@@ -1,0 +1,34 @@
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <link rel="stylesheet" href="{{ site.baseurl }}/assets/main.css"  media="screen" type="text/css">
+
+   <title>{% if page.headtitle %}{{ page.headtitle | escape }}{% else %}{{ page.title  | escape }}{% endif %} </title>
+   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description[page.lang] }}{% endif %}">
+
+   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+   {%- assign posts=site.posts | where:"ref", page.ref | sort: 'lang' -%}{%- for post in posts -%}
+   <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />{% endfor %}
+   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}{%- for page in pages -%}
+   <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />{% endfor %}
+   <link rel="alternate" type="application/rss+xml" title="{{ site.title[page.lang] }}" href="{{ site.feed[page.lang] | prepend: site.baseurl | prepend: site.url }}">
+
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <meta name="generator" content="Jekyll v3.7.3" />
+  <meta property="og:title" content="Home" />
+  <meta name="author" content="Aguayo-Canela, F.J." />
+  <meta property="og:locale" content="{{ page.lang | default: site.lang | default: "en" }}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description[page.lang] }}{% endif %}" />
+	<link rel="canonical" href="{{ site.hard_url }}/" />
+	<meta property="og:url" content="{{ site.hard_url }}/" />
+  <meta property="og:site_name" content="{{ site.title[page.lang] }}" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ page.date }}" />
+
+  
+
+</head>

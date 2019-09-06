@@ -1,0 +1,1 @@
+[ {% assign colPo=site.posts | where:"ref", page.ref | sort: 'lang' %}{% for po in colPo %} <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}"> {{ po.lang }}</a>{% endfor %}{% assign colPa=site.pages | where:"ref", page.ref | sort: 'lang' %}{% for pa in colPa %} <a href="{{ pa.url | prepend: site.baseurl }}" class="{{ pa.lang }}"> {{ pa.lang }}</a>{% endfor %} ]

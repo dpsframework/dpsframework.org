@@ -1,0 +1,57 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title[page.lang] | escape }} {{ site.trademark }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+
+          <li class="p-name">
+            {%- if site.license -%}
+              {% include icon-license.html username="dpsframework" %} {{ site.license | escape }}
+            {%- else -%}
+              {{ site.title[page.lang] | escape }}
+            {%- endif -%}
+          </li>
+<!--        
+          <li class="p-name">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title[page.lang] | escape }}
+            {%- endif -%}
+          </li>
+            
+          {%- if site.email -%}
+            <li class="p-name">
+               <a style="font: normal 11px Arial, Helvetica, sans-serif; color: #828282;"  href="mailto:{{ site.email }}"><span>{{ site.ieeeMember | escape }} </span> </a>
+            </li>
+          {%- endif -%}
+          
+          <li>
+              <a href="https://ieee-collabratec.ieee.org/app/home" target="blank"><img src="{{ site.baseurl }}/assets/images/collabratec_logo_img.png" height="30px"> </a>
+          </li>
+
+      <li class="p-name"> <a style="font: normal 11px Arial, Helvetica, sans-serif; color: #828282;"><span>{{ site.unileonMember | escape }} </span> </a> </li>
+          <li><a href="https://departamentos.unileon.es/ingenieria-electrica-y-de-sistemas-y-automatica/" target="blank"><img src="{{ site.baseurl }}/assets/images/simbolo-webnegativo.jpg" height="22px"> </a></li>     
+-->   
+
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <br>
+        {%- include social.html -%}
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p><a href="{{ site.baseurl }}/{{ site.index[page.lang] }}"><img src="{{ site.baseurl }}/assets/images/logo_dpsframework_bw.png" align="left" width="86px" alt="Home"></a>{{- site.description[page.lang]  -}}</p>
+      </div>
+    </div>
+
+  </div>
+</footer>

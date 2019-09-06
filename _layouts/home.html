@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+{%-  include sidebar.html  -%}
+
+<div class="home">
+  {{ content }}
+  
+
+</div>
+
+<p class="post-meta">
+	<br><br>
+	<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+	  {%- if page.lang == 'en' -%}
+	    Last update&nbsp;[&nbsp; {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+	  {{ page.date | date: date_format }}
+	  {%- else -%}
+	    &Uacute;ltima actualizaci&oacute;n&nbsp;[&nbsp; {%- assign date_format = site.minima.date_format | default: "%-d %b, %Y" -%} {{ page.date | date: date_format }}
+	  {%- endif -%}
+	</time>
+	&nbsp;]&nbsp;&nbsp;•&nbsp;&nbsp;
+	{%- if page.lang == 'en' -%}
+	   <span class="post-meta">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}"> RSS</a></span>
+	{%- else -%}
+	   <span class="post-meta">Subscribirse aqu&iacute; a <a href="{{ "/feed_es.xml" | prepend: site.baseurl }}">RSS</a></span>
+	{%- endif -%}
+
+	<span  class="post-meta">&nbsp;&nbsp;•&nbsp;&nbsp;Selector&nbsp;&nbsp;
+	 {%- include language-selector.html -%}&nbsp;<a href="{{ site.baseurl }}/{{ site.index[page.lang] }}"><img src="{{ site.baseurl }}/assets/images/internet.png"></a>
+</p>
+  
+ 
