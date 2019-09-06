@@ -2,7 +2,7 @@
 layout: post
 title:  "Método para tener éxito con 'Git'"
 ref: gitBranching
-author: "Vincent Driessen"
+author: "Vincent Driessen<br><br>Translated by: Aguayo-Canela, F.J. (2016)<br>Department of Electrical and Systems Engineering and Automation"
 date: 2010-01-05 09:48:44 +0100
 categories: drafts
 tags: infront featured
