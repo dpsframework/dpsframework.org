@@ -19,8 +19,8 @@ lang: en
 {:.table-left}
 | Institution | Contact address   | 
 |:--------------------------------- |:--------------------- |
-| ![UniLeon](/assets/images/marca-logo-color.jpg){:width="90px" align="left" hspace="2px"  border="0px"}  | **Institución**: Universidad de León. [_https://www.unileon.es_](https://www.unileon.es) <br>**Departamento**: Departamento de Ingeniería Eléctrica y de Sistemas y Automática. <br> **Escuela de Ingenierías Industrial, Informática y Aeroespacial** (EIIIA) <br> Campus de Vegazana S/N<br> 24071 León  <br> <br>**Autor**: {{ site.author2 | escape }}.  | 
-| ![IEEEColab](/assets/images/collabratec_logo_img.png){:width="190px" align="left" hspace="2px"  border="0px"}  | **Autor**: {{ site.author | escape }} <br>_e-mail_: francisco (dot) aguayo [AT] ieee (dot) org  | 
+| ![UniLeon](/assets/images/marca-logo-color.jpg){:width="90px" align="left" hspace="2px"  border="0px"}  | **Institución**: Universidad de León. [_https://www.unileon.es_](https://www.unileon.es) <br>**Departamento**: Departamento de Ingeniería Eléctrica y de Sistemas y Automática. <br> **Escuela de Ingenierías Industrial, Informática y Aeroespacial** (EIIIA) <br> Campus de Vegazana S/N<br> 24071 León  <br> <br>_Professor_  {{ site.author2 | escape }}.<br> **E-mail**: isaias (dot) garcia [AT] unileon (dot) es  | 
+| ![IEEEColab](/assets/images/collabratec_logo_img.png){:width="190px" align="left" hspace="2px"  border="0px"}  | _PhD_  {{ site.author | escape }} <br>**E-mail**: francisco (dot) aguayo [AT] ieee (dot) org  | 
 
 
 
