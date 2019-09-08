@@ -28,7 +28,7 @@ lang: en
 {:.table-left}
 | Institution  | Research Project   | 
 |:--------------------------------- |:--------------------- |
-| ![UniLeon](/assets/images/marca-logo-color.jpg){:width="90px" align="left" hspace="2px"  border="0px"}  | **Institution**: University of León[^UNILEON]. <br>**Department**: Department of Electrical and Systems Engineering and Automation[^UNILEONDEPT].  <br> <br> **Research title**:  _Techniques for deploying Distributed Architecture in Rule-Based Expert Systems using the Multiagent paradigm_. (2012-2017) <br>**Deposit**: [_DIALNET_](https://dialnet.unirioja.es/servlet/tesis?codigo=124344). **Status**: Finished. <br>**Authors**: {{ site.author | escape }} y {{ site.author2 | escape }}[^IGARCIA].  | 
+| ![UniLeon](/assets/images/marca-logo-color.jpg){:width="90px" align="left" hspace="2px"  border="0px"}  | **Institution**: University of León[^UNILEON]. <br>**Department**: Department of Electrical and Systems Engineering and Automation[^UNILEONDEPT].  <br> <br> **Research title**:  _Techniques for deploying Distributed Architecture in Rule-Based Expert Systems using the Multiagent paradigm_. (2012-2017) <br>**Deposit**: [_DIALNET_](https://dialnet.unirioja.es/servlet/tesis?codigo=124344). **Status**: Finished. <br>**Authors**: {{ site.author | escape }} and {{ site.author2 | escape }}[^IGARCIA].  | 
 
 
 
@@ -41,12 +41,12 @@ lang: en
 
 ## Objectives of the _{{ site.title[page.lang] | escape }}_ Project 
 
-The execution of the `**{{ site.title[page.lang] | escape }}**' project is pending approval and it's in search of financing. It has an estimated range of two years (Dec. 2019 - Dec. 2021) and its objectives are as follows:
+&nbsp;The execution of the `**{{ site.title[page.lang] | escape }}**' project is pending approval and it's in search of funding. It has an estimated range of two years (Dec. 2019 - Dec. 2021) and its objectives are as follows:
 
 1. Evolve the code of the four **DPS-Agents** for their exploitation in the **Domains**:
    - _E-learning_ and _Educational systems_.
-   - _User-centered applications_.
-   - Capacity and reliability to act as autonomous _Assisting agents_.
+   - _User-Centered Applications_.
+   - Capacity and reliability to act as autonomous _Assistance Agents_.
 1. Establish the **MIT License** as of Dec. 2019 and use the **Open-Source** project development model.
 1. Adapt the source code to take advantage of the modular capabilities of **JAVA / openJDK 11.x**[^ORACLE] or higher.
 
@@ -55,14 +55,16 @@ The execution of the `**{{ site.title[page.lang] | escape }}**' project is pendi
 
 
 
-
 ## Available versions
 
-There are currently two versions available: **v0.9.1** (SOCO) and **v1.7** (EUMAS) (see, Table.2). These releases have been packaged in a file of type .JAR with the nomenclature: **dpsFrameworkBuilder-X.Y.jar**. These .JAR files allow you to create and initialize a basic development environment with libraries and components necessary for the development of the application. In addition, they generate the minimum directory structure to put into operation the skeleton of an operational _Agent-Based Application_[^SHOHAM] .
+&nbsp;&nbsp;There are currently two versions available: **v0.9.1** (SOCO) and **v1.7** (EUMAS) (see, Table.2). These releases have been packaged in a file of type .JAR with the nomenclature: **dpsFrameworkBuilder-X.Y.jar**. Each .JAR file allows you to create and initialize a basic development environment with libraries and components necessary for the development of the application. Its mission is to generate the minimum directory structure to put into operation the skeleton of an operational _Agent-Based Application_[^SHOHAM].
 
 
 {:.caption-left}
 **Tabl2 2**. Version number, mnemonic and main characteristics of the release.
+
+
+
 
 {:.table-left}
 | Release   | Description   | 
@@ -72,7 +74,7 @@ There are currently two versions available: **v0.9.1** (SOCO) and **v1.7** (EUMA
 
 
     
-Both releases have been compiled with JAVA and have been verified on the operating systems: Ms-Windows, Apple OS-X and Linux. Note that, v1.7 (EUMAS) release allows to deploy DPS-Agents with the CLIPS[^CLIPS] and / or JESS[^JESS] Expert Systems engine on **ARM** architectures (e.g. RaspberryPI[^PI]).
+&nbsp;Both releases have been compiled with JAVA and have been verified on the operating systems: Ms-Windows, Apple OS-X and Linux. Note that, v1.7 (EUMAS) release allows to deploy DPS-Agents with the CLIPS[^CLIPS] and / or JESS[^JESS] Expert Systems engine on **ARM** architectures (e.g. RaspberryPI[^PI]).
 
 
 
