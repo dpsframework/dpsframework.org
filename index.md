@@ -43,7 +43,7 @@ lang: en
 
 &nbsp;The execution of the `**{{ site.title[page.lang] | escape }}**' project is pending approval and it's in search of funding. It has an estimated range of two years (Dec. 2019 - Dec. 2021) and its objectives are as follows:
 
-1. Evolve the code of the four **DPS-Agents** for their exploitation in the **Domains**:
+1. Evolve the source code of the four **DPS-Agents** for their exploitation in the **Domains**:
    - _E-learning_ and _Educational systems_.
    - _User-Centered Applications_.
    - Capacity and reliability to act as autonomous _Assistance Agents_.
