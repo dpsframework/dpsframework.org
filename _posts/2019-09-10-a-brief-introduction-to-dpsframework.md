@@ -14,7 +14,7 @@ lang: en
 
 
 
-> **_Abstract:_** An informal description is given of five JADE Multiagent platform micro-utilities. These micro-utilities have been developed in Java Language and they have two main functions: the first one to facilitate the deployment of complex agents or complex-agent communities that belong to the replicas of a distributed application; the second one to allow the configuration, adaptation and subsequent debugging of agents at runtime. This set of micro-utilities is named **_dpsFramework_**.
+> **_Abstract:_** An informal description is given of five JADE Multiagent platform oriented micro-utilities. These micro-utilities have been developed in Java Language and they have two main functions: the first one has been to facilitate the deployment of complex-agents that belong to the replicas of a distributed application; the second one target has been to allow the configuration, adaptation and subsequent debugging of those agents at JADE Platform runtime. This set of open source micro-utilities has been named **_dpsFramework_**.
 
 **Keywords:** 
 Multiagent Systems, Complex-Agents JADE Platform, Java, CLIPS, Jess, Prolog

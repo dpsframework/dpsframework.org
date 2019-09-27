@@ -14,7 +14,7 @@ lang: es
 
 
 
-> **_Resumen:_** Se ofrece una descripción genérica de cinco micro-utilidades para la plataforma multiagente JADE. Esas micro-utilidades han sido desarrolladas en Lenguaje Java y presentan dos funcionalidades principales: la primera, facilitar el despliegue de agentes-complejos o comunidades formadas por agentes-complejos que pertenecen a réplicas de una aplicación distribuida; la segunda, permitir la configuración, adaptación y posterior depuración de los agentes en tiempo de ejecución. Este conjunto de micro-utilidades se ha denominado **_dpsFramework_**.
+> **_Resumen:_** Este borrador ofrece una descripción genérica de cinco micro-utilidades desarrolladas para ser utilizadas en la plataforma multiagente JADE. Se encuentran desarrolladas en Lenguaje Java y presentan dos funcionalidades principales: la primera, facilitar el despliegue de agentes-complejos que pertenecen a las réplicas de una aplicación distribuida; la segunda función, es permitir la configuración, adaptación y posterior depuración de los agentes en tiempo de ejecución una vez desplegados en la plataforma JADE. A este pequeño conjunto de utilidades se le ha denominado **_dpsFramework_**.
 
 
 
