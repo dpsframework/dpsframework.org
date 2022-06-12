@@ -1,15 +1,11 @@
-## DPS-Agents Framework (Project Website)
+## dpsFramework-Website by Githup-Pages
+
+- Revision 0.2: June, 2019.
+- Revision 1.0: Summer, 2022.
 
 
->  The **_DPS-Agents Framework_** consists of four **JADE** Agents and a Development Micro-Environment (named **_dpsFramework_**) that allows initializing, debugging and deploying multiple _DPS-Agents_ on the JADE platform to implement _Agent Oriented Applications_.
-
-
-
--  [Web-projet with GitHu-pages](https://dpsframework.org)
-
+-  [dpsFramework Website URL](https://dpsframework.org)
 
 
 ![DPS-Agent GUI example](/assets/images/psMonitorAgent00.png){
-**Fig. 1**. Example of a Graphical User Interface of an Agent-DPS _Monitor_ class in debug-mode..
-
-
+**Fig. 1**. A brief screen-shot about Command-line Shell conected to JADE Agent at runtime
