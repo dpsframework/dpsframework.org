@@ -1,0 +1,53 @@
+// Placeholder to allow overriding predefined variables smoothly.
+
+
+$header-brand-color:           #828282 !default;
+$header-brand-color-light:     lighten($header-brand-color, 40%) !default;
+$header-brand-color-dark:      darken($header-brand-color, 25%) !default;
+
+$header-site-title-color:      $header-brand-color-dark !default;
+
+$header-text-color:            #111111 !default;
+$header-background-color:      #f8f8f8 !default;
+$header-code-background-color: #eeeeff !default;
+
+$header-link-base-color:       #2a7ae2 !default;
+$header-link-visited-color:    darken($header-link-base-color, 15%) !default;
+$header-link-hover-color:      $header-text-color !default;
+
+$header-border-color-01:       $header-brand-color-light !default;
+$header-border-color-02:       lighten($header-brand-color, 35%) !default;
+$header-border-color-03:       $header-brand-color-dark !default;
+
+$header-table-text-color:      lighten($header-text-color, 18%) !default;
+$header-table-zebra-color:     lighten($header-brand-color, 46%) !default;
+$header-table-header-bg-color: lighten($header-brand-color, 43%) !default;
+$header-table-header-border:   lighten($header-brand-color, 37%) !default;
+$header-table-border-color:    $header-border-color-01 !default;
+
+
+
+$foot-brand-color:           #999999 !default;
+$foot-brand-color-light:     lighten($foot-brand-color, 5%) !default;
+$foot-brand-color-dark:      darken($foot-brand-color, 35%) !default;
+
+$foot-site-title-color:      $foot-brand-color-light !default;
+
+$foot-text-color:            #bbbbbb !default;
+$foot-background-color:      #181818 !default;
+$foot-code-background-color: #212121 !default;
+
+$foot-link-base-color:       #79b8ff !default;
+$foot-link-visited-color:    $foot-link-base-color !default;
+$foot-link-hover-color:      $foot-text-color !default;
+
+$foot-border-color-01:       $foot-brand-color-dark !default;
+$foot-border-color-02:       $foot-brand-color-light !default;
+$foot-border-color-03:       $foot-brand-color !default;
+
+$foot-table-text-color:      $foot-text-color !default;
+$foot-table-zebra-color:     lighten($foot-background-color, 4%) !default;
+$foot-table-header-bg-color: lighten($foot-background-color, 10%) !default;
+$foot-table-header-border:   lighten($foot-background-color, 21%) !default;
+$foot-table-border-color:    $foot-border-color-01 !default;
+

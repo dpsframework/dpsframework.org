@@ -1,0 +1,422 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: 1120px;
+  // calc(#{$content-width} - (#{$spacing-unit}));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 10;  /* $spacing-unit;  */
+  padding-left:  10;  /* $spacing-unit;  */
+  @extend %clearfix;
+  
+
+
+}
+
+
+
+.site-title {
+  float: none;
+  margin-top: -10px;
+}
+
+.site-subtitle {
+  @include relative-font-size(0.980);
+  font-weight: 300;
+  line-height: 1.010;
+  letter-spacing: -0.24px;
+  margin-bottom: -50px;
+  margin-top: -5px;
+  float: initial;
+
+}
+
+
+
+
+
+
+
+
+
+
+/**
+ * From https://github.com/yihui/xaringan/issues/30
+ */
+.caption-left {
+  text-align: left;
+  font-size: .8rem;
+  img {
+    margin-right: 21px;
+  }  
+}
+
+.caption-right {
+  text-align: right;
+  font-size: .8rem;
+  img {
+    margin-left: 21px;
+  }
+}
+
+.caption {
+  text-align: center;
+  font-size: .8rem;
+}
+
+.table-left {
+  text-align: left;
+  font-size: .8rem;
+  width: 75%;
+}
+  
+
+
+.table-left-full {
+  text-align: left;
+  font-size: .8rem;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html {
+	scroll-behavior: smooth;
+}
+
+#backtop a { 
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    width:50px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px; 
+    right: 60px; 
+    color: rgb(64,120,192); 
+    z-index: 1000;
+    background: #fff; 
+    padding: auto; 
+    border-radius: 50px; 
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    font-weight: bold; 
+    text-decoration: none !important;
+    box-shadow:0 1px 2px rgba(0,0,0,.15), 0 1px 0 #ffffff inset;
+}
+
+#backtop a:hover { 
+    background: rgba(64,120,192,0.8); 
+    color: #fff; 
+}
+
+
+
+
+
+
+
+
+
+/**
+ * Paper and Proposals content
+ */
+.paper-list-heading {
+  @include relative-font-size(1.75);
+}
+
+.paper-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit;
+  }
+}
+
+.paper-meta {
+  font-size: $small-font-size;
+  color: $brand-color;
+}
+
+.paper-link {
+  display: block;
+  @include relative-font-size(1.5);
+}
+
+
+.paper-header {
+  margin-bottom: $spacing-unit;
+}
+
+.paper-title,
+.paper-content h1 {
+  @include relative-font-size(2.625);
+  letter-spacing: -1px;
+  line-height: 1.15;
+
+  @media screen and (min-width: $on-large) {
+    @include relative-font-size(2.625);
+  }
+}
+
+.paper-content {
+  margin-bottom: $spacing-unit;
+
+  h1, h2, h3 { margin-top: $spacing-unit * 2 }
+  h4, h5, h6 { margin-top: $spacing-unit }
+
+  h2 {
+    @include relative-font-size(1.75);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(2);
+    }
+  }
+
+  h3 {
+    @include relative-font-size(1.375);
+
+    @media screen and (min-width: $on-large) {
+      @include relative-font-size(1.625);
+    }
+  }
+
+  h4 {
+    @include relative-font-size(1.25);
+  }
+
+  h5 {
+    @include relative-font-size(1.125);
+  }
+  h6 {
+    @include relative-font-size(1.0625);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Negritas en el Lenguaje Seleccionado
+ */
+.en:lang(en), .es:lang(es){
+    font-weight: bold;
+}
+
+
+
+
+
+/**
+ * Site header
+ */
+.site-header {
+  border-top: 5px solid $header-border-color-03;
+  border-bottom: 1px solid $header-border-color-01;
+  background-color: $header-background-color;
+  text-color: $header-text-color;
+}
+
+
+.site-nav {
+  background-color: $header-background-color;
+
+  .menu-icon {
+
+    > svg path {
+      fill: $header-border-color-03;
+    }
+  }
+
+
+  .page-link {
+    color: $header-text-color;
+
+  }
+
+  @media screen and (min-width: $on-medium) {
+    background-color: $header-background-color;
+
+  }
+}
+
+
+
+/**
+ * Site footer
+ */
+.site-footer {
+  border-top: 1px solid $foot-border-color-01;
+  text-color: $foot-text-color;
+  background-color: $foot-background-color;
+
+  a {
+    color: $foot-link-base-color;
+    text-decoration: none;
+
+    &:visited {
+      color: $foot-link-visited-color;
+    }
+
+    &:hover {
+      color: $foot-link-hover-color;
+      text-decoration: underline;
+    }
+
+    .social-media-list &:hover {
+      text-decoration: none;
+
+      .username {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+.footer-col-wrapper,
+.social-links {
+  @include relative-font-size(0.9375);
+  color: $foot-brand-color;
+}
+
+
+
+.social-media-list {
+  display: table;
+  margin: 0 auto;
+  li {
+    float: left;
+    margin: 5px 10px 5px 0;
+    &:last-of-type { margin-right: 0 }
+    a {
+      display: block;
+      padding: $spacing-unit / 4;
+      border: 1px solid $foot-border-color-01;
+      &:hover { border-color: $foot-border-color-02 }
+    }
+  }
+}
+
+
+
+
+.main-col-wrapper,
+.social-links {
+  @include relative-font-size(0.9375);
+  color: $brand-color;
+}
+
+.main-col {
+  margin-bottom: $spacing-unit / 2;
+}
+
+.main-col-1,
+.main-col-2 {
+  width: calc(50% - (#{$spacing-unit} / 2));
+}
+
+.main-col-3 {
+  width: calc(100% - (#{$spacing-unit} / 2));
+}
+
+@media screen and (min-width: $on-large) {
+  .main-col-1 {
+    width: calc(35% - (#{$spacing-unit} / 2));
+  }
+
+  .main-col-2 {
+    width: calc(20% - (#{$spacing-unit} / 2));
+  }
+
+  .main-col-3 {
+    width: calc(45% - (#{$spacing-unit} / 2));
+  }
+}
+
+@media screen and (min-width: $on-medium) {
+  .main-col-wrapper {
+    display: flex
+  }
+
+  .main-col {
+    width: calc(100% - (#{$spacing-unit} / 2));
+    padding: 0 ($spacing-unit / 2);
+
+    &:first-child {
+      padding-right: $spacing-unit / 2;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+      padding-left: $spacing-unit / 2;
+    }
+  }
+}

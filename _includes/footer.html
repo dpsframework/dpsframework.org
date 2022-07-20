@@ -2,56 +2,70 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title[page.lang] | escape }} {{ site.trademark }}</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
+      <div class="footer-col-1">
+        <p class="feed-subscribe">
+          <a href="{{ 'feed.xml' | relative_url }}">
+            <svg class="svg-icon">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
 
-          <li class="p-name">
-            {%- if site.license -%}
-              {% include icon-license.html username="dpsframework" %} {{ site.license | escape }}
-            {%- else -%}
-              {{ site.title[page.lang] | escape }}
-            {%- endif -%}
-          </li>
-<!--        
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title[page.lang] | escape }}
-            {%- endif -%}
-          </li>
-            
-          {%- if site.email -%}
-            <li class="p-name">
-               <a style="font: normal 11px Arial, Helvetica, sans-serif; color: #828282;"  href="mailto:{{ site.email }}"><span>{{ site.ieeeMember | escape }} </span> </a>
-            </li>
-          {%- endif -%}
-          
-          <li>
-              <a href="https://ieee-collabratec.ieee.org/app/home" target="blank"><img src="{{ site.baseurl }}/assets/images/collabratec_logo_img.png" height="30px"> </a>
-          </li>
-
-      <li class="p-name"> <a style="font: normal 11px Arial, Helvetica, sans-serif; color: #828282;"><span>{{ site.unileonMember | escape }} </span> </a> </li>
-          <li><a href="https://departamentos.unileon.es/ingenieria-electrica-y-de-sistemas-y-automatica/" target="blank"><img src="{{ site.baseurl }}/assets/images/simbolo-webnegativo.jpg" height="22px"> </a></li>     
--->   
-
-
-        </ul>
+        {%- if site.author %}
+           <ul class="contact-list">
+       
+            {% if site.author.name -%}
+              {% if site.author.email -%}
+                <li>
+          <a class="u-email" href="mailto:{{ site.author.email }}">
+          <img class="u-email"  src="{{ site.baseurl  }}/assets/imgs/email.png" height="17px">
+            <span>E-mail</span>
+          </a>
+        </li>
+              {%- endif %}
+            {% endif -%}
+      
+            {% if site.author.collabratech -%}
+              <li><a href="{{ site.author.collabratech }}" target="blank">
+          <img class="u-email"  src="{{ site.baseurl  }}/assets/imgs/collabratec_logo_img.png" height="35px"></a>
+        </li>
+            {% endif -%}
+           </ul>
+        {%- endif %}
+        
+        <div class="social-links">
+          {%- include social.html -%}
+        </div>
+        
       </div>
 
-      <div class="footer-col footer-col-2">
-        <br>
-        {%- include social.html -%}
+
+      <div class="footer-col">
+        <p>
+          <a href="{{ site.baseurl }}/{{ site.index[page.lang] }}">
+            <img src="{{ site.baseurl }}/assets/imgs/dpsframework.png"
+            align="left" width="91px" alt="Home">
+          </a>
+          {{ site.data.dpsFW[0].description[page.lang] | escape }}
+        </p>
+        
+        {% include acknowledgments.html %}	
+    
+        
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p><a href="{{ site.baseurl }}/{{ site.index[page.lang] }}"><img src="{{ site.baseurl }}/assets/images/logo_dpsframework_bw.png" align="left" width="86px" alt="Home"></a>{{- site.description[page.lang]  -}}</p>
-      </div>
+
+
+      
+
+
+
     </div>
+    
+    
+
 
   </div>
+
 </footer>

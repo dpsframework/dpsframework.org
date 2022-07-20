@@ -1,0 +1,12 @@
+- head:
+    en: "Guides and Websites of used components"
+    es: "Manuales y Webs de componentes utilizados"
+  title:
+    en: '<strong>Table 1</strong>. Rule-Based Expert Systems Tools - APIs - Manuals - Users Guide about components.' 
+    es: '<strong>Tabla 1</strong>. Herramientas de construcción de Sistemas Expertos - API - Guías de Usuario.'
+  field01:
+    en: 'Software / Library'
+    es: 'Software / Librería'
+  field02:
+    en: 'Description'
+    es: 'Descripción'

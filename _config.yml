@@ -1,88 +1,149 @@
-# The Minimal-Theme most used parameters
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-minimal
+## --------------------------------------------------------
+## dpsFW _config based on minima theme. (2017-2022)
+## -------------------------------------------------------
+theme: minima
 
-title: 
-  en: "DPS-Agents Framework"
-  es: "Marco de Agentes-DPS"
+show_excerpts: false
 
-# trademark: ""                 #  "<sup>&reg;</sup>"
-trademark: "<sup>&copy;</sup>"
+plugins:
+ - jekyll-toc
+ - jekyll-feed
+ - jekyll-seo-tag
+## - jekyll-paginate
 
-subtitle:
-  en: "Distributed problem solving with JADE Agents"
-  es: "Resolución distribuida de problemas con Agentes JADE"
 
+markdown: kramdown
+
+toc:
+  min_level: 1
+  max_level: 4
+  ordered_list: false # default is false
+
+github:
+  owner_url: "https://github.com/dpsframework"
+  repository_url: "https://github.com/dpsframework"
+  owner_name: "dpsframework"
+  project_tagline: "2.1"
+  name: github
+  is_project_page: true
+  repository_name: dpsframework
+
+
+
+## --------------------------------------------------------
+## Web collections
+## --------------------------------------------------------
+title:
+  en: "PS-Agents for the JADE Platform"
+  es: "Agentes-PS para la plataforma JADE"
+  
+baseurl:  ''
+url:      'https://dpsframework.org'
+hard_url: 'https://dpsframework.org'
+
+collections:
+  papers:
+    output: true
+    label: papers
+  proposals:
+    output: true
+    label: proposals
+  guides:
+    output: true
+    sort_by: chapter
+    label: guides
+
+defaults:
+  - scope:
+      path: ""
+      type: "papers"
+    values:
+      layout: "paper"
+  - scope:
+      path: ""
+      type: "proposals"
+    values:
+      layout: "proposal"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+## {{ site.collections | where: "label", "myCollection" | first }}
+
+## --------------------------------------------------------
+## Language control
+## --------------------------------------------------------
+lang: es
 
 index:
   en: index.html
   es: index_es.html
 
-lang: en
-
-author: 'Aguayo-Canela, Francisco J.'
-author2: 'Garcia-Rodriguez, Isaias'
-email: 'francisco -dot- aguayo -At- ieee.org'
-
-description:
-  en: Distributed problem solving with JADE Agents. Four implemented agents; a Development micro-Environment that facilitates the deployment of these agents in JADE platform to create large communities and; some interesting examples.
-  es: Resolución distribuida de problemas con Agentes JADE. Cuatro agentes implementados; un micro-Entorno de Desarrollo que facilita el despliegue de esos agentes en la plataforma JADE para crear grandes comunidades y; algunos ejemplos interesantes.
-  
-
 feed:
   en: /feed.xml
   es: /feed_es.xml
 
-baseurl: ""
-url: "https://dpsframework.org" 
-hard_url: "https://dpsframework.org"
+
+dpsFW:
+  trademark: "<sup>&copy;</sup>"
+  registry: "<sup>&reg;</sup>"
+
+  url: 'https://dpsframework.org'
+  domain: '.org'
+  baseurl: ''
 
 
-github:
-  owner_url: "https://dpsframework.github.io/"
-  repository_url: "https://github.com/dpsframework"
-  owner_name: "Francisco J. Aguayo-Canela"
-  project_tagline: "1.7"
-  name: github
-  is_project_page: true
-  repository_name: dpsframework
+## --------------------------------------------------------
+## Jekyll minima
+## --------------------------------------------------------
+author:
+  name:  'DpsFramework project'
+  email: 'info@dpsframework.org'
+  collabratech: 'https://ieee-collabratec.ieee.org/app/p/FranciscoAguayo115080'
 
-# social links
-github_username:  dpsframework
-rss: rss
-linkedin: linkedin
-ieeeMember: "IEEE Power & Energy Systems Society Member"
-unileonMember: "PhD from León University"
-linkedin_username: paco-aguayo
-license: "MIT License"
 
-# set to true to show excerpts on the homepage
-show_excerpts: true 
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ 
 minima:
   date_format: "%b %-d, %Y"
+  skin: classic
+
+  social_links:
+    twitter: unileon
+    github:  dpsframework
+    # devto: 
+    # dribbble: 
+    facebook: unileon
+    # flickr:   
+    # instagram: 
+    # linkedin: 
+    # pinterest: 
+    youtube: universidaddeleon
+    # youtube_channel:
+    # youtube_channel_name:
+    # telegram: 
+    # googleplus: +
+    # microdotblog: 
+    # keybase: 
+
+    # Mastodon instances
+    # mastodon:
+    # - username: 
+    #   instance: example.com
+    # - username: 
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: 
+    #   instance: example.com
+    # - username: 
+    #   instance: example.com
 
 
 
-# Language labels
-i18n:
-  en:
-    categories: "Categories"
-    featured:   "Featured"
-    download:   "Downloads"
-    essay:      "JavaDoc & Guides"
-    acknowledgment: "Acknowledgments" 
-  es:
-    categories: "Categorías"
-    featured:   "Destacados"
-    download:   "Descargas"
-    essay:      "JavaDoc y Manuales"
-    acknowledgment: "Agradecimientos"
-
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
