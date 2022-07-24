@@ -68,7 +68,10 @@ layout: default
 
         </div>
         <h3>{{ site.data.i18n[page.lang].tocH1 }}</h3>
-        {% toc %}
+        
+           <div class="section-nav">
+             {% include toc.html html=content %}
+           </div>
         
       
       </div>

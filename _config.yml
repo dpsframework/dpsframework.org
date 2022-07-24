@@ -7,7 +7,7 @@ show_excerpts: false
 google_analytics: false
 
 plugins:
- - jekyll-toc
+## - jekyll-toc
  - jekyll-feed
  - jekyll-seo-tag
 ## - jekyll-paginate

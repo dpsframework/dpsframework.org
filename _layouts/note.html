@@ -6,7 +6,9 @@ layout: default
     <div class="main-col-wrapper">
 
       <div class="main-col-1">
-      {% toc %}
+         <div class="section-nav">
+           {% include toc.html html=content %}
+         </div>
       {% include home-sidebar.html %}
       </div>
 
