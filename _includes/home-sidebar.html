@@ -1,0 +1,76 @@
+ {% assign papers    = site.papers    | where:"lang", page.lang %}
+ {% assign proposals = site.proposals | where:"lang", page.lang %}
+ {% assign paginas   = site.pages     | where:"lang", page.lang %}
+ {% assign guias     = site.guides    | where:"lang", page.lang | where:"chapter", 0 %}
+ {% assign posts     = site.posts     | where:"lang", page.lang %}
+
+
+
+
+<!-- Essays -->
+  <div class="sidebar-title">
+    {{ site.data.i18n[page.lang]['paperH1'] }}:
+  </div>
+
+  {% for paper in papers %}
+  ● <a class="page-link"  
+     href="{{ site.baseurl }}{{ paper.url}}">
+     {{ paper.shorttitle }}
+    </a>
+    <p class="sidebar-meta">
+      {{ paper.title }}
+    </p>
+  {% endfor %}
+
+
+
+
+<!-- Proposals -->
+  <div class="sidebar-title">
+    {{ site.data.i18n[page.lang]['proposalH1'] }}:
+  </div>
+  {% for proposal in proposals %}
+    {% include proposal-entry.html %}
+  {% endfor %}
+
+
+
+
+
+
+
+<!-- Guides and Manuals -->
+  <div class="sidebar-title">
+    {{ site.data.i18n[page.lang]['guideH1'] }}:
+  </div>
+
+  {% for guia in guias %}
+    ● <a class="page-link"
+      href="{{ site.baseurl }}{{ guia.url}}">
+      {{ guia.shorttitle }}
+    </a>
+    <p class="sidebar-meta">
+      {{ guia.title }}
+    </p>
+  {% endfor %}
+
+
+
+<!-- Notes and Posts -->
+  <div class="sidebar-title">
+    {{ site.data.i18n[page.lang]['postH1'] }}:
+  </div>
+
+  {% for post in posts %}
+  ○ <a class="page-link"
+    href="{{ site.baseurl }}{{ post.url}}">
+    {{ post.author }}
+  </a>
+    <p class="sidebar-meta">
+      {{ post.title }}
+    </p>
+  
+  {% endfor %}
+
+
+

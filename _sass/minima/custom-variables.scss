@@ -1,4 +1,20 @@
-// Placeholder to allow overriding predefined variables smoothly.
+// dpsFramework website based on minima.
+// ------------------------------------------
+
+$base-font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+$spacing-unit:     40px;
+
+
+
+
+
+$color-blue-1: #E8F8FF;
+$color-blue-2: #edfaff;
+ 
+$code-background-color: #edfaff !default;
 
 
 $header-brand-color:           #828282 !default;

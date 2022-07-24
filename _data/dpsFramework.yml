@@ -1,0 +1,38 @@
+title:
+  en: 'dpsFramework project'
+  es: 'Proyecto dpsFramework'
+
+
+subtitle:
+  en: 'Distributed Problem-Solving JADE Agents'
+  es: 'Agentes JADE para resolución de problemas distribuidos'
+
+
+description:
+  en: ' dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as core of JESS rule-based engine.'
+  
+  es: ' El proyecto dpsFramework tiene como objetivo mantener la compatibilidad de los agentes de resolución de problemas distribuidos para la plataforma JADE, y su conexión con sus Sistemas Expertos autónomos integrados. Este proyecto también ha incluido algunas propuestas, con soluciones probadas, para adaptar: JADE 4.5.4 (2022) y su módulo FIPA implementado con CORBA; CLIPSJNI para CLIPS-6.31 y CLIPS-6.40, así como en núcleo del motor de reglas Java JESS.'
+
+
+shortdescription:
+  en: ' dpsFramework project aims to maintain PS-Agents compatibility and connectivity with their integrated Expert Systems; as well as deepening the understanding of the technologies used to multiply the performance achieved in the 2018 version.'
+
+  es: ' El proyecto dpsFramework tiene como objetivos mantener la compatibilidad de los Agentes-PS y la conectividad con sus Sistemas Expertos integrados; así como profundizar en la compresión de las tecnologías empleadas para multiplicar el rendimiento alcanzado en la versión de 2018.'
+
+motto:
+  en: ' JADE Agents with built-in Expert Systems.'
+
+  es: ' Agentes de JADE con Sistemas Expertos integrados.'
+
+  
+home-fig1:
+  en: 'An Agent from [dpsAgent-1.8] library named `Mon712`. It is ready for receive messages, configure properties or create new behaviour: through its Java command-line shell at runtime on JADE Platform.'
+
+  es: 'Un agente de la librería [dpsAgents-1.8] con nombre `Mon712`. Preparado para recibir órdenes, configurar propiedades o crear comportamientos: desde su consola de Java en tiempo de ejecución sobre JADE.'
+
+trademark: "<sup>&copy;</sup>"
+registry: "<sup>&reg;</sup>"
+
+url: 'https://dpsframework.org'
+domain: '.org'
+baseurl: ''

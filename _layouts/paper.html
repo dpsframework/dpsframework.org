@@ -1,66 +1,69 @@
 ---
 layout: default
 ---
-<article class="paper h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="paper-header">
-    <div class="main-col-wrapper">
-      <div class="main-col-3">
-  
-    <h1 class="paper-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="paper-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
+
+<div class="wrapper">
+ <div class="home">
+
+  <div class="main-col-wrapper">
+     
+
+
+
+    <div class="main-col">
+
+      <p class="paper-meta">
+      <h1 class="paper-title">
+      {{ page.title | escape }}
+      </h1>
+        {%- if page.author -%}
+          • {% for author in page.author %}
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+              {%- if forloop.last == false %}, {% endif -%}
+          {% endfor %}
+        <br>
+        {%- endif -%}
+
+
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: date_format }}
         </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
-      
-      
-             {% toc %}
- 
-
-    </div>
-
         
+        
+        {%- if page.modified_date -%}
+          ~ 
+          {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+          <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+            {{ mdate | date: date_format }}
+          </time>
+        {%- endif -%}
+        
+        </p>
+     
+
+      {{ content }}
+    </div>
 
 
+       
+        <div  class="main-col-4">
+        <h2>
+         {{ site.data.i18n[page.lang].tocH1 }}
+        </h2>
+        {% toc %}
+        </div>
 
 
-      <div class="main-col">
-         {{ content }}
-      </div>
 
  
 
+  </div>
+   {% include top-button.html %}
+
+ </div>
 
 
-    </div>
-
-      
-      
-      
-      
-      
-  </header>
-
-
-
-
-      {% include top-button.html %}
-      
-      
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</div>

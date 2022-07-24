@@ -27,4 +27,4 @@
      <a href="{{ pa.url | prepend: site.baseurl }}" class="{{ pa.lang }}">
       • {{ pa.lang }}
      </a>
-  {% endfor %} &nbsp;]: <strong>{{ site.data.i18n[0][page.lang].language }}</strong>  
+  {% endfor %} &nbsp;]: {{ site.data.i18n[page.lang].language }} 

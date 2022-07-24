@@ -2,91 +2,80 @@
 layout: default
 ---
 
-
-
 <div class="home">
-
+  <div class="wrapper">
     <div class="main-col-wrapper">
 
+
+
       <div class="main-col">
+           <h1 class="paper-title">
+             {{ page.headtitle | escape }}
+           </h1>
 
-
-
-
-        <article class="proposal h-entry" itemscope itemtype="http://schema.org/Blogproposaling">
-
-          <header class="proposal-header">
-            
-            <p class="proposal-meta">
-              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-              <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date: date_format }}
-              </time>
-              {%- if page.modified_date -%}
-                ~ 
-                {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-                <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-                  {{ mdate | date: date_format }}
-                </time>
-              {%- endif -%}
-              {%- if page.author -%}
-                • {% for author in page.author %}
-                  <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                    <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-                    {%- if forloop.last == false %}, {% endif -%}
-                {% endfor %}
-              {%- endif -%}</p>
-          </header>
-
-          <div class="proposal-content e-content" itemprop="articleBody">
-            {{ content | inject_anchors  }}
-          </div>
-
-          {%- if site.disqus.shortname -%}
-            {%- include disqus_comments.html -%}
-          {%- endif -%}
-
-          <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-        </article>
-
-
-
+            <div class="paper-content">
+              {{ content  }}
+            </div>
       </div>
       
-      
+ 
+
+
+
+ 
       
       <div class="main-col-4">
-
-    <h1 class="paper-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="paper-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
-        </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
-      
-      
-             {% toc %}
+        <div class="paper-content">
         
-        {% include top-button.html %}
+          <h4>Specification Request proposal:<br>
+            {{ page.shorttitle | escape }}
+          </h4>
+        
+        
+          <p class="paper-meta">
+
+
+            {%- if page.author -%}
+              {% for author in page.author %}
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+                  {%- if forloop.last == false %}, {% endif -%}
+              {% endfor %}
+            <br>
+            {%- endif -%}
+
+
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <time class="dt-published" 
+              datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            Created: {{ page.date | date: date_format }}
+            </time>
+
+
+            {%- if page.modified_date -%}
+              • Modified: 
+              {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+              <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+                {{ mdate | date: date_format }}
+                <br>
+              </time>
+            {%- endif -%}
+
+
           
+            </p>
+          
+
+        </div>
+        <h3>{{ site.data.i18n[page.lang].tocH1 }}</h3>
+        {% toc %}
+        
+      
       </div>
-
-
     </div>
+    {% include top-button.html %}     
 
+  </div>
+        
 </div>
 

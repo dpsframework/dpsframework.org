@@ -2,35 +2,41 @@
 layout: default
 ---
 
-
-
-<div class="home">
-
+<div class="wrapper">
     <div class="main-col-wrapper">
 
       <div class="main-col">
-
-
             {{ content  }}
-
-
-
       </div>
-      
-      
+
+
       
       <div class="main-col-4">
+ 
+      {% assign lessons = site.guides  | where:"manualcode", page.manualcode | where:"lang", page.lang %}
 
+
+      {% for lesson in lessons %}
+        {% if lesson.chapter == page.chapter %}
+           {% toc %}
+        {% else %}
+           {{ site.data.i18n[page.lang].chapter }}: 
+           {{ lesson.chapter }}. &nbsp;
+           <a href="{{ lesson.url |  prepend: site.baseurl }}"> 
+           {{ lesson.headtitle }} 
+           </a>
+           <br>
+        {% endif %}
+      {% endfor %}
 
       
-             {% toc %}
-        
-        {% include top-button.html %}
-          
+
       </div>
-
-
+      
+      
+      
+      
+      
     </div>
-
+   {% include top-button.html %}
 </div>
-

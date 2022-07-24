@@ -1,9 +1,10 @@
 ## --------------------------------------------------------
-## dpsFW _config based on minima theme. (2017-2022)
+## dpsFramework _config based on minima theme. (2017-2022)
 ## -------------------------------------------------------
 theme: minima
 
 show_excerpts: false
+google_analytics: false
 
 plugins:
  - jekyll-toc
@@ -13,6 +14,7 @@ plugins:
 
 
 markdown: kramdown
+
 
 toc:
   min_level: 1
@@ -34,9 +36,15 @@ github:
 ## Web collections
 ## --------------------------------------------------------
 title:
-  en: "PS-Agents for the JADE Platform"
-  es: "Agentes-PS para la plataforma JADE"
-  
+  en: 'dpsFramework project'
+  es: 'Proyecto dpsFramework'
+
+
+subtitle:
+  en: 'Distributed Problem-Solving JADE Agents'
+  es: 'Agentes JADE para resolución de problemas distribuidos'
+
+
 baseurl:  ''
 url:      'https://dpsframework.org'
 hard_url: 'https://dpsframework.org'
@@ -90,13 +98,7 @@ feed:
   es: /feed_es.xml
 
 
-dpsFW:
-  trademark: "<sup>&copy;</sup>"
-  registry: "<sup>&reg;</sup>"
 
-  url: 'https://dpsframework.org'
-  domain: '.org'
-  baseurl: ''
 
 
 ## --------------------------------------------------------

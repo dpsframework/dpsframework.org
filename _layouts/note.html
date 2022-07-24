@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="wrapper">
+    <div class="main-col-wrapper">
+
+      <div class="main-col-1">
+      {% toc %}
+      {% include home-sidebar.html %}
+      </div>
+
+      <div class="main-col">
+        <div class="sidebar-title">
+          {{ page.title }}:
+        </div>
+        {{ content }}
+      </div>
+
+    </div>
+  {% include top-button.html %}
+</div>
+
+
+
