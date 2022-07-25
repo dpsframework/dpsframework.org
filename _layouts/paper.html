@@ -68,6 +68,8 @@ layout: default
        {% if page.toc %}
          <div class="section-nav">
            {% include toc.html html=content %}
+           {%- include language-selector.html -%}
+           <img src="{{ site.baseurl }}/assets/imgs/internet.png">
          </div>
        {% endif %}
        
