@@ -23,6 +23,7 @@ en:
   chapter             :  'Chapter'
   current             :  'Current'
   idiom               :  'Language'
+  abstract            :  'Abstract'
   
                 
 ## Español              
@@ -49,3 +50,4 @@ es:
   chapter             :  'Capítulo'
   current             :  'Actual'
   idiom               :  'Idioma'
+  abstract            :  'Resumen'

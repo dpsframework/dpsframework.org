@@ -9,27 +9,48 @@ layout: default
   <div class="main-col-wrapper">
      
 
+       
+    <div  class="main-col-4">
+    
+    <!-- Essays -->
+    <div class="sidebar-title">
+      {{ site.data.i18n[page.lang]['paperH1'] }}:
+    </div>
+    <div class="mini-banner">
+     {%- if page.images[0] -%}
+     <img class="mini-banner" 
+          src="{{ page.imagepath }}{{ page.images[0] }}" 
+          alt="{{ page.shorttitle }}" >
+     {%- endif -%}
+     <strong>{{ page.author }}</strong><br>
+     {{ page.department }}<br>
+     
+     
+     
+     
+     
+     {%- if page.authors -%}
+      {% for author in page.authors %}
+        <small><strong>{{ author }}</strong></small><br>
+        {{ page.metadata[ author.index ] }}<br>
+          {%- if forloop.last == false %}• {% endif -%}
+       {% endfor %}
+     <br>
+     {%- endif -%}
 
 
-    <div class="main-col">
+       
+       {%- if page.license == false -%}
+         <small><strong>License: </strong>
+           {{ page.license }}
+         </small>
+       {%- endif -%}
+        
 
-      <p class="paper-meta">
-      <h1 class="paper-title">
-      {{ page.title | escape }}
-      </h1>
-        {%- if page.author -%}
-          • {% for author in page.author %}
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-              {%- if forloop.last == false %}, {% endif -%}
-          {% endfor %}
-        <br>
-        {%- endif -%}
-
-
+     
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {{ page.date | date: date_format }}
+        <br>{{ page.date | date: date_format }}
         </time>
         
         
@@ -41,22 +62,41 @@ layout: default
           </time>
         {%- endif -%}
         
-        </p>
-     
-
-      {{ content }}
+       </div>
+       
+       
+       {% if page.toc %}
+         <div class="section-nav">
+           {% include toc.html html=content %}
+         </div>
+       {% endif %}
+       
+       
+       
+       
+       
+       
+       
+       
+       
     </div>
 
 
-       
-        <div  class="main-col-4">
-        <h2>
-         {{ site.data.i18n[page.lang].tocH1 }}
-        </h2>
-        <div class="section-nav">
-          {% include toc.html html=content %}
-        </div>
-        </div>
+
+
+
+
+
+
+
+
+    <div class="main-col">
+      <h1 class="paper-title">
+      {{ page.title | escape }}
+      </h1>
+        
+      {{ content }}
+    </div>
 
 
 

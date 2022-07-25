@@ -18,9 +18,13 @@ layout: default
 
       {% for lesson in lessons %}
         {% if lesson.chapter == page.chapter %}
-           <div class="section-nav">
-             {% include toc.html html=content %}
-           </div>
+
+           {% if page.toc %}
+             <div class="section-nav">
+               {% include toc.html html=content %}
+             </div>
+           {% endif %}
+           
         {% else %}
            {{ site.data.i18n[page.lang].chapter }}: 
            {{ lesson.chapter }}. &nbsp;
