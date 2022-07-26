@@ -10,7 +10,7 @@
      • {{ po.lang }}
      </a>
   {% endfor %}
-  {% assign colPo=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% assign colPo=site.notes | where:"ref", page.ref | sort: 'lang' %}
   {% for po in colPo %} 
      <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}">
      • {{ po.lang }}
