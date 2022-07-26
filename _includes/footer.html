@@ -4,7 +4,7 @@
     <div class="footer-col-wrapper">
       <div class="footer-col-1">
         <p class="feed-subscribe">
-          <a href="{{ 'feed.xml' | relative_url }}">
+          <a href="{{ site.data.dpsFramework.feed[page.lang] | relative_url }}">
             <svg class="svg-icon">
               <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
             </svg><span>Subscribe</span>
@@ -42,7 +42,7 @@
 
       <div class="footer-col">
         <p>
-          <a href="{{ site.baseurl }}/{{ site.index[page.lang] }}">
+          <a href="{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}">
             <img src="{{ site.baseurl }}/assets/imgs/dpsframework.png"
             align="left" width="91px" alt="Home">
           </a>

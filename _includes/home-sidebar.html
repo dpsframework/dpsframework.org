@@ -2,7 +2,7 @@
  {% assign proposals = site.proposals | where:"lang", page.lang %}
  {% assign paginas   = site.pages     | where:"lang", page.lang %}
  {% assign guias     = site.guides    | where:"lang", page.lang | where:"chapter", 0 %}
- {% assign posts     = site.posts     | where:"lang", page.lang %}
+ {% assign notes     = site.notes     | where:"lang", page.lang %}
 
 
 
@@ -58,16 +58,16 @@
 
 <!-- Notes and Posts -->
   <div class="sidebar-title">
-    {{ site.data.i18n[page.lang]['postH1'] }}:
+    {{ site.data.i18n[page.lang]['noteH1'] }}:
   </div>
 
-  {% for post in posts %}
+  {% for note in notes %}
   ○ <a class="page-link"
-    href="{{ site.baseurl }}{{ post.url}}">
-    {{ post.author }}
+    href="{{ site.baseurl }}{{ note.url}}">
+    {{ note.author }}
   </a>
     <p class="sidebar-meta">
-      {{ post.title }}
+      {{ note.title }}
     </p>
   
   {% endfor %}

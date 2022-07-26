@@ -9,11 +9,11 @@ lang: es
     <subtitle>{{ site.data.dpsFramework.subtitle[page.lang] | xml_escape }}</subtitle>
     <description>{{ site.data.dpsFramework.description[page.lang] | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/noticia.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% assign posts=site.posts | where:"lang", page.lang %}
+    {% assign posts = site.pages | where:"lang", page.lang %}
     {% for post in posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>

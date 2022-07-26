@@ -3,12 +3,12 @@
 
   <div class="wrapper">
     <div class="site-title" rel="author">
-     <a class="page-link" href="{{ site.baseurl }}/{{ site.index[page.lang] }}" style="text-decoration: none;">{{ site.data.dpsFramework.title[page.lang] | default: site.github.repository_name }}</a>
+     <a class="page-link" href="{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}" style="text-decoration: none;">{{ site.data.dpsFramework.title[page.lang] | default: site.github.repository_name }}</a>
     </div>
     
     <div class="site-subtitle">
       {{ site.data.dpsFramework.subtitle[page.lang] | default: site.github.repository_name }}<br>
-      <a href="{{  site.url  }}{{ site.baseurl }}/{{ site.index[page.lang] }}" style="text-decoration: none;">
+      <a href="{{  site.url  }}{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}" style="text-decoration: none;">
         <img src="{{ site.baseurl }}/assets/imgs/logo-dpsFW-sombras.png"  
         width="200px" alt="Come-back" title="comeback"> ↩
       </a>
@@ -48,14 +48,14 @@
             
             &nbsp;
             
-            <a href="{{  site.data.dpsFramework.url  }}{{ site.baseurl }}/{{ site.index[page.lang] }}">
+            <a href="{{  site.data.dpsFramework.url  }}{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}">
               <img src="{{ site.baseurl }}/assets/imgs/internet.png">
             </a>
             
             &nbsp;
 
 
-            [<a href="{{ site.github.owner_url }}" target="blank"><strong>G</strong>itHub</a>]
+            [<a href="{{ site.github.owner_url }}" target="blank"><strong>GitHub</strong></a>]
             
             
           </div>

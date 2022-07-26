@@ -21,7 +21,6 @@ shortdescription:
 
 motto:
   en: ' JADE Agents with built-in Expert Systems.'
-
   es: ' Agentes de JADE con Sistemas Expertos integrados.'
 
   
@@ -30,9 +29,21 @@ home-fig1:
 
   es: 'Un agente de la librería [dpsAgents-1.8] con nombre `Mon712`. Preparado para recibir órdenes, configurar propiedades o crear comportamientos: desde su consola de Java en tiempo de ejecución sobre JADE.'
 
+
 trademark: "<sup>&copy;</sup>"
 registry: "<sup>&reg;</sup>"
 
 url: 'https://dpsframework.org'
 domain: '.org'
 baseurl: ''
+
+
+lang: es
+
+index:
+  en: index.html
+  es: index_es.html
+
+feed:
+  en: /feed.xml
+  es: /feed_es.xml

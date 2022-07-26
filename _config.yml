@@ -3,52 +3,56 @@
 ## -------------------------------------------------------
 theme: minima
 
+
+## Main domain: dpsFramework.github
+## -------------------------------------------------
+baseurl:  ''
+url:      'https://dpsframework.org'
+hard_url: 'https://dpsframework.org'
+
+
+title:    'dpsFramework project: Distributed Problem-Solving JADE Agents'
+
+subtitle: 'dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as core of JESS rule-based engine.'
+
+author:
+  name: pacoaguayo
+  email: info@dpsframework.org
+
+description: 'dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as core of JESS rule-based engine.'
+
+lang:   en
+index:  index.html
+feed:
+  en: /feed.xml
+  es: /feed_es.xml
+
+
 show_excerpts: false
-google_analytics: false
+google_analytics: true
 
 plugins:
-## - jekyll-toc
  - jekyll-feed
  - jekyll-seo-tag
-## - jekyll-paginate
-
 
 markdown: kramdown
 
 
-toc:
-  min_level: 1
-  max_level: 4
-  ordered_list: false # default is false
-
 github:
   owner_url: "https://github.com/dpsframework"
   repository_url: "https://github.com/dpsframework"
-  owner_name: "dpsframework"
-  project_tagline: "2.1"
-  name: github
+  owner_name: pacoaguayo
+  project_tagline: "1.8"
+  name: dpsframework
   is_project_page: true
   repository_name: dpsframework
 
 
 
+
 ## --------------------------------------------------------
-## Web collections
+## Site dpsFramework collections
 ## --------------------------------------------------------
-title:
-  en: 'dpsFramework project'
-  es: 'Proyecto dpsFramework'
-
-
-subtitle:
-  en: 'Distributed Problem-Solving JADE Agents'
-  es: 'Agentes JADE para resolución de problemas distribuidos'
-
-
-baseurl:  ''
-url:      'https://dpsframework.org'
-hard_url: 'https://dpsframework.org'
-
 collections:
   papers:
     output: true
@@ -60,7 +64,12 @@ collections:
     output: true
     sort_by: chapter
     label: guides
+  notes:
+    output: true
+    label: notes
 
+## {{ site.collections | where: "label", "proposals" | first }}
+## ------------------------------------------------------------
 defaults:
   - scope:
       path: ""
@@ -79,26 +88,13 @@ defaults:
       layout: "guide"
   - scope:
       path: ""
+      type: "notes"
+    values:
+      layout: "note"
+  - scope:
+      path: ""
     values:
       layout: "default"
-
-## {{ site.collections | where: "label", "myCollection" | first }}
-
-## --------------------------------------------------------
-## Language control
-## --------------------------------------------------------
-lang: es
-
-index:
-  en: index.html
-  es: index_es.html
-
-feed:
-  en: /feed.xml
-  es: /feed_es.xml
-
-
-
 
 
 ## --------------------------------------------------------
@@ -108,7 +104,6 @@ author:
   name:  'DpsFramework project'
   email: 'info@dpsframework.org'
   collabratech: 'https://ieee-collabratec.ieee.org/app/p/FranciscoAguayo115080'
-
 
 
 minima:
@@ -146,6 +141,5 @@ minima:
     #   instance: example.com
     # - username: 
     #   instance: example.com
-
 
 
