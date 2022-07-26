@@ -11,7 +11,7 @@ shorttitle: 'Giarratano, J.C. (2021)'
  
 toc: true
 author: 'Bibliografía (2022)'
-date: '2022-07-24 18:56:49:00 +0100'
+date: '2022-07-24 08:28:40:49:44 +0100'
  
 keywords: 
   - 'Mendeley'
@@ -253,7 +253,7 @@ ndt: '2022-07-24 08:28:40:49:44 +0100'
 
 
 
-[^jekyllTOC]: **jekyll-toc**: Add jekyll-toc plugin in your site's Gemfile, and run bundle install.. Available at: <https://github.com/toshimaru/jekyll-toc>.  (2022)
+[^jekyllTOC]: **jekyll-toc**: GitHub Pages can't run custom Jekyll plug-ins so when generating Tables of Contents (TOCs), you're stuck with either a JavaScript solution or using kramdown's :toc option. Available at: <https://github.com/allejo/jekyll-toc>.  (2022)
 
 [^maven]: **Maven**: Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information. Available at: <https://maven.apache.org/>.  (2022).
 
