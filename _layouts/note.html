@@ -6,9 +6,11 @@ layout: default
     <div class="main-col-wrapper">
 
       <div class="main-col-1">
+         {% if page.toc %}
          <div class="section-nav">
            {% include toc.html html=content %}
          </div>
+         {% endif %}
       {% include home-sidebar.html %}
       </div>
 

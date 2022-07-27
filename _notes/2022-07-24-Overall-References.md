@@ -1,44 +1,55 @@
 ---
 layout: note
-lang: en
-ref: biblio
- 
+ref:  biblio
+lang:  en
+idiom:  
+imagepath:  'assets/imgs/'
+images:
+  -  'dpsframework-logo.png'
+
+
+
+
+
+
+
+
+
+date:  '2022-07-24 08:28:40:49:44 +0100'
 menu: false
+toc:  false
 
-title: 'dpsFramework References'
-headtitle: 'Readme'
-shorttitle: 'Giarratano, J.C. (2021)'
 
-toc: true
-author: 'References (2022)'
-date: '2022-07-24 08:28:40:49:44 +0100'
-
-keywords: 
-  - 'Mendeley'
-  - 'Zotero'
-ndt: '2022-07-24 08:28:40:49:44 +0100'
- 
---- 
+title:  'dpsFramework Website References'
+headtitle:  'dpsFramework Website References'
+shorttitle:  'References (2022)'
+year:  '2022'
+author:  'Aguayo, FJ'
+department:  '2022-07-24 08:28:40:49:44 +0100'
+authors:
 
 
 
+keywords:
+  -  'Mendeley'
+  -  'Zotero'
 
 
-
-
-# Concepts and components
-
-
+doi:  
+url:  'https://dpsframework.org/'
+editor:  'dpsFramerwork project'
+pubdate:  '2022-07-24 08:28:40:49:44 +0100'
+license:  'GNU Lesser General Public License v3.0.  Permissions of this copyleft license are conditioned on making available complete source code of licensed works and modifications under the same license or the GNU GPLv3. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without source code for the larger work.'
 
 
 
 
+last_updated:  '2022-07-24 08:28:40:49:44 +0100'
+ndt:  '2022-07-24 08:28:40:49:44 +0100'
 
 
 
-
-
-
+---
 
 
 
@@ -48,49 +59,62 @@ ndt: '2022-07-24 08:28:40:49:44 +0100'
 
 
 
-1. Jekyll plugin to generate TOC on website pages, Jekyll Template Language and Theme for website preparation, compatible with GitHub-Pages:
-- **JekyllTOC**[^jekyllTOC].
-- **Liquid**[^liquid].
-- **Minima Jekyll theme**[^minima].
-
-1. Agent creation and debugging environment:
-- Multi-Agent Platform **JADE**[^TILAB].
-- **FIPA**[^FIPA]. FIPA Interaction Protocol Library Specification. Foundation for Intelligent Physical Agents.
-
-1. Paradigm for creating software with the ability to generate new structures of _Agent-Oriented Applications_:
-- Agent-oriented programming or (**AOP**)[^SHOHAM] (Agent-Oriented-Programming) [Shoham].
-- Standardized creation model projects in Java Language. **Apache Maven**[^maven].
+#   Concepts and components used
 
 
-1. Java compiler and development environment: Java platform and early OpenJDK releases, accessible in **JAVA/openJDK-17...-19**[^ORACLE] and higher.
 
 
-1. Version of dpsFramework project and components (see, **Table 1.**):
-- v0.9.1 (SOCO)
-- v1.7 (EUMAS)
-- v1.8 (**JOURNAL**) dpsFramework current version[^GITREPO].
 
 
-1. Java interpreter for integration in Java applications with the ability to execute scripts and generate objects at run time:
-- **BeanShell**[^BEANSHEL].
+1.  Jekyll plugins; Liquid Template Language, GitHub-Themes for websites:
+   -   _Entire TOC solution developed in Liquid; GitHub-Page recommended plugins for SEO; Liquid Languaje Filters, Control Flow, Interations, etc; Minima Theme for GitHub Pages.  _
+   -  **TOC Jekyll plugin**.  [^jekyllTOC]
+   -  **Liquid Template Language**.  [^liquid]
+   -  **Minima GitHub-Pages Theme**.  [^minima]
+
+1.  Agent development environment and Agent deployment MAS Platform used:
+   -   _Development paradigms to build Agent Oriented Applications; Widget Toolkit for Java designed to provide efficient and portable access to the user interface facilities of the operating systems on which it is implemented for each PS-Agent developed; Agent communications language standards; Software project management and understanding tool such as Apache Maven; Java interpreter for integration into Java applications; Advanced editor for syntax illumination and assisted programming; Agent Interaction Protocol Standard; Framework for building Semantic Web and Linked Data applications; etc._
+   -  **Eclipse IDE for Java Developers**.  [^eclipse2022]
+   -  **SWT: The Standard Widget Toolkit**.  [^SWT]
+   -  **Java Agent DEvelopment environment (JADE)**.  [^TILAB]
+   -  **Foundation for Intelligent Physical Agents (FIPA)**.  [^FIPAfoundation]
+   -  **Agent Oriented Programming (AOP)**.  [^SHOHAM]
+   -  **Apache Maven**.  [^maven]
+   -  **Java Platform Compiler and Development Kit**.  [^ORACLE]
+   -  **Java Shell Interpreter and Scripting Java Languaje**.  [^BEANSHEL]
+   -  **FIPA Interaction Protocol for Physical Agents (IP)**.  [^FIPA]
+   -  **Apache JENA**.  [^jena]
 
 
-1. Advanced editor for syntax illumination and assisted programming for new Languages ​​like CLIPS, Jess, API-JADE, etc.:
-- **RSyntaxTexArea**[^RSYNTAX].
 
 
-1. Target architecture used in the tests:
-- **ARM** architecture (e.g. RaspberryPI[^PI]).
+
+1.  JADE Problem-Solver Agents Java Library:
+   -   _JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems (see, **Table 1**). The dpsFramework project incorporates proposals, with proven solutions, to adapt PS-Agents-1.8 to: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; a proposal of CLIPSJNI Library for CLIPS-6.31 and CLIPS-6.40 upgrade to OpenJDK-18 or higher, as well as the minimal revision of core of JESS rule-based engine and briefly adaptations of swiProlog JPL-7 Java Native Interface Library. _
+   -  **PS-Agents-1.8-full.jar (current version)**.  [^GITREPO]
 
 
-1. Expert Systems construction tools, used by Agents:
-- CLIPS[^CLIPS].
-- JESS[^JESS].
-- swi-Prolog[^PROLOG] (Section 2).
 
 
-1. Research project, doctoral thesis director, teaching supervision process, and official deposit of the thesis publication (see **Table 2.**).
+1.  Expert Systems used by PS-Agents entities:
+   -   _Expert System construction tools for forward and backward chaining. Debugging and compilation environments for Libraries and code developed in C++ for Windows, OS-X and GNU Linux; Documentation on common architectures in IoT devices; etc._
+   -  **Raspberry-PI -ARM Architecture**.  [^PI]
+   -  **CLIPS Expert System Tool and CLIPSJNI Library**.  [^CLIPS]
+   -  **JESS Java Expert System Software (Rule-Based)**.  [^JESS]
+   -  **SWI-Prolog and JPL Library**.  [^PROLOG]
 
+
+
+
+
+
+
+
+
+
+
+1.  Old doctoral documents and their links:
+   -   _The Research Project; Doctoral thesis director and good friend, Teaching Supervision Processes; Link to the publication in the Official Deposit of Doctoral Theses (see **Table 2.**)._
 
 
 
@@ -134,7 +158,7 @@ ndt: '2022-07-24 08:28:40:49:44 +0100'
 {:.table-left}
 | Institution | Research project |
 |:--------------------------------- |:------------- -------- |
-| ![UniLeon]({{ site.baseurl }}/assets/imgs/marca-logo-color.jpg){:width="90px" align="left" hspace="2px" border="0px"} | **Institution**: University of León[^UNILEON]. <br>**Department**: Department of Electrical Engineering, Systems and Automation[^UNILEONDEPT]. <br> **Research name**: _Techniques for deployment of distributed architecture in rule-based expert systems using the multi-agent paradigm_. (2012-2017) <br>**Deposit**: [_DIALNET_](https://dialnet.unirioja.es/servlet/tesis?codigo=124344). **Status**: Completed. <br>**Author**: Aguayo-Canela, FJ[^TESIS]. **Director**: García-Rodríguez, I[^IGARCIA]. |
+| ![UniLeon]({{ site.baseurl }}/assets/imgs/marca-logo-color.jpg){:width="90px" align="left" hspace="2px" border="0px"} | **Institution**: University of León[^UNILEON]. <br>**Department**: Department of Electrical Engineering, Systems and Automation[^UNILEONDEPT]. <br> **Research name**: _Techniques for deployment of distributed architecture in rule-based expert systems using the multi-agent paradigm_. (2012-2017) <br>**Deposit**: [_DIALNET_](https://dialnet.unirioja.es/servlet/tesis?codigo=124344). **Status**: Completed. <br>**Author**: Aguayo-Canela, FJ[^TESIS]. **Director**: García-Rodríguez, I [^IGARCIA]. | 
 
 
 
@@ -252,8 +276,29 @@ ndt: '2022-07-24 08:28:40:49:44 +0100'
 
 
 
+[^FIPAfoundation]: **FIPA**. Foundation for Intelligent Physical Agents, 2002. <http://www.fipa.org/>
+
+
+
+
+
+
+
+
+
+
+
+[^jena]: **Apache JENA**. A Java framework for building Semantic Web and Linked Data applications. <https://jena.apache.org/>.
+
+[^eclipse2022]: **Eclipse IDE for Java Developers**: Available at: <https://www.eclipse.org/downloads/packages/>.
+
+
+[^SWT]: **SWT: The Standard Widget Toolkit**: SWT is an open source widget toolkit for Java designed to provide efficient, portable access to the user-interface facilities of the operating systems on which it is implemented. <https://www.eclipse.org/swt/>.
+
+
 
 [^jekyllTOC]: **jekyll-toc**: GitHub Pages can't run custom Jekyll plug-ins so when generating Tables of Contents (TOCs), you're stuck with either a JavaScript solution or using kramdown's :toc option. Available at: <https://github.com/allejo/jekyll-toc>.  (2022)
+
 
 [^maven]: **Maven**: Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information. Available at: <https://maven.apache.org/>.  (2022).
 
@@ -261,3 +306,5 @@ ndt: '2022-07-24 08:28:40:49:44 +0100'
 [^minima]: **Minima Jekyll Theme**: Minima is a one-size-fits-all Jekyll theme for writers. It's Jekyll's default (and first) theme. Available at: <https://github.com/jekyll/>.  (2022).
 
 [^liquid]: **Liquid**: Safe, customer-facing template language for flexible web apps. Liquid is an open-source template language created by Shopify and written in Ruby. Available at: <https://shopify.github.io/liquid/>. (2022)
+
+[^sitemap]: **jeckyl-sitemap plugin**: This is a GitHub-Pages plugin. Available at: <https://github.com/jekyll/jekyll-sitemap>
