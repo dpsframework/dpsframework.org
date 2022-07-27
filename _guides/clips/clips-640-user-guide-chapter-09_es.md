@@ -1,30 +1,56 @@
 ---
 layout: guide
-lang:   es
-ref:    c640ug09
+ref:  c640ug09
+lang:  es
+idiom:  es-ES
+imagepath:  'images/'
+images:
+  -  'cug-640-banner.png'
+  -  'clips_logo.png'
 
-manualcode: c640ug
+manualcode:  c640ug
 
-title:      'CLIPS 6.4 Guía de Usuario'
+
+
+
+
+
+
+
+toc:  true
+
+
+title:  "CLIPS 6.4 Guía del usuario"
 headtitle:  'Mensajes significativos'
-shorttitle: 'Giarratano, J.C. (2021)'
+shorttitle:  'Giarratano, J.C. (2021)'
+year:  '2021'
+author:  'Dr. Giarratano, Joseph C.'
+department:  
+authors:
 
-toc:    true
-author: 'Dr. Giarratano, Joseph C.'
-date:   '2021-04-09 03:17:40:49:44 +0100'
 
-keywords:
-  - 'CLIPS'
-  - 'COOL'
 
-chapter: 9
+departments:
+
+
+
+chapter:  9
+doi:  
+url:  
+editor:  'Gary Riley'
+pubdate:  '2021'
+license:  ''
+
+
+
+
+ndtdate:  '2022-07-01 11:07:56:49:44 +0100'
+date_published:  '2022-07-16'
+date_modified:  '2022-07-16'
+publisher:  'Gary Riley'
+
 ---
 
-
-
-
-![image](images/clips-user-guide-JC-Giarratano-Banner.jpg){:width="200px"  border="0px" } 
-![image](images/clips_logo.jpg){:width="128px"  border="0px" } 
 
 
 # Capítulo 9: Mensajes significativos

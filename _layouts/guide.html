@@ -5,23 +5,51 @@ layout: default
 <div class="wrapper">
     <div class="main-col-wrapper">
 
-      <div class="main-col">
-            {{ content  }}
-      </div>
 
+
+    <div class="main-col">
+       {{ content  }}
+    </div>
+
+ 
 
       
-      <div class="main-col-4">
- 
-      {% assign lessons = site.guides  | where:"manualcode", page.manualcode | where:"lang", page.lang %}
+    <div class="main-col-4">
+      
+      
+    <!-- Guides and Manuals -->
+      <div class="sidebar-title">
+        {{ site.data.i18n[page.lang]['guideH1'] }}:
+      </div>
+      <div class="mini-banner">
+       {%- if page.images[0] -%}
+       <img class="mini-banner" 
+            src="{{ page.imagepath }}{{ page.images[0] }}" 
+            alt="{{ page.shorttitle }}" >
+       {%- endif -%}
+       
+       <h2>{{ page.title }}</h2>
+       <strong>{{ page.author }}</strong><br>
+       <i>Ed. {{ page.publisher }}</i>
+       <br>
 
+       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+       <time class="dt-published" datetime="{{ page.date_published | date_to_xmlschema }}" itemprop="datePublished">
+       <br>{{ page.date_published | date: date_format }}
+       </time>
+       <hr>
 
-      {% for lesson in lessons %}
+       </div>    
+       {% assign lessons = site.guides  | where:"manualcode", page.manualcode | where:"lang", page.lang %}
+
+       {% for lesson in lessons %}
         {% if lesson.chapter == page.chapter %}
 
            {% if page.toc %}
              <div class="section-nav">
                {% include toc.html html=content %}
+               {%- include language-selector.html -%}
+               <img src="{{ site.baseurl }}/assets/imgs/internet.png">           
              </div>
            {% endif %}
            
@@ -35,7 +63,11 @@ layout: default
         {% endif %}
       {% endfor %}
 
-      
+
+        
+
+       
+             
 
       </div>
       
@@ -44,5 +76,13 @@ layout: default
       
       
     </div>
+    
+   
+    
+    
+    
+    
+    
+    
    {% include top-button.html %}
 </div>

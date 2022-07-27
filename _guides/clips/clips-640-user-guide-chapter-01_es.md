@@ -1,44 +1,70 @@
 ---
 layout: guide
-lang: es
-ref: c640ug01
- 
-manualcode: c640ug
- 
-title: 'CLIPS 6.4 Guía del usuario'
-headtitle: 'Solo los hechos'
-shorttitle: 'Giarratano, J.C. (2021)'
- 
-toc: true
-author: 'Dr. Giarratano, Joseph C.'
-date: '2021-04-09 03:17:40:49:44 +0100'
- 
-keywords: 
-  - 'CLIPS'
-  - 'COOL'
-ndt: '2022-07-24 08:28:40:49:44 +0100'
-chapter: 1
---- 
+ref:  c640ug01
+lang:  es
+idiom:  es-ES
+imagepath:  'images/'
+images:
+  -  'cug-640-banner.png'
+  -  'clips_logo.png'
 
-![image](images/clips-user-guide-JC-Giarratano-Banner.jpg){:width="200px"  border="0px" }
-![image](images/clips_logo.jpg){:width="128px"  border="0px" }
+manualcode:  c640ug
 
 
 
-<h1 class="no_toc">CLIPS 6.40 Guía del usuario (2021)</h1>
 
 
-# **Capítulo 1**
 
-# 1. Solo los hechos
 
-> Si ignoras los hechos, nunca te preocuparás por equivocarte
+
+toc:  true
+
+
+title:  "CLIPS 6.4 Guía del usuario"
+headtitle:  'Solo los hechos'
+shorttitle:  'Giarratano, J.C. (2021)'
+year:  '2021'
+author:  'Dr. Giarratano, Joseph C.'
+department:  
+authors:
+
+
+
+departments:
+
+
+
+chapter:  1
+doi:  
+url:  
+editor:  'Gary Riley'
+pubdate:  '2021'
+license:  ''
+
+
+
+
+ndtdate:  '2022-07-01 11:07:56:49:44 +0100'
+date_published:  '2022-07-16'
+date_modified:  '2022-07-16'
+publisher:  'Gary Riley'
+
+---
+
+
+
+
+#  **Capítulo 1**
+
+# 1.  Solo los hechos
+
+>  Si ignoras los hechos, nunca te preocuparás por equivocarte
 
 
 Este capítulo introduce los conceptos básicos de un sistema experto. Verá cómo insertar y eliminar datos en CLIPS.
 
 
-## 1.1. Introducción
+## 1.1.   Introducción
 
 
 CLIPS es un tipo de lenguaje informático diseñado para escribir aplicaciones llamadas sistemas expertos. Un sistema experto es un programa que está diseñado específicamente para modelar la experiencia o el conocimiento humano. Por el contrario, los programas comunes, como los programas de nómina, los procesadores de texto, las hojas de cálculo, los juegos de computadora, etc., no pretenden incorporar la experiencia o el conocimiento humanos. (Una definición de experto es alguien a más de 50 millas de su casa y que lleva un maletín).
@@ -66,7 +92,7 @@ que no requiere ningún dato adicional para provocar su ejecución. Sin embargo,
 Originalmente, CLIPS tenía capacidades para representar solo reglas y hechos. Sin embargo, las mejoras de la versión 6.0 permiten que las reglas coincidan tanto con objetos como con hechos. Además, los objetos se pueden usar sin reglas mediante el envío de mensajes, por lo que el motor de inferencia ya no es necesario si usa solo objetos. En los capítulos 1 a 7, discutiremos los hechos y las reglas de CLIPS. Las características de los objetos de CLIPS se tratan en los capítulos 8 a 12.
 
 
-## 1.2. El principio y el final
+## 1.2.  El principio y el final
 
 
 Para iniciar CLIPS, simplemente ingrese el comando de ejecución apropiado para su sistema.
@@ -89,7 +115,7 @@ El modo normal de salir de CLIPS es con el comando de salida. Sólo tipo
 en respuesta a la indicación CLIPS y luego presione la tecla de retorno de carro.
 
 
-## 1.3. Haciendo una lista
+## 1.3.   Haciendo una lista
 
 
 Al igual que con otros lenguajes de programación, CLIPS reconoce ciertas palabras clave. Por ejemplo, si desea poner datos en la lista de hechos, puede usar el comando afirmar.
@@ -119,7 +145,7 @@ lo que indica que CLIPS ha almacenado el hecho del pato en la lista de hechos y 
 Observe que el comando (afirmar) y su argumento (pato) están entre paréntesis. Como muchos otros lenguajes de sistemas expertos, CLIPS tiene una sintaxis similar a LISP que usa paréntesis como delimitadores. Aunque CLIPS no está escrito en LISP, el estilo de LISP ha influido en el desarrollo de CLIPS.
 
 
-## 1.4. Y comprobándolo dos veces
+## 1.4.   Y comprobándolo dos veces
 
 
 Suponga que desea ver lo que hay en la lista de hechos. Si su versión de CLIPS es compatible con una GUI, puede seleccionar el comando apropiado del menú. Alternativamente, puede ingresar comandos desde el teclado. A continuación, describiremos los comandos del teclado ya que las selecciones de la ventana se explican por sí mismas.
@@ -169,7 +195,7 @@ Los hechos pueden ser eliminados o **retractados**. Cuando se retracta un hecho,
 
 
 
-## 1.5. Aclarando los hechos
+## 1.5.   Aclarando los hechos
 
 
 
@@ -202,7 +228,7 @@ CLIPS>
 Tenga en cuenta que (animal-es pato) tiene un identificador de hechos de f-1 porque el comando (borrar) restablece los identificadores de hechos. El comando (borrar) en realidad hace más que simplemente eliminar hechos. Además de eliminar todos los hechos, (claro) también elimina todas las reglas, como verás en el siguiente capítulo.
 
 
-## 1.6. Campos sensibles y sorber
+## 1.6.   Campos sensibles y sorber
 
 
 
@@ -488,7 +514,7 @@ CLIPS>
 Como puede ver, CLIPS reemplazó los retornos de carro y las pestañas con espacios simples. Si bien el uso de espacios en blanco para separar los hechos es conveniente para una persona que lee un programa, CLIPS los convierte en espacios simples.
 
 
-## 1.7. Una cuestión de estilo
+## 1.7.   Una cuestión de estilo
 
 
 Es un buen estilo de programación basado en reglas usar el primer campo de un hecho para describir la relación de los siguientes campos. Cuando se usa de esta manera, el primer campo se llama relación. Los campos restantes del hecho se utilizan para valores específicos. Un ejemplo es (lista de comestibles, helado, galletas, dulces, salsa de chocolate). Los guiones se utilizan para hacer que varias palabras quepan en un solo campo.
@@ -518,7 +544,7 @@ Las relaciones explícitas, animal-is y animales, tienen más sentido para una p
 
 
 
-## 1.8. Obteniendo espacio suficiente
+## 1.8.   Obteniendo espacio suficiente
 
 
 Dado que los espacios se utilizan para separar varios campos, se deduce que los espacios no se pueden incluir simplemente en los hechos. Por ejemplo,
@@ -583,7 +609,7 @@ CLIPS>
 ```
 
 
-## 1.9. Retractarse de ese hecho
+## 1.9.   Retractarse de ese hecho
 
 
 
@@ -686,7 +712,7 @@ CLIPS>
 ```
 
 
-## 1.10. Mira ese hecho
+## 1.10.   Mira ese hecho
 
 
 CLIPS proporciona varios comandos para ayudarlo a depurar programas. Un comando le permite observar continuamente cómo se afirman y se retractan los hechos. Esto es más conveniente que tener que escribiren un comando (de hechos) una y otra vez y tratando de averiguar qué ha cambiado en la lista de hechos.

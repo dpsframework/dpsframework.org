@@ -12,3 +12,4 @@ gem 'kramdown'
 gem "jekyll-paginate"
 gem 'wdm', '>= 0.1.0'
 # gem 'jekyll-toc'
+gem 'jekyll-sitemap'
