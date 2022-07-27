@@ -39,7 +39,7 @@ doi:
 url:  'https://dpsframework.org/'
 editor:  'dpsFramerwork project'
 pubdate:  '2022-07-24 08:28:40:49:44 +0100'
-license:  'GNU Lesser General Public License v3.0.  Permissions of this copyleft license are conditioned on making available complete source code of licensed works and modifications under the same license or the GNU GPLv3. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work through interfaces provided by the licensed work may be distributed under different terms and without source code for the larger work.'
+license:  'GNU Lesser General Public License v3.0.'
 
 
 
@@ -67,7 +67,7 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
 
 
 1.  Complementos de Jekyll; Lenguaje de Templates Liquid, GitHub-Themes para sitios web:
-   -   _Solución TOC desarrollada en Liquid; Complementos recomendados de GitHub-Page para SEO; Filtros de Lenguaje de Templates Liquid, Flujo de Control, Interacciones, etc; Tema Minima para GitHub._
+   -   _Solución TOC desarrollada en Liquid; Complementos recomendados de GitHub-Pages para SEO; Filtros de Lenguaje de Templates Liquid, Flujo de Control, Interacciones, etc; Tema Minima para GitHub._
    -  **TOC Jekyll plugin**.  [^jekyllTOC]
    -  **Liquid Template Language**.  [^liquid]
    -  **Minima GitHub-Pages Theme**.  [^minima]
@@ -84,10 +84,12 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
    -  **Java Shell Interpreter and Scripting Java Languaje**.  [^BEANSHEL]
    -  **FIPA Interaction Protocol for Physical Agents (IP)**.  [^FIPA]
    -  **Apache JENA**.  [^jena]
-
-
-
-
+   -  **Mult-Agent Systems [1]**.  [^WOOL]
+   -  **HyperSQL**.  [^HSQL]
+   -  **Framework for building intelligent systems [1]**.  [^PROTEGEE]
+   -  **Highlighting Editor for Java SWT**.  [^RSYNTAX]
+   -  **Russell & Norvig 4th Ed.**.  [^RUSSELL]
+   -  **Yellow pages JADE Service**.  [^YELLOW]
 
 1.  Librería Java de Agentes JADE para Resolución de Problemas:
    -   _Agentes de resolución de problemas distribuidos (PS-Agents) para JADE y su conexión a sus Sistemas Expertos autónomos integrados (ver **Tabla 1**). El proyecto dpsFramework incorpora propuestas, con soluciones probadas, para adaptar PS-Agents-1.8-full.jar a: JADE 4.5.4 (2022) y su módulo FIPA implementado con librerías CORBA; una propuesta de la biblioteca CLIPSJNI para la actualización de CLIPS-6.31 y CLIPS-6.40 a OpenJDK-18 o superior, así como la revisión mínima del núcleo del motor basado en reglas JESS y adaptaciones breves de la biblioteca de interfaz nativa Java swiProlog JPL-7._
@@ -100,18 +102,18 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
    -   _Herramientas de construcción de Sistemas Expertos para encadenamiento hacia delante y hacia atrás. Entornos de depuración y compilación de Librerías y de código desarrollado en C++ para Windows, OS-X y GNU Linux; Documentación sobre arquitecturas habituales en dispositivos IoT; etc._
    -  **Raspberry-PI -ARM Architecture**.  [^PI]
    -  **CLIPS Expert System Tool and CLIPSJNI Library**.  [^CLIPS]
-   -  **JESS Java Expert System Software (Rule-Based)**.  [^JESS]
-   -  **SWI-Prolog and JPL Library**.  [^PROLOG]
-
-
-
-
-
-
-
-
-
-
+   -  **JESS, Expert System Software Tool (8.0a1 (alfa)) [1]**.  [^JESS]
+   -  **SWI-Prolog and JPL Library [2]**.  [^PROLOG]
+   -  **Building expert systems in Prolog [1]**.  [^PROLOG]
+   -  **JPL.pl Java Interface Prolog [3]**.  [^PROLOG]
+   -  **Parallel, distributed and multiagent production systems [2]**.  [^WOOL]
+   -  **Using Jesstab to integrate Protégé and Jess [2]**.  [^PROTEGEE]
+   -  **Rule-based object-oriented OWL Reasoner [3]**.  [^RAZON]
+   -  **Knowledge-based probabilistic reasoning [1]**.  [^RAZON]
+   -  **CLIPS-OWL Extensional ontology queries [2]**.  [^RAZON]
+   -  **JESS in Action [2] Friedmann-Hill**.  [^JESS]
+   -  **C++ Programming Language [1]**.  [^CPLUS]
+   -  **Microsoft Visual Studio C++ [2]**.  [^CPLUS]
 
 1.  Antiguos documentos del doctorado y sus enlaces:
    -   _El Proyecto de Investigación; Director de tesis doctoral y buen amigo, Supervisión-proceso docente; Enlace a la publicación en el Depósito Oficial de Tesis doctorales (ver **Tabla 2.**)._
@@ -158,7 +160,7 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
 {:.table-left}
 | Institución  | Proyecto de investigación   |
 |:--------------------------------- |:--------------------- |
-| ![UniLeon]({{ site.baseurl }}/assets/imgs/marca-logo-color.jpg){:width="90px" align="left" hspace="2px"  border="0px"}  | **Institución**: Universidad de León[^UNILEON]. <br>**Departamento**: Departamento de Ingeniería Eléctrica y de Sistemas y Automática[^UNILEONDEPT].  <br> <br> **Nombre de investigación**:  _Técnicas para despliegue de arquitectura distribuida en sistemas expertos basados en reglas empleando el paradigma multi-agente_. (2012-2017) <br>**Depósito**: [_DIALNET_](https://dialnet.unirioja.es/servlet/tesis?codigo=124344). **Estado**: Finalizado. <br>**Autor**: Aguayo-Canela, FJ[^TESIS]. **Director**: García-Rodríguez, I [^IGARCIA].   | 
+| ![UniLeon]({{ site.baseurl }}/assets/imgs/marca-logo-color.jpg){:width="90px" align="left" hspace="2px"  border="0px"}  | **Institución**: Universidad de León[^UNILEON]. <br>**Departamento**: Departamento de Ingeniería Eléctrica y de Sistemas y Automática[^UNILEONDEPT].  <br> <br> **Nombre de investigación**:  _Técnicas para despliegue de arquitectura distribuida en sistemas expertos basados en reglas empleando el paradigma multi-agente_. (2012-2017) <br>**Depósito**: [_DIALNET_](https://dialnet.unirioja.es/servlet/tesis?codigo=124344). **Estado**: Finalizado. <br>**Director de tesis**: García-Rodríguez, I [^IGARCIA].<br>**Autor**: Aguayo-Canela, FJ [^TESIS].    | 
 
 
 
@@ -236,7 +238,7 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
 
 
 
-[^TESIS]: **PhD Thesis**. Aguayo, F.J., García I. (2017) Techniques for deployment of distributed architecture in rule-based expert systems using the multi-agent paradigm. <https://dialnet.unirioja.es/servlet/tesis?codigo=124344> Department of Electrical and Systems Engineering and Automation. Leon University (SPAIN).
+[^TESIS]: **PhD Theses**. Aguayo, F.J., García I. (2017) Techniques for deployment of distributed architecture in rule-based expert systems using the multi-agent paradigm. <https://dialnet.unirioja.es/servlet/tesis?codigo=124344> Department of Electrical and Systems Engineering and Automation. Leon University (SPAIN).
 
 
 
@@ -258,7 +260,7 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
 
 
 
-[^CPLUS]: **The C++ Programming Language**. Bjarne Stroustrup (2000). 3rd Addison-Wesley Longman Publishing Co., Inc. Boston, MA, USA. <https://dl.acm.org/citation.cfm?id=518791>.
+[^CPLUS]: **The C++ Programming Language** [**1**]. Bjarne Stroustrup (2000). 3rd Addison-Wesley Longman Publishing Co., Inc. Boston, MA, USA. <https://dl.acm.org/citation.cfm?id=518791>. Microsoft Visual Studio C++ IDE and Compiler  [**2**]. Comprehensive IDE for .NET and C++ developers on Windows.<https://visualstudio.microsoft.com/vs>.
 
 
 
@@ -269,7 +271,7 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
 [^IGARCIA]: **Professor**: Dr. Isaías García Rodríguez. Department of Electrical and Systems Engineering and Automation. Leon University (SPAIN).  <https://dialnet.unirioja.es/servlet/autor?codigo=1448367>.
 
 
-[^RUSSELL]: **Inteligencia Artificial: un enfoque moderno**. Russell, S.J. and Norvig P. 2nd Edition (2004). Pearson Prentice Hall.
+[^RUSSELL]: **Artificial Intelligence: A modern Approach**. Russell, S.J. and Norvig P. 4th Edition (2021). Pearson Prentice Hall.
 
 
 [^UNILEONDEPT]: **Departamento de Ingeniería Eléctrica y de Sistemas y Automática**. Universidad de León. <https://departamentos.unileon.es/ingenieria-electrica-y-de-sistemas-y-automatica/>
