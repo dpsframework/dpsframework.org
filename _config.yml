@@ -96,6 +96,10 @@ defaults:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: "doc/**/*"
+    values:
+      sitemap: true
 
 
 ## --------------------------------------------------------

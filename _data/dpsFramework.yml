@@ -9,9 +9,9 @@ subtitle:
 
 
 description:
-  en: ' dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as core of JESS rule-based engine.'
+  en: ' dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as minor adjustments to the Java JESS rules engine core.'
   
-  es: ' El proyecto dpsFramework tiene como objetivo mantener la compatibilidad de los agentes de resolución de problemas distribuidos para la plataforma JADE, y su conexión con sus Sistemas Expertos autónomos integrados. Este proyecto también ha incluido algunas propuestas, con soluciones probadas, para adaptar: JADE 4.5.4 (2022) y su módulo FIPA implementado con CORBA; CLIPSJNI para CLIPS-6.31 y CLIPS-6.40, así como en núcleo del motor de reglas Java JESS.'
+  es: ' El proyecto dpsFramework tiene como objetivo mantener la compatibilidad de los agentes de resolución de problemas distribuidos para la plataforma JADE, y su conexión con sus Sistemas Expertos autónomos integrados. Este proyecto también ha incluido algunas propuestas, con soluciones probadas, para adaptar: JADE 4.5.4 (2022) y su módulo FIPA implementado con CORBA; CLIPSJNI para CLIPS-6.31 y CLIPS-6.40, así como mínimos ajuste en núcleo del motor de reglas Java JESS.'
 
 
 shortdescription:
