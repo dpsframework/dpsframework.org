@@ -112,7 +112,7 @@ author:
 
 
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: "%b, %Y"  # "%b %-d, %Y"
   skin: classic
 
   social_links:

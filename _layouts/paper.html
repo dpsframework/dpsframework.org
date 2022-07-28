@@ -20,7 +20,7 @@ layout: default
      {%- if page.images[0] -%}
      <img class="mini-banner" 
           src="{{ page.imagepath }}{{ page.images[0] }}" 
-          alt="{{ page.shorttitle }}" >
+          title="{{ page.shorttitle }}" >
      {%- endif -%}
      <strong>{{ page.author }}</strong><br>
      {{ page.department }}<br>
@@ -39,28 +39,22 @@ layout: default
      {%- endif -%}
 
 
-       
-       {%- if page.license == false -%}
-         <small><strong>License: </strong>
-           {{ page.license }}
-         </small>
-       {%- endif -%}
-        
-
-     
+    
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         <br>{{ page.date | date: date_format }}
         </time>
         
-        
-        {%- if page.modified_date -%}
-          ~ 
+        {% comment %}
+        {%- if page.modified_date and page.lang == "es" -%}
           {%- assign mdate = page.modified_date | date_to_xmlschema -%}
           <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-            {{ mdate | date: date_format }}
+            &nbsp; • &nbsp;
+            <small><i>N. del T.&nbsp;  </i></small>
+            {{ mdate | date: date_format }} 
           </time>
         {%- endif -%}
+        {% endcomment %}
         
        </div>
        
@@ -76,7 +70,15 @@ layout: default
        
        
        
-       
+       {% comment %}
+       {%- if page.license  -%}
+         <small><strong>License: </strong>
+           {{ page.license }}
+         </small>
+       {%- endif -%}
+       {% endcomment %}
+
+        
        
        
        

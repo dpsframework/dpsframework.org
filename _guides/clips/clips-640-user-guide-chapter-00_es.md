@@ -35,17 +35,17 @@ departments:
 
 
 chapter:  0
-doi:  
-url:  
+doi:  ''
+url:  ''
 editor:  'Gary Riley'
-pubdate:  '2021'
+pubdate:  '2021-09-04'
 license:  ''
 
 
 
 
-ndtdate:  '2022-07-01 11:07:56:49:44 +0100'
-date_published:  '2022-07-16'
+ndtdate:  '44743'
+date_published:  '2021-09-04'
 date_modified:  '2022-07-16'
 publisher:  'Gary Riley'
 
@@ -57,8 +57,8 @@ publisher:  'Gary Riley'
 >  Autor: Dr. **Joseph C. Giarratano**<br>
 >  Editor: **Gary Riley**
 
--  CLIPS 6.40 User's Guide está disponible en _SourceForge_[^1].
--  _Traducción: Dr. **Francisco J. Aguayo**_ (Junio, 2022)
+-  Disponble en: _SourceForge_. [^1]
+-  Traductor: _Dr. Francisco J. Aguayo_
 
 
 

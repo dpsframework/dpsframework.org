@@ -35,18 +35,18 @@ departments:
 
 
 chapter:  0
-doi:  
-url:   
+doi:  ''
+url:  ''
 editor:  'Gary Riley'
-pubdate:  '2021'
+pubdate:  '2021-09-04'
 license:  ''
 
 
 
 
-ndtdate:  '2022-07-01 11:07:56:49:44 +0100'
+ndtdate:  ''
 date_published:  '2021-09-04'
-date_modified:  '2022-07-16'
+date_modified:  ''
 publisher:  'Gary Riley'
 
 ---
@@ -57,8 +57,8 @@ publisher:  'Gary Riley'
 >  by  **Joseph C. Giarratano**, Ph.D.<br>
 >  Editor: **Gary Riley**
 
--  CLIPS 6.40 User's Guide is available at _SourceForge_[^1].
--  In the process of being translated into Spanish [at this address...](/guides/clips/clips-640-user-guide-chapter-00_es.html)
+-  Available at: _SourceForge_. [^1]
+-  In translation process [[<strong> • es  </strong>]](/guides/clips/clips-640-user-guide-chapter-00_es.html)
 
 
 
