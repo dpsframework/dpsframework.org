@@ -2,103 +2,80 @@
 layout: default
 ---
 
-<div class="home">
-  <div class="wrapper">
-    <div class="main-col-wrapper">
+<div class="wrapper">
+  <div class="main-col-wrapper">
+  
 
 
-
-      <div class="main-col">
-           <h1 class="paper-title">
-             {{ page.title | escape }}
-           </h1>
-
-            <div class="paper-content">
-              {{ content  }}
-            </div>
-      </div>
-      
- 
-
-
-
- 
-    <!-- Proposal for Upgrades -->
-      <div class="main-col-4">
-      
-        
-          <h2 class="paper-title">
-             {{ page.headtitle | escape }}
-          </h2>
- 
- 
-          <div class="sidebar-title">
-            {{ site.data.i18n[page.lang]['guideH1'] }}:
-          </div>
-          <div class="mini-banner">
-           {%- if page.images[0] -%}
-           <img class="mini-banner" 
-                src="{{ page.imagepath }}{{ page.images[0] }}" 
-                alt="{{ page.shorttitle }}" >
-           {%- endif -%}
-           
-           <strong>{{ page.author }}</strong><br>
-           <i>Ed. {{ page.publisher }}</i>
-           <br>
-
-
-         
-            {{ page.shorttitle | escape }}
-          
-          
-        
-        
-          <p class="paper-meta">
-
-
-            {%- if page.author -%}
-              {% for author in page.author %}
-                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                  <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-                  {%- if forloop.last == false %}, {% endif -%}
-              {% endfor %}
-            <br>
-            {%- endif -%}
-
-
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <time class="dt-published" 
-              datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            Created: {{ page.date | date: date_format }}
-            </time>
-
-
-            {%- if page.modified_date -%}
-              • Modified: 
-              {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-              <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-                {{ mdate | date: date_format }}
-                <br>
-              </time>
-            {%- endif -%}
-
-
-          
-            </p>
-          
-
-        </div>
-        <h3>{{ site.data.i18n[page.lang].tocH1 }}</h3>
-        
-           <div class="section-nav">
-             {% include toc.html html=content %}
-           </div>
-        
-
+    
+    <div class="main-col">
+      {{ content }}
     </div>
-    {% include top-button.html %}     
+
+
+
+
+
+  <!-- Proposal for Upgrades -->
+  <div class="main-col-4">
+
+
+    <div class="sidebar-title">
+      {{ site.data.i18n[page.lang]['proposalH1'] }}:
+    </div>
+      
+
+    <div class="mini-banner-right">
+    
+    
+      {%- if page.images[0] -%}
+         <a rel="page-link" href="https://github.com/dpsframework/{{ page.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ page.githubrepo | escape }}">
+         <img class="mini-banner-right"
+              src="{{ page.imagepath }}{{ page.images[0] }}" 
+              alt="{{ page.shorttitle }}" >
+         </a>
+     {%- endif -%}   
+    
+    
+  
+   
+       <h2>{{ page.title }}</h2>
+ 
+
+  
+      ● {{ page.shorttitle  }} ~  
+      {%- if page.githubrepo -%}&nbsp;
+        <a rel="page-link" href="https://github.com/dpsframework/{{ page.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ page.githubrepo | escape }}">
+        <strong>GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        </a><br>
+      {%- endif -%}  
+
+    
+ 
+     
+
+       
+       <small>
+       <strong>Status:</strong>      {{ page.status }}<br>
+       <strong>Publised:</strong>    {{ page.date_published }}<br>
+       <strong>License: </strong>    {{ page.license }}<br>
+       </small>
+       
+       
+
+     </div>
+     
+
+
+     <div class="section-nav">
+       {% include toc.html html=content %}
+     </div>
+      
 
   </div>
-        
+  {% include top-button.html %}     
+
+</div>
+      
 </div>
 

@@ -20,7 +20,7 @@ images:
 toc:  true
 
 
-title:  'FIPA-CORBA Proposal for upgrade to OpenJDK-17.'
+title:  'FIPA-CORBA proposal for upgrade to OpenJDK-17'
 headtitle:  'FIPA module belonging to JADE 4.5.x: a  proposal for update to OpenJDK-17 and Java Platform Module System with embedded GlassFish CORBA ORB.'
 shorttitle:  'P1-FIPA-CORBA (2022)'
 year:  '2022'
@@ -36,9 +36,9 @@ departments:
 
 status:  'In process: 25 Jan, 2022'
 reason:  'In process at the request of the Proposal Lead.'
-repository:  'p1-fipa-corba'
+githubrepo:  'p1-fipa-corba'
 editor:  'GitHub'
-pubdate:  'August 2022; Revision Pending'
+date_published:  'August 2022; Revision Pending'
 license:  'GNU Lesser General Public License v2.1'
 
 
@@ -54,26 +54,26 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
+<h1 class="no_toc">P1-FIPA-CORBA (2022)</h1>
 
 
-#   _**Proposal for Upgrade**_
+>   FIPA module belonging to JADE 4.5.x: a  proposal for update to OpenJDK-17 and Java Platform Module System with embedded GlassFish CORBA ORB.
 
-
-#   Section 1: Identification
-
-
-
-
-#   Section 2: Upgrade
-
-
-
-##  2.1. Proposal description:
+##   Section 1: Identification
 
 
 
 
-##  2.2. Target platform
+##   Section 2: Upgrade
+
+
+
+###  2.1. Proposal description:
+
+
+
+
+###  2.2. Target platform
 
 
 (i.e., desktop, server, personal, embedded, card, etc.)
@@ -81,22 +81,13 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  2.3. What need by the proposed proposal?
+###  2.3. What need by the proposed proposal?
 
 
 
 
 
-##  2.4. Why this proposals?
-
-
-
-
-
-
-
-
-##  2.5. Underlying technology or technologies:
+###  2.4. Why this proposals?
 
 
 
@@ -105,11 +96,20 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
+###  2.5. Underlying technology or technologies:
 
 
 
 
-##  2.6. Package name for the API Proposal?
+
+
+
+
+
+
+
+
+###  2.6. Package name for the API Proposal?
 
 (i.e. org.something, etc.)
 
@@ -125,7 +125,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  2.7. Dependencies on specific operating systems
+###  2.7. Dependencies on specific operating systems
 
 
 
@@ -139,7 +139,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  2.8. Security issues by the current security model
+###  2.8. Security issues by the current security model
 
 
 
@@ -155,7 +155,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  2.9. Internationalization or localization issues?
+###  2.9. Internationalization or localization issues?
 
 
 
@@ -172,14 +172,14 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  2.10. Any need of revision as a result of this work?
+###  2.10. Any need of revision as a result of this work?
 
 
 
 
 
 
-![]( {{ page.imagepath }}{{ page.images[ 1] }} )
+![]( {{ page.imagepath }}{{ page.images[ 2] }} )
 
 
 
@@ -190,7 +190,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  2.11. Schedule for the development of this proposal
+###  2.11. Schedule for the development of this proposal
 
 
 
@@ -209,12 +209,12 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-#  Section 3: Contributions
+##   Section 3: Contributions
 
 
 
 
-##  3.1. Documents, proposals, or implementations that describe the technology
+###  3.1. Documents, proposals, or implementations that describe the technology
 
 
 
@@ -230,7 +230,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  3.2. Starting point for the work
+###  3.2. Starting point for the work
 
 
 
@@ -251,7 +251,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-#  Section 4: Additional Information (Optional)
+##   Section 4: Additional Information (Optional)
 
 
 
@@ -264,7 +264,7 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-##  4.1. Additional information to include in the Proposal for Upgrade
+###  4.1. Additional information to include in the Proposal for Upgrade
 
 
 
@@ -280,430 +280,6 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
+# References
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-FIPA WORKING GROUPS AND STUDY GROUPS. 2007. Multi-agents system standard specifications. http://www.fipa.org/subgroups.
+-  FIPA WORKING GROUPS AND STUDY GROUPS. 2007. Multi-agents system standard specifications. http://www.fipa.org/subgroups.

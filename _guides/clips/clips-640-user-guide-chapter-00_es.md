@@ -58,24 +58,24 @@ publisher:  'Gary Riley'
 >  Editor: **Gary Riley**
 
 -  Disponble en: _SourceForge_. [^1]
--  Traductor: _Dr. Francisco J. Aguayo_
+-  Traducción: _Dr. Francisco J. Aguayo_
 
 
 
 #   Tabla de contenidos
 Léame<br>
-1. Solo los hechos<br>
-2. Siguiendo las reglas<br>
-3. Agregar los detalles<br>
-4. Variables con intereses<br>
-5. Hacerlo con estilo<br>
-6. Ser funcional<br>
-7. Cómo tener el control<br>
-8. Cuestiones de herencia<br>
-9. Mensajes significativos<br>
-10. Facetas fascinantes<br>
-11. Gestionando a los Manipuladores<br>
-12. Preguntas y respuestas<br>
+_Capítulo 1._ Solo los hechos<br>
+_Capítulo 2._ Siguiendo las reglas<br>
+_Capítulo 3._ Agregar los detalles<br>
+_Capítulo 4._ Variables con intereses<br>
+_Capítulo 5._ Hacerlo con estilo<br>
+_Capítulo 6._ Ser funcional<br>
+_Capítulo 7._ Cómo tener el control<br>
+_Capítulo 8._ Cuestiones de herencia<br>
+_Capítulo 9._ Mensajes significativos<br>
+_Capítulo 10._ Facetas fascinantes<br>
+_Capítulo 11._ Gestionando a los Manipuladores<br>
+_Capítulo 12._ Preguntas y respuestas<br>
 Información de soporte<br>
 
 
@@ -153,3 +153,4 @@ Se han realizado cambios menores en el documento original del Dr. Giarratano par
 ##  _Bibliografía_
 
 [^1]: CLIPS Rule Based Programming Language Files. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)
+

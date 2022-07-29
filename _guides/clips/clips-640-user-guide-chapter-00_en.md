@@ -64,18 +64,18 @@ publisher:  'Gary Riley'
 
 #   Table of Contents
 Readme<br>
-1. Just the Facts<br>
-2. Following the Rules<br>
-3. Adding Details<br>
-4. Variable Interests<br>
-5. Doing It Up In Style<br>
-6. Being Functional<br>
-7. How to Be in Control<br>
-8. Matters of Inheritance<br>
-9. Meaningful Messages<br>
-10. Fascinating Facets<br>
-11. Handling Handlers<br>
-12. Questions and Answers<br>
+_Chapter 1._ Just the Facts<br>
+_Chapter 2._ Following the Rules<br>
+_Chapter 3._ Adding Details<br>
+_Chapter 4._ Variable Interests<br>
+_Chapter 5._ Doing It Up In Style<br>
+_Chapter 6._ Being Functional<br>
+_Chapter 7._ How to Be in Control<br>
+_Chapter 8._ Matters of Inheritance<br>
+_Chapter 9._ Meaningful Messages<br>
+_Chapter 10._ Fascinating Facets<br>
+_Chapter 11._ Handling Handlers<br>
+_Chapter 12._ Questions and Answers<br>
 Support Information<br>
 
 
@@ -153,3 +153,4 @@ Minor changes have been made to Dr. Giarratano’s original document to reflect 
 ##  _References_
 
 [^1]: CLIPS Rule Based Programming Language Files. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)
+

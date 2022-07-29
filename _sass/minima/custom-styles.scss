@@ -396,10 +396,21 @@ pre, code {
     max-height: 80px;
     float: left;
   }
-  
-  
 }
 
+.mini-banner-right {
+
+  // max-width: 120px;
+  min-height: 140px;
+  vertical-align: top;
+  padding: 5px 5px 5px 5px;
+  text-align: left;
+  
+  img {
+    width: 80px;
+    float: right;
+  }
+}
 
 
 
