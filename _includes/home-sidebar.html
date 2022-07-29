@@ -7,23 +7,6 @@
 
 
 
-<!-- Essays -->
-  <div class="sidebar-title">
-    {{ site.data.i18n[page.lang]['paperH1'] }}:
-  </div>
-
-  {% for paper in papers %}
-  ● <a class="page-link"  
-     href="{{ site.baseurl }}{{ paper.url}}">
-     {{ paper.shorttitle }}
-    </a>
-    <p class="sidebar-meta">
-      {{ paper.title }}
-    </p>
-  {% endfor %}
-
-
-
 
 <!-- Proposals -->
   <div class="sidebar-title">
@@ -72,5 +55,22 @@
   
   {% endfor %}
 
+
+
+
+<!-- Essays -->
+  <div class="sidebar-title">
+    {{ site.data.i18n[page.lang]['paperH1'] }}:
+  </div>
+
+  {% for paper in papers %}
+  ● <a class="page-link"  
+     href="{{ site.baseurl }}{{ paper.url}}">
+     {{ paper.shorttitle }}
+    </a>
+    <p class="sidebar-meta">
+      {{ paper.title }}
+    </p>
+  {% endfor %}
 
 

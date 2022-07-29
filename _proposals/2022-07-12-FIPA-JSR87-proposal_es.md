@@ -1,8 +1,8 @@
 ---
 layout: proposal 
 
-shorttitle: 'SR1-FIPA-CORBA'
-githubrepo: 'fipa-corba'
+shorttitle: 'P1-FIPA-CORBA'
+githubrepo: 'p1-fipa-corba'
 
 
 title:     'FIPA upgrade proposal to OpenJDK-18'
