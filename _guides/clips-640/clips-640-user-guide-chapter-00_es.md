@@ -58,8 +58,8 @@ publisher:  'Gary Riley'
 >  Editor: **Gary Riley**
 
 -  Disponble en: _SourceForge_. [^1]
--  Traducción: _Dr. Francisco J. Aguayo_
-
+-  Traducción (es-ES): _Dr. Francisco J. Aguayo_
+-  Licencia: _GNU Lesser General Public License v3.0_
 
 
 #   Tabla de contenidos
@@ -122,7 +122,7 @@ La _Guía del usuario de CLIPS_ es un tutorial introductorio sobre las funciones
 
 El propósito de la _Guía del usuario de CLIPS_ es proporcionar una introducción elemental y fácil de leer a los sistemas expertos para personas con poca o ninguna experiencia con sistemas expertos.
 
-La _Guía del usuario de CLIPS_ se puede utilizar en el aula o para el autoaprendizaje. El único requisito previo es que tenga un conocimiento básico de programación en un lenguaje de alto nivel como Java, Ada, FORTRAN, C (OK, BÁSICO si nada más, pero no lo admitiremos en público y rechazaremos esta declaración si se pregunta sobre ello).
+La _Guía del usuario de CLIPS_ se puede utilizar en el aula o para el autoaprendizaje. El único requisito previo es que tenga un conocimiento básico de programación en un lenguaje de alto nivel como Java, Ada, FORTRAN, C (OK, BASIC, sí nada más, pero no lo admitiremos en público y rechazaremos esta declaración si se pregunta sobre ello).
 
 ##  _Como utilizar este libro_
 
@@ -132,7 +132,7 @@ Para obtener el máximo beneficio, debe escribir los programas de ejemplo en el 
 
 Como cualquier otro lenguaje de programación, solo aprenderá a programar en CLIPS escribiendo programas en él. Para aprender realmente a programar sistemas expertos, debe elegir un problema interesante y escribirlo en CLIPS.
 
-##  _Expresiones de gratitud_
+##  _Reconocimientos_
 
 Agradezco mucho los consejos y reseñas de este libro por parte de muchas personas. Gracias a Gary Riley, Chris Culbert, Brian Dantes, Bryan Dulock, Steven Lewis, Ann Baker, Steve Mueller, Stephen Baudendistel, Yen Huynh, Ted Leibfried, Robert Allen, Jim Wescott, Marsha Renals, Pratibha Boloor, Terry Feagin y Jack Aldridge. Un agradecimiento especial a Bob Savely por apoyar el desarrollo de CLIPS.
     
@@ -152,5 +152,4 @@ Se han realizado cambios menores en el documento original del Dr. Giarratano par
 
 ##  _Bibliografía_
 
-[^1]: CLIPS Rule Based Programming Language Files. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)
-
+[^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)

@@ -31,11 +31,11 @@ layout: default
        <h2>{{ page.title }}</h2>
        <strong>{{ page.author }}</strong><br>
        <i>Ed. {{ page.publisher }}</i>
-       <br>
+        ~ 
 
        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
        <time class="dt-published" datetime="{{ page.date_published | date_to_xmlschema }}" itemprop="datePublished">
-       <br>{{ page.date_published | date: date_format }}
+       {{ page.date_published | date: date_format }}
        </time>
        
        {% comment %}

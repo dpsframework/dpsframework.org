@@ -106,11 +106,11 @@ CLIPS >
 At this point, you can start entering **commands** directly into CLIPS. The mode in which you  are entering direct commands is called the **top-level**. If you have a Graphical User Interface  (GUI) version of CLIPS, you can also **select** some commands using the mouse or arrow keys rather than typing them in. Please refer to the CLIPS Interfaces Guide for a discussion of the  commands supported by the various CLIPS GUIs. For simplicity and uniformity in this book,  we’ll assume the commands are typed in.
 
 
-The normal mode of leaving CLIPS is with the exit command. Just type
-
+<p class="code-label">The normal mode of leaving CLIPS is with the exit command. Just type</p>
 ```scheme
 (exit)
 ```
+
 
 in response to the CLIPS prompt and then press the carriage return key.
 
@@ -121,21 +121,21 @@ in response to the CLIPS prompt and then press the carriage return key.
 As with other programming languages, CLIPS recognizes certain keywords. For example, if you  want to put data in the fact-list, you can use the assert command.
 
 
-As an example of assert, enter the following right after the CLIPS prompt as shown:
-
+<p class="code-label">As an example of assert, enter the following right after the CLIPS prompt as shown:</p>
 ```scheme
 
 CLIPS> (assert (duck))
 ```
 
+
 Here the assert command takes (duck) as its argument. Be sure to always press the carriage return  key to send the line to CLIPS.
 
 
-You will see the response
-
+<p class="code-label">You will see the response</p>
 ```scheme
 <Fact-1>
 ```
+
 
 
 
@@ -153,7 +153,7 @@ Suppose you want to see what’s in the fact-list. If your version of CLIPS supp
 
 The keyboard command to see facts is with the facts command. Enter (facts) in response to  the CLIPS prompt and CLIPS will respond with a list of facts in the fact-list. Be sure to put  parentheses around the command or CLIPS will not accept it.
 
-<p class="code-label">The result of the (facts) command  in this example should be </p>
+<p class="code-label">The result of the (facts) command  in this example should be:</p>
 ```scheme
 CLIPS> (facts)
 f-1 (duck)
@@ -161,11 +161,11 @@ For a total of 1 fact.
 
 CLIPS>
 ```
+
 The term f-1 is the **fact identifier** assigned to the (duck) fact by CLIPS. Every fact inserted into  the **fact-list** is assigned a unique fact identifier starting with the letter “f ” and followed by an  integer called the **fact-index**. On starting up CLIPS, and after certain commands such as **clear**  and **reset** (to be discussed in more detail later), the fact- index will be set to one, and then  incremented by one as each new fact is asserted.
 
-
-What happens if you try to put a second duck into the fact-list? Let’s try it and see. Assert a  new (duck), then issue a (facts) command as follows
-
+<p class="code-label">What happens if you try to put a second duck into the fact-list?</p>
+Let’s try it and see. Assert a new (duck), then issue a (facts) command as follows
 ```scheme
 CLIPS> (assert (duck))
 <Fact-1>
@@ -176,8 +176,8 @@ CLIPS>
 ```
 
 The <Fact-1> message is returned by CLIPS to indicate that the fact already exists. You’ll see  just the original “f-1 (duck)”. This shows that CLIPS will not accept a duplicate entry of a fact.  However, there is an override command, **set-fact-duplication**, which will allow duplicate fact  entry.
-Of course you can put in other, different facts. For example, assert a (quack) fact and then  issue a (facts) command. You’ll see
 
+<p class="code-label">Of course you can put in other, different facts. For example, assert a (quack) fact and then  issue a (facts) command. You’ll see</p>
 ```scheme
 CLIPS> (assert (quack))
 <Fact-2>
@@ -199,8 +199,7 @@ Facts may be removed or **retracted**. When a fact is retracted, the other facts
 
 
 
-The clear command removes all facts from memory, as shown by the following.
-
+<p class="code-label">The clear command removes all facts from memory, as shown by the following.</p>
 ```scheme
 CLIPS> (facts)
 f-1 (duck)
@@ -212,9 +211,9 @@ CLIPS>
 ```
 
 
-The (clear) command essentially restores CLIPS to its original startup state. It clears the memory  of CLIPS and resets the fact-identifier to one. To see this, assert (animal-is duck), then check the  fact-list.
 
-
+The (clear) command essentially restores CLIPS to its original startup state. It clears the memory  of CLIPS and resets the fact-identifier to one. 
+<p class="code-label">To see this, assert (animal-is duck), then check the fact-list.</p>
 ```scheme
 CLIPS> (assert (animal-is duck))
 <Fact-1>
@@ -223,6 +222,7 @@ f-1 (animal-is duck)
 For a total of 1 fact.
 CLIPS>
 ```
+
 
 
 Notice that (animal-is duck) has a fact-identifier of f-1 because the (clear) command reset the fact  identifiers. The (clear) command actually does more than just remove facts. Besides removing all  the facts, (clear) also removes all the rules, as you’ll see in the next chapter.
@@ -320,10 +320,7 @@ As you read through this manual, you will learn the special meanings of the char
 
 
 
-The following are examples of symbols.
-
-
-
+<p class="code-label">The following are examples of symbols.</p>
 ```racket
 duck
 duck1
@@ -332,6 +329,9 @@ duck-soup
 duck1-1_soup-soup
 d!?#%^
 ```
+
+
+
 
 
 The second type of field is the string. A string must begin and end with double quotes. The  double quotes are part of the field. Zero or more characters of any kind can appear between the  double quotes. Some examples of strings follow.
@@ -362,7 +362,8 @@ All numbers in CLIPS are treated as “long long” integers or double-precision
 .
 2N-1 - 1
 
-For 64-bit “long long” integers, this corresponds to a range of numbers
+"For 64-bit “long long” integers, 
+this corresponds to a range of numbers"
 -9223372036854770000
 .
 .
@@ -725,7 +726,7 @@ CLIPS provides several commands to help you debug programs. One command allows y
 CLIPS> (clear)
 CLIPS> (watch facts)
 CLIPS> (assert (animal-is duck))
-#ERROR!
+==> f-1 (animal-is duck)
 <Fact-1>
 CLIPS>
 ```
@@ -738,7 +739,7 @@ The right double arrow symbol, `==>`, means that a fact is entering memory while
 CLIPS> (reset)
 <== f-1 (animal-is duck)
 CLIPS> (assert (animal-is duck))
-#ERROR!
+==> f-1 (animal-is duck)
 <Fact-1>
 CLIPS> (retract 1)
 <== f-1 (animal-is duck)

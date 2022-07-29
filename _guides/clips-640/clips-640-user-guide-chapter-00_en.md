@@ -59,7 +59,7 @@ publisher:  'Gary Riley'
 
 -  Available at: _SourceForge_. [^1]
 -  In translation process [[<strong> • es  </strong>]](/guides/clips/clips-640-user-guide-chapter-00_es.html)
-
+-  License: _GNU Lesser General Public License v3.0_
 
 
 #   Table of Contents
@@ -152,5 +152,4 @@ Minor changes have been made to Dr. Giarratano’s original document to reflect 
 
 ##  _References_
 
-[^1]: CLIPS Rule Based Programming Language Files. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)
-
+[^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)

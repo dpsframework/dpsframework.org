@@ -106,11 +106,11 @@ CLIPS >
 En este punto, puede comenzar a ingresar **comandos** directamente en CLIPS. El modo en el que ingresa comandos directos se denomina **nivel superior**. Si tiene una versión de interfaz gráfica de usuario (GUI) de CLIPS, también puede **seleccionar** algunos comandos usando el mouse o las teclas de flecha en lugar de escribirlos. Consulte la Guía de interfaces de CLIPS para ver una discusión sobre los comandos admitidos. por las diversas GUI de CLIPS. Por simplicidad y uniformidad en este libro, supondremos que los comandos se escriben.
 
 
-El modo normal de salir de CLIPS es con el comando de salida. Sólo tipo
-
+<p class="code-label">El modo normal de salir de CLIPS es con el comando de salida. Sólo tipo</p>
 ```scheme
 (exit)
 ```
+
 
 en respuesta a la indicación CLIPS y luego presione la tecla de retorno de carro.
 
@@ -121,21 +121,21 @@ en respuesta a la indicación CLIPS y luego presione la tecla de retorno de carr
 Al igual que con otros lenguajes de programación, CLIPS reconoce ciertas palabras clave. Por ejemplo, si desea poner datos en la lista de hechos, puede usar el comando afirmar.
 
 
-Como ejemplo de afirmación, ingrese lo siguiente justo después de la solicitud de CLIPS como se muestra:
-
+<p class="code-label">Como ejemplo de afirmación, ingrese lo siguiente justo después de la solicitud de CLIPS como se muestra:</p>
 ```scheme
 
 CLIPS> (assert (duck))
 ```
 
+
 Aquí el comando de afirmación toma (pato) como argumento. Asegúrese de presionar siempre la tecla de retorno de carro para enviar la línea a CLIPS.
 
 
-Verás la respuesta
-
+<p class="code-label">Verás la respuesta</p>
 ```scheme
 <Fact-1>
 ```
+
 
 
 
@@ -153,7 +153,7 @@ Suponga que desea ver lo que hay en la lista de hechos. Si su versión de CLIPS 
 
 El comando de teclado para ver hechos es con el comando hechos. Ingrese (hechos) en respuesta al aviso de CLIPS y CLIPS responderá con una lista de hechos en el hecho-lista. Asegúrese de poner paréntesis alrededor del comando o CLIPS no lo aceptará.
 
-<p class="code-label">El resultado del comando (hechos) en este ejemplo debería ser </p>
+<p class="code-label">El resultado del comando (hechos) en este ejemplo debería ser:</p>
 ```scheme
 CLIPS> (facts)
 f-1 (duck)
@@ -161,11 +161,11 @@ For a total of 1 fact.
 
 CLIPS>
 ```
+
 El término f-1 es el **identificador de hecho** asignado al hecho (pato) por CLIPS. A cada hecho insertado en la **lista de hechos** se le asigna un identificador de hecho único que comienza con la letra "f" y le sigue un número entero llamado **índice de hechos**. Al iniciar CLIPS, y después de ciertos comandos como **borrar** y **restablecer** (que se analizarán con más detalle más adelante), el índice de datos se establecerá en uno y luego se incrementará en uno a medida que se realicen nuevos cambios. se afirma el hecho.
 
-
-¿Qué pasa si intentas poner un segundo pato en la lista de hechos? Intentémoslo y veamos. Afirme un nuevo (pato), luego emita un comando (hechos) de la siguiente manera
-
+<p class="code-label">¿Qué pasa si intentas poner un segundo pato en la lista de hechos? </p>
+Intentémoslo y veamos. Afirme un nuevo (pato), luego emita un comando (hechos) de la siguiente manera
 ```scheme
 CLIPS> (assert (duck))
 <Fact-1>
@@ -176,8 +176,8 @@ CLIPS>
 ```
 
 CLIPS devuelve el mensaje <Fact-1> para indicar que el hecho ya existe. Verá solo el "f-1 (pato)" original. Esto muestra que CLIPS no aceptará una entrada duplicada de un hecho. Sin embargo, hay un comando de anulación, **set-fact-duplication**, que permitirá la entrada de datos duplicados.
-Por supuesto, puede incluir otros hechos diferentes. Por ejemplo, afirmar un hecho (curandero) y luego emitir un comando (hechos). Verás
 
+<p class="code-label">Por supuesto, puede incluir otros hechos diferentes. Por ejemplo, afirmar un hecho (curandero) y luego emitir un comando (hechos). Verás</p>
 ```scheme
 CLIPS> (assert (quack))
 <Fact-2>
@@ -199,8 +199,7 @@ Los hechos pueden ser eliminados o **retractados**. Cuando se retracta un hecho,
 
 
 
-El comando borrar elimina todos los hechos de la memoria, como se muestra a continuación.
-
+<p class="code-label">El comando borrar elimina todos los hechos de la memoria, como se muestra a continuación.</p>
 ```scheme
 CLIPS> (facts)
 f-1 (duck)
@@ -212,9 +211,9 @@ CLIPS>
 ```
 
 
-El comando (borrar) esencialmente restaura CLIPS a su estado de inicio original. Borra la memoria de CLIPS y restablece el identificador de hechos a uno. Para ver esto, afirme (animal-es pato), luego verifique la lista de hechos.
 
-
+El comando (borrar) esencialmente restaura CLIPS a su estado de inicio original. Borra la memoria de CLIPS y restablece el identificador de hechos a uno. 
+<p class="code-label">Para ver esto, afirme (animal-es pato), luego verifique la lista de hechos.</p>
 ```scheme
 CLIPS> (assert (animal-is duck))
 <Fact-1>
@@ -223,6 +222,7 @@ f-1 (animal-is duck)
 For a total of 1 fact.
 CLIPS>
 ```
+
 
 
 Tenga en cuenta que (animal-es pato) tiene un identificador de hechos de f-1 porque el comando (borrar) restablece los identificadores de hechos. El comando (borrar) en realidad hace más que simplemente eliminar hechos. Además de eliminar todos los hechos, (claro) también elimina todas las reglas, como verás en el siguiente capítulo.
@@ -320,10 +320,7 @@ A medida que lea este manual, aprenderá los significados especiales de los cara
 
 
 
-Los siguientes son ejemplos de símbolos.
-
-
-
+<p class="code-label">Los siguientes son ejemplos de símbolos.</p>
 ```racket
 duck
 duck1
@@ -332,6 +329,9 @@ duck-soup
 duck1-1_soup-soup
 d!?#%^
 ```
+
+
+
 
 
 El segundo tipo de campo es la cadena. Una cadena debe comenzar y terminar con comillas dobles. Las comillas dobles son parte del campo. Cero o más caracteres de cualquier tipo pueden aparecer entre comillas dobles. A continuación se muestran algunos ejemplos de cadenas.
@@ -362,7 +362,8 @@ Todos los números en CLIPS se tratan como enteros "largos" o flotantes de doble
 .
 2N-1 - 1
 
-Para enteros "largos largos" de 64 bits, esto corresponde a un rango de números
+"Para enteros ""largos largos"" de 64 bits, 
+esto corresponde a un rango de números"
 -9223372036854770000
 .
 .
@@ -725,7 +726,7 @@ CLIPS proporciona varios comandos para ayudarlo a depurar programas. Un comando 
 CLIPS> (clear)
 CLIPS> (watch facts)
 CLIPS> (assert (animal-is duck))
-#ERROR!
+==> f-1 (animal-is duck)
 <Fact-1>
 CLIPS>
 ```
@@ -738,7 +739,7 @@ El símbolo de doble flecha derecha, `==>`, significa que un hecho está ingresa
 CLIPS> (reset)
 <== f-1 (animal-is duck)
 CLIPS> (assert (animal-is duck))
-#ERROR!
+==> f-1 (animal-is duck)
 <Fact-1>
 CLIPS> (retract 1)
 <== f-1 (animal-is duck)
