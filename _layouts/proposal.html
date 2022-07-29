@@ -10,7 +10,7 @@ layout: default
 
       <div class="main-col">
            <h1 class="paper-title">
-             {{ page.headtitle | escape }}
+             {{ page.title | escape }}
            </h1>
 
             <div class="paper-content">
@@ -23,13 +23,34 @@ layout: default
 
 
  
-      
+    <!-- Proposal for Upgrades -->
       <div class="main-col-4">
-        <div class="paper-content">
+      
         
-          <h4>Specification Request proposal:<br>
+          <h2 class="paper-title">
+             {{ page.headtitle | escape }}
+          </h2>
+ 
+ 
+          <div class="sidebar-title">
+            {{ site.data.i18n[page.lang]['guideH1'] }}:
+          </div>
+          <div class="mini-banner">
+           {%- if page.images[0] -%}
+           <img class="mini-banner" 
+                src="{{ page.imagepath }}{{ page.images[0] }}" 
+                alt="{{ page.shorttitle }}" >
+           {%- endif -%}
+           
+           <strong>{{ page.author }}</strong><br>
+           <i>Ed. {{ page.publisher }}</i>
+           <br>
+
+
+         
             {{ page.shorttitle | escape }}
-          </h4>
+          
+          
         
         
           <p class="paper-meta">
@@ -73,8 +94,7 @@ layout: default
              {% include toc.html html=content %}
            </div>
         
-      
-      </div>
+
     </div>
     {% include top-button.html %}     
 
