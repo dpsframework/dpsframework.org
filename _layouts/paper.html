@@ -22,23 +22,17 @@ layout: default
           src="{{ page.imagepath }}{{ page.images[0] }}" 
           title="{{ page.shorttitle }}" >
      {%- endif -%}
-     <strong>{{ page.author }}</strong><br>
+     <strong>{{ page.author }}
+             {%- if page.authors -%}
+              {% for author in page.authors %}, {{ author }}
+              {% endfor %}
+             {%- endif -%}
+     </strong>
+    
+     <br>
      {{ page.department }}<br>
      
-     
-     
-     
-     
-     {%- if page.authors -%}
-      {% for author in page.authors %}
-        <small><strong>{{ author }}</strong></small><br>
-        {{ page.metadata[ author.index ] }}<br>
-          {%- if forloop.last == false %}• {% endif -%}
-       {% endfor %}
-     <br>
-     {%- endif -%}
-
-
+ 
     
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">

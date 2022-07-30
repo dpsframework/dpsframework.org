@@ -1,0 +1,445 @@
+Los agentes inteligentes y autónomos son una subárea de la inteligencia artificial simbólica en la que estos agentes deciden, ya sea de forma reactiva o proactiva, sobre un curso de acción razonando sobre la información disponible sobre el mundo (incluido el entorno, el propio agente y otros agentes). . Abarca multitud de técnicas, como protocolos de negociación, simulación de agentes, argumentación multiagente, planificación multiagente y muchas otras. En este artículo, nos enfocamos en la programación de agentes y proporcionamos una revisión sistemática de la literatura sobre programación basada en agentes para sistemas multiagente. En particular, analizamos tanto los lenguajes de programación de agentes veteranos (aún mantenidos) como los novedosos, sus extensiones, el trabajo de comparación de algunos de estos lenguajes y las aplicaciones encontradas en la literatura que hacen uso de la programación de agentes. Palabras clave: programación basada en agentes; sistemas multiagente; lenguajes de programación de agentes
+
+programación basada en agentes; sistemas multiagente; lenguajes de programación de agentes
+
+1. Introducción
+
+
+
+Los sistemas multiagente (MAS) [1] son ​​una rama bien establecida de la inteligencia artificial (IA). Aunque son relativamente jóvenes con respecto a áreas de investigación más arquetípicas, los MAS tienen una rica historia; en 1995 [2] la tecnología de agentes fue reconocida como un área de investigación en rápido desarrollo y una de las áreas de tecnología de la información de más rápido crecimiento. Tal afirmación sigue siendo cierta hoy en día, donde se pueden encontrar muchos artículos de investigación, herramientas y conferencias cuyo objetivo es avanzar en la investigación en el área. A pesar de esto, los MAS no se usan tan ampliamente como podrían. Teniendo en cuenta el aspecto de programación de agentes de los MAS, según [3], la razón clave es que hay pocos incentivos para que los desarrolladores cambien a los lenguajes de programación de agentes (APL) actuales, ya que los comportamientos que se pueden programar fácilmente son lo suficientemente simples como para ser implementables. en los lenguajes principales con solo una pequeña sobrecarga en el tiempo de codificación. Esto, entre la presencia de demasiadas opciones desorganizadas disponibles, no ayuda a que los lenguajes y herramientas de programación basados ​​en agentes sean elegidos por usuarios no expertos.
+
+
+
+Un agente inteligente [4] puede generalizarse como una entidad informatizada que: es capaz de razonar (racional/cognitivo), de tomar sus propias decisiones de forma independiente (autónomo), de colaborar con otros agentes cuando es necesario (social), de percibir el contexto en el que opera y reacciona adecuadamente (reactivo), y finalmente, para tomar acción con el fin de lograr sus objetivos (proactivo). Un sistema basado en agentes (u orientado a agentes) es un sistema donde los agentes son las entidades principales, tratadas como abstracciones de primera clase. Desde una perspectiva de programación, se puede seguir el mismo razonamiento. En particular, al usar una comparación, podemos decir que los agentes son para los lenguajes de Programación Orientada a Agentes (AOP) lo que los objetos son para los lenguajes de Programación Orientada a Objetos (OOP). En un lenguaje de programación basado en agentes, los agentes son los bloques de construcción, y los programas se obtienen programando sus comportamientos (cómo razona un agente), sus objetivos (lo que pretende lograr un agente) y su interoperación (cómo colaboran los agentes para resolver una tarea). ).
+
+
+
+Los agentes son adecuados para usarse en aplicaciones que involucran cómputo distribuido o concurrente o cuando se requiere comunicación entre diferentes componentes. Por esta razón, la tecnología de agentes es útil en aplicaciones que razonan sobre mensajes/objetos recibidos a través de una red. Al preservar su estado de procesamiento y el estado del mundo que los rodea, los agentes también son ideales para las aplicaciones de automatización. Además, los agentes autónomos pueden operar sin la intervención del usuario y pueden usarse en aplicaciones tales como automatización de plantas/procesos, gestión de flujos de trabajo, robótica y otras. Otra ventaja de la programación basada en agentes es que debido al ciclo de razonamiento presente en los agentes, también es posible proporcionar explicaciones sobre las decisiones que ha tomado un agente.
+
+
+
+
+El objetivo de este artículo es revisar los últimos trabajos en programación basada en agentes, para ayudar a los usuarios expertos y no expertos a comprender mejor el estado actual de las tecnologías de programación basada en agentes, e identificar direcciones futuras de investigación en esta área. En particular, nos enfocamos en los últimos lenguajes de programación de agentes, plataformas y marcos para el desarrollo de MAS. Se tienen en cuenta tanto los artículos teóricos como los prácticos, y también analizamos brevemente las extensiones recientes, las comparaciones existentes y las aplicaciones de la programación basada en agentes.
+
+
+
+
+Con respecto a otras revisiones y encuestas sobre APL en la literatura [3,5–10], nuestra revisión se enfoca en desarrollos recientes y considera trabajos que presentan nuevas APL, así como trabajos que se enfocan en extender o comparar APL existentes. Además, consideramos aspectos tanto teóricos como prácticos; esto ayuda a tener una mejor comprensión de la brecha de realidad entre los APL teóricos y prácticos. Finalmente, con respecto a revisiones anteriores, nos enfocamos en toda la clase de APL, y no en un área específica de APL como en [6], donde solo se consideran los aspectos de ingeniería, o en [7], donde solo se consideran las plataformas de APL, o en [8], donde solo se analiza la literatura de simulación basada en agentes, o en [3,5], donde su enfoque está en un modelo específico de agencia (Creencia-Deseo-Intención—BDI).
+
+
+
+
+Este documento está estructurado de la siguiente manera. En la Sección 2 se proporciona una breve historia de la programación basada en agentes. En la Sección 3, se presenta el proceso de revisión sistemática seguido en este documento. La Sección 4 contiene los hallazgos de la revisión con los artículos encontrados en nuestra búsqueda de la literatura. En la Sección 5, se discuten los resultados de la revisión y se sugieren direcciones futuras. Finalmente, en la Sección 6, se reportan las conclusiones del trabajo.
+
+
+
+
+2. Historia de la programación basada en agentes
+
+
+
+
+En 1993, la Programación Orientada a Agentes se introdujo por primera vez [11] como una especialización de la Programación Orientada a Objetos. En particular, analiza la noción del estado mental de un agente, que consiste en su información, decisiones y capacidades. Este trabajo también describe los programas de agentes en el intérprete AGENT-0 (implementado en el lenguaje Lisp) y su comunicación usando la teoría de los actos de habla, esta última todavía se usa para definir la comunicación de agentes en varios lenguajes de programación de agentes contemporáneos. A lo largo de los años, se han desarrollado muchos modelos cognitivos y de razonamiento para la programación basada en agentes. En esta sección, analizamos tres modelos particulares que han sido fundamentales en el diseño de muchos lenguajes de programación de agentes en el pasado y que todavía se utilizan en nuevos lenguajes en la actualidad: Sistema de razonamiento procedimental (PRS), BDI y Cálculo de situación.
+
+
+
+
+El Sistema de Razonamiento Procedural (PRS) [12] (implementado en Lisp) define un sistema capaz de razonar sobre procesos, es decir, formas procedimentales de conocimiento. Un agente en este sistema puede usar estos procedimientos para seleccionar intenciones para lograr objetivos particulares. A diferencia de los lenguajes de programación convencionales, estos procedimientos no se invocan a priori, sino que se activan cuando son capaces de contribuir a algún objetivo o reaccionar ante alguna situación. Si bien comparte algunas similitudes con los planificadores de IA de la época, su principal diferencia es que realiza una planificación jerárquica parcial en el sentido de que interactúa con un entorno dinámico durante el proceso de razonamiento, en lugar de generar un plan para un entorno estático.
+
+
+
+
+El modelo Creencia-Deseo-Intención (BDI) [13,14] consiste en un proceso de razonamiento que ayuda a la toma de decisiones de seleccionar una acción apropiada para el logro de algún objetivo. Sus tres actitudes mentales son: creencia: conocimiento que el agente cree acerca de su entorno, de sí mismo y de otros agentes; deseo: los estados deseados que el agente quiere lograr; e intención: una secuencia de pasos hacia el logro de un deseo. Estas actitudes mentales representan respectivamente los estados de información, motivación y deliberación del agente. El flujo de trabajo en un sistema BDI genérico se muestra en la Figura 1 y funciona como tal: una función de revisión de creencias recibe información de entrada del entorno (por ejemplo, sensores) y es responsable de actualizar la base de creencias. Esta actualización puede generar más opciones que pueden convertirse en deseos actuales basados ​​en la base de creencias y la base de intenciones. Un filtro se encarga de actualizar la base de intenciones, teniendo en cuenta su estado anterior y la base de creencias y la base de deseos actuales. Finalmente, se elige una intención para ser realizada como una acción por parte del agente. BDI es el modelo de agencia más popular, ha sido y sigue siendo utilizado en muchos lenguajes de programación de agentes. AgentSpeak(L) [15] es un lenguaje que sirve como una abstracción de los sistemas BDI implementados que se pueden utilizar para interpretar los programas de agente como programas lógicos de cláusula de bocina. La teoría detrás de este lenguaje se ha implementado como base para muchas APL.
+
+
+
+
+
+
+
+
+El modelo BDI.
+
+
+
+
+
+
+
+
+El Cálculo de Situación [16] es un lenguaje de primer orden diseñado para representar cambios en entornos dinámicos. Una situación es un término de primer orden que representa una secuencia de acciones. Una situación inicial es cuando aún no se han producido acciones. La función do(a, s) da como resultado una situación sucesora de s después de ejecutar la acción a, similar a los sistemas de transición de estado. Los entornos dinámicos juegan un papel importante en la programación basada en agentes y, como tal, Situation Calculus se ha utilizado para modelar cómo cambia el mundo como resultado de la ejecución de acciones.
+
+
+
+
+
+
+
+
+Como veremos en la Sección 4, hay muchos otros modelos que han inspirado los lenguajes de programación basados ​​en agentes, sin embargo, estos tres fueron los más influyentes en la historia pasada de la programación basada en agentes. Algunos lenguajes de agentes comparten similitudes o incluso mezclan conceptos de otros paradigmas de programación, como procedimental, imperativo, orientado a objetos, funcional, actor, concurrente, etc. Comparar las diferencias o entrar en detalles sobre estos otros paradigmas está fuera del alcance de esta revisión.o en un área específica de APL como en [6], donde solo se consideran los aspectos de ingeniería, o en [7], donde solo se consideran las plataformas de APL, o en [8], donde solo se analiza la literatura de simulación basada en agentes, o en [3,5], donde su enfoque está en un modelo específico de agencia (Creencia-Deseo-Intención—BDI).
+
+
+
+
+Este documento está estructurado de la siguiente manera. En la Sección 2 se proporciona una breve historia de la programación basada en agentes. En la Sección 3, se presenta el proceso de revisión sistemática seguido en este documento. La Sección 4 contiene los hallazgos de la revisión con los artículos encontrados en nuestra búsqueda de la literatura. En la Sección 5, se discuten los resultados de la revisión y se sugieren direcciones futuras. Finalmente, en la Sección 6, se reportan las conclusiones del trabajo.
+
+
+
+
+
+
+3. Metodología de revisión
+
+
+
+
+
+
+
+Realizamos una revisión sistemática de la literatura sobre lenguajes de programación de agentes durante los últimos 5 años (2015-2020). En la Figura 2 se muestra un diagrama que ilustra nuestra metodología de revisión. Para cada término buscado, consideramos las primeras 10 páginas (100 entradas) recuperadas por Google Scholar (ordenadas por relevancia), para un total de 400 entradas (incluidos los duplicados).
+
+
+
+
+Los términos utilizados en nuestra búsqueda fueron:
+
+
+
+
+- Lenguajes de programación basados ​​en agentes
+- Extensiones de programación basadas en agentes
+- Comparación de programación basada en agentes
+- Aplicaciones de programación basadas en agentes
+
+
+
+
+
+
+
+
+Diagrama de flujo de revisión sistemática.
+
+
+
+
+
+
+
+Después de eliminar los duplicados, teníamos 250 documentos restantes. A estos, agregamos 16 entradas de fuentes externas; en su mayoría referencias antiguas que no aparecerían en la búsqueda, además de algunas otras que se encuentran en citas en papel y otras fuentes. De las 16 entradas externas, ocho fueron APL influyentes que se desarrollaron antes de 2015 y se actualizaron recientemente (es decir, 2017-2020).
+
+
+
+4. Revisar los hallazgos sobre la programación basada en agentes para Mas
+
+
+
+
+
+En esta sección, cubrimos toda la investigación encontrada en nuestra revisión sistemática de la literatura. Comenzamos con los lenguajes de programación de agentes y sus extensiones, luego continuamos discutiendo las comparaciones existentes en la programación basada en agentes y cerramos la sección con una breve revisión de las aplicaciones en el área.
+
+
+
+
+4.1. Lenguajes de programación de agentes
+
+
+
+
+Reportamos los lenguajes de programación de agentes encontrados en la revisión sistemática en la Tabla 1. Como mencionamos en la Sección 2, podemos ver que BDI es claramente el modelo de agencia más popular, siendo utilizado en 7 de los 15 lenguajes. La mayoría de los lenguajes implementados se han implementado en Java, probablemente para aprovechar la multiplataforma de Java a través de su máquina virtual Java. La tabla contiene solo los lenguajes de propósito general de alto nivel que se pueden usar para desarrollar MAS independientes del dominio. Si bien otros enfoques, como el modelado y la simulación basados ​​en agentes (ABMS) y los agentes cognitivos en robótica, no se incluyen en la tabla, informamos brevemente algunas de las investigaciones novedosas que se han realizado en esas áreas más adelante.
+
+
+
+
+
+Tabla 1. Una colección de lenguajes de programación de agentes recientes (o actualizados recientemente). Los idiomas que no tienen una implementación disponible públicamente se representan con una X. En caso de que haya varias ramas de implementación, la columna Última actualización hace referencia a la última actualización en la rama maestra.
+
+
+
+
+4.1.1. APL de propósito general
+
+
+
+
+
+En [6] se puede encontrar una encuesta sobre la programación orientada a agentes desde la perspectiva de la ingeniería de software. Uno de los principales desafíos informados en la encuesta para los desarrolladores de APL es la necesidad de cerrar la brecha cognitiva que existe entre los conceptos que sustentan los lenguajes convencionales y los que sustentan AOP. En [21] los autores intentan llenar este vacío centrándose en comprender la relación entre AgentSpeak(L) [15] y OOP con el objetivo de tratar de reducir la brecha cognitiva percibida. Tal trabajo propone un nuevo lenguaje de programación de agentes tipificados estáticamente denominado ASTRA.
+
+
+
+
+
+En [22] los autores presentan Chromar, una notación basada en reglas con semántica estocástica que produce una cadena de Markov de tiempo continuo. Chromar está integrado en Haskell, lo que le otorga un mayor poder expresivo y se adapta a la disponibilidad de tipos enriquecidos. En Chromar, las reglas son abstracciones de primer orden que pueden describir un comportamiento (posiblemente parcial) de un agente individual y una acción sincronizada de dos o más agentes.
+
+
+
+
+GOAL [ 23 ] es un lenguaje de programación de agentes declarativos que utiliza creencias y objetivos basados ​​en conocimientos para respaldar la toma de decisiones de sus agentes cognitivos. A pesar de compartir conceptos similares con el modelo BDI (creencias, deseos/metas), el lenguaje GOAL está más centrado en la toma de decisiones basada en reglas. Los programas de los agentes están escritos en la sintaxis específica de GOAL, pero el conocimiento del agente (por ejemplo, las reglas) generalmente se representa en Prolog.
+
+
+
+
+Jason [ 24 ] es una extensión del lenguaje AgentSpeak(L), basado en el modelo de agente BDI. Los agentes de Jason reaccionan a los eventos del sistema ejecutando acciones en el entorno, de acuerdo con los planes disponibles en la biblioteca de planes de cada agente. Una de las extensiones de Jason es la adición de reglas similares a Prolog que se pueden agregar y usar en la base de creencias de los agentes.
+
+
+
+La plataforma JaCaMo [25, 26] está compuesta por tres tecnologías, Jason, CArtAgO [27] y Moise [28], cada una de las cuales representa un nivel de abstracción diferente. Jasón se usa paraprogramando el nivel de agente, CARtAgO es responsable del nivel de ambiente y Moise del nivel de organización. JaCaMo integra estas tres tecnologías definiendo un vínculo semántico entre conceptos en diferentes niveles de abstracción (agente, entorno y organización). El resultado final es la plataforma de desarrollo JaCaMo MAS. Proporciona soporte de primera clase y alto nivel para el desarrollo de agentes, entornos y organizaciones, lo que permite el desarrollo de sistemas multiagente más complejos.
+
+
+
+
+Gwendolen [29] inicialmente comenzó como un pequeño subconjunto de Jason con la esperanza de desarrollar programas de agentes verificables, pero desde entonces ha crecido hasta convertirse en su propia sintaxis y semántica. Debido a que es un lenguaje que se ha creado para admitir la verificación de agentes desde cero, está limitado en cuanto a las funciones que puede admitir; sin embargo, los conceptos básicos de AgentSpeak (L) y BDI están todos presentes. Existe una vasta literatura sobre verificación de programas de agentes y MAS, pero los consideramos fuera del alcance de esta revisión. Gwendolen, además de ser verificable, sigue siendo un lenguaje viable para desarrollar MAS de propósito general.
+
+
+
+JADE [30] es una plataforma de código abierto para el desarrollo de aplicaciones basadas en agentes peer-to-peer. Además de la abstracción del agente, también proporciona: modelo de composición y ejecución de tareas, comunicación de agente entre pares basada en el paso de mensajes asincrónicos y un servicio de páginas amarillas que admite el mecanismo de descubrimiento de publicación y suscripción. Los sistemas basados ​​en JADE se pueden distribuir entre máquinas con diferentes sistemas operativos y se han utilizado en muchos lenguajes (p. ej., Jason y JaCaMo) como infraestructura de distribución.
+
+
+
+En [31 ] los autores presentan JADEL (Lenguaje JADE), una extensión de JADE que brinda soporte para la construcción de agentes y MAS sobre JADE sin tener que usar Java directamente; posteriormente, en [32], los autores presentan Jadescript, una extensión de JADEL. Jadescript se caracteriza por una fuerte sintaxis expresiva inspirada en gran medida en los lenguajes de secuencias de comandos modernos para promover la legibilidad y hacer que los programas de agentes sean más similares al pseudocódigo.
+
+
+
+
+Jadex [33] permite la programación de agentes de software inteligente en XML y Java. La abstracción de agentes se basa en el modelo BDI y proporciona varias funciones, como: una infraestructura de tiempo de ejecución para agentes, múltiples estilos de interacción, soporte de simulación, formación automática de redes superpuestas y un amplio conjunto de herramientas de tiempo de ejecución.
+
+
+
+
+LightJason, una plataforma basada en Java altamente escalable para programación y simulación orientada a agentes BDI, se presenta en [34]. LightJason se basa en un lenguaje lógico que amplía AgentSpeak(L) con expresiones lambda, definición de reglas y planes múltiples, acciones de reparación explícitas, asignaciones de múltiples variables, ejecución paralela y variables seguras para subprocesos. Aunque el lenguaje está inspirado en AgentSpeak(L) y Jason, LightJason se implementa desde cero.
+
+
+
+En [ 35 ], un lenguaje AOP llamado Lenguaje basado en la planificación para agentes y entornos computacionales (PLACE) agrega capacidad de planificación de IA a los agentes. PLACE tiene una estructura sintáctica cercana a BDI, mientras que la planificación se realiza en un planificador Hierarchical Task Network (HTN). A diferencia de otros lenguajes AOP, las acciones en PLACE tienen duraciones asociadas, por lo que requieren que el planificador sea capaz de manejar información temporal. Los agentes en PLACE tienen la capacidad de recuperarse de fallas adaptando sus actividades a las nuevas situaciones. Para este propósito, se agrega un mecanismo de reparación del plan que repara un plan si los eventos no anticipados en el entorno hacen que el plan se vuelva inviable.
+
+
+
+En [ 36 ] se propone el Lenguaje de Programación para Agentes Síncronos (PLASA). PLASA es independiente de la plataforma y facilita una implementación rápida de aplicaciones cooperativas en múltiples robots físicos y en entornos dinámicos. Esencialmente, PLASA implementa una variante del modelo Wait-Look-Compute-Move propuesto en [37], donde los robots se mueven sincrónicamente. Está diseñado como un lenguaje de programación de alto nivel, que permite a los usuarios especificar las instrucciones que deben realizar los robots en un lenguaje legible por humanos.
+
+
+El sistema multiagente de modelo relacional (RMAS) [38] es un enfoque centrado en la base de datos para sistemas multiagente adecuado para la incorporación del razonamiento y el control en sistemas ciberfísicos (CPS). La implementación inicial de RMAS se propone mediante el acoplamiento del entorno Matlab y el lenguaje de base de datos SQLite.
+
+
+
+
+El enfoque de SARL [39 ] es proporcionar un lenguaje extensible que esté equipado con la cantidad mínima de conceptos (es decir, conceptos clave) necesarios para admitir AOP. El lenguaje tiene como objetivo proporcionar abstracciones para concurrencia, distribución, interacción, descentralización, reactividad, autonomía y reconfiguración dinámica. Para ello no se basa en ningún modelo, sino que crea su propio Lenguaje Específico de Dominio (DSL) con el fin de proporcionar un núcleo reducido y más ligero.
+
+
+
+
+4.1.2. ABMS, robótica y otros
+
+
+
+
+
+Como se reconoce en [40 ], existe una brecha entre el software orientado a agentese Ingeniería (AOSE) metodologías y el desarrollo de ABMS. Para superar este problema, en [41] se propone un proceso AOSE denominado Proceso para el desarrollo de simuladores basados ​​en agentes eficientes (PEABS). Utiliza la metodología INGENIAS [ 42] para modelar la especificación y diseñar su estructura. Aplica un marco de adaptación que permite a los desarrolladores de ABMS obtener simulaciones con una alta eficiencia para grandes cantidades de datos. Otro enfoque para desarrollar ABMS se presenta en [43,44], donde los autores proponen una nueva arquitectura de agente cognitivo basada en el modelo BDI e integrada en el lenguaje de modelado GAMA [45]. Con respecto a trabajos previos de integración entre BDI y ABMS, en [43] la arquitectura propuesta pretende ser flexible y fácil de usar para usuarios no expertos. Otro trabajo que tiene como objetivo integrar BDI y ABMS se presenta en [46], donde los autores presentan un marco que permite que los agentes cognitivos BDI se incrusten en un sistema ABMS. En comparación con [43], la referencia [46] es más general ya que su objetivo es integrar cualquier sistema basado en BDI con ABMS. El único requisito es que se puedan identificar a priori los perceptos (u observaciones/eventos ambientales) de interés para cada agente y las acciones que el agente puede ejecutar en el entorno de simulación.
+
+
+
+
+ALLEGRO (=ALGOL en PREGO [47, 48]) es un formalismo de programación basado en una arquitectura de creencias para dominios estocásticos que pretende ser una alternativa a GOLOG [49] para el control de alto nivel en aplicaciones robóticas. Otro lenguaje que se basa en GOLOG y el cálculo de situación se presenta en [50], donde se presenta una implementación prototipo de Yet Another GOLOG Interpreter (YAGI), un lenguaje de programación de agentes y robots basado en acciones. YAGI ofrece enlaces para marcos de robótica populares como Robot Operating System (ROS) [51] y Fawkes.
+
+
+
+
+En [ 52 ] los autores presentan un marco de programación de agentes cognitivos afectivos (CAAF), un marco basado en la teoría de las emociones de creencias y deseos que permite el cálculo de las emociones para los agentes cognitivos (es decir, convertirlos en agentes cognitivos afectivos). Los autores presentan una semántica que muestra las construcciones de programación de estos agentes. Con estas construcciones, un programador puede crear un programa de agente con agentes cognitivos que calculan automáticamente las emociones durante las ejecuciones.
+
+
+
+
+4.2. Extensiones de lenguajes de programación de agentes
+
+
+
+
+En la sección anterior, informamos trabajos que presentan APL novedosas (2015–2020), junto con trabajos que presentan las APL más influyentes (≤2015) que aún se mantienen. Ahora, consideramos los trabajos más influyentes que han ampliado las APL existentes. Nos referimos a las extensiones de APL como trabajos que han cambiado las APL existentes internamente, ya sea agregando nuevas características o construyendo sobre las APL existentes, por ejemplo, al personalizar la APL para un escenario nuevo y específico.
+
+
+
+En [54] se presenta una versión mejorada del Sistema de Agentes Múltiples para Mercados Eléctricos Competitivos (MASCEM) [53]. Esta versión extendida del simulador MASCEM tiene como objetivo apoyar la integración de modelos nuevos y complementarios. Las importantes decisiones de implementación estructural brindan la facilidad para acomodar diferentes herramientas y mecanismos, lo que hace que MASCEM pueda lidiar con el entorno en constante cambio y altamente exigente de los mercados de electricidad. En particular, la nueva extensión de MASCEM trae el uso de ontologías para apoyar las comunicaciones de los jugadores.
+
+
+
+En [55], los autores presentan TABSAOND, una extensión de PEABS [41]. La principal diferencia entre TABSAOND y PEABS es que el primero se centra en el diseño e implementación de los procesos de toma de decisiones en escenarios no deterministas. Además, los simuladores ahora se implementan como aplicaciones móviles y herramientas en línea.
+
+
+
+En [56] se propone un modelo de sincronización conservador para el lenguaje SARL y su plataforma de tiempo de ejecución Janus. Dado que Janus no hace ninguna suposición sobre el orden de los eventos que intercambian los agentes, no es posible utilizar la plataforma Janus para la simulación basada en agentes que involucre tiempo sin proporcionar a la plataforma un mecanismo de sincronización específico. Un modelo para tal mecanismo se describe en su extensión.
+
+
+
+
+
+
+Los autores de [57] proponen nuevas construcciones de programación para integrar un modelo de emoción avanzado pero basado en reglas, EMIA [58], en línea con el lenguaje de agente 2APL [59]. La combinación de ambos se ha llevado a cabo redefiniendo la sintaxis, la semántica y el ciclo de deliberación de 2APL. Esta combinación se enfoca principalmente en la generación de emociones basadas en eventos, y la simulación resultante muestra una gran credibilidad en las emociones expresadas por el agente al responder a los escenarios de la vida real.
+
+
+
+
+ARGO [60] es una arquitectura Jason personalizada para programar agentes robóticos integrados utilizando el middleware Javino y los filtros de percepción.
+
+
+
+
+En [61], los autores muestran cómo la reflexión procedimental en el lenguaje de programación de agentes meta-APL [62] puede usarse para permitir una implementación directa de algunosde los pasos en el ciclo de deliberación de un agente BDI, al permitir que tanto los programas del agente como la estrategia de deliberación del agente se codifiquen en el mismo lenguaje de programación.
+
+
+
+
+Una extensión [63] de Jason y Gwendolen permite que los agentes en estos lenguajes se comuniquen con ROS, apoyando así la programación de agentes autónomos que pueden controlar y tomar decisiones de alto nivel en aplicaciones robóticas desarrolladas en ROS. La extensión se realiza a través de una interfaz que se utiliza como entorno entre el agente y ROS, y la comunicación entre el entorno y los nodos ROS se realiza mediante la biblioteca rosbridge. La principal diferencia entre su trabajo y los intentos anteriores de extender las APL tradicionales para admitir ROS es que su enfoque no requiere modificaciones adicionales en ninguna de las dos APL o ROS, lo que lo hace utilizable y portátil para diferentes versiones de estas herramientas. De manera similar, en [64] se presenta un marco para usar Jason con ROS en sistemas integrados y se introduce una nueva arquitectura para admitir interacciones de bajo nivel entre ROS y el agente.
+
+
+
+
+Finalmente, en [65] se presenta un modelo para un marco de programación de agentes BDI que integra el aprendizaje por refuerzo y una implementación basada en el lenguaje de programación Jason. El enfoque admite el diseño de agentes BDI donde algunos planes pueden programarse explícitamente y otros pueden ser aprendidos por el agente durante la etapa de desarrollo/ingeniería.
+
+
+
+
+
+
+
+
+
+4.3. Comparación de lenguajes de programación de agentes
+
+
+
+A partir de la investigación descrita en las dos secciones anteriores, podemos observar que hay muchas APL para desarrollar MAS disponibles en la comunidad de programación basada en agentes. Desafortunadamente, muy a menudo la evaluación de un idioma se pierde parcial o incluso por completo. En el pasado se han realizado algunos estudios como [66] para comparar lenguajes de agentes con otros paradigmas, en ese caso la comparación fue con lenguajes basados ​​en actores. En sus resultados, los autores han demostrado que los lenguajes de agentes (específicamente Jason en ese trabajo) pueden competir con lenguajes más livianos como los actores.
+
+
+
+En [67], los autores presentan un marco de evaluación para evaluar lenguajes de modelado específicos de dominio existentes o recientemente definidos para MAS. La evaluación se centra tanto en el lenguaje como en las herramientas correspondientes y proporciona resultados tanto cualitativos como cuantitativos.
+
+
+
+
+
+En [68] se muestra una comparación entre el pseudocódigo de un conocido algoritmo para resolver problemas de satisfacción de restricciones distribuidas y la implementación de tal algoritmo en JADEL.
+
+
+
+El trabajo en [69] se enfoca en comparar plataformas paralelas que soportan simulaciones de múltiples agentes y su ejecución en recursos de alto rendimiento como clústeres paralelos.
+
+
+
+Los autores de [70] realizan una evaluación sistemática de los enfoques ABMS diferenciando los conceptos de qué tan complejo es el comportamiento del modelo y qué tan complicada es la estructura del modelo, e ilustran la relación no lineal entre ellos. Luego, evalúan las compensaciones entre modelos simples (a menudo teóricos) y modelos complicados (a menudo basados ​​empíricamente).
+
+
+
+
+
+4.4. Aplicaciones basadas en agentes
+
+
+
+
+En esta sección enumeramos algunas de las aplicaciones más recientes que utilizan programación basada en agentes. Nuestro objetivo aquí es mostrar la amplia variedad de dominios de aplicaciones en los que los agentes pueden ser útiles, por lo tanto, esta lista no es exhaustiva y no es el enfoque principal de nuestra revisión.
+
+
+
+El Concurso de Programación Multiagente (https://multiagentcontest.org/) (MAPC) es una competencia internacional anual que ocurre desde 2005. Su propósito es estimular la investigación en programación multiagente mediante la introducción de escenarios de referencia complejos que requieren una acción coordinada y se puede usar para probar y comparar lenguajes de programación, plataformas y herramientas de múltiples agentes. En los últimos años se han utilizado implementaciones que utilizan diferentes plataformas y lenguajes basados ​​en agentes; como JaCaMo [ 71 –73 ], Jason [ 74, 75 ], GOAL [76].
+
+
+
+
+En [77,78] se propusieron modelos basados ​​en agentes para simular y evaluar la transmisión de la enfermedad por coronavirus (COVID-19). Existe toda una área de investigación centrada en el uso de tecnologías basadas en agentes en la industria energética. Por ejemplo, en [ 79], las tecnologías MAS se utilizan para el control de Microgrid, su optimización y distribución en el mercado. Para lecturas adicionales, hay una encuesta [80 ] sobre las aplicaciones de MAS en el control y operación de Microrredes, y una revisión [81] del estado del arte en la aplicación de MAS a problemas de optimización de energía.
+
+
+
+En [82], se presenta una aplicación de ABMS para estudiar las relaciones entre las actividades humanas y los cambios en el uso y la cobertura del suelo para respaldar las decisiones científicas con respecto a la planificación y el uso razonables del suelo. El modelo se implementa en base a la plataforma de modelado Repast [83].
+
+
+
+En [ 84 ], los autores presentan e ilustran FlowLogo, un entorno de modelado interactivo para desarrollar modelos de aguas subterráneas basados ​​en agentes acoplados. FlowLogo está implementado en NetLogo y es thEl primer software integrado que ofrece una forma sencilla de representar los comportamientos de los agentes que evolucionan con las condiciones del agua subterránea. En [8] se puede encontrar una encuesta sistemática sobre las herramientas y aplicaciones de ABMS.
+
+
+
+
+En [10] se proporciona una guía metodológica para el uso de agentes BDI en simulaciones sociales y una descripción general de las metodologías y herramientas existentes para usarlos.
+
+
+
+
+
+
+Los agentes se pueden usar para desarrollar sistemas de Internet de las cosas (IoT) autogestionados debido a su naturaleza distribuida, conciencia del contexto y autoadaptación (para obtener más información sobre el uso de microservicios como agentes en IoT [85, 86]). En [87], los autores tienen como objetivo mejorar el desarrollo de aplicaciones IoT utilizando agentes y líneas de productos de software en sistemas de autogestión.
+
+
+
+
+En [88] se presentan experimentos para validar la programación de robots autónomos utilizando Jadescript. Presenta el novedoso soporte para manejadores de percepción que se ha introducido recientemente en el lenguaje para hacer frente a la alta tasa de datos de los sensores en aplicaciones robóticas.
+
+
+
+
+5. Discusión y Direcciones Futuras
+
+
+
+
+Como hemos mostrado, existe una amplia variedad de opciones para la programación basada en agentes, desde los enfoques más tradicionales (por ejemplo, BDI) hasta la simulación o la planificación. Algunos lenguajes también han intentado combinar conceptos de la programación basada en agentes con otros paradigmas de programación, sobre todo de la programación orientada a objetos. Uno de los principales inconvenientes de tratar de lograr una comunidad más amplia de programadores en programación basada en agentes es la falta de conocimiento y familiaridad con sus conceptos, que son significativamente diferentes de otros paradigmas más comunes. Los lenguajes de programación basados ​​en agentes que usan algunos de los conceptos de estos otros paradigmas pueden ayudar a traer nuevos programadores que de otro modo se sentirían demasiado intimidados. Estos lenguajes híbridos tienen su propio nicho de aplicaciones según los conceptos que utilizan, que a veces pueden superponerse con los lenguajes de programación de agentes más "puros", pero los enfoques "puros" aún son necesarios para abordar completamente todas las abstracciones de programación de agentes (agente, entorno). , organización, interacción, etc.).
+
+
+
+
+
+De los 15 lenguajes de programación de agentes enumerados en la Tabla 1, cinco no tienen una implementación disponible públicamente (es decir, el código no está alojado en un dominio público/accesible). Esto representa un problema importante, ya que limita la usabilidad práctica del lenguaje propuesto y dificulta la comparación cuantitativa con otros lenguajes. No todas las extensiones a idiomas existentes requieren una implementación para ser útiles, sin embargo, tener una disponible siempre es positivo para la comunidad.
+
+
+
+
+Aunque hay varias comparaciones cualitativas (por ejemplo, conceptos, características) en la literatura, el uso de diferentes modelos de agencia dificulta proporcionar una comparación justa entre las características presentes en estos idiomas. Se debe realizar un estudio más profundo para identificar las características fundamentales de la programación orientada a agentes y, lo que es más importante, cómo encajan estas características en los diferentes modelos de agencia que utilizan los lenguajes de programación existentes.
+
+
+
+
+Las comparaciones cuantitativas (p. ej., rendimiento) de los lenguajes de programación son más complicadas debido al ciclo de desarrollo de tener actualizaciones constantes, lo que es aún más común en los lenguajes de programación desarrollados en la academia (como lo son la mayoría de los lenguajes de programación de agentes). Sin embargo, es importante desarrollar puntos de referencia específicos de agentes que la comunidad pueda usar fácilmente para evaluar nuevos lenguajes de programación o extensiones de lenguajes existentes.
+
+
+
+
+La mayoría de los idiomas ofrecen una variedad de ejemplos diferentes que muestran sus características y fortalezas. Si bien estos ejemplos son ciertamente útiles para comprender y aprender mejor el lenguaje, por lo general no son suficientes para convencer a los nuevos usuarios de la aplicabilidad del lenguaje en aplicaciones del mundo real. Es difícil desarrollar estudios de casos complejos y realistas, pero la comunidad de agentes tiene disponible un conjunto de escenarios complejos como parte del MAPC anual que podría aprovecharse mejor para probar y comparar lenguajes de programación de agentes.
+
+
+
+
+Dos encuestas recientes [3,5] centradas en la programación de agentes BDI describen las limitaciones y desafíos en el área. En un manifiesto [3], el autor argumenta que es necesario ampliar el conjunto de funciones de las APL actuales para permitir una adopción más amplia de la tecnología de agentes. El autor tampoco está de acuerdo con encuestas anteriores en que la falta de metodologías y herramientas más pulidas no es el factor principal (aunque contribuye) en la adopción limitada de APL; en cambio, el autor sugiere que hay poco o ningún incentivo para que los desarrolladores realicen el cambio a AOP, ya que los comportamientos que se muestran actualmente en las aplicaciones de la literatura se pueden implementar en lenguajes más convencionales con un esfuerzo limitado. La encuesta en [5] resume la historia hasta el momento y el estado del arte en la programación de agentes con un enfoque en los enfoques basados ​​en BDI. Identifican como un gran desafío para futuras investigaciones la integración de técnicas de IA en agentes lenguajes de programación como un paso importante y necesario para la amplia aceptación y adopción de AOP.
+
+
+
+
+Recomendación para futuras investigaciones
+
+
+
+
+Teniendo en cuenta los últimos 5 años de investigación sobre APL, se han propuesto muchos marcos, plataformas y modelos novedosos. Cada uno de estos, junto con nuevas extensiones, enriqueció la literatura basada en agentes y amplió el espectro de posibles aplicaciones. Sin embargo, como se observa correctamente en [3,5], el principal problema de las APL actuales no está en su conjunto de características, sino en su usabilidad. Generalmente, no hay deseo de aprender nuevos idiomas cuando las ventajas no son sencillas. En nuestra revisión, analizamos APL que eran a la vez expresivos y potentes, pero con importantes problemas de usabilidad; como la ausencia de una herramienta (mantenida), documentación y comparaciones cualitativas y cuantitativas con otros idiomas. En nuestra opinión, la investigación adicional sobre APL tendrá que abordar estos problemas de usabilidad para tratar de difundir el uso de APL fuera de la comunidad de agentes.
+
+
+
+
+
+
+
+6. Conclusiones
+
+
+
+
+La programación basada en agentes es un área de investigación próspera de la inteligencia artificial. En este artículo de revisión, hemos clasificado tanto las contribuciones veteranas como las recientes según cuatro categorías diferentes: lenguajes de programación basados ​​en agentes, sus extensiones, las comparaciones entre lenguajes y, por último, algunas de las aplicaciones que utilizan estos lenguajes. Para cada contribución, revisamos brevemente el contenido y esbozamos los resultados clave. Para comprender mejor el estado actual del arte, no solo nos enfocamos en los últimos enfoques, sino que también revisamos brevemente los lenguajes de programación basados ​​en agentes más destacados que aún se mantienen.
+
+
+
+
+Cada año hay muchas extensiones a los lenguajes existentes e incluso se proponen lenguajes completamente nuevos, sin embargo, la mayoría de ellos se limitan a descripciones formales sin ninguna implementación para respaldar la teoría formal. El pequeño subconjunto de enfoques con implementación carece de una evaluación efectiva. La comparación de nuevos enfoques con el estado del arte es uno de los principales pasos necesarios para avanzar en el área de la programación basada en agentes. Las comparaciones cualitativas y cuantitativas pueden ayudar a identificar brechas en los lenguajes existentes, lo que puede conducir a mejoras o nuevos enfoques que puedan hacer frente a los desafíos planteados. Además, en nuestra revisión también hemos identificado una falta de aplicaciones del mundo real. Para ampliar el uso de estos lenguajes, es importante que su usabilidad en el mundo real esté bien documentada, por lo tanto, alentamos y recomendamos más artículos basados ​​en aplicaciones que puedan demostrar las características de la programación basada en agentes en el mundo real. .
+
+
+
+**Financiación**: Esta investigación fue financiada por el Industrial Strategy Challenge Fund (ISCF) del Reino Unido, proporcionada por UK Research and Innovation (UKRI) y administrada por el Engineering and Physical Sciences Research Council (EPSRC) en el marco de Robotics and AI for Extreme. Programa de entornos con subvenciones Robotics and AI in Nuclear (RAIN) Hub (EP/R026084/1), Future AI and Robotics for Space (FAIR-SPACE) Hub (EP/R026092/1) y Offshore Robotics for Certification of Assets (ORCA ) Buje (EP/R026173/1).
+
+
+
+
+**Conflictos de interés**: Los autores declaran no tener ningún conflicto de interés. Los financiadores no tuvieron ningún papel en el diseño del estudio; en la recopilación, análisis o interpretación de datos; en la redacción del manuscrito, o en la decisión de publicar los resultados.
