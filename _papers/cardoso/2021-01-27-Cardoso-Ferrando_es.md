@@ -20,7 +20,7 @@ citation:  'Cardoso, R.C.; Ferrando, A. A Review of Agent-Based Programming for 
 toc:  true
 
 
-title:  'FIPA: Especificación de protocolos para la interacción de sistemas de múltiples agentes'
+title:  'Una Revisión de la Programación Basada en Agentes para Sistemas Multi-Agente'
 headtitle:  'Cardoso, R.C.; Ferrando, A. A Review of Agent-Based Programming for Multi-Agent Systems. Computers 2021, 10, 16.'
 shorttitle:  'Cardoso, Ferrando (2021)'
 year:  '2021'
