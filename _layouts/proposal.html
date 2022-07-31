@@ -43,7 +43,7 @@ layout: default
        
 
        
-      <strong>Objective:</strong>      {{ page.title }}<br>
+      <strong>Objective:</strong>      {{ page.objective }}<br>
      
      
       {%- if page.githubrepo -%}
@@ -57,6 +57,7 @@ layout: default
      
      
       <strong>Status:</strong>      {{ page.status }}<br>
+      <strong>Proposed by:</strong> {{ page.author }}<br>
       <strong>Publised:</strong>    {{ page.date_published }}<br>
       <strong>License: </strong>    {{ page.license }}<br>
 
@@ -66,12 +67,18 @@ layout: default
      </div>
      
 
-
-     <div class="section-nav">
-       {% include toc.html html=content %}
-     </div>
       
-
+     {% if page.toc %}
+       <div class="section-nav">
+         {% include toc.html html=content %}
+         {%- include language-selector.html -%}
+         <img src="{{ site.baseurl }}/assets/imgs/internet.png">
+       </div>
+     {% endif %}
+       
+       
+       
+       
   </div>
   {% include top-button.html %}     
 
