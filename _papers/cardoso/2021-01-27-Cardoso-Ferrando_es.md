@@ -45,7 +45,7 @@ license:  'Copyright: © 2021 by the authors. Li censee MDPI, Basel, Switzerland
 
 
 date:  '2021/01/27'
-modified_date:  '2021/01/27'
+modified_date:  '2022/07/31'
 
 
 
@@ -57,11 +57,11 @@ modified_date:  '2021/01/27'
 
 
 
-<small>
-Control de citas:  [^1],  [^2],  [^3],  [^4],  [^5],  [^6],  [^7],  [^8],  [^9],  [^10],  [^11],  [^12],  [^13],  [^14],  [^15],  [^16],  [^17],  [^18],  [^19],  [^20],  [^21],  [^22],  [^23],  [^24],  [^25],  [^26],  [^27],  [^28],  [^29],  [^30],  [^31],  [^32],  [^33],  [^34],  [^35],  [^36],  [^37],  [^38],  [^39],  [^40],  [^41],  [^42],  [^43],  [^44],  [^45],  [^46],  [^47],  [^48],  [^49],  [^50],  [^51],  [^52],  [^53],  [^54],  [^55],  [^56],  [^57],  [^58],  [^59],  [^60],  [^61],  [^62],  [^63],  [^64],  [^65],  [^66],  [^67],  [^68],  [^69],  [^70],  [^71],  [^72],  [^73],  [^74],  [^75],  [^76],  [^77],  [^78],  [^79],  [^80],  [^81],  [^82],  [^83],  [^84],  [^85],  [^86],  [^87],  [^88]. 
-</small>
 
-> **{{ site.data.i18n[page.lang].abstract }}:**  Los agentes inteligentes y autónomos son una subárea de la inteligencia artificial simbólica en la que estos agentes deciden, ya sea de forma reactiva o proactiva, sobre un curso de acción razonando sobre la información disponible sobre el mundo (incluido el entorno, el propio agente y otros agentes). . Abarca multitud de técnicas, como protocolos de negociación, simulación de agentes, argumentación multiagente, planificación multiagente y muchas otras. En este artículo, nos enfocamos en la programación de agentes y proporcionamos una revisión sistemática de la literatura sobre programación basada en agentes para sistemas multiagente. En particular, analizamos tanto los lenguajes de programación de agentes veteranos (aún mantenidos) como los novedosos, sus extensiones, el trabajo de comparación de algunos de estos lenguajes y las aplicaciones encontradas en la literatura que hacen uso de la programación de agentes. Palabras clave: programación basada en agentes; sistemas multiagente; lenguajes de programación de agentes
+Control de citas:  [^1],  [^2],  [^3],  [^4],  [^5],  [^6],  [^7],  [^8],  [^9],  [^10],  [^11],  [^12],  [^13],  [^14],  [^15],  [^16],  [^17],  [^18],  [^19],  [^20],  [^21],  [^22],  [^23],  [^24],  [^25],  [^26],  [^27],  [^28],  [^29],  [^30],  [^31],  [^32],  [^33],  [^34],  [^35],  [^36],  [^37],  [^38],  [^39],  [^40],  [^41],  [^42],  [^43],  [^44],  [^45],  [^46],  [^47],  [^48],  [^49],  [^50],  [^51],  [^52],  [^53],  [^54],  [^55],  [^56],  [^57],  [^58],  [^59],  [^60],  [^61],  [^62],  [^63],  [^64],  [^65],  [^66],  [^67],  [^68],  [^69],  [^70],  [^71],  [^72],  [^73],  [^74],  [^75],  [^76],  [^77],  [^78],  [^79],  [^80],  [^81],  [^82],  [^83],  [^84],  [^85],  [^86],  [^87],  [^88]. 
+
+
+> **{{ site.data.i18n[page.lang].abstract }}:**  Los agentes inteligentes y autónomos son una subárea de la inteligencia artificial simbólica en la que estos agentes deciden, ya sea de forma reactiva o proactiva, sobre un curso de acción razonando y, sobre la información disponible del entorno (incluido el entorno, el propio agente y otros agentes). Abarca multitud de técnicas, como protocolos de negociación, simulación de agentes, argumentación multiagente, planificación multiagente y muchas otras. En este artículo, nos enfocamos en la programación de agentes y proporcionamos una revisión sistemática de la literatura sobre programación basada en agentes para sistemas multiagente. En particular, analizamos tanto los lenguajes de programación de agentes veteranos (aún mantenidos) como los novedosos, sus extensiones, el trabajo de comparación de algunos de estos lenguajes y las aplicaciones encontradas en la literatura que hacen uso de la programación de agentes.
 
 **{{ site.data.i18n[page.lang].keywords}}:**  programación basada en agentes; sistemas multiagente; lenguajes de programación de agentes
 
@@ -69,11 +69,11 @@ Control de citas:  [^1],  [^2],  [^3],  [^4],  [^5],  [^6],  [^7],  [^8],  [^9],
 
 
 
-Los sistemas multiagente (MAS) **[^1]** son ​​una rama bien establecida de la inteligencia artificial (IA). Aunque son relativamente jóvenes con respecto a áreas de investigación más arquetípicas, los MAS tienen una rica historia; en 1995 **[^2]** la tecnología de agentes fue reconocida como un área de investigación en rápido desarrollo y una de las áreas de tecnología de la información de más rápido crecimiento. Tal afirmación sigue siendo cierta hoy en día, donde se pueden encontrar muchos artículos de investigación, herramientas y conferencias cuyo objetivo es avanzar en la investigación en el área. A pesar de esto, los MAS no se usan tan ampliamente como podrían. Teniendo en cuenta el aspecto de programación de agentes de los MAS, según **[^3]**, la razón clave es que hay pocos incentivos para que los desarrolladores cambien a los lenguajes de programación de agentes (APL) actuales, ya que los comportamientos que se pueden programar fácilmente son lo suficientemente simples como para ser implementables. en los lenguajes principales con solo una pequeña sobrecarga en el tiempo de codificación. Esto, entre la presencia de demasiadas opciones desorganizadas disponibles, no ayuda a que los lenguajes y herramientas de programación basados ​​en agentes sean elegidos por usuarios no expertos.
+Los sistemas multiagente (MAS) **[^1]** son ​​una rama bien establecida de la inteligencia artificial (IA). Aunque son relativamente jóvenes con respecto a áreas de investigación más arquetípicas, los MAS tienen una rica historia; en 1995 **[^2]** la tecnología de agentes fue reconocida como un área de investigación en rápido desarrollo y una de las áreas de tecnología de la información de más rápido crecimiento. Tal afirmación sigue siendo cierta hoy en día, donde se pueden encontrar muchos artículos de investigación, herramientas y conferencias cuyo objetivo es avanzar en la investigación en el área. A pesar de esto, los MAS no se usan tan ampliamente como pudiera hacerse. Teniendo en cuenta el aspecto de programación de agentes de los MAS, según **[^3]**, la razón clave es que hay pocos incentivos para que los desarrolladores cambien a los lenguajes de programación de agentes (APL) actuales, ya que los comportamientos que se pueden programar fácilmente son lo suficientemente simples como para ser implementables, en los lenguajes principales, con solo una pequeña sobrecarga en el tiempo de codificación. Esto, entre la presencia de demasiadas opciones desorganizadas disponibles, no ayuda a que los lenguajes y herramientas de programación basados ​​en agentes sean elegidos por usuarios no expertos.
 
 
 
-Un agente inteligente **[^4]** puede generalizarse como una entidad informatizada que: es capaz de razonar (racional/cognitivo), de tomar sus propias decisiones de forma independiente (autónomo), de colaborar con otros agentes cuando es necesario (social), de percibir el contexto en el que opera y reacciona adecuadamente (reactivo), y finalmente, para tomar acción con el fin de lograr sus objetivos (proactivo). Un sistema basado en agentes (u orientado a agentes) es un sistema donde los agentes son las entidades principales, tratadas como abstracciones de primera clase. Desde una perspectiva de programación, se puede seguir el mismo razonamiento. En particular, al usar una comparación, podemos decir que los agentes son para los lenguajes de Programación Orientada a Agentes (AOP) lo que los objetos son para los lenguajes de Programación Orientada a Objetos (OOP). En un lenguaje de programación basado en agentes, los agentes son los bloques de construcción, y los programas se obtienen programando sus comportamientos (cómo razona un agente), sus objetivos (lo que pretende lograr un agente) y su interoperación (cómo colaboran los agentes para resolver una tarea). ).
+Un agente inteligente **[^4]** puede generalizarse como una entidad informatizada que: es capaz de razonar de forma (racional/cognitiva), capaz de tomar sus propias decisiones de forma independiente (autónomo), capaz de colaborar con otros agentes cuando es necesario (social), capaz de percibir el contexto en el que opera y reaccionar adecuadamente (reactivo), y finalmente, capaz de adoptar una acción con el fin de lograr sus objetivos (proactivo). Un sistema basado en agentes (u orientado a agentes) es un sistema donde los agentes son las entidades principales, tratadas como abstracciones de primera clase. Desde una perspectiva de programación, se puede seguir el mismo razonamiento. En particular, al usar una comparación, podemos decir que los agentes son para los lenguajes de Programación Orientada a Agentes (AOP) lo que los objetos son para los lenguajes de Programación Orientada a Objetos (OOP). En un lenguaje de programación basado en agentes, los agentes son los bloques de construcción, y los programas se obtienen programando sus comportamientos (cómo razona un agente), sus objetivos (lo que pretende lograr un agente) y su interoperación (cómo colaboran los agentes para resolver una tarea).
 
 
 
@@ -112,7 +112,7 @@ El Sistema de Razonamiento Procedural (PRS) **[^12]** (implementado en Lisp) def
 
 
 
-El modelo Creencia-Deseo-Intención (BDI) **[^13]**,**[^14]** consiste en un proceso de razonamiento que ayuda a la toma de decisiones de seleccionar una acción apropiada para el logro de algún objetivo. Sus tres actitudes mentales son: creencia: conocimiento que el agente cree acerca de su entorno, de sí mismo y de otros agentes; deseo: los estados deseados que el agente quiere lograr; e intención: una secuencia de pasos hacia el logro de un deseo. Estas actitudes mentales representan respectivamente los estados de información, motivación y deliberación del agente. El flujo de trabajo en un sistema BDI genérico se muestra en la Figura 1 y funciona como tal: una función de revisión de creencias recibe información de entrada del entorno (por ejemplo, sensores) y es responsable de actualizar la base de creencias. Esta actualización puede generar más opciones que pueden convertirse en deseos actuales basados ​​en la base de creencias y la base de intenciones. Un filtro se encarga de actualizar la base de intenciones, teniendo en cuenta su estado anterior y la base de creencias y la base de deseos actuales. Finalmente, se elige una intención para ser realizada como una acción por parte del agente. BDI es el modelo de agencia más popular, ha sido y sigue siendo utilizado en muchos lenguajes de programación de agentes. AgentSpeak(L) **[^15]** es un lenguaje que sirve como una abstracción de los sistemas BDI implementados que se pueden utilizar para interpretar los programas de agente como programas lógicos de cláusula de bocina. La teoría detrás de este lenguaje se ha implementado como base para muchas APL.
+El modelo Creencia-Deseo-Intención (BDI) **[^13]**,**[^14]** consiste en un proceso de razonamiento que ayuda a la toma de decisiones para seleccionar una acción apropiada para conseguir el logro de algún objetivo. Sus tres actitudes mentales son: creencia: conocimiento que el agente cree acerca de su entorno, de sí mismo y de otros agentes; deseo: los estados deseados que el agente quiere lograr; e intención: una secuencia de pasos hacia el logro de un deseo. Estas actitudes mentales representan respectivamente los estados de información, motivación y deliberación del agente. El flujo de trabajo en un sistema BDI genérico se muestra en la Figura 1 y funciona como tal: una función de revisión de creencias recibe información de entrada del entorno (por ejemplo, sensores) y es responsable de actualizar la base de creencias. Esta actualización puede generar más opciones que pueden convertirse en deseos actuales basados ​​en la base de creencias y la base de intenciones. Un filtro se encarga de actualizar la base de intenciones, teniendo en cuenta su estado anterior y la base de creencias y la base de deseos actuales. Finalmente, se elige una intención para ser realizada como una acción por parte del agente. BDI es el modelo de agencia más popular, ha sido y sigue siendo utilizado en muchos lenguajes de programación de agentes. AgentSpeak(L) **[^15]** es un lenguaje que sirve como una abstracción de los sistemas BDI implementados que se pueden utilizar para interpretar los programas de agente como programas lógicos de sentencias de llamada. La teoría detrás de este lenguaje se ha implementado como base para muchas APL.
 
 
 
@@ -139,7 +139,7 @@ El Cálculo de Situación **[^16]** es un lenguaje de primer orden diseñado par
 
 
 
-Como veremos en la Sección 4, hay muchos otros modelos que han inspirado los lenguajes de programación basados ​​en agentes, sin embargo, estos tres fueron los más influyentes en la historia pasada de la programación basada en agentes. Algunos lenguajes de agentes comparten similitudes o incluso mezclan conceptos de otros paradigmas de programación, como procedimental, imperativo, orientado a objetos, funcional, actor, concurrente, etc. Comparar las diferencias o entrar en detalles sobre estos otros paradigmas está fuera del alcance de esta revisión.o en un área específica de APL como en **[^6]**, donde solo se consideran los aspectos de ingeniería, o en **[^7]**, donde solo se consideran las plataformas de APL, o en **[^8]**, donde solo se analiza la literatura de simulación basada en agentes, o en **[^3]**,**[^5]**, donde su enfoque está en un modelo específico de agencia (Creencia-Deseo-Intención—BDI).
+Como veremos en la Sección 4, hay muchos otros modelos que han inspirado los lenguajes de programación basados ​​en agentes, sin embargo, estos tres fueron los más influyentes en la historia pasada de la programación basada en agentes. Algunos lenguajes de agentes comparten similitudes o incluso mezclan conceptos de otros paradigmas de programación, como procedimental, imperativo, orientado a objetos, funcional, actor, concurrente, etc. Comparar las diferencias o entrar en detalles sobre estos otros paradigmas está fuera del alcance de esta revisión, o de un área específica de APL como en **[^6]**, donde solo se consideran los aspectos de ingeniería, o en **[^7]**, donde solo se consideran las plataformas de APL, o en **[^8]**, donde solo se analiza la literatura de simulación basada en agentes, o en **[^3]**,**[^5]**, donde su enfoque está en un modelo específico de agencia (Creencia-Deseo-Intención—BDI).
 
 
 
@@ -911,3 +911,19 @@ Se han utilizado las siguientes abreviaturas en el manuscrito:
 
 
 [^88]:  **[88]**. Iotti, E.; Petrosino, G.; Monica, S.; Bergenti, F. Exploratory Experiments on Programming Autonomous Robots in Jadescript. In Proceedings of the First Workshop on Agents and Robots for reliable Engineered Autonomy, AREA@ECAI 2020, Virtual Event, Santiago de Compostela, Spain, 4 September 2020; Volume 319, pp. 55–67. [CrossRef]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
