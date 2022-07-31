@@ -20,8 +20,8 @@ manualcode:  psa210dg
 toc:  true
 
 
-title:  "PS-Agents 2.1: Deployment Guide"
-headtitle:  'Chapter 1. First application deployment in 3 minutes'
+title:  "PS-Agents 2.1: Deployment Manual"
+headtitle:  'JADE Agent-Based Problem-Solving Applications: Deployment Manual with Examples.'
 shorttitle:  'Aguayo, FJ (2022)'
 year:  '2022'
 author:  'Aguayo, FJ, Ph.D.'
@@ -52,45 +52,44 @@ publisher:  'Pending'
 ---
 
 
-<h1 class="no_toc">PS-Agents 2.1: Deployment Guide</h1>
+<h2 class="no_toc">Problem Solving Agents for JADE: <br>Deployment Manual with Examples</h2>
 
->  _Aguayo, FJ (2022)_<br>
->  _**Ed**.  Pending_
+>  by  **Francisco J. Aguayo**, Ph.D.<br>
+>  Editor: 
 
 
 -  **Available at**: _GitHub_. [^1]
 -  **License**: _GNU Lesser General Public License v3.0_
 
 
-<h2 class="no_toc">Table of Contents</h2>
-<br>
-_First deployment in 3 minutes_<br>
+#  Table of Contents
+Readme<br>
 _Chapter 1._ Types of agents included<br>
 _Chapter 2._ Agent-oriented application structure<br>
-_Chapter 3._ Monitor and Precog agent directories<br>
+_Chapter 3._ Monitor and Precog agents directories<br>
 _Chapter 4._ CLIPS, Jess and Prolog agent directories<br>
 _Chapter 5._Agents to debug agents: the stage<br>
-_Chapter 6._ Runlevels: stopping time<br>
-_Chapter 7._ Message queue management<br>
-_Chapter 8._ Agent behavior management<br>
+_Chapter 6._ Runlevels: stopping the time<br>
+_Chapter 7._ Message Queue management<br>
+_Chapter 8._ Agent Behaviour management<br>
 _Chapter 9._ Coordination between agents<br>
 _Chapter 10._ Orchestration between agents<br>
 _Chapter 11._ Agent discovery and registration<br>
 Support information<br>
 
 
+#  _Readme_
 
-
-#  _First deployment in 3 minutes_
-
-
-
->  This world is like this: <br>3 minutes today are an eternity.
+>  And the world changed. And then 3 minutes turned into an eternity
 
 
 
 
 
+
+
+
+##  _First deployment in 3 minutes_
 
 
 
@@ -114,7 +113,7 @@ Support information<br>
 
 
 
-##  _What agent-oriented applications can solve_
+##  _Agents are deployed on a MAS platform_
 
 
 
@@ -151,3 +150,5 @@ Support information<br>
 
 
 ##  _References_
+
+[^1]: GitHub release 2.1

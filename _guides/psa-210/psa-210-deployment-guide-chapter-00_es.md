@@ -20,8 +20,8 @@ manualcode:  psa210dg
 toc:  true
 
 
-title:  "PS-Agents 2.1: Guía de despliegue"
-headtitle:  'Capítulo 1. Primer despliegue de aplicación en 3 minutos'
+title:  "PS-Agents 2.1: Manual de Despliegue"
+headtitle:  'Manual de despliegue con ejemplos: aplicaciones de resolución de problemas basadas en agentes PS-Agents 2.1 de JADE.'
 shorttitle:  'Aguayo, FJ (2022)'
 year:  '2022'
 author:  'Dr. FJ. Aguayo'
@@ -52,21 +52,20 @@ publisher:  'Pending'
 ---
 
 
-<h1 class="no_toc">PS-Agents 2.1: Guía de despliegue</h1>
+<h2 class="no_toc">Agentes de Resolución de Problemas para JADE: <br>Manual de Despliegue con ejemplos</h2>
 
->  _Aguayo, FJ (2022)_<br>
->  _**Ed**.  Pending_
+>  Autor: Dr. **Francisco J. Aguayo**<br>
+>  Editor:
 
 
--  Disponble en: _GitHub_. [^1]
+-  **Disponble en**: _GitHub_. [^1]
 -  **License**: _GNU Lesser General Public License v3.0_
 
 
-<h2 class="no_toc">Tabla de contenidos</h2>
-<br>
-_El primer despliegue en 3 minutos_<br>
-_Capítulo 2._ Tipos de agentes incluidos<br>
-_Capítulo 3._ Estructura de aplicación oritentada a agentes<br>
+#  Tabla de contenidos
+Léame<br>
+_Capítulo 1._ Tipos de agentes incluidos<br>
+_Capítulo 2._ Estructura de aplicación oritentada a agentes<br>
 _Capítulo 4._ Directorios de agentes Monitor y Precog<br>
 _Capítulo 5._ Directorios de agentes CLIPS, Jess y Prolog<br>
 _Capítulo 6._ Agentes para depurar agentes: el escenario<br>
@@ -79,18 +78,18 @@ _Capítulo 12._ Descubrimiento y registro de agentes<br>
 Información de soporte<br>
 
 
+#  _Léame_
 
-
-#  _Primer despliegue en 3 minutos_
-
-
-
->  Este mundo es así:<br> 3 minutos hoy son una eternidad.
+>  Y el mundo cambió. Y entonces 3 minutos se convirtieron en una eternidad
 
 
 
 
 
+
+
+
+##  _Primer despliegue en 3 minutos_
 
 
 
@@ -114,7 +113,7 @@ Información de soporte<br>
 
 
 
-##  _Qué pueden solucionar las aplicaciones orientadas a agentes_
+##  _Los agentes se despliegan en una plataforma MAS_
 
 
 
@@ -151,3 +150,5 @@ Información de soporte<br>
 
 
 ##  _Bibliografía_
+
+[^1]: GitHub release 2.1

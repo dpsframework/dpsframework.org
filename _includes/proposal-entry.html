@@ -1,9 +1,0 @@
-● <a class="page-link"
-   href="{{ site.baseurl }}{{ proposal.url}}">
-  {{ proposal.shorttitle  }}
-</a>
-~ GitHub: 
-{%- if proposal.githubrepo -%}&nbsp;<a rel="page-link" href="https://github.com/dpsframework/{{ proposal.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ proposal.githubrepo | escape }}"><svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg></a>{%- endif -%}    
-<p class="sidebar-meta">
-  {{ proposal.title }} 
-</p>

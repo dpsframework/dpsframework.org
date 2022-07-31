@@ -8,6 +8,7 @@
   padding-right: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
   @extend %clearfix;
+  
 
   
 
@@ -36,7 +37,7 @@
 
 .sidebar-meta {
   font-size: smaller;
-  padding-left: 15px;   
+  // padding-left: 15px;   
 }
 
 /**

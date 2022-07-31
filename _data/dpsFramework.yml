@@ -5,7 +5,7 @@ title:
 
 subtitle:
   en: 'JADE Agent-Based Problem-Solving Applications'
-  es: 'Aplicaciones de Resolución de Problemas Basadas en Agentes JADE'
+  es: 'Aplicaciones de Resolución de Problemas Basadas en Agentes de JADE'
 
 
 description:
@@ -25,9 +25,9 @@ motto:
 
   
 home-fig1:
-  en: 'An agent built with [dpsAgents-full-1.8.jar] library named `Mon712`. That agent is ready to receive messages; set new properties; create additional behaviors; etc., through its Java runtime command line shell on the JADE platform.'
+  en: 'An agent built with [dpsAgents-full-1.8.jar (2020)] library named `Mon712`. That agent is ready to receive messages; set new properties; create additional behaviors; etc., through its Java runtime command line shell on the JADE platform.'
 
-  es: 'Agente generado con biblioteca [dpsAgents-full-1.8.jar] nombrado como `Mon712`. Ese agente está listo para recibir mensajes; establecer nuevas propiedades; crear comportamientos adicionales; etc., a través de su shell de línea de comandos Java en tiempo de ejecución en la plataforma JADE.'
+  es: 'Agente generado con biblioteca [dpsAgents-full-1.8.jar (2020)] nombrado como `Mon712`. Ese agente está listo para recibir mensajes; establecer nuevas propiedades; crear comportamientos adicionales; etc., a través de su shell de línea de comandos Java en tiempo de ejecución en la plataforma JADE.'
 
 
 trademark: "<sup>&copy;</sup>"

@@ -20,7 +20,7 @@ images:
 toc:  true
 
 
-title:  'FIPA-CORBA proposal for upgrade to OpenJDK-17'
+title:  'FIPA-CORBA to OpenJDK-17 proposal for upgrade'
 headtitle:  'FIPA module belonging to JADE 4.5.x: a  proposal for update to OpenJDK-17 and Java Platform Module System with embedded GlassFish CORBA ORB.'
 shorttitle:  'P1-FIPA-CORBA (2022)'
 year:  '2022'
@@ -54,10 +54,10 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-<h1 class="no_toc">P1-FIPA-CORBA (2022)</h1>
 
 
->   FIPA module belonging to JADE 4.5.x: a  proposal for update to OpenJDK-17 and Java Platform Module System with embedded GlassFish CORBA ORB.
+
+  
 
 ##   Section 1: Identification
 
@@ -283,3 +283,4 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 # References
 
 -  FIPA WORKING GROUPS AND STUDY GROUPS. 2007. Multi-agents system standard specifications. http://www.fipa.org/subgroups.
+

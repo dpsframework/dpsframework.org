@@ -22,7 +22,7 @@ toc:  false
 
 title:  'Bibliografía de dpsFramework'
 headtitle:  'Bibliografía de dpsFramework'
-shorttitle:  'Bibliografía (2022)'
+shorttitle:  'Referencias bibliográficas (2022)'
 year:  '2022'
 author:  'Aguayo, FJ'
 department:  '2022-07-24 08:28:40:49:44 +0100'

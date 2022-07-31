@@ -20,7 +20,7 @@ images:
 toc:  true
 
 
-title:  'Propuesta para actualización de FIPA-CORBA a OpenJDK-17'
+title:  'Propuesta de actualización FIPA-CORBA a JDK-17'
 headtitle:  'Módulo FIPA perteneciente a JADE 4.5.x: propuesta para actualización a OpenJDK-17 y Java Platform Module System con GlassFish CORBA ORB incorporado.'
 shorttitle:  'P1-FIPA-CORBA (2022)'
 year:  '2022'
@@ -54,10 +54,10 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 
 
 
-<h1 class="no_toc">P1-FIPA-CORBA (2022)</h1>
 
 
->   Módulo FIPA perteneciente a JADE 4.5.x: propuesta para actualización a OpenJDK-17 y Java Platform Module System con GlassFish CORBA ORB incorporado.
+
+  
 
 ##   Sección 1: Identificación
 
@@ -283,3 +283,4 @@ modified_date:  '2022-07-24 11:07:56:49:44 +0100'
 # Bibliografía
 
 -  FIPA WORKING GROUPS AND STUDY GROUPS. 2007. Multi-agents system standard specifications. http://www.fipa.org/subgroups.
+

@@ -20,7 +20,7 @@ citation:  'Cardoso, R.C.; Ferrando, A. A Review of Agent-Based Programming for 
 toc:  true
 
 
-title:  'Una Revisión de la Programación Basada en Agentes para Sistemas Multi-Agente'
+title:  'Revisión de la Programación Basada en Agentes para Sistemas Multi-Agente'
 headtitle:  'Cardoso, R.C.; Ferrando, A. A Review of Agent-Based Programming for Multi-Agent Systems. Computers 2021, 10, 16.'
 shorttitle:  'Cardoso, Ferrando (2021)'
 year:  '2021'

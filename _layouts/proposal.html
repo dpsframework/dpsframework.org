@@ -9,6 +9,10 @@ layout: default
 
     
     <div class="main-col">
+      <div class="sidebar-title">
+        {{ page.shorttitle }} <h1> </h1>
+        {{ page.headtitle }}  <h2> </h2>
+      </div>
       {{ content }}
     </div>
 
@@ -36,30 +40,26 @@ layout: default
          </a>
      {%- endif -%}   
     
-    
-  
-   
-       <h2>{{ page.title }}</h2>
- 
-
-  
-      ● {{ page.shorttitle  }} ~  
-      {%- if page.githubrepo -%}&nbsp;
-        <a rel="page-link" href="https://github.com/dpsframework/{{ page.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ page.githubrepo | escape }}">
-        <strong>GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-        </a><br>
-      {%- endif -%}  
-
-    
- 
-     
+       
 
        
-       <small>
-       <strong>Status:</strong>      {{ page.status }}<br>
-       <strong>Publised:</strong>    {{ page.date_published }}<br>
-       <strong>License: </strong>    {{ page.license }}<br>
-       </small>
+      <strong>Objective:</strong>      {{ page.title }}<br>
+     
+     
+      {%- if page.githubrepo -%}
+        <strong>Repo: </strong>
+        <a rel="page-link" href="https://github.com/dpsframework/{{ page.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ page.githubrepo | escape }}">
+        <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        </a>
+        <br>
+      {%- endif -%}  
+     
+     
+     
+      <strong>Status:</strong>      {{ page.status }}<br>
+      <strong>Publised:</strong>    {{ page.date_published }}<br>
+      <strong>License: </strong>    {{ page.license }}<br>
+
        
        
 
