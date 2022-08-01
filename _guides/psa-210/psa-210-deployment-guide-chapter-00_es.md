@@ -54,12 +54,12 @@ publisher:  'Pending'
 
 <h2 class="no_toc">Agentes de Resolución de Problemas para JADE: <br>Manual de Despliegue con ejemplos</h2>
 
->  Autor: Dr. **Francisco J. Aguayo**<br>
+>   Autor: Dr. Francisco J. Aguayo<br>
 >  Editor:
 
-
--  **Disponble en**: _GitHub_. [^1]
--  **License**: _GNU Lesser General Public License v3.0_
+- Disponble en: _SourceForge_. [^1]
+- In translation [[<strong> • en  </strong>]](/guides/psa-210/psa-210-deployment-guide-chapter-00_en.html)
+- Licencia: _GNU Lesser General Public License v3.0_
 
 
 #  Tabla de contenidos
@@ -101,7 +101,7 @@ Información de soporte<br>
 
 
 
--  _**Plataform**_ 
+-  _**Plataforma**_ 
 
 -  _**Agentes autónomos**_ 
 

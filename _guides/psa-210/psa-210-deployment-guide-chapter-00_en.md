@@ -54,12 +54,12 @@ publisher:  'Pending'
 
 <h2 class="no_toc">Problem Solving Agents for JADE: <br>Deployment Manual with Examples</h2>
 
->  by  **Francisco J. Aguayo**, Ph.D.<br>
+>   by  Francisco J. Aguayo, Ph.D.<br>
 >  Editor: 
 
+- Available at: _SourceForge_. [^1]
+- License: _GNU Lesser General Public License v3.0_
 
--  **Available at**: _GitHub_. [^1]
--  **License**: _GNU Lesser General Public License v3.0_
 
 
 #  Table of Contents
@@ -101,11 +101,11 @@ Support information<br>
 
 
 
--  _**Plataforma**_
+-  _**Platform**_
 
--  _**Agentes autónomos**_
+-  _**Autonomous agents**_
 
--  _**Protocolos de Comunicación entre agentes**_
+-  _**Communication protocols between agents**_
   
 
 

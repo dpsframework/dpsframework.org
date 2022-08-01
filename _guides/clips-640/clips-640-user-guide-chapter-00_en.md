@@ -35,18 +35,18 @@ departments:
 
 
 chapter:  0
-doi:  ''
-url:  ''
+doi:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download'
+url:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/'
 editor:  'Gary Riley'
 pubdate:  '2021-09-04'
-license:  ''
+license:  'GNU Lesser General Public License v3.0'
 
 
 
 
 ndtdate:  ''
 date_published:  '2021-09-04'
-date_modified:  ''
+date_modified:  '2022-09-01'
 publisher:  'Gary Riley'
 
 ---
@@ -54,15 +54,15 @@ publisher:  'Gary Riley'
 
 <h1 class="no_toc">CLIPS 6.40 User's Guide (2021)</h1>
 
->  by  **Joseph C. Giarratano**, Ph.D.<br>
->  Editor: **Gary Riley**
+>  by  Joseph C. Giarratano, Ph.D.<br>
+>  Editor: Gary Riley
 
 -  Available at: _SourceForge_. [^1]
--  In translation process [[<strong> • es  </strong>]](/guides/clips/clips-640-user-guide-chapter-00_es.html)
+-  In translation process [[<strong> • es  </strong>]](/guides/clips-640/clips-640-user-guide-chapter-00_es.html)
 -  License: _GNU Lesser General Public License v3.0_
 
 
-#   Table of Contents
+# Table of Contents
 Readme<br>
 _Chapter 1._ Just the Facts<br>
 _Chapter 2._ Following the Rules<br>
@@ -152,4 +152,4 @@ Minor changes have been made to Dr. Giarratano’s original document to reflect 
 
 ##  _References_
 
-[^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip](https://altushost-swe.dl.sourceforge.net/project/clipsrules/CLIPS/6.40/clips_documentation_640.zip)
+[^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download)
