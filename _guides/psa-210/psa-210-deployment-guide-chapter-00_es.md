@@ -24,7 +24,7 @@ title:  "PS-Agents 2.1: Manual de Despliegue"
 headtitle:  'Manual de despliegue con ejemplos: aplicaciones de resolución de problemas basadas en agentes PS-Agents 2.1 de JADE.'
 shorttitle:  'Aguayo, FJ (2022)'
 year:  '2022'
-author:  'Dr. FJ. Aguayo'
+author:  'FJ. Aguayo'
 department:  
 authors:
 
@@ -54,7 +54,7 @@ publisher:  'Pending'
 
 <h2 class="no_toc">Agentes de Resolución de Problemas para JADE: <br>Manual de Despliegue con ejemplos</h2>
 
->   Autor: Dr. Francisco J. Aguayo<br>
+>   Autor: Francisco J. Aguayo<br>
 >  Editor:
 
 - Disponble en: _SourceForge_. [^1]

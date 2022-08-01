@@ -24,7 +24,7 @@ title:  "PS-Agents 2.1: Deployment Manual"
 headtitle:  'JADE Agent-Based Problem-Solving Applications: Deployment Manual with Examples.'
 shorttitle:  'Aguayo, FJ (2022)'
 year:  '2022'
-author:  'Aguayo, FJ, Ph.D.'
+author:  'Aguayo, FJ'
 department:  
 authors:
 
@@ -54,7 +54,7 @@ publisher:  'Pending'
 
 <h2 class="no_toc">Problem Solving Agents for JADE: <br>Deployment Manual with Examples</h2>
 
->   by  Francisco J. Aguayo, Ph.D.<br>
+>   by  Francisco J. Aguayo<br>
 >  Editor: 
 
 - Available at: _SourceForge_. [^1]
