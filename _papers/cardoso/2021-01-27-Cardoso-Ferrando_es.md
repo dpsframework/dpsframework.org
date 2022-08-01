@@ -24,7 +24,7 @@ title:  'Revisión de la Programación Basada en Agentes para Sistemas Multi-Age
 headtitle:  'Cardoso, R.C.; Ferrando, A. A Review of Agent-Based Programming for Multi-Agent Systems. Computers 2021, 10, 16.'
 shorttitle:  'Cardoso, Ferrando (2021)'
 year:  '2021'
-author:  'Cardos, R.C.'
+author:  'Cardoso, R.C.'
 department:  'Department of Computer Science, The University of Manchester, Manchester M13 9PL, UK '
 authors:
   -  'Ferrando, A.'
@@ -911,19 +911,5 @@ Se han utilizado las siguientes abreviaturas en el manuscrito:
 
 
 [^88]:  **[88]**. Iotti, E.; Petrosino, G.; Monica, S.; Bergenti, F. Exploratory Experiments on Programming Autonomous Robots in Jadescript. In Proceedings of the First Workshop on Agents and Robots for reliable Engineered Autonomy, AREA@ECAI 2020, Virtual Event, Santiago de Compostela, Spain, 4 September 2020; Volume 319, pp. 55–67. [CrossRef]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
