@@ -18,6 +18,14 @@ layout: default
         <div class="sidebar-title">
           {{ page.title }}:
         </div>
+
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        <br>{{ page.date | date: date_format }}
+        </time>        
+        
+        
+        
         {{ content }}
       </div>
 
