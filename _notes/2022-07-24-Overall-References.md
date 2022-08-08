@@ -5,7 +5,7 @@ lang:  en
 idiom:  
 imagepath:  'assets/imgs/'
 images:
-  -  'dpsframework-logo.png'
+  -  'dpsframework4areas.png'
 
 
 
@@ -28,7 +28,7 @@ author:  'Aguayo, FJ'
 department:  '2022-07-24 08:28:40:49:44 +0100'
 authors:
 
-
+status: 'in process'
 
 keywords:
   -  'Mendeley'

@@ -1,24 +1,66 @@
 
+
+<!-- Presentacion agente basico -->
 <div class="mini-banner">
+  <h1></h1>
+  <blockquote>
+    {{ site.data.dpsFramework.motto[page.lang] }}
+  </blockquote>
 
-<blockquote>
-  {{ site.data.dpsFramework.motto[page.lang] }}
-</blockquote>
+    <a href="/assets/imgs/psPrecogAgent00.png" target="blank">
+      <img class="mini-banner" 
+           src="/assets/imgs/psPrecogAgent00.png">
+    </a>
+    <a href="/assets/imgs/psPrecogAgent01.png" target="blank">
+      <img class="mini-banner" 
+           src="/assets/imgs/psPrecogAgent01.png">
+    </a>
+    <strong><i>Fig. 1</i></strong>.&nbsp; 
+    {{ site.data.dpsFramework.home-fig1[page.lang] }}
 
-  <a href="/assets/imgs/psPrecogAgent00.png" target="blank">
-    <img class="mini-banner" 
-         src="/assets/imgs/psPrecogAgent00.png">
-  </a>
-
-  <a href="/assets/imgs/psPrecogAgent01.png" target="blank">
-    <img class="mini-banner" 
-         src="/assets/imgs/psPrecogAgent01.png">
-  </a>
-
-
-
-  <strong><i>Fig. 1</i></strong>.&nbsp; 
-  {{ site.data.dpsFramework.home-fig1[page.lang] }}
-  
-       
 </div>
+
+
+<br>
+
+
+
+<!-- Presentacion cuatro areas -->
+<div>
+  <h1></h1>
+  <blockquote>
+    {{ site.data.dpsFramework.areas[page.lang] }}
+  </blockquote>
+
+  {% include home-cuatro-areas.html %}
+
+  <strong>[1]
+  <i>{{ site.data.i18n[page.lang]['proposalsH1'] }}:</i>
+  </strong> 
+  {{ site.data.dpsFramework.home-proposals[page.lang] }}
+  <br>
+  
+  
+  <strong>[2]
+  <i>{{ site.data.i18n[page.lang]['guideH1'] }}:</i>
+  </strong> 
+  {{ site.data.dpsFramework.home-guides[page.lang] }}
+  <br>
+  
+  
+  <strong>[3]
+  <i>{{ site.data.i18n[page.lang]['noteH1'] }}:</i>
+  </strong> 
+  {{ site.data.dpsFramework.home-notes[page.lang] }}
+  <br>
+  
+  
+  <strong>[4]
+  <i>{{ site.data.i18n[page.lang]['paperH1'] }}:</i>
+  </strong> 
+  {{ site.data.dpsFramework.home-papers[page.lang] }}
+  <br>
+  
+  
+</div>
+

@@ -25,9 +25,43 @@ motto:
 
   
 home-fig1:
-  en: 'An agent built with [dpsAgents-full-1.8.jar (2020)] library named `Mon712`. That agent is ready to receive messages; set new properties; create additional behaviors; etc., through its Java runtime command line shell on the JADE platform.'
+  en: 'A JADE Agent built with [dpsAgents-full-1.8.jar (2020)] library named `Mon712`. That agent is ready to receive messages; set new properties; create additional behaviors; etc., through its Java runtime command line shell.'
 
-  es: 'Agente generado con biblioteca [dpsAgents-full-1.8.jar (2020)] nombrado como `Mon712`. Ese agente está listo para recibir mensajes; establecer nuevas propiedades; crear comportamientos adicionales; etc., a través de su shell de línea de comandos Java en tiempo de ejecución en la plataforma JADE.'
+  es: 'Agente JADE generado con [dpsAgents-full-1.8.jar (2020)] nombrado como `Mon712`. Ese agente está listo para recibir mensajes; establecer nuevas propiedades; crear comportamientos adicionales; etc., a través de su shell de línea de comandos Java en tiempo de ejecución.'
+
+areas:
+  en: 'Four documentation areas.'
+  es: 'Cuatro áreas de documentación.'
+
+
+home-proposals:
+  en: 'Java `Specification Request` type documents. Connected to their own repository on GitHub.'  
+  
+  es: 'Documentos tipo `Solicitud de  Especificación` de Java. Conectados a su propoio repositorio en GitHub.' 
+  
+
+home-guides:
+  en: 'Technical Manuals on Programming Languages CLIPS, Jess, and on PS-Agents.'
+  
+  es: 'Manuales técnicos sobre Lenguajes de programación CLIPS, Jess, y sobre los Agentes-PS.' 
+  
+
+home-notes:
+  en: 'Documents, Posts and Short Notes, News or release notices.'
+  
+  es: 'Documentos, Posts y Notas breves, Noticias o avisos de liberación de versiones.' 
+  
+
+home-papers:
+  en: "Transcendental documents for the dpsFramework project. "
+  
+  es: 'Documentos trascendentales para el proyecto dpsFramework.' 
+  
+
+
+
+
+
 
 
 trademark: "<sup>&copy;</sup>"

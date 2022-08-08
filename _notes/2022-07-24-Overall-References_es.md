@@ -5,8 +5,7 @@ lang:  es
 idiom:  
 imagepath:  'assets/imgs/'
 images:
-  -  'dpsframework-logo.png'
-
+  -  'dpsframework4areas.png'
 
 
 
@@ -20,7 +19,7 @@ menu: false
 toc:  false
 
 
-title:  'Bibliografía de dpsFramework'
+title:  'Bibliografía'
 headtitle:  'Bibliografía de dpsFramework'
 shorttitle:  'Referencias bibliográficas (2022)'
 year:  '2022'
@@ -28,6 +27,8 @@ author:  'Aguayo, FJ'
 department:  '2022-07-24 08:28:40:49:44 +0100'
 authors:
 
+
+status: 'en proceso'
 
 
 keywords:

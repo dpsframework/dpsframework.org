@@ -1,0 +1,22 @@
+ 
+<!-- Lenguaje 4 areas -->
+{% assign sufijo = "" %}
+{% if page.lang != "en" %}
+  {% assign sufijo = "_" | append: page.lang %}
+{% endif %}
+
+  <img class="mini-banner" usemap="#4areas" align="left" 
+       src="/assets/imgs/dpsframework4areas.png">
+       
+   
+  <map name="4areas">
+     <area shape="rect" coords="0,0,109,109"  title="{{ site.data.i18n[page.lang]['proposalsH1'] }}"   alt="Proposals" href="proposals{{ sufijo }}.html">
+     
+     <area shape="rect" coords="109,0,218,109"  title="{{ site.data.i18n[page.lang]['guidesH1'] }}"  alt="Guides" href="guides{{ sufijo }}.html">
+     
+     <area shape="rect" coords="0,109,109,218"  title="{{ site.data.i18n[page.lang]['notesH1'] }}"   alt="Notes" href="notes{{ sufijo }}.html">
+     
+     <area shape="rect" coords="109,109,218,218" title="{{ site.data.i18n[page.lang]['papersH1'] }}"   alt="Essays and papers" href="papers{{ sufijo }}.html">
+  </map>
+
+
