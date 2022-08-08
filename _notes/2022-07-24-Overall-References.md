@@ -20,8 +20,8 @@ menu: false
 toc:  false
 
 
-title:  'dpsFramework Website References'
-headtitle:  'dpsFramework Website References'
+title:  'Website References'
+headtitle:  'Website References'
 shorttitle:  'References (2022)'
 year:  '2022'
 author:  'Aguayo, FJ'
@@ -58,8 +58,8 @@ ndt:  '2022-07-24 08:28:40:49:44 +0100'
 
 
 
-
-#   Concepts and components used
+<br>
+##   Concepts and components used
 
 
 

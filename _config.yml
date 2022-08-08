@@ -21,11 +21,11 @@ author:
 
 description: 'dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as core of JESS rule-based engine.'
 
-lang:   en
+lang:   es
 index:  index.html
 feed:
-  en: /feed.xml
-  es: /feed_es.xml
+  en: /feed_en.xml
+  es: /feed.xml
 
 
 show_excerpts: false

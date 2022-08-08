@@ -1,6 +1,6 @@
 ---
-layout: null
-lang: es
+layout: none
+lang: en
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -13,7 +13,7 @@ lang: es
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% assign posts = site.pages | where:"lang", page.lang %}
+    {% assign posts = site.pages     | where:"lang", page.lang %}
     {% for post in posts limit:10 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>

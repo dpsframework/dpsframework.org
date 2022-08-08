@@ -35,9 +35,9 @@ areas:
 
 
 home-proposals:
-  en: 'Java `Specification Request` type documents. Connected to their own repository on GitHub.'  
+  en: 'These are documents similar to Java Specification Requests. They are connected to their GitHub repository, to make it easy to build components with Java JDK-17 LTS or higher.'  
   
-  es: 'Documentos tipo `Solicitud de  Especificación` de Java. Conectados a su propoio repositorio en GitHub.' 
+  es: 'Son documentos similares a las Solicitudes de  Especificación de Java. Están conectados a su repositorio de GitHub, para facilitar la compilación de componentes con Java JDK-17 LTS o superior.' 
   
 
 home-guides:
@@ -53,9 +53,9 @@ home-notes:
   
 
 home-papers:
-  en: "Transcendental documents for the dpsFramework project. "
+  en: 'These are documents that inspired the dpsFramework project and the current content review and refactoring of the PS-Agent code and its components.'
   
-  es: 'Documentos trascendentales para el proyecto dpsFramework.' 
+  es: 'Son documentos que inspiraron el proyecto dpsFramework y la revisión actual de contenidos y la refactorización del código de los Agentes-PS y sus sus componentes.' 
   
 
 
@@ -75,9 +75,9 @@ baseurl: ''
 lang: es
 
 index:
-  en: index.html
-  es: index_es.html
+  en: index_en.html
+  es: index.html
 
 feed:
-  en: /feed.xml
-  es: /feed_es.xml
+  en: /feed_en.xml
+  es: /feed.xml

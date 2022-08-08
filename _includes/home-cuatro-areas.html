@@ -1,14 +1,11 @@
  
 <!-- Lenguaje 4 areas -->
-{% assign sufijo = "" %}
-{% if page.lang != "en" %}
-  {% assign sufijo = "_" | append: page.lang %}
-{% endif %}
+{% assign sufijo = "_" | append: page.lang %}
 
   <img class="mini-banner" usemap="#4areas" align="left" 
-       src="/assets/imgs/dpsframework4areas.png">
-       
-   
+       src="/assets/imgs/dpsframework4areas{{ sufijo }}.png">
+  
+  
   <map name="4areas">
      <area shape="rect" coords="0,0,109,109"  title="{{ site.data.i18n[page.lang]['proposalsH1'] }}"   alt="Proposals" href="proposals{{ sufijo }}.html">
      

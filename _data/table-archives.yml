@@ -70,7 +70,7 @@
   title:  'A Java interface for SWI-Prolog'
   author: 'Fred Dushin and J. Wielemaker. University of Amsterdam'
 
-- web:    false
+- web:    true
   link:   'https://github.com/bobbylight/RSyntaxTextArea/'
   imag:   'rsyntaxta.png'
   size:   '35px'

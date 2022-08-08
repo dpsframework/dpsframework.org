@@ -3,14 +3,16 @@
  {% assign paginas   = site.pages     | where:"lang", page.lang %}
  {% assign guias     = site.guides    | where:"lang", page.lang | where:"chapter", 0 %}
  {% assign notes     = site.notes     | where:"lang", page.lang %}
-
+ {% assign sufijo = "_" | append: page.lang %}
 
 
 
 
 <!-- Proposals -->
   <div class="sidebar-title">
-    {{ site.data.i18n[page.lang]['proposalsH1'] }}:
+    <a href="proposals{{ sufijo }}.html">
+      <strong>{{ site.data.i18n[page.lang]['proposalsH1'] }}</strong>
+    </a>:
   </div>
   {% for proposal in proposals %}
     <a class="page-link"
@@ -32,7 +34,9 @@
 
 <!-- Guides and Manuals -->
   <div class="sidebar-title">
-    {{ site.data.i18n[page.lang]['guidesH1'] }}:
+    <a  href="guides{{ sufijo }}.html">
+      <strong>{{ site.data.i18n[page.lang]['guidesH1'] }}</strong>
+    </a>:
   </div>
 
   {% for guia in guias %}
@@ -49,7 +53,9 @@
 
 <!-- Notes and Posts -->
   <div class="sidebar-title">
-    {{ site.data.i18n[page.lang]['notesH1'] }}:
+    <a  href="notes{{ sufijo }}.html">
+     <strong>{{ site.data.i18n[page.lang]['notesH1'] }}</strong>
+    </a>:
   </div>
 
   {% for note in notes %}
@@ -68,7 +74,9 @@
 
 <!-- Essays -->
   <div class="sidebar-title">
-    {{ site.data.i18n[page.lang]['papersH1'] }}:
+    <a href="papers{{ sufijo }}.html">
+     <strong>{{ site.data.i18n[page.lang]['papersH1'] }}</strong>
+    </a>:
   </div>
 
   {% for paper in papers %}
