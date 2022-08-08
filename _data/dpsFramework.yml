@@ -35,9 +35,9 @@ areas:
 
 
 home-proposals:
-  en: 'These are documents similar to Java Specification Requests. They are connected to their GitHub repository, to make it easy to build components with Java JDK-17 LTS or higher.'  
+  en: 'Documents similar to Java Specification Requests. They are connected to GitHub repositories, to allow code compilation and proposal analysis.'  
   
-  es: 'Son documentos similares a las Solicitudes de  Especificación de Java. Están conectados a su repositorio de GitHub, para facilitar la compilación de componentes con Java JDK-17 LTS o superior.' 
+  es: 'Documentos similares a las Solicitudes de Especificación de Java. Están conectados a repositorios GitHub, para permitir la compilación del código y el análisis de la propuesta.' 
   
 
 home-guides:
