@@ -1,12 +1,12 @@
 ---
 layout: proposal
-ref:  p20-jade-fipa
+ref:  p10-fipa-corba
 lang:  en
 idiom:  en-US
-imagepath:  'images/jade-fipa/'
+imagepath:  'images/fipa-corba/'
 images:
-  -  'jade-rotated.png'
-  -  'jade.png'
+  -  'fipa_logo__0075_.png'
+  -  'logo-ieee-pes2x.png'
   -  'fipa.png'
 
 
@@ -19,10 +19,10 @@ images:
 
 toc:  true
 
-objective:  'Compile JADE with Java OpenJDK-11 to 18 or higher'
-title:  'JADE-FIPA update proposal to be compiled on OpenJDK-11 to 18'
-headtitle:  'Unify the libraries used by the JADE 4.5.4 core: This is a proposal to update the compilation mechanism so that it can be done with OpenJDK-11 to 18 or higher. And allow future adoption of the Java Platform Module System in the JADE core.'
-shorttitle:  'P20-JADE-FIPA (2022)'
+objective:  'Compile FIPA with Java JDK-17'
+title:  'FIPA-CORBA to OpenJDK-17 proposal for upgrade'
+headtitle:  'FIPA module belonging to JADE 4.5.x: a  proposal for update to OpenJDK-17 and Java Platform Module System with embedded GlassFish CORBA ORB.'
+shorttitle:  'P10-FIPA-CORBA (2022)'
 year:  '2022'
 author:  'FJ. Aguayo'
 department:  'IEEE Power and Energy System Society Member'
@@ -35,8 +35,8 @@ departments:
 
 
 status:  'Completed'
-reason:  'Java Compiler Advances, from JDK-9 to current JDK-18'
-githubrepo:  'p20-jade-fipa'
+reason:  'Advanced from Java JDK-9 to JDK-18.'
+githubrepo:  'p10-fipa-corba'
 editor:  'GitHub'
 date_published:  'August 2022; Revision Pending'
 license:  'GNU Lesser General Public License v2.1'
@@ -44,7 +44,7 @@ license:  'GNU Lesser General Public License v2.1'
 
 
 
-date:  '2022-04-22'
+date:  '2022-01-02'
 modified_date:  '2022-07-24'
 
 
@@ -66,14 +66,14 @@ modified_date:  '2022-07-24'
 
 ##   Section 2: Update
 -  OpenJDK-11 to OpenJDK-18 compiler are used.
--  Revision 6868 of JADE version 4.5.4 of July 17, 2002 (by, G. Caire) is used.
+-  FIPA implementation made by JADE in 2002 is used.
 
 ###  2.1. Description of the proposal:
 
--  It is proposed to use the Java Module System on top of the JADE 4.5.4 (2022) platform core. And connect JADE to the FIPA module internally through the declaration of the file org.tilab.jade to org.fipa.
--  Once the unification with the FIPA module with the JADE 4.5.4 (2022) kernel has been carried out, it will be possible to know the scope of the necessary changes in the JADE kernel; know what are the additional necessary libraries required by JADE 4.5.4 and allow JADE to be compiled with OpenJDK-17 or higher.
+-  It is proposed to temporarily extract the FIPA module from the core of the JADE platform development. Since, with the current version of Java JDK-18 or higher, it is no longer possible to compile JADE. This is caused because the CORBA libraries have been removed from the core of the Java SE Standard releases and the Java JDK development release versions 17 and higher.
+-  Once the FIPA separation of the JADE core has been carried out, it will be possible to know the scope of the necessary changes in the FIPA module; know which are the necessary libraries of GlassFish of CORBA ORB to achieve optimal stability; and allow later integration of the FIPA module with JADE compiled with OpenJDK-17 or higher.
 
-###  2.2. target platform
+###  2.2. Target platform
 -  Java SE 17, OpenJDK-17 or higher, Java JDK-17 or higher. This implies that it can be used in Desktop or Server environments, with different architectures and operating systems.
   
 -  The final objective is its integration in JADE 4.5.4, and to wait for a future revision of JADE.
@@ -82,9 +82,9 @@ modified_date:  '2022-07-24'
 
 
 ###  23. What does the update proposal need?
--  Access to the JADE Platform code. Found at: <https://jade.tilab.com/svn/jade/trunk/>
+-  Access to the code of the FIPA module of the JADE Platform. Found at: <https://jade.tilab.com/svn/jade/trunk/>
 -  A development environment. Eclipse 2021-12 has been used.
--  A detailed compilation of the errors offered by the OpenJDK-17/ Java JDK-17 compiler; its progressive correction; the incorporation of the Java Platform System of Modules to allow later integration of JADE with its FIPA module under the Java system of modules.
+-  A detailed compilation of the errors offered by the OpenJDK-17/ Java JDK-17 compiler; its progressive correction; the incorporation of the Java Platform Module System to allow later integration of this FIPA module with the JADE platform.
 
 
 ###  2.4. Why this proposal?
@@ -100,7 +100,7 @@ modified_date:  '2022-07-24'
 -  OpenJDK-9 to OpenJDK18.
 -  Oracle Java JDK-9 through Oracle Java JDK-18.
 -  GlassFish CORBA ORB 2.4
--  Apache Commons
+
 
 
 
@@ -110,8 +110,8 @@ modified_date:  '2022-07-24'
 
 
 ###  2.6. Package name for API proposal?
--  File: **com.tilab.jade-2002.jar**
--  Package: **jade**
+-  File: **org-fipa-2002.jar**
+-  Package: **FIPA**
 
 
 
@@ -191,8 +191,8 @@ modified_date:  '2022-07-24'
 
 
 ###  2.11. Schedule for the development of this proposal
--   Start: **April 2022**
--   End: **August 2022**
+-   Start: January 2022
+-   End: July 2022
 
 
 
@@ -231,7 +231,7 @@ modified_date:  '2022-07-24'
 
 
 ###  3.2. Starting point of the work.
--   JADE Revision 6868.
+-   FIPA module implemented by TILAB, within the development of JADE.
 
 
 
@@ -265,10 +265,21 @@ modified_date:  '2022-07-24'
 
 
 ###  4.1. Additional information to include in the Improvement Proposal
+-  Other relevant documents include the following FIPA documents, which can be found at http://www.fipa.org
   
-  
-
-
-
-
-
+1. [FIPA00003] FIPA Agent Communication Language Specification (http://www.fipa.org/fipa00003/),
+1. [FIPA00007] FIPA Content Languages Specification (http://www.fipa.org/fipa00007/),
+1. [FIPA00008] FIPA SL Content Language Specification (http://www.fipa.org/fipa00008/),
+1. [FIPA00009] FIPA CCL Content Language Specification (http://www.fipa.org/fipa00009/),
+1. [FIPA00010] FIPA KIF Content Language Specification (http://www.fipa.org/fipa00010/),
+1. [FIPA00011] FIPA RDF Content Language Specification (http://www.fipa.org/fipa00011/),
+1. [FIPA00067] FIPA Message Transport Service Specification (http://www.fipa.org/fipa00067/),
+1. [FIPA00068] FIPA ACL Message Representation Library Specification (http://www.fipa.org/fipa00068/),
+1. [FIPA00069] FIPA ACL Message Representation in Bit-efficient Encoding Specification (http://www.fipa.org/fipa00069/),
+1. [FIPA00070] FIPA ACL Message Representation in String Specification (http://www.fipa.org/fipa00070 /),
+1. [FIPA00071] FIPA ACL Message Representation in XML Specification (http://www.fipa.org/fipa00071/),
+1. [FIPA00072] FIPA Agent Message Transport Envelope Representation Library Specification (http://www.fipa.org/fipa00072/),
+1. [FIPA00073] FIPA Agent Message Transport Envelope Representation in String Specification (http://www.fipa.org/fipa00073/),
+1. [FIPA00074] FIPA Agent Message Transport Protocol Library Specification (http://www.fipa.org/fipa00074/),
+1. [FIPA00075] FIPA Agent Message Transport Protocol for IIOP Specification (http://www.fipa.org/fipa00075/),
+1. [FIPA00076] FIPA Agent Message Transport Protocol for WAP Specification (http://www.fipa.org/fipa00076/).
