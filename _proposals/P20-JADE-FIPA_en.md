@@ -19,9 +19,9 @@ images:
 
 toc:  true
 
-objective:  'Compile JADE with Java JDK-17'
-title:  'JADE-FIPA to OpenJDK-17 proposal for upgrade'
-headtitle:  'JADE 4.5.4 core: Proposal for upgrade to OpenJDK-17 and Java Platform Module System.'
+objective:  'Compile JADE with Java OpenJDK-11 to 18 or higher'
+title:  'JADE-FIPA update proposal to be compiled on OpenJDK-11 to 18'
+headtitle:  'Unify the libraries used by the JADE 4.5.4 core: This is a proposal to update the compilation mechanism so that it can be done with OpenJDK-11 to 18 or higher. And allow future adoption of the Java Platform Module System in the JADE core.'
 shorttitle:  'P20-JADE-FIPA (2022)'
 year:  '2022'
 author:  'FJ. Aguayo'
@@ -34,8 +34,8 @@ departments:
 
 
 
-status:  'In process.'
-reason:  'Advanced from Java JDK-9 to JDK-18.'
+status:  'Completed'
+reason:  'Java Compiler Advances, from JDK-9 to current JDK-18'
 githubrepo:  'p20-jade-fipa'
 editor:  'GitHub'
 date_published:  'August 2022; Revision Pending'
@@ -267,6 +267,8 @@ modified_date:  '2022-07-24'
 ###  4.1. Additional information to include in the Improvement Proposal
   
   
+
+
 
 
 
