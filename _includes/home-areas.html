@@ -65,6 +65,15 @@
             {% endif %}   
             </a>
           </div>
+
+          <h4>
+          {%- assign date_format = "%b %-d, %Y" -%}
+          <time class="dt-published" datetime="{{ proposal.date | date_to_xmlschema }}" itemprop="datePublished">&nbsp;({{ proposal.date | date: date_format }})
+          </time>
+          </h4>
+
+ 
+
           <h2>{{ proposal.headtitle }}  </h2>
         
            
@@ -183,8 +192,13 @@
             {%- endif -%}
             </a>
           </div>
+
+          {%- assign date_format = "%b %-d, %Y" -%}
+          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">&nbsp;({{ note.date | date: date_format }})
+          </time>
        
           <h2> </h2>
+          
           <strong>Status:</strong>      {{ note.status }}<br>
           <strong>Proposed by:</strong> {{ note.author }}<br>
           <strong>Published:</strong>   {{ note.pubdate }}<br>

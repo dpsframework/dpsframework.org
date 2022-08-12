@@ -1,51 +1,21 @@
 ---
-layout: proposal
+layout:  proposal
+toc:  true
+author:  'FJAC'
+license:  'GNU Lesser General Public License v2.1'
 ref:  p20-jade-fipa
 lang:  es
-idiom:  es-ES
+date:  '2022-04-22'
+modified:  '2022-07-24'
+status:  'Finalizado'
+title:  'Compilación de JADE-FIPA con OpenJDK-18'
+subtitle:  'Solicitud de mejora de JADE-FIPA para permitir su compilación con OpenJDK-18, JDK-17 LTS y versiones anteriores de Java.'
+headtitle:  'Unificar las librerías utilizadas por el núcleo de JADE 4.5.4: esta es una propuesta para actualización del mecanismo de compilación de manera que pueda realizarse con OpenJDK-11 a 18 o superior. Y permitr la futura adopción del Java Platform Module System en el núcleo de JADE.'
 imagepath:  'images/jade-fipa/'
-images:
+images:  
   -  'jade-rotated.png'
   -  'jade.png'
   -  'fipa.png'
-
-
-
-
-
-
-
-
-
-toc:  true
-
-objective:  'Compilar JADE con Java OpenJDK-11 a 18 o superior'
-title:  'Propuesta de actualización de JADE-FIPA para ser compilados sobre OpenJDK-11 a 18'
-headtitle:  'Unificar las librerías utilizadas por el núcleo de JADE 4.5.4: esta es una propuesta para actualización del mecanismo de compilación de manera que pueda realizarse con OpenJDK-11 a 18 o superior. Y permitr la futura adopción del Java Platform Module System en el núcleo de JADE.'
-shorttitle:  'P20-JADE-FIPA (2022)'
-year:  '2022'
-author:  'FJ. Aguayo'
-department:  'IEEE Power and Energy System Society Member'
-authors:
-
-
-
-departments:
-
-
-
-status:  'Finalizado'
-reason:  'Avances del Compilador Java, desde JDK-9 a actual JDK-18'
-githubrepo:  'p20-jade-fipa'
-editor:  'GitHub'
-date_published:  'Agosto 2022: Pendiente de revisión.'
-license:  'GNU Lesser General Public License v2.1'
-
-
-
-
-date:  '2022-04-22'
-modified_date:  '2022-07-24'
 
 
 
@@ -266,9 +236,3 @@ modified_date:  '2022-07-24'
 
 ###  4.1. Información adicional a incluir en la Propuesta de Mejora
   
-  
-
-
-
-
-

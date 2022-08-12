@@ -22,7 +22,7 @@ toc:  false
 
 title:  'Website References'
 headtitle:  'Website References'
-shorttitle:  'References (2022)'
+shorttitle:  'References'
 year:  '2022'
 author:  'Aguayo, FJ'
 department:  ''
@@ -45,7 +45,7 @@ license:  'MIT License Copyright (c) 2022. Authors:  Aguayo-Canela, FJ'
 
 
 pubdate:  '2022-07-16'
-modified_date:  '2022-08-08'
+modified_date:  '2022-08-07'
 
 
 

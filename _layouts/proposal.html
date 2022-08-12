@@ -10,7 +10,7 @@ layout: default
     
     <div class="main-col">
       <div class="sidebar-title">
-        {{ page.shorttitle }} <h1> </h1>
+        {{ page.ref | capitalize }} <h1> </h1>
         {{ page.headtitle }}  <h2> </h2>
       </div>
       {{ content }}
@@ -18,36 +18,29 @@ layout: default
 
 
       <br>
+      
+      
       <hr>
       {%- if page.license  -%}
         <small><strong>License: </strong>{{ page.license }}</small><br>
       {%- endif -%}
-      {%- if page.editor  -%}
-        <small><strong>Editor: </strong>{{ page.editor }}</small><br>
+      
+      
+      
+      {%- if page.author  -%}
+        <small><strong>Author: </strong>{{ page.author }}</small><br>
       {%- endif -%}
-      {%- if page.doi  -%}
-        <small><strong>DOI: </strong>{{ page.doi }}</small><br>
+      
+
+      
+      {%- if page.modified  -%}
+        <small><strong>Updated: </strong>{{ page.modified }}</small><br>
       {%- endif -%}
-      {%- if page.updates  -%}
-        <small><strong>Updates at: </strong>{{ page.updates }}</small><br>
-      {%- endif -%}
-      {%- if page.citation  -%}
-        <small><strong>Citation: </strong>{{ page.citation }}</small><br>
-      {%- endif -%}
+      
+      
+
      
       <br>
-
-      {%- if page.modified_date and page.lang == "es" -%}
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-        <small><i><strong>N. d T.</strong>&nbsp;last revised, {{ mdate | date: date_format }}.</i></small><br>
-        </time>
-      {%- endif -%}
-
-
-
-
-
 
 
 
@@ -77,22 +70,22 @@ layout: default
     
     
       {%- if page.images[0] -%}
-         <a rel="page-link" href="https://github.com/dpsframework/{{ page.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ page.githubrepo | escape }}">
+         <a rel="page-link" href="https://github.com/dpsframework/{{ page.ref | cgi_escape | escape }}" target="_blank" title="{{ page.ref | escape }}">
          <img class="mini-banner-right"
               src="{{ page.imagepath }}{{ page.images[0] }}" 
-              alt="{{ page.shorttitle }}" >
+              alt="{{ page.title }}" >
          </a>
      {%- endif -%}   
     
        
 
        
-      <strong>Objective:</strong>      {{ page.objective }}<br>
+      <strong>Objective:</strong>      {{ page.subtitle }}<br>
      
      
-      {%- if page.githubrepo -%}
+      {%- if page.ref -%}
         <strong>Repo: </strong>
-        <a rel="page-link" href="https://github.com/dpsframework/{{ page.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ page.githubrepo | escape }}">
+        <a rel="page-link" href="https://github.com/dpsframework/{{ page.ref | cgi_escape | escape }}" target="_blank" title="{{ page.ref | escape }}">
         <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
         </a>
         <br>
@@ -102,7 +95,12 @@ layout: default
      
       <strong>Status:</strong>      {{ page.status }}<br>
       <strong>Proposed by:</strong> {{ page.author }}<br>
-      <strong>Publised:</strong>    {{ page.date_published }}<br>
+      <strong>Initiated:</strong>   
+         {%- assign date_format = "%b %-d, %Y" -%}
+            <time class="dt-published" 
+            datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            ({{ page.date | date: date_format }}) 
+            </time><br>
       <strong>License: </strong>    {{ page.license }}<br>
 
        

@@ -1,54 +1,20 @@
 ---
-layout: proposal
-ref:  p42-clips-640-ug
+layout:  proposal
+toc:  true
+author:  'Giarratano, Riley'
+license:  'GNU Lesser General Public License v2.1'
+ref:  p42-clips-ug
 lang:  es
-idiom:  'es-ES'
+date:  '2022-03-27'
+modified:  '2022-08-10'
+status:  'En curso'
+title:  'CLIPS 6.4 Guía de Usuario en castellano'
+subtitle:  'Propuesta de traducción del manual técnico: CLIPS 6.40 User`s Guide, revisada por Giarratano y Riley, en 2021, al español.'
+headtitle:  'La Guía de Usuario del CLIPS 6.30 de 2014, es una pieza de documentación casi imprescindible para iniciarse en la programación no-imperativa guiada por hechos y acciones. Ha sido revisada por el Dr. Giarratano J.C. y Editada por Riley el año pasado, 2021. La nueva versión de CLIPS 6.40 User Guide contiene los últimos avances de la versión 6.40.'
 imagepath:  'images/clips-640/'
 images:
   -  'cug-640-banner.png'
-
-
-
-
-
-
-
-
-
-
-
-toc:  true
-
-objective:  'Traducir al castellano, la Guía de Usuario de CLIPS-6.40 que ha sido revisada por Giarratano y Riley el año 2021.'
-title:  'Propuesta de traducción de manual técnico: CLIPS 6.40 User Guide al castellano'
-headtitle:  'La Guía de Usuario del CLIPS 6.30 de 2014, es una pieza de documentación casi imprescindible para iniciarse en la programación no-imperativa guiada por hechos y acciones. Ha sido revisada por el Dr. Giarratano J.C. y Editada por Riley el año pasado, 2021. La nueva versión de CLIPS 6.40 User Guide contiene los últimos avances de la versión 6.40.'
-shorttitle:  'P42-CLIPS-640-UG'
-year:  '2022'
-author:  'Giarratano, Riley'
-department:  
-authors:
-
-
-
-departments:
-
-
-
-status:  'En curso 60%'
-reason:  'No exiten traducciones de este documento al castellano.'
-githubrepo:  'p42-clips-640-ug'
-editor:  'GitHub'
-date_published:  'Agosto 2022: Pendiente de revisión.'
-license:  'GNU Lesser General Public License v2.1'
-
-
-
-
-date:  '2022-04-22'
-modified_date:  '2022-08-10'
-
-
-
+  
 ---
 
 
@@ -266,12 +232,3 @@ etc.
 
 ###  4.1. Información adicional a incluir en la Propuesta de Mejora
   
-  
-
-
-
-
-
-
-
-

@@ -1,54 +1,20 @@
 ---
-layout: proposal
-ref:  p42-clips-640-ug
+layout:  proposal
+toc:  true
+author:  'Giarratano, Riley'
+license:  'GNU Lesser General Public License v2.1'
+ref:  p42-clips-ug
 lang:  en
-idiom:  'en-US'
+date:  '2022-03-27'
+modified:  '2022-08-10'
+status:  'In process'
+title:  'CLIPS 6.4 User`s Guide in spanish'
+subtitle:  'Proposal for the translation of the technical manual: CLIPS 6.4 User`s Guide, revised by Giarratano and Riley, in 2021, into Spanish.'
+headtitle:  'The CLIPS 6.30 Users Guide of 2014 is an almost essential piece of documentation to get started in non-imperative programming guided by events and actions. It has been reviewed by Dr. Giarratano J.C. and Edited by Riley last year, 2021. The new version of CLIPS 6.40 User Guide contains the latest advances from version 6.40.'
 imagepath:  'images/clips-640/'
 images:
   -  'cug-640-banner.png'
-
-
-
-
-
-
-
-
-
-
-
-toc:  true
-
-objective:  'Translate into Spanish, the CLIPS-6.40 User`s Guide that has been revised by Giarratano and Riley in 2021.'
-title:  'Proposal for the translation of the technical manual: CLIPS 6.40 Users Guide into Spanish'
-headtitle:  'The CLIPS 6.30 Users Guide of 2014 is an almost essential piece of documentation to get started in non-imperative programming guided by events and actions. It has been reviewed by Dr. Giarratano J.C. and Edited by Riley last year, 2021. The new version of CLIPS 6.40 User Guide contains the latest advances from version 6.40.'
-shorttitle:  'P42-CLIPS-640-UG'
-year:  '2022'
-author:  'Giarratano, Riley'
-department:  
-authors:
-
-
-
-departments:
-
-
-
-status:  'In process 60%'
-reason:  'There are no translations of this document into Spanish.'
-githubrepo:  'p42-clips-640-ug'
-editor:  'GitHub'
-date_published:  'August 2022; Revision Pending'
-license:  'GNU Lesser General Public License v2.1'
-
-
-
-
-date:  '2022-04-22'
-modified_date:  '2022-08-10'
-
-
-
+  
 ---
 
 
@@ -266,12 +232,3 @@ etc.
 
 ###  4.1. Additional information to include in the Improvement Proposal
   
-  
-
-
-
-
-
-
-
-

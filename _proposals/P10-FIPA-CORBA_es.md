@@ -1,52 +1,21 @@
 ---
-layout: proposal
+layout:  proposal
+toc:  true
+author:  'FJAC'
+license:  'GNU Lesser General Public License v2.1'
 ref:  p10-fipa-corba
 lang:  es
-idiom:  es-ES
+date:  '2022-01-02'
+modified:  '2022-06-18'
+status:  'Cancelado'
+title:  'Compilar FIPA con Java JDK-17'
+subtitle:  'Integrar CORBA en FIPA y adaptar para compilar con OpenJDK-17'
+headtitle:  'Propuesta de compilación del módulo FIPA perteneciente a JADE 4.5.4 con Java OpenJDK-17 y, su posterior adaptación al sistema de módulos de la plataforma Java, integrando las librerías de GlassFish CORBA ORB.'
 imagepath:  'images/fipa-corba/'
-images:
+images: 
   -  'fipa_logo__0075_.png'
   -  'logo-ieee-pes2x.png'
   -  'fipa.png'
-
-
-
-
-
-
-
-
-
-toc:  true
-
-objective:  'Compilar FIPA con Java JDK-17'
-title:  'Propuesta de actualización FIPA-CORBA a JDK-17'
-headtitle:  'Módulo FIPA perteneciente a JADE 4.5.x: propuesta para actualización a OpenJDK-17 y Java Platform Module System con GlassFish CORBA ORB incorporado.'
-shorttitle:  'P10-FIPA-CORBA (2022)'
-year:  '2022'
-author:  'FJ. Aguayo'
-department:  'IEEE Power and Energy System Society Member'
-authors:
-
-
-
-departments:
-
-
-
-status:  'Finalizada'
-reason:  'Avances desde JDK-9 a actual JDK-18'
-githubrepo:  'p10-fipa-corba'
-editor:  'GitHub'
-date_published:  'Agosto 2022: Pendiente de revisión.'
-license:  'GNU Lesser General Public License v2.1'
-
-
-
-
-date:  '2022-01-02'
-modified_date:  '2022-07-24'
-
 
 
 ---
@@ -60,9 +29,9 @@ modified_date:  '2022-07-24'
   
 
 ##   Sección 1: Identificación
--  Responsable de la propuesta: _FJ Aguayo_.
--  Fecha de la propuesta: Agosto 2022.
--  Ubicación de resultados: GitHub repo.
+-  Responsable de la propuesta: FJAC
+-  Fecha de la propuesta: Enero, 2022
+-  Ubicación de resultados: GitHub
 
 ##   Sección 2: Actualización
 -  Se utilizan compilador OpenJDK-11 a OpenJDK-18.
@@ -191,8 +160,8 @@ modified_date:  '2022-07-24'
 
 
 ###  2.11. Cronograma para el desarrollo de esta propuesta
--   Inicio: Enero de 2022 
--   Final: Julio 2022
+-   Inicio: **Enero de 2022**
+-   Final: **Julio 2022**
 
 
 
@@ -283,3 +252,8 @@ modified_date:  '2022-07-24'
 1. [FIPA00074] FIPA Agent Message Transport Protocol Library Specification (http://www.fipa.org/fipa00074/),
 1. [FIPA00075] FIPA Agent Message Transport Protocol for IIOP Specification (http://www.fipa.org/fipa00075/),
 1. [FIPA00076] FIPA Agent Message Transport Protocol for WAP Specification (http://www.fipa.org/fipa00076/).
+
+
+
+
+ 

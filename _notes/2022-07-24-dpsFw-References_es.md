@@ -22,9 +22,9 @@ toc:  false
 
 title:  'Bibliografía'
 headtitle:  'Bibliografía de dpsFramework'
-shorttitle:  'Referencias bibliográficas (2022)'
+shorttitle:  'Referencias bibliográficas en dpsFw.'
 year:  '2022'
-author:  'Aguayo, FJ'
+author:  'FJAC'
 department:  ''
 authors:
 
@@ -39,13 +39,13 @@ doi:  ''
 url:  https://dpsframework.org
 editor:  'Pending'
   
-license:  'MIT License Copyright (c) 2022. Authors:  Aguayo-Canela, FJ'
+license:  'MIT License Copyright (c) 2022'
 
 
 
 
-pubdate:  '2022-07-16'
-modified_date:  '2022-08-08'
+pubdate:  '2022-07-25'
+modified_date:  '2022-07-31'
 
 
 

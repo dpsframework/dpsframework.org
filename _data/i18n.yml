@@ -31,6 +31,7 @@ en:
   keywords            :  'Keywords'
   figure              :  'Figure'
   table               :  'Table'
+  repository          :  'Repository'
   
   
   
@@ -53,8 +54,8 @@ es:
   papersH1            :  'Ensayos y artículos'
   proposalH1          :  'Propuesta'
   proposalsH1         :  'Propuestas'
-  guideH1             :  'Manual'
-  guidesH1            :  'Manuales'
+  guideH1             :  'Guía'
+  guidesH1            :  'Guías y Manuales'
   noteH1              :  'Anotación y Posts'  
   notesH1             :  'Posts y Notas'  
   tocH1               :  'Relación de contenidos'
@@ -67,6 +68,6 @@ es:
   keywords            :  'Palabras clave'
   figure              :  'Figura'
   table               :  'Tabla'
-  
+  repository          :  'Repositorio'
   
   
