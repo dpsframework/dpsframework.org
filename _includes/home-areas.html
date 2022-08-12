@@ -57,11 +57,11 @@
           <div class="site-title">
             <a class="page-link"
                href="{{ site.baseurl }}{{ proposal.url}}">
-               {{ proposal.shorttitle  }} 
+               {{ proposal.title  }} 
             {% if proposal.images[0] %}
                <img class="mini-banner-right"
                src="proposals/{{ proposal.imagepath }}{{ proposal.images[0] }}" 
-               alt="{{ proposal.shorttitle }}" >
+               alt="{{ proposal.title }}" >
             {% endif %}   
             </a>
           </div>
@@ -78,12 +78,12 @@
         
            
            <strong>Objective:</strong>
-             {{ proposal.objective }}
+             {{ proposal.subtitle }}
            <br>
      
-           {%- if proposal.githubrepo -%}
+           {%- if proposal.ref -%}
              <strong>Repo: </strong>
-             <a rel="page-link" href="https://github.com/dpsframework/{{ proposal.githubrepo | cgi_escape | escape }}" target="_blank" title="{{ proposal.githubrepo | escape }}">
+             <a rel="page-link" href="https://github.com/dpsframework/{{ proposal.ref | cgi_escape | escape }}" target="_blank" title="{{ proposal.ref | escape }}">
              <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
              </a>
              <br>
@@ -91,7 +91,7 @@
              
            <strong>Status:</strong>      {{ proposal.status }}<br>
            <strong>Proposed by:</strong> {{ proposal.author }}<br>
-           <strong>Published:</strong>    {{ proposal.date_published }}<br>
+           <strong>Published:</strong>    {{ proposal.date }}<br>
            <strong>License: </strong>    {{ proposal.license }}<br>
        
            <hr>
