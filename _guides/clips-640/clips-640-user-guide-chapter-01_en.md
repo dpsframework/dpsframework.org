@@ -35,17 +35,17 @@ departments:
 
 
 chapter:  1
-doi:  
-url:  
+doi:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download'
+url:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/'
 editor:  'Gary Riley'
-pubdate:  '2021'
-license:  ''
+pubdate:  '2021-04-09'
+license:  'GNU Lesser General Public License v3.0'
 
 
 
 
 ndtdate:  '2022-07-01 11:07:56:49:44 +0100'
-date_published:  '2021-09-04'
+date_published:  '2021-04-09'
 date_modified:  '2022-07-16'
 publisher:  'Gary Riley'
 
@@ -338,11 +338,11 @@ The second type of field is the string. A string must begin and end with double 
 
 
 ```racket
-duck
-duck1
-duck/soup
-duck soup
-duck soup is good!!!
+  "duck"
+  "duck1"
+  "duck/soup"
+  "duck soup"
+  "duck soup is good!!!"
 ```
 
 
@@ -506,7 +506,8 @@ candy
 fudge-sauce))
 <Fact-1>
 CLIPS> (facts)
-f-1 (grocery-list ice-cream cookies candy fudge-sauce)  For a total of 1 fact.
+"f-1 (grocery-list ice-cream cookies candy fudge-sauce)  
+For a total of 1 fact."
 CLIPS>
 ```
 
@@ -531,7 +532,7 @@ Another example of related facts is (duck), (horse), and (cow). It’s better st
 (animal-is duck)
 (animal-is horse)
 (animal-is cow)
-or as the single fact
+          or as the single fact
 (animals duck horse cow)
 ```
 
@@ -784,3 +785,4 @@ There are a number of things you can watch. These include the following, which a
 
 
 As you use more of the capabilities of CLIPS, you’ll find these (watch) commands very helpful in  debugging. To turn off a (watch) command, enter an unwatch command. For example, to turn  off watching compilations, enter (unwatch compilations).
+

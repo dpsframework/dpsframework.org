@@ -45,8 +45,8 @@ license:  'GNU Lesser General Public License v3.0'
 
 
 ndtdate:  ''
-date_published:  '2021-09-04'
-date_modified:  '2022-09-01'
+date_published:  '2021-04-09'
+date_modified:  '2022-08-01'
 publisher:  'Gary Riley'
 
 ---
@@ -91,7 +91,7 @@ Support Information<br>
 
 This section was formerly called the Preface, but since nobody read it, I renamed it to a more  conventional title that computers users are conditioned to obey. Another suggestion was to call  this the Don’t Readme section, but since people today believe everything they read, I was afraid  they really wouldn’t read it.
 
-The purpose of a Preface, oops, excuse me, a Readme, is to provide metaknowledge about  the knowledge contained in a book. The term **metaknowledge** means knowledge about the  knowledge. So this description of the Readme is actually metametaknowledge. If you’re either  confused or intrigued at this point, go ahead and read this book anyway because I need all the  readers I can get.
+The purpose of a Preface, oops, excuse me, a Readme, is to provide **metaknowledge** about  the knowledge contained in a book. The term metaknowledge means knowledge about the  knowledge. So this description of the Readme is actually metametaknowledge. If you’re either  confused or intrigued at this point, go ahead and read this book anyway because I need all the  readers I can get.
 
 
 ##  _What Is CLIPS?_
@@ -153,3 +153,5 @@ Minor changes have been made to Dr. Giarratano’s original document to reflect 
 ##  _References_
 
 [^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download)
+
+

@@ -19,7 +19,7 @@ layout: default
       
     <!-- Guides and Manuals -->
       <div class="sidebar-title">
-        {{ site.data.i18n[page.lang]['guideH1'] }}:
+        {{ site.data.i18n[page.lang]['guidesH1'] }}:
       </div>
       <div class="mini-banner">
        {%- if page.images[0] -%}
@@ -30,17 +30,15 @@ layout: default
        
        <h2>{{ page.title }}</h2>
        <i>{{ page.author }}</i><br>
-       <i>Ed. {{ page.publisher }}</i>
-        ~ 
-
+     
+       <i>Editor: {{ page.editor }}</i>
+       <br> 
        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
        <time class="dt-published" datetime="{{ page.date_published | date_to_xmlschema }}" itemprop="datePublished">
        {{ page.date_published | date: date_format }}
        </time>
-       <h2> </h2>
-
-
-
+       <hr>
+   
 
        <!-- Table of content and Lessons -->
        </div>    
@@ -58,9 +56,9 @@ layout: default
            {% endif %}
            
         {% else %}
-           {{ site.data.i18n[page.lang].chapter }}: 
-           {{ lesson.chapter }}. &nbsp;
+           <strong>{{ site.data.i18n[page.lang].chapter }}</strong>&nbsp;
            <a href="{{ lesson.url |  prepend: site.baseurl }}"> 
+           <i><strong>{{ lesson.chapter }}</i></strong>. &nbsp;
            {{ lesson.headtitle }} 
            </a>
            <br>

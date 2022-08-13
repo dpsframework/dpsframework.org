@@ -32,8 +32,19 @@ en:
   figure              :  'Figure'
   table               :  'Table'
   repository          :  'Repository'
-  
-  
+  tableofcontent    : 'Table of content'
+  objective             :  'Objective'
+  repo: 'Repo'
+  status: 'Status'
+  proposedby: 'Proposed by'
+  initiated: 'Initiated'
+  license: 'License'
+  published: 'Published'
+  author: 'Author'
+  updateon: 'Update on'
+  citation: 'Citation .bib format'
+  editor: 'Editor'
+ 
   
                 
 ## Español              
@@ -69,5 +80,21 @@ es:
   figure              :  'Figura'
   table               :  'Tabla'
   repository          :  'Repositorio'
+  tableofcontent    : 'Índice general'
+  objective             :  'Objetivo'
+  repo: 'Repotorio'
+  status: 'Estado'
+  proposedby: 'Propuesto por'
+  initiated: 'Iniciado el'
+  license: 'Licencia'
+  published: 'Publicado el'
+  author: 'Autor'
+  updateon: 'Actualizado el'
+  citation: 'Ref. formato .bib'
+  editor: 'Editor'
+  
+  
+  
+  
   
   

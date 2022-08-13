@@ -77,22 +77,22 @@
           <h2>{{ proposal.headtitle }}  </h2>
         
            
-           <strong>Objective:</strong>
+           <strong>{{  site.data.i18n[page.lang].objective }}:</strong>
              {{ proposal.subtitle }}
            <br>
      
            {%- if proposal.ref -%}
-             <strong>Repo: </strong>
+             <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
              <a rel="page-link" href="https://github.com/dpsframework/{{ proposal.ref | cgi_escape | escape }}" target="_blank" title="{{ proposal.ref | escape }}">
              <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
              </a>
              <br>
            {%- endif -%}  
              
-           <strong>Status:</strong>      {{ proposal.status }}<br>
-           <strong>Proposed by:</strong> {{ proposal.author }}<br>
-           <strong>Published:</strong>    {{ proposal.date }}<br>
-           <strong>License: </strong>    {{ proposal.license }}<br>
+           <strong>{{  site.data.i18n[page.lang].status}}:</strong>      {{ proposal.status }}<br>
+           <strong>{{  site.data.i18n[page.lang].proposedby }}:</strong> {{ proposal.author }}<br>
+           <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ proposal.date }}<br>
+           <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ proposal.license }}<br>
        
            <hr>
        
@@ -134,18 +134,20 @@
        
 
           <i>{{ guia.author }}</i><br>
-          <i>Ed. {{ guia.publisher }}</i>
-           ~ 
+          <i>Editor  {{ guia.editor }}</i>
+          <br> 
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <time class="dt-published" datetime="{{ guia.date_published | date_to_xmlschema }}" itemprop="datePublished">
           {{ guia.date_published | date: date_format }}
           </time>
           <h2> </h2>
 
-          <strong>Proposed by:</strong> {{ guia.author }}<br>
-          <strong>Published:</strong>   {{ guia.date_published }}<br>
-          <strong>License: </strong>    {{ guia.license }}<br>
-       
+
+          <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ guia.author }}<br>
+          <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ guia.pubdate }}<br>
+          <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ guia.license }}<br>
+
+
           <hr>
 
         </div>           
@@ -199,11 +201,11 @@
        
           <h2> </h2>
           
-          <strong>Status:</strong>      {{ note.status }}<br>
-          <strong>Proposed by:</strong> {{ note.author }}<br>
-          <strong>Published:</strong>   {{ note.pubdate }}<br>
-          <strong>Update on:</strong>   {{ note.modified_date }}<br>
-          <strong>License: </strong>    {{ note.license }}<br>
+          <strong>{{  site.data.i18n[page.lang].status  }}:</strong>      {{ note.status }}<br>
+          <strong>{{  site.data.i18n[page.lang].proposedby  }}:</strong> {{ note.author }}<br>
+          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ note.pubdate }}<br>
+          <strong>{{  site.data.i18n[page.lang].updateon  }}:</strong>   {{ note.modified_date }}<br>
+          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ note.license }}<br>
        
           <hr>
 
@@ -265,10 +267,10 @@
           </strong>
           <br>{{ paper.department }}
           <h2> </h2>
-          <strong>Editor:</strong>      {{ paper.editor }}<br>
-          <strong>Citation:</strong>    {{ paper.citation }}<br>
-          <strong>Published:</strong>   {{ paper.pubdate }}<br>
-          <strong>License: </strong>    {{ paper.license }}<br>
+          <strong>{{  site.data.i18n[page.lang].editor  }}:</strong>      {{ paper.editor }}<br>
+          <strong>{{  site.data.i18n[page.lang].citation  }}:</strong>    {{ paper.citation }}<br>
+          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ paper.pubdate }}<br>
+          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ paper.license }}<br>
        
           <hr>
 

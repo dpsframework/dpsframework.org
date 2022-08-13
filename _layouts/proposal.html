@@ -80,11 +80,11 @@ layout: default
        
 
        
-      <strong>Objective:</strong>      {{ page.subtitle }}<br>
+      <strong>{{  site.data.i18n[page.lang].objective }}:</strong>      {{ page.subtitle }}<br>
      
      
       {%- if page.ref -%}
-        <strong>Repo: </strong>
+        <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
         <a rel="page-link" href="https://github.com/dpsframework/{{ page.ref | cgi_escape | escape }}" target="_blank" title="{{ page.ref | escape }}">
         <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
         </a>
@@ -93,17 +93,18 @@ layout: default
      
      
      
-      <strong>Status:</strong>      {{ page.status }}<br>
-      <strong>Proposed by:</strong> {{ page.author }}<br>
-      <strong>Initiated:</strong>   
+      <strong>{{  site.data.i18n[page.lang].status }}:</strong>      {{ page.status }}<br>
+      <strong>{{  site.data.i18n[page.lang].proposedby }}:</strong> {{ page.author }}<br>
+      <strong>{{  site.data.i18n[page.lang].initiated }}:</strong>   
          {% assign date_format = "%Y-%m-%d"  %}
          {%- assign date_format = "%a, %b %-d, %Y" -%}
          
             <time class="dt-published" 
             datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
             ({{ page.date | date: date_format }}) 
-            </time><br>
-      <strong>License: </strong>    {{ page.license }}<br>
+            </time>
+      <br>
+      <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ page.license }}<br>
 
        
        

@@ -9,17 +9,7 @@ images:
   -  'clips_logo.png'
 
 manualcode:  c640ug
-
-
-
-
-
-
-
-
 toc:  true
-
-
 title:  "CLIPS 6.4 User's Guide"
 headtitle:  'Following the Rules'
 shorttitle:  'Giarratano, J.C. (2021)'
@@ -35,19 +25,17 @@ departments:
 
 
 chapter:  2
-doi:  
-url:  
+doi:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download'
+url:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/'
 editor:  'Gary Riley'
-pubdate:  '2021'
-license:  ''
+pubdate:  '2021-04-09'
+license:  'GNU Lesser General Public License v3.0'
 
 
 
 
-ndtdate:  '2022-07-01'
-date_published:  '2021-09-04'
+date_published:  '2021-04-09'
 date_modified:  '2022-08-09'
-publisher:  'Gary Riley'
 
 ---
 
@@ -55,7 +43,7 @@ publisher:  'Gary Riley'
 
 
   
-# **Chapter 2**
+#  **Chapter 2**
   
 
 >  
@@ -88,7 +76,7 @@ THEN execute the following actions
 ``` 
 
 
-Another term for the above statement is pseudocode, which literally means false code. While  pseudocode cannot be directly executed by the computer, it serves as a very useful guide to  writing executable code. Pseudocode is also helpful in documenting rules. A translation of rules  from natural language to CLIPS is not very difficult if you keep this IF THEN analogy in mind.  As your experience with CLIPS grows, you’ll find that writing rules in CLIPS becomes easy. You  can either type rules directly into CLIPS or load rules in from a file of rules created by a text  editor.
+Another term for the above statement is **pseudocode**, which literally means false code. While  pseudocode cannot be directly executed by the computer, it serves as a very useful guide to  writing executable code. Pseudocode is also helpful in documenting rules. A translation of rules  from natural language to CLIPS is not very difficult if you keep this IF THEN analogy in mind.  As your experience with CLIPS grows, you’ll find that writing rules in CLIPS becomes easy. You  can either type rules directly into CLIPS or load rules in from a file of rules created by a text  editor.
 
 
 
@@ -114,9 +102,9 @@ CLIPS> (assert (animal-is duck))
 <Fact-1>
 CLIPS>
 (defrule duck
-(animal-is duck)
+    (animal-is duck)
 =>
-(assert (sound-is quack)))
+    (assert (sound-is quack)))
 CLIPS>
 
 ``` 
@@ -128,7 +116,7 @@ If you type in the rule correctly as shown, you should see the CLIPS prompt reap
 
 
 
-The same rule is shown following with comments added to match the parts of the rule. Also  shown is the optional rule-header comment in quotes, "Here comes the quack". There can be  only one rule-header comment and it must be placed after the rule name and before the first  pattern. Although we’re only discussing pattern matching against facts now, more generally a  pattern can be matched against a pattern entity. A pattern entity is either a fact or an instance of  a user-defined class. Pattern matching on objects will be discussed later.
+The same rule is shown following with comments added to match the parts of the rule. Also  shown is the optional **rule-header** comment in quotes, "Here comes the quack". There can be  only one rule-header comment and it must be placed after the rule name and before the first  **pattern**. Although we’re only discussing pattern matching against facts now, more generally a  pattern can be matched against a **pattern entity**. A pattern entity is either a fact or an instance of  a user-defined class. Pattern matching on objects will be discussed later.
 
 
 
@@ -142,19 +130,19 @@ CLIPS tries to match the pattern of the rule against a pattern entity. Of course
 ```scheme
 ; Rule header
 (defrule duck
-; Comment
-Here comes the quack
-; Pattern
-   (animal-is duck)
+    ; Comment
+    "Here comes the quack"
+     ; Pattern
+        (animal-is duck)
 => ; THEN arrow
-; Action
-(assert (sound-is quack)))
+     ; Action  
+     (assert (sound-is quack)))
 
 ``` 
 
 
 
->    &clubs; Only one rule name can exist at one time in CLIPS.
+>    &clubs; _Only one rule name can exist at one time in CLIPS._
 
 
 
@@ -190,7 +178,7 @@ Entering the same rule name, in this case `duck`, will replace any existing rule
 ``` 
 
 
-The entire rule must be surrounded by parentheses. Each of the rule patterns and actions must  be surrounded by parentheses. An action is actually a function which typically has no return  value, but performs some useful action, such as an (assert) or (retract). For example, an action  might be (assert (duck)). Here the function name is `assert` and its argument is `duck`. Notice  that we don’t want any return value such as a number. Instead, we want the fact (duck) to be  asserted. A function in CLIPS is a piece of executable code identified by a specific name, which  returns a useful value or performs a useful side-effect, such as (printout).
+The entire rule must be surrounded by parentheses. Each of the rule patterns and **actions** must  be surrounded by parentheses. An action is actually a function which typically has no **return  value**, but performs some useful action, such as an (assert) or (retract). For example, an action  might be (assert (duck)). Here the function name is `assert` and its argument is `duck`. Notice  that we don’t want any return value such as a number. Instead, we want the fact (duck) to be  asserted. A **function** in CLIPS is a piece of executable code identified by a specific name, which  returns a useful value or performs a useful side-effect, such as (printout).
 
 
 
@@ -200,7 +188,7 @@ The entire rule must be surrounded by parentheses. Each of the rule patterns and
 
 
 
-Zero or more patterns may be written after the rule header. Each pattern consists of one or  more fields. In the duck rule, the pattern is (animal-is duck), where the fields are `animal-is` and  `duck`. CLIPS attempts to match the patterns of rules against facts in the fact-list. If all the  patterns of a rule match facts, the rule is activated and put on the agenda. The agenda is a  collection of activations which are those rules which match pattern entities. Zero or more  activations may be on the agenda.
+Zero or more patterns may be written after the rule header. Each pattern consists of one or  more fields. In the duck rule, the pattern is (animal-is duck), where the fields are `animal-is` and  `duck`. CLIPS attempts to match the patterns of rules against facts in the fact-list. If all the  patterns of a rule match facts, the rule is **activated** and put on the **agenda**. The agenda is a  collection of **activations** which are those rules which match pattern entities. Zero or more  activations may be on the agenda.
 
 
 
@@ -215,7 +203,7 @@ The last part of a rule is the list of zero or more actions that will be execute
 
 
 
->    &clubs; A program will cease execution when no activations are on the agenda.
+>    &clubs; _A program will cease execution when no activations are on the agenda._
 
 
 
@@ -226,7 +214,7 @@ When multiple activations are on the agenda, CLIPS automatically determines whic
 
 
 
-The part of the rule before the arrow is called the left-hand side (LHS) and the part of the  rule after the arrow is called the right-hand side (RHS). If no patterns are specified, CLIPS  automatically activates the rule when a (reset) command is entered.
+The part of the rule before the arrow is called the left-hand side **(LHS)** and the part of the  rule after the arrow is called the right-hand side **(RHS)**. If no patterns are specified, CLIPS  automatically activates the rule when a **(reset)** command is entered.
 
 
 
@@ -241,7 +229,7 @@ CLIPS always executes the actions on the RHS of the highest priority rule on the
 
 
 
-<p class="code-label">You can check what’s on the agenda with the agenda command. For example:</p>
+<p class="code-label">You can check what’s on the agenda with the **agenda** command. For example:</p>
 ```scheme
 CLIPS> (agenda)
 0 duck: f-1
@@ -251,7 +239,7 @@ CLIPS>
 ``` 
 
 
-The first number `0` is the salience of the `duck` activation, and `f-1` is the fact-identifier of  the fact, (animal-is duck), which matches the activation. If the salience of a rule is not declared  explicitly, CLIPS assigns it the default value of zero, where the possible salience values range  from -10,000 to 10,000. In this book, we’ll use the definition of the term default as meaning the  standard way.
+The first number `0` is the salience of the `duck` activation, and `f-1` is the fact-identifier of  the fact, (animal-is duck), which matches the activation. If the salience of a rule is not declared  explicitly, CLIPS assigns it the default value of zero, where the possible salience values range  from -10,000 to 10,000. In this book, we’ll use the definition of the term **default** as meaning the  standard way.
 
 
 
@@ -268,12 +256,12 @@ this pattern will be satisfied by the fact (animal-is duck) and so the duck-soun
 
 
 
-Each field of the pattern is said to be a literal constraint. The term literal means having  a constant value, as opposed to a variable whose value is expected to change. In this case, the  literals are `animal-is` and `duck`.
+Each field of the pattern is said to be a **literal constraint**. The term **literal** means having  a constant value, as opposed to a variable whose value is expected to change. In this case, the  literals are `animal-is` and `duck`.
 
 
 
 
-To make a program run, just enter the run command. Type (run) and press the carriage  return key.
+To make a program **run**, just enter the run command. Type (run) and press the carriage  return key.
 
 
 <p class="code-label">Then do a (facts) to check that the fact was asserted by the rule.</p>
@@ -288,11 +276,11 @@ CLIPS>
 ``` 
 
 
-Before going on, let’s save the duck rule with the save command so that you don’t have to type it  in again (if you haven’t already saved it in an editor).
+Before going on, let’s save the duck rule with the **save** command so that you don’t have to type it  in again (if you haven’t already saved it in an editor).
 
 
 
-<p class="code-label">Just enter a command such as</p>
+<p class="code-label">Just enter a command such as:</p>
 ```scheme
 (save "duck.clp")
 
@@ -341,14 +329,14 @@ The following example shows activations and firing of a rule. Notice that the (w
 
 
 
-<p class="code-label">; Comments in blue/italics have been added for explanation. You will not see these in the actual output:</p>
+<p class="code-label">Comments in blue/italics have been added for explanation. You will not see these in the actual output:</p>
 ```scheme
 CLIPS> (clear)
 CLIPS>
 (defrule duck
-(animal-is duck)
+   (animal-is duck)   
 =>
-(assert (sound-is quack)))
+    (assert (sound-is quack)))
 CLIPS> (watch facts)
 CLIPS> (watch activations)
 CLIPS> (assert (animal-is duck))
@@ -390,7 +378,7 @@ You can make the rule fire again if you retract the fact and then assert it as a
 
 ##  2.4. Show Me the Rules
 
-Sometimes you may want to see a rule while you’re in CLIPS. There’s a command called  ppdefrule – the pretty print rule – that prints a rule.
+Sometimes you may want to see a rule while you’re in CLIPS. There’s a command called  **ppdefrule** – the pretty print rule – that prints a rule.
 
 
 
@@ -439,11 +427,11 @@ Besides asserting facts in the RHS of rules, you also can print out information 
 <p class="code-label">For a change, the  crlf is not included in parentheses. As an example:</p>
 ```scheme
 CLIPS>
-(defrule duck
-(animal-is duck)
+  (defrule duck
+    (animal-is duck)
 =>
-;; Be sure to type in the "t"
-(printout t "quack" crlf))
+     ;; Be sure to type in the "t"
+     (printout t "quack" crlf))
 ==> Activation 0 duck: f-1
 CLIPS> (run)
 quack
@@ -453,7 +441,7 @@ CLIPS>
 
 
 
-The output is the text within the double quotes. Be sure to type the letter `t` following the  printout command. This tells CLIPS to send the output to the standard output device of  your computer. Generally, the standard output device is your terminal (hence the letter `t` after printout). However, this may be redefined so that the standard output device is some other device,  such as a modem or disk.
+The output is the text within the double quotes. Be sure to type the letter "**t**" following the  printout command. This tells CLIPS to send the output to the **standard output device** of  your computer. Generally, the standard output device is your terminal (hence the letter `t` after printout). However, this may be redefined so that the standard output device is some other device,  such as a modem or disk.
 
 
 
