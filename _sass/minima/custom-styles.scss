@@ -70,6 +70,16 @@
   
 }
 
+@media screen and (max-width: $on-palm) {
+  .site-subtitle {
+    display: none;
+  }
+  .site-title {
+    font-weight: bold;
+    text-decoration:  aquamarine;
+  }
+}
+
 
 
 
