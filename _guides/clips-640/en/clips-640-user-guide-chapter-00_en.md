@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug00
 lang:  en
 idiom:  us-EN
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -58,7 +58,7 @@ publisher:  'Gary Riley'
 >  Editor: Gary Riley
 
 -  Available at: _SourceForge_. [^1]
--  In translation process [[<strong> • es  </strong>]](/guides/clips-640/clips-640-user-guide-chapter-00_es.html)
+-  In translation process [[<strong> • es  </strong>]](/guides/clips-640/es/clips-640-user-guide-chapter-00_es.html)
 -  License: _GNU Lesser General Public License v3.0_
 
 
@@ -153,5 +153,7 @@ Minor changes have been made to Dr. Giarratano’s original document to reflect 
 ##  _References_
 
 [^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download)
+
+
 
 

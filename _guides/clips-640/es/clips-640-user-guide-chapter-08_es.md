@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug08
 lang:  es
 idiom:  es-ES
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -115,7 +115,7 @@ Una instancia, es un objeto que tiene valores concretos asignados a sus campos, 
 
 El comportamiento de un objeto está definido por sus controladores de mensajes, o controladores para abreviar. Un controlador de mensajes para un objeto responde a los mensajes y realiza las acciones requeridas. Por ejemplo, enviar el mensaje
 
-```racket
+```scheme
 (send [John_Smith] print)
 ```
 
@@ -154,7 +154,7 @@ Como ejemplo, supongamos que quisiéramos definir una clase llamada UPPIE, que e
 
 La Fig. 8.1 ilustra cómo los YUPPIS (UPPIE) obtienen su herencia hasta el OBJETO de la clase raíz. Tenga en cuenta que UPPIE se define como una subclase de USER. Los cuadros o nodos representan clases, mientras que las flechas de conexión se denominan enlaces. A menudo se utilizan líneas en lugar de flechas para simplificar el dibujo. Además, dado que CLIPS solo admite enlaces is-a, la relación "is-a" no se escribirá explícitamente junto a cada enlace a partir de ahora.
 
-![Figura 8.1. La clase UPPIE](images/figura-8-1.png)
+![Figura 8.1. La clase UPPIE](../images/figura-8-1.png)
 
 **Figura 8.1. La clase UPPIE**
 
@@ -209,7 +209,7 @@ Una subclase directa está conectada por un solo enlace a la clase por encima de
 
 
 
-![Figura 8.2. Relaciones inter-clases](images/figura-8-2.png)
+![Figura 8.2. Relaciones inter-clases](../images/figura-8-2.png)
 
 **Figura 8.2. Relaciones inter-clases**
 
@@ -237,7 +237,7 @@ Las clases directas e indirectas de una clase son todas aquellas que se encuentr
 La Fig. 8.3 ilustra una taxonomía muy simplificada de organismos que ilustra la herencia en la Naturaleza. El término taxonomía significa una clasificación. Las taxonomías biológicas están diseñadas para mostrar el parentesco de los organismos. Es decir, una taxonomía biológica enfatiza las similitudes entre los organismos agrupándolos.
 
 
-![Figura 8.3. Taxonomía simple de organismos vivos con enlaces is-a](images/figura-8-3.png)
+![Figura 8.3. Taxonomía simple de organismos vivos con enlaces is-a](../images/figura-8-3.png)
 
 **Figura 8.3. Taxonomía simple de organismos vivos con enlaces is-a**
 
@@ -274,7 +274,7 @@ La Fig. 8.5 muestra el diagrama de herencia del YUKKIE ilegítimo. Para simplifi
 
 
 
-![Figura 8.5. El YUKKIE ilegítimo](images/figura-8-5.png)
+![Figura 8.5. El YUKKIE ilegítimo](../images/figura-8-5.png)
 
 **Figura 8.5. El YUKKIE ilegítimo**
 
@@ -295,7 +295,7 @@ Es posible corregir la figura. Sin embargo, necesitamos usar un gráfico en luga
 La Fig. 8.6 muestra la clase Yuppie legítima YUKKIE. Se ha creado una nueva clase CHILD y se han hecho enlaces entre YUKKIE y sus dos superclases, YUPPIE y CHILD. Tenga en cuenta que ya no existe un vínculo ilegítimo entre YUKKIE y PUPPIE.
 
 
-![Figura 8.6. El legítimo YUKKIE](images/figura-8-6.png)
+![Figura 8.6. El legítimo YUKKIE](../images/figura-8-6.png)
 
 **Figura 8.6. El YUKKIE legítimo**
 
@@ -304,7 +304,7 @@ La Fig. 8.6 muestra la clase Yuppie legítima YUKKIE. Se ha creado una nueva cla
 Este es un gráfico porque la clase YUKKIE tiene dos superclases directas en lugar de una sola como en un árbol. Este también es un gráfico jerárquico porque las clases se organizan utilizando enlaces is-a desde el más general, USER, hasta el más específico, SUPPIE, MUPPIE, PUPPIE y YUKKIE. Utilizando la figura 8.6, podemos decir que un YUKKIE es un YUPPIE, y también que un YUKKIE es-un CHILD.
 
 <p class="code-label">A continuación se muestran los comandos para agregar las subclases que se muestran en la Fig. 8.6.</p>
-```racket
+```scheme
 CLIPS> (clear)
 CLIPS> (defclass UPPIE (is-a USER))
 CLIPS> (defclass CHILD (is-a USER))
@@ -318,14 +318,14 @@ CLIPS> (defclass YUKKIE (is-a YUPPIE CHILD))
 
 El orden en que se definen las clases debe ser tal que una clase se defina antes que sus subclases. De este modo,
 
-```racket
+```scheme
 (defclass CHILD (is-a USER)) 
 ```
 
 
 Debe ser declarado antes.
 
-```racket
+```scheme
 (defclass YUKKIE (is-a YUPPIE CHILD))
 ```
 
@@ -357,14 +357,14 @@ La función `superclasep` devuelve VERDADERO si <clase1> es una superclase de <c
 
 
 
-```racket
+```scheme
 (function <class1> <class2>)
 ```
 
 
 Por ejemplo:
 
-```racket
+```scheme
 CLIPS> (superclassp UPPIE YUPPIE)
 TRUE
 CLIPS> (superclassp YUPPIE UPPIE)
@@ -385,7 +385,7 @@ Ahora veamos si CLIPS aceptó todas estas nuevas clases. Una forma de hacerlo es
 
 
 
-```racket
+```scheme
 
 CLIPS> (list-defclasses)
 FLOAT
@@ -428,13 +428,13 @@ Si observa esta lista, verá todas las clases definidas por el usuario que ingre
 
 El diagrama de herencia general de las clases predefinidas del Manual de referencia de CLIPS se muestra en la Fig. 8.7, donde las flechas apuntan a las subclases.
 
-![Figura 8.7. Las Clases Predefinidas en CLIPS](images/figura-8-7.png)
+![Figura 8.7. Las Clases Predefinidas en CLIPS](../images/figura-8-7.png)
 
 **Figura 8.7. Las Clases Predefinidas en CLIPS**
 
 
 
-![Figura 8.7. Las Clases Predefinidas en CLIPS versión antigua](images/figura-8-7-bis.png)
+![Figura 8.7. Las Clases Predefinidas en CLIPS versión antigua](../images/figura-8-7-bis.png)
 
 **Figura 8.7. Las Clases Predefinidas en CLIPS en versión antigua**
 
@@ -459,7 +459,7 @@ El comando `browse-classes` muestra la jerarquía de clases a través de la sang
 
 
 
-```racket
+```scheme
 CLIPS> (browse-classes)
 OBJECT
   PRIMITIVE
@@ -497,7 +497,7 @@ El comando (browse-classes) tiene un argumento opcional que especifica la clase 
 
 
  
-```racket
+```scheme
 CLIPS> (browse-classes UPPIE)
 UPPIE
   SUPPIE
@@ -541,7 +541,7 @@ Para el caso de clases organizadas en un árbol, es decir, herencia simple, la h
 La figura 8.8 es otro ejemplo de un gráfico. Observe que algunos nodos, como el rombo, tienen más de un padre.
 
 
-![Figura 8.8. El gráfico del cuadrilátero](images/figura-8-8.png)
+![Figura 8.8. El gráfico del cuadrilátero](../images/figura-8-8.png)
 
 **Figura 8.8. El gráfico del cuadrilátero**
 

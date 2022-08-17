@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug03
 lang:  es
 idiom:  es-ES
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -14,7 +14,7 @@ toc:  true
 
 title:  "CLIPS 6.4 Guía de usuario"
 subtitle:  "En los primeros dos capítulos, aprendió los fundamentos de CLIPS. Ahora verá cómo construir sobre esa base para crear programas más potentes."
-headtitle:  'Incorporando los detalles'
+headtitle:  'Añadiendo los detalles'
 shorttitle:  'Giarratano, J.C. (2021)'
 year:  '2021'
 author:  'Dr. Giarratano, Joseph C.'
@@ -43,12 +43,12 @@ date_modified:  '2022-08-14'
 
   
 
-#  3. Agregar los detalles
+#  3. Añadiendo los detalles
 
 
 
    
->No es el panorama general el problema, son los detalles
+>El problema no está en la visión de conjunto, está en los detalles
 
 
 
@@ -58,7 +58,7 @@ En los primeros dos capítulos, aprendió los fundamentos de CLIPS. Ahora verá 
 
 
 
-##  3.1. Parar y Continuar
+##  3.1. Detenerse y caminar
 
 
 
@@ -168,7 +168,7 @@ Ahora que todas estas configuraciones opcionales diferentes están disponibles, 
 
 
 
-##  3.4. Dame los hechos con `Deffacts`
+##  3.4. Muéstrame los hechos con `Deffacts`
 
 
 
@@ -185,10 +185,10 @@ CLIPS> (unwatch activations)
 CLIPS> (clear)
 CLIPS>
 (deffacts walk "Some facts about walking"
-; status fact to be asserted
-(status walking)
-; walk-sign fact to be asserted
-(walk-sign walk))
+   ; status fact to be asserted
+    (status walking)
+    ; walk-sign fact to be asserted
+    (walk-sign walk))
 CLIPS> (reset)
 ; reset causes facts from
 ; deffacts to be asserted
@@ -229,7 +229,7 @@ En realidad, el (reset) también realiza las operaciones correspondientes en los
 
 
 
-##  3.5. Eliminación selectiva
+##  3.5. La eliminación selectiva
 
 
 
@@ -253,7 +253,7 @@ Este ejemplo demuestra cómo se ha suprimido la declaración de **walk** (con de
 
 
 
-##  3.6. ¡Míralo!
+##  3.6. ¡Mira qué es eso!
 
 
 
@@ -300,7 +300,7 @@ La sintaxis de estos comandos para el argumento `<rulename>` se muestra a contin
 
 
 
-##  3.7. Un buen partido (una coincidencia correcta)
+##  3.7. Una concordancia perfecta
 
 
 
@@ -404,5 +404,3 @@ Otras funciones le permiten manipular cadenas fácilmente:
 
 
 Si desea imprimir una variable multicampo sin paréntesis, la forma más sencilla es utilizar la función de implosión de cadenas, **implode$**.
-
-

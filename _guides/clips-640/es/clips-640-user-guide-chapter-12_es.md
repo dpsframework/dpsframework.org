@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug12
 lang:  es
 idiom:  es-ES
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'

@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug01
 lang:  en
 idiom:  us-EN
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -785,4 +785,10 @@ There are a number of things you can watch. These include the following, which a
 
 
 As you use more of the capabilities of CLIPS, you’ll find these (watch) commands very helpful in  debugging. To turn off a (watch) command, enter an unwatch command. For example, to turn  off watching compilations, enter (unwatch compilations).
+
+
+
+
+
+
 

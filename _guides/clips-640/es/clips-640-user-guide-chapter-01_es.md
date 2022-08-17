@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug01
 lang:  es
 idiom:  es-ES
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -785,4 +785,10 @@ Hay varias cosas que puedes ver. Estos incluyen los siguientes, que se describen
 
 
 A medida que utilice más funciones de CLIPS, estos comandos como (watch), le resultarán muy útiles para la depuración. Para desactivar un comando (watch), ingrese un comando **unwatch** para no ver más cambios. Por ejemplo, para desactivar la visualización de compilaciones, ingrese **(unwatch compilations)**.
+
+
+
+
+
+
 

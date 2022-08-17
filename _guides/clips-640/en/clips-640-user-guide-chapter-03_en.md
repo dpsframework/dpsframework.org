@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug03
 lang:  en
 idiom:  us-EN
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -185,10 +185,10 @@ CLIPS> (unwatch activations)
 CLIPS> (clear)
 CLIPS>
 (deffacts walk "Some facts about walking"
-; status fact to be asserted
-(status walking)
-; walk-sign fact to be asserted
-(walk-sign walk))
+   ; status fact to be asserted
+    (status walking)
+    ; walk-sign fact to be asserted
+    (walk-sign walk))
 CLIPS> (reset)
 ; reset causes facts from
 ; deffacts to be asserted
@@ -404,5 +404,3 @@ Other functions allow you to manipulate strings easily:
 
 
 If you want to printout a multifield variable without parentheses, the simplest way is by using the  string implode function, **implode$**.
-
-

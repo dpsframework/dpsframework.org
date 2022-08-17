@@ -3,7 +3,7 @@ layout: guide
 ref:  c640ug02
 lang:  es
 idiom:  es-ES
-imagepath:  'images/'
+imagepath:  '../images/'
 images:
   -  'cug-640-banner.png'
   -  'clips_logo.png'
@@ -58,7 +58,7 @@ date_modified:  '2022-08-09'
 
 
 
-##  2.1. Cómo hacer buenas reglas
+##  2.1. Creando las buenas reglas
 
 
 
