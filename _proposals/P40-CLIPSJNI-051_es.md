@@ -31,7 +31,7 @@ images:
 -  Ubicación de resultados: GitHub repo.
 
 ##   Sección 2: Actualización propuesta
--  La interfaz nativa de Java CLIPS-JNI version 0.51 para CLIPS 6.31 ha sido revisada por _Gary Riley_ el pasado 2019-08-06, comp puede comprobarse en Source forge, en <https://sourceforge.net/projects/clipsrules/files/CLIPS/6.31/>.
+-  La interfaz nativa de Java CLIPS-JNI version 0.51 para CLIPS 6.31 ha sido revisada por _Gary Riley_ el pasado 2019-08-06. El código fuente está disponible en Source forge, en <https://sourceforge.net/projects/clipsrules/files/CLIPS/6.31/>.
 -  Los agentes JADE con capacidades de integrar y ejecutar Sistemas Expertos autónomos sobre la plataforma Multi-Agente, requieren conocer de antemano cuál es la arquitectura de la máquina Java y del hardware donde se ejecutan. 
 
 ###  2.1. Descripción de la propuesta:
