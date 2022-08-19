@@ -66,7 +66,7 @@
             </a>
           </div>
 
-          <h4>
+          <h4>{{ proposal.ref | cgi_escape | escape }}
           {%- assign date_format = "%b %-d, %Y" -%}
           <time class="dt-published" datetime="{{ proposal.date | date_to_xmlschema }}" itemprop="datePublished">&nbsp;({{ proposal.date | date: date_format }})
           </time>
@@ -74,7 +74,7 @@
 
  
 
-          <h2>{{ proposal.headtitle }}  </h2>
+          <h3>{{ proposal.headtitle }}  </h3>
         
            
            <strong>{{  site.data.i18n[page.lang].objective }}:</strong>
@@ -85,13 +85,13 @@
              <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
              <a rel="page-link" href="https://github.com/dpsframework/{{ proposal.ref | cgi_escape | escape }}" target="_blank" title="{{ proposal.ref | escape }}">
              <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-             </a>
+             https://github.com/dpsframework/{{ proposal.ref | cgi_escape | escape }}</a>
              <br>
            {%- endif -%}  
              
            <strong>{{  site.data.i18n[page.lang].status}}:</strong>      {{ proposal.status }}<br>
            <strong>{{  site.data.i18n[page.lang].proposedby }}:</strong> {{ proposal.author }}<br>
-           <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ proposal.date }}<br>
+           <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ proposal.date | date: date_format }}<br>
            <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ proposal.license }}<br>
        
            <hr>
@@ -265,7 +265,8 @@
                {% endfor %}
              {%- endif -%}
           </strong>
-          <br>{{ paper.department }}
+          <br>
+          <i>{{ paper.department }}</i>
           <h2> </h2>
           <strong>{{  site.data.i18n[page.lang].editor  }}:</strong>      {{ paper.editor }}<br>
           <strong>{{  site.data.i18n[page.lang].citation  }}:</strong>    {{ paper.citation }}<br>
