@@ -10,8 +10,11 @@ layout: default
     
     <div class="main-col">
       <div class="sidebar-title">
-        {{ page.ref | capitalize }} 
+        <strong>{{ page.ref }}</strong> 
+        <br> 
+        {{ page.title  }} 
       </div>
+      <h2> </h2>
       
       <h3>
          <strong>{{ site.data.i18n[ page.lang ].abstract }}</strong>:  

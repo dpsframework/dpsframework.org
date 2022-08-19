@@ -8,30 +8,36 @@ lang:  en
 date:  '2022-03-27'
 modified:  '2022-08-10'
 status:  'In process'
-title:  'CLIPS 6.4 User`s Guide in spanish'
-subtitle:  'Proposal for the translation of the technical manual: CLIPS 6.4 User`s Guide, revised by Giarratano and Riley, in 2021, into Spanish.'
-headtitle:  'The CLIPS 6.30 Users Guide of 2014 is an almost essential piece of documentation to get started in non-imperative programming guided by events and actions. It has been reviewed by Dr. Giarratano J.C. and Edited by Riley last year, 2021. The new version of CLIPS 6.40 User Guide contains the latest advances from version 6.40.'
+title:  'Proposal: CLIPS 6.4 User`s Guide, in spanish language'
+subtitle:  'Proposal for the translation of the CLIPS 6.40 User`s Guide technical manual, 2021 version'
+headtitle:  'Since the first version of the CLIPS 6.20 User`s Guide, in March 2002, this technical manual has been an essential piece to get started in non-imperative programming guided by facts and actions. It has been progressively revised with every CLIPS release. The latest version of this guide has been reviewed by Dr. Giarratano J.C. and Edited by Gary Riley in April 2021. And now includes the latest advances introduced in CLIPS version 6.40.'
 imagepath:  'images/clips-640/'
 images:
   -  'cug-640-banner.png'
   
 ---
 
-
-
-
-
+##  To-Do List:
+- [x]  \(1) Build navigation system by chapters.
+- [x]  \(2) Mechanism to not alter the source code of examples.
+- [x]  \(3) Translation of chapters Introduction, 1st, 2nd, 3rd and 4th.
+- [x]  \(4) Review system of directories and images
+- [ - ]  \(5) Translation of chapters 5th, 6th and 7th (completed Part-I).
+- [ - ]  \(6) Translation of chapters 8th and 9th.
+- [ - ]  \(7) Translation of chapters 10th, 11th (completed Part-II COOL).
+- [ - ]  \(8) Translation of chapter 12 and support annex
+- [ - ]  \(9) Review and compilation as .epub and .pdf
 
 
   
 
 ##   Section 1: Identification
--  Responsible for the proposal: _FJ Aguayo_.
+-  Responsible for the proposal: _FJ Aguayo_[^traductor].
 -  Proposal date: April, 2022.
 -  Results location: GitHub repo.
 
-##   Section 2: Translation
--  Google Translator and manual review are used, paragraph by paragraph, of the wording in Spanish.
+##   Section 2: Process
+-  The goal is to make a complete translation, paragraph by paragraph, of version 6.4 of the CLIPS User Guide[^1].
 -  All source code is treated identically in both languages, and in the Web version, a header is added to each Code Listing.
 
 ###  2.1. Description of the proposal:
@@ -42,7 +48,7 @@ images:
 ###  2.2. Target platform
 -  Markdown language
   
--  The twelve chapters in Spanish.
+  
 
 
 
@@ -158,7 +164,7 @@ etc.
 
 ###  2.11. Schedule for the development of this proposal
 -   Start: **April 2022**
--   End: **August 2022**
+-   Scheduled finish: **September 2022**
 
 
 
@@ -232,3 +238,17 @@ etc.
 
 ###  4.1. Additional information to include in the Improvement Proposal
   
+  
+
+
+##  _References_
+
+
+
+
+
+[^1]:  **CLIP 6.4 User's Guide**. 2021. Joseph C. Giarratano, Ph.D. Editor, Gary Riley. Available at: <https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/>. Visited in 2022.
+
+[^traductor]: **Traducción (es-ES)**: _Dr. FJ. Aguayo_ (2022). The rights of this work belong to its original authors. The translation has been done under the GNU Lesser General Public License v2.1.
+
+

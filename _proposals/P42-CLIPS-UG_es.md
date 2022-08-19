@@ -8,30 +8,36 @@ lang:  es
 date:  '2022-03-27'
 modified:  '2022-08-10'
 status:  'En curso'
-title:  'CLIPS 6.4 Guía de Usuario en castellano'
-subtitle:  'Propuesta de traducción del manual técnico: CLIPS 6.40 User`s Guide, revisada por Giarratano y Riley, en 2021, al español.'
-headtitle:  'La Guía de Usuario del CLIPS 6.30 de 2014, es una pieza de documentación casi imprescindible para iniciarse en la programación no-imperativa guiada por hechos y acciones. Ha sido revisada por el Dr. Giarratano J.C. y Editada por Riley el año pasado, 2021. La nueva versión de CLIPS 6.40 User Guide contiene los últimos avances de la versión 6.40.'
+title:  'Propuesta: CLIPS 6.4 Guía de Usuario, en castellano'
+subtitle:  'Propuesta de traducción de manual técnico de CLIPS 6.4 User`s Guide, versión de 2021'
+headtitle:  'Desde la primera versión de la Guía de Usuario de CLIPS 6.20, de Marzo de 2002, este manual técnico ha sido una pieza imprescindible para iniciarse en la programación no-imperativa guiada por hechos y acciones. Ha sido revisada progresivamente en cada lanzamiento de CLIPS. La última versión de esta Guía ha sido revisada por el Dr. Giarratano J.C. y Editada por Gary Riley en Abril de 2021. Y ahora incluye los últimos avances introducidos en la versión 6.40 de CLIPS.'
 imagepath:  'images/clips-640/'
 images:
   -  'cug-640-banner.png'
   
 ---
 
-
-
-
-
+##  Lista de Tareas:
+- [x]  \(1) Cosntruir sistema de navegació por capítulos.
+- [x]  \(2) Mecanismo para no alterar el código-fuente de ejemplos.
+- [x]  \(3) Traducción de capítulos Introducción, 1º, 2º, 3º y 4º.
+- [x]  \(4) Revisión sistema de directorios e imágenes
+- [ - ]  \(5) Traducción de capítulos 5º, 6º y 7º (finalizada Parte-I).
+- [ - ]  \(6) Traducción de capítulos 8º y 9º.
+- [ - ]  \(7) Traducción de capítulos 10º, 11º (finalizada Parte-II COOL).
+- [ - ]  \(8) Traducción de capítulo 12º y anexo de Soporte
+- [ - ]  \(9) Revisión y compilación como .epub y .pdf
 
 
   
 
 ##   Sección 1: Identificación
--  Responsable de la propuesta: _FJ Aguayo_.
+-  Responsable de la propuesta: _FJ Aguayo_[^traductor].
 -  Fecha de la propuesta: Abril, 2022.
 -  Ubicación de resultados: GitHub repo.
 
-##   Sección 2: Traducción
--  Se utiliza Google Translator y revisión manual, párrafo a párrafo de la redacción en castellano.
+##   Sección 2: Procesos
+-  El objetivo es realizar una traducción completa, párrafo a párrafo, de la versión 6.4 de la Guía de Usuario de CLIPS[^1].
 -  Todo el código se trata de forma idéntica en ambos idiomas, y en la versión Web, se incorpora cabecera a cada Listado de código.
 
 ###  2.1. Descripción de la propuesta:
@@ -42,7 +48,7 @@ images:
 ###  2.2. Plataforma de destino
 -  Lenguaje Markdown
   
--  Los doce capítulos en castellano.
+  
 
 
 
@@ -158,7 +164,7 @@ etc.
 
 ###  2.11. Cronograma para el desarrollo de esta propuesta
 -   Inicio: **Abril de 2022**
--   Final: **Agosto 2022**
+-   Final programado: **Septiembre de 2022**
 
 
 
@@ -232,3 +238,17 @@ etc.
 
 ###  4.1. Información adicional a incluir en la Propuesta de Mejora
   
+  
+
+
+##  _Bibliografía_
+
+
+
+
+
+[^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download)
+
+[^traductor]: **Traducción (es-ES)**: _Dr. FJ. Aguayo_ (2022). Los derechos de esta obra pertenecen a sus autores originales. La traducción se ha realizado bajo la GNU Lesser General Public License v2.1.
+
+
