@@ -17,13 +17,13 @@ images:
   
 ---
 
-
-
-
-
-
-
-
+##  Lista de Tareas:
+- [x]  \(1) Lograr el cumplimiento del componente CLIPJNI con las especificaciones del sistema de módulos[^migra17] de la Plataforma Java (JPMS).
+- [x]  \(2) Permitir la compilación desde versiones de Oracle Java[^java] JDK-11 hasta JDK-17 LTS (2022-2029) y superiores. Y además, permitir compilación con versiones de OpenJDK[^openJDK] desde la openJDK-11 hasta la OpenJDK-17.
+- [x]  \(3) Optimizar el rendimiento de CLIPSJNI-0.51a en los Comportamientos de los Agentes de la plataforma JADE.
+- [x]  \(4) Incorporar archivos de secuencia de pasos de compilación para las diferentes arquitecturas.
+- [x]  \(5) Realizar los Test de CLIPS 6.31 sobre una consola de Agentes tipo Nodo.
+- [x]  \(6) Preparar como Repositorio GitHub para su descarga y evaluación de la propuesta.
 
 
 
@@ -266,4 +266,3 @@ etc.
 [^openJDK]: OpenJDK 17 is the open-source reference implementation of version 17 of the Java SE Platform, as specified by by JSR 390 in the Java Community Process. JDK 17 reached General Availability on 14 September 2021. URL for OpenJDK-11 is: https://openjdk.java.net/projects/jdk/11/. URL for OpenJDK-17 is: https://openjdk.java.net/projects/jdk/17/.
 
 [^cool]: COOL is the acronym for CLIPS Object Oriented Language.
-

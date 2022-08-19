@@ -5,12 +5,12 @@ author:  'FJAC'
 license:  'GNU Lesser General Public License v2.1'
 ref:  p10-fipa-corba
 lang:  en
-date:  '2022-01-07'
+date:  '2022-01-02'
 modified:  '2022-06-18'
-status:  'Cancelled'
-title:  'Compile FIPA with Java JDK-17'
-subtitle:  'Integrate CORBA into FIPA and adapt to compile with OpenJDK-17'
-headtitle:  'Compilation proposal of the FIPA module belonging to JADE 4.5.4 with Java OpenJDK-17 and its subsequent adaptation to the Java platform module system, integrating the GlassFish CORBA ORB libraries.'
+status:  'Completed'
+title:  'Proposal: compile FIPA module with Java JDK-17'
+subtitle:  'Proposal: integration study of the CORBA library used by FIPA and its possibility of adapting to the OpenJDK-17 Java compiler'
+headtitle:  'The FIPA module belonging to JADE 4.5.4 requires the GlassFish CORBA ORB libraries for its compilation. Before migrating from JADE 4.5.4 r6867 to Java OpenJDK-17, it is necessary to check the behavior of FIPA with higher versions of Java.'
 imagepath:  'images/fipa-corba/'
 images: 
   -  'fipa_logo__0075_.png'
@@ -20,7 +20,13 @@ images:
 
 ---
 
-
+##  To-Do List:
+- [x]  \(1) Achieve FIPA module compliance with the Java Platform Module System[^migra17] (JPMS) specifications.
+- [x]  \(2) Separate the FIPA module from JADE and study the particular compilation requirements with Oracle Java[^java] JDK-11 through JDK-17 LTS and higher. Further study, how to compile with OpenJDK[^openJDK] versions from openJDK-11 to OpenJDK-18.
+- [x]  \(3) Modify the FIPA Objects that prevent compiling with higher versions. Document the changes and check their integration with the JADE platform.
+- [x]  \(4) Analyze the javax used by FIPA.
+- [x]  \(5) Analyze GlassFish CORBA used by FIPA.
+- [x]  \(6) Prepare as a GitHub repository for download and evaluation.
 
 
 
@@ -257,3 +263,28 @@ images:
 
 
  
+
+ 
+
+
+
+
+
+
+
+
+
+##  _References_
+
+[^1]: CLIPS Rule Based Programming Language Files. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/.
+
+[^java]: ORACLE Java 17 is the latest long-term support (LTS) release under Java's six-month release cadence and is the result of extensive collaboration between Oracle engineers and other members of the worldwide Java developer community via the OpenJDK Community and the Java Community Process (JCP). Verificada con la versioón jdk-17.0.3.1 (junio, 2022). https://www.oracle.com/news/announcement/oracle-releases-java-17-2021-09-14/.
+
+[^jade]:    JADE Platform. jade - Revision 6867: /trunk. https://jade.tilab.com/svn/jade/trunk/  Login/passwod: jade/jade. Version 4.5.4 (abril, 2022).
+
+[^migra17]: Significant Changes in JDK 17 Release. Notes for additional descriptions of the new features and enhancements, and API specification in JDK 17. Updates in Java SE 17 and JDK 17: https://docs.oracle.com/en/java/javase/17/migrate/significant-changes-jdk-release.html
+
+[^openJDK]: OpenJDK 17 is the open-source reference implementation of version 17 of the Java SE Platform, as specified by by JSR 390 in the Java Community Process. JDK 17 reached General Availability on 14 September 2021. URL for OpenJDK-11 is: https://openjdk.java.net/projects/jdk/11/. URL for OpenJDK-17 is: https://openjdk.java.net/projects/jdk/17/.
+
+[^cool]: COOL is the acronym for CLIPS Object Oriented Language.
+
