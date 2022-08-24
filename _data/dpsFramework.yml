@@ -1,17 +1,17 @@
 title:
-  en: 'dpsFramework'
-  es: 'dpsFramework'
+  en: 'dpsFramework Project'
+  es: 'Proyecto dpsFramework'
 
 
 subtitle:
-  en: 'Distributed problem-solving applications based on JADE Agents.'
-  es: 'Aplicaciones distribuidas de resolución de problemas basadas en Agentes JADE.'
+  en: 'Distributed Production-Systems on JADE platform'
+  es: 'Sistemas de producción distribuidos sobre JADE'
 
 
 description:
-  en: ' dpsFramework aims to maintain the compatibility of troubleshooting agents developed for the JADE Platform, in addition to optimizing the connection of that type of agent with its integrated autonomous Expert System. This repository has also included some proposals, with tested solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA; CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as minor adjustments to the core Java rules engine, JESS.'
+  en: ' The dpsFramework project aims to maintain compatibility between the JADE PS-Agents, and the engine software and expert system building tools that run the Production Systems integrated and managed by these Agents. It is organized in documentation areas where they are compiled: proposals, guides, annotations and work documents.'
   
-  es: ' dpsFramework tiene como objetivo mantener la compatibilidad de los agentes de resolución de problemas desarrollados para la Plataforma JADE, además de optimizar la conexión de ese tipo de agente con su Sistema Experto autónomo integrado. Este repositorio también ha incluido algunas propuestas, con soluciones probadas, para adaptar: JADE 4.5.4 (2022) y su módulo FIPA implementado con CORBA; CLIPSJNI para CLIPS-6.31 y CLIPS-6.40, así como mínimos ajustes en núcleo del motor de reglas de Java, JESS.'
+  es: ' El proyecto dpsFramework tiene como objetivo mantener la compatibilidad entre los Agentes-PS de JADE, y el software de los motores y de las herramientas de construcción de sistemas expertos que ejecutan los Sistemas de Producción integrados y gestionados por esos Agentes. Se organiza en áreas de documentación donde se recopilan: propuestas, guías, anotaciones y documentos de trabajo.'
 
 
 shortdescription:
@@ -20,48 +20,61 @@ shortdescription:
   es: ' dpsFramework tiene como objetivo mantener la compatibilidad de los agentes PS-Agents y la conectividad con sus Sistemas Expertos integrados.'
 
 motto:
-  en: ' JADE Agents with built-in Expert System.'
-  es: ' Agentes JADE con Sistema Experto integrado.'
+  en: 'PS-Agent GUI Examples'
+  es: 'Ejemplos de interfaz gráfica de usuario de Agentes-PS'
 
   
 home-fig1:
-  en: 'A JADE Agent built with [dpsAgents-full-1.8.jar (2020)] library named `Mon712`. That agent is ready to receive messages; set new properties; create additional behaviors; etc., through its Java runtime command line shell.'
+  en: ' The dpsframework <a href="https://github.com/dpsframework/dpsframework-components"/>project component repository</a>  is the place where all the update and maintenance efforts for the JADE PS-Agents have been gathered. It is scheduled for release in September 2022. '
 
-  es: 'Agente JADE generado con [dpsAgents-full-1.8.jar (2020)] nombrado como `Mon712`. Ese agente está listo para recibir mensajes; establecer nuevas propiedades; crear comportamientos adicionales; etc., a través de su shell de línea de comandos Java en tiempo de ejecución.'
+  es: ' El repositorio de <a href="https://github.com/dpsframework/dpsframework-components"/>componentes del proyecto dpsframework</a> es el lugar donde se han reunido todos los esfuerzos de actualización y mantenimiento de los Agentes-PS de JADE. Está prevista su liberación en Septiembre de 2022. '
 
 areas:
-  en: 'Four documentation areas.'
-  es: 'Cuatro áreas de documentación.'
+  en: 'Documentation areas:'
+  es: 'Áreas de documentación:'
 
 
 home-proposals:
-  en: 'Documents similar to Java Specification Requests. They are connected to GitHub repositories, to allow code compilation and proposal analysis.'  
+  en: ' They are very similar to the Java Specification Requests format. These types of documents are connected to each GitHub repository, where you can find the proposed solutions.'  
   
-  es: 'Documentos similares a las Solicitudes de Especificación de Java. Están conectados a repositorios GitHub, para permitir la compilación del código y el análisis de la propuesta.' 
+  es: ' Son muy similares al formato de las Solicitudes de Especificación de Java. Este tipo de documentos está conectado a cada repositorio de GitHub, donde encontrar las soluciones propuestas.' 
   
 
 home-guides:
-  en: 'Technical Manuals on Programming Languages CLIPS, Jess, and on PS-Agents.'
+  en: ' These are translations of technical manuals and software guides. In Markdown format and ready to navigate through its chapters.'
   
-  es: 'Manuales técnicos sobre Lenguajes de programación CLIPS, Jess, y sobre los Agentes-PS.' 
+  es: ' Se trata de traducciones de manuales técnicos o de guías de software. En formato Markdown y preparados para navegar a través de sus capítulos.' 
   
 
 home-notes:
-  en: 'Documents, Posts and Short Notes, News or release notices.'
+  en: 'They are small reviews and featured announcements to indicate an event, or they are simple lists to connect with work and processes of the dpsframework project that have been completed.'
   
-  es: 'Documentos, Posts y Notas breves, Noticias o avisos de liberación de versiones.' 
+  es: ' Son pequeñas reseñas y anuncios destacados para indicar algún evento, o son sencillas listas para conectar con trabajos y con procesos del proyecto dpsframework que han sido terminados.' 
   
 
 home-papers:
-  en: 'These are documents that inspired the dpsFramework project and the current content review and refactoring of the PS-Agent code and its components.'
+  en: '  They compile the working documents and international publications that represent the inspiration of the dpsFramework project: more specifically, the project objective that is oriented towards the maintenance of the software for the deployment of Multi-Agent systems and the Tools for the construction of Expert systems.'
   
-  es: 'Son documentos que inspiraron el proyecto dpsFramework y la revisión actual de contenidos y la refactorización del código de los Agentes-PS y sus componentes.' 
+  es: '  Recopilan los documentos de trabajo y las publicaciones internacionales que representan la inspiración de el proyecto dpsFramework: más en concreto, el objetivo de proyecto que se orienta hacia el mantenimiento del software para el despliegue de sistemas Multi-Agente y de las Herramientas para la construcción de Sistemas Expertos.' 
   
 
 
 
+puntuacion: "˙ ‥ ‧ ‵ ❛ ❜ ❝ ❞ 、 。 〃 「 」 『 』 〝 〞 ︰ ﹁ ﹂ ﹃ ﹄ ﹐ ﹒ ﹔ ﹕ ！ ＃ ＄ ％ ＆ ＊ ， ． ： ； ？ ＠ ～ • … ¿ “ ‘ · ′ ” ’ ‐ ‑ ‒ – — ― ‗ ‚ ‛ „ ‟ ‣ ․ ″ ‴ ‶ ‷ ʹ ʺ ʻ ʼ ʽ ʾ ʿ ˀ ˁ ˂ ˃ ˄ ˅ ˆ ˇ ˈ ˉ ˊ ˋ ˌ ˍ ˎ ˏ ː ˑ ˒ ˓ ˔ ˕ ˖ ˗ ˘ ˚ ˛ ˜ ˝ ˞ ˠ ˡ ⁘ ⁙ ⁚ ⁛ ⁜ ⁜ ⁝ ⁞"
 
+parentesis: "〈 〈 〉 《 》 「 」 『 』 【 】 〔 〕 ︵ ︶ ︷ ︸ ︹ ︺ ︻ ︼ ︽ ︽ ︾ ︿ ﹀ ﹁ ﹁ ﹂ ﹃ ﹄ ﹙ ﹙ ﹚ ﹛ ﹜ ﹝ ﹞ ﹤ ﹥ （ ） ＜ ＞ ｛ ｛ ｝"
 
+hand_symbols: "☚ ☛ ☜  ☞ ☟"
+
+music: "♩ ♪ ♫ ♬ ♭ ♮ ♯ ° ø ؂ ≠ ≭ ♩ ♪ 𝅜 𝅝 𝅗𝅥 𝅘𝅥 𝅘𝅥𝅮 𝅘𝅥𝅯 𝅘𝅥𝅰 𝅘𝅥𝅱 𝅘𝅥𝅲"
+
+chess: "♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟"
+
+flechas: "↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↥ ↦ ↧ ↨ ↩ ↪ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↳ ↴ ↶ ↷ ↸ ↹ ↺ ↻ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇎ ⇏ ⇕ ⇖ ⇗ ⇘ ⇙ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇧ ⇨ ⇩ ⇪ ⌅ ⌆ ⌤ ⏎ ▶ ☇ ☈ ☊ ☋ ☌ ☍ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⤴ ⤵ ↵ ↓ ↔ ← → ↑→ ↑  ⇐ ⇑ ⇒ ⇓ ⇔ ⌦ ⌧ ⌫ ⇰ ⇫ ⇬ ⇭ ⇳ ⇮ ⇯ ⇱ ⇲ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⟵ ⟶ ⟷ ⬄ ⬀ ⬁ ⬂ ⬃ ⬅ ⮕ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⇽ ⇾ ⇿ ⬳ ⟿ ⤉ ⤈ ⇻ ⇼ ⬴ ⤀ ⬵ ⤁ ⬹ ⤔ ⬺ ⤕ ⬶ ⤅ ⬻ ⤖ ⬷ ⤐ ⬼ ⤗ ⬽ ⤘ ⤝ ⤞ ⤟ ⤠ ⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤪ ⤨ ⤧ ⤩ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤫ ⤬ ⬐ ⬎ ⬑ ⬏ ⤶ ⤷ ⥂ ⥃ ⥄ ⭀ ⥱ ⥶ ⥸ ⭂ ⭈ ⭊ ⥵ ⭁ ⭇ ⭉ ⥲ ⭋ ⭌ ⥳ ⥴ ⥆ ⥅ ⥹ ⥻ ⬰ ⥈ ⬾ ⥇ ⬲ ⟴ ⥷ ⭃ ⥺ ⭄ ⥉ ⥰ ⬿ ⤳ ⥊ ⥋ ⥌ ⥍ ⥎ ⥏ ⥐ ⥑ ⥒ ⥓ ⥔ ⥕ ⥖ ⥗ ⥘ ⥙ ⥚ ⥛ ⥜ ⥝ ⥞ ⥟ ⥠ ⥡ ⥢ ⥤ ⥣ ⥥ ⥦ ⥨ ⥧ ⥩ ⥮ ⥯ ⥪ ⥬ ⥫ ⥭ ⤌ ⤍ ⤎ ⤏ ⬸ ⤑ ⬱ ⟸ ⟹ ⟺ ⤂ ⤃ ⤄ ⤆ ⤇ ⤊ ⤋ ⭅ ⭆ ⟰ ⟱ ⟻ ⟼ ⤒ ⤓ ⤙ ⤚ ⤛ ⤜ ⥼ ⥽ ⥾ ⥿ ⤼ ⤽ ⤾ ⤿ ⤸ ⤺ ⤹ ⤻ ⥀ ⥁ ⟲ ⟳ ⮍ ⮌ ⮏ ⮎ ⮔ ◄ ► ◅ ▻ ◀ ▲ ▼ ⌃ ⌄ ⮹"
+
+cuadrados: "❏ ❐ ❑ ❒ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ ▉ ▊ ▋ █ ▌ ▐ ▍ ▎ ▏ ▕ ░ ▒ ▓ ▔ ▬ ▢ ▣ ▤ ▥ ▦ ▧ ▨ ▩ ▪ ▫ ▭ ▮ ▯ ☰ ☲ ☱ ☴ ☵ ☶ ☳ ☷ ▰ ▱ ◧ ◨ ◩ ◪ ◫ ∎ ■ □ ⊞ ⊟ ⊠ ⊡ ❘ ❙ ❚ 〓 ˍ ⋄ ⎔ ⎚ ► ◄ ◆ ◇ ◈ ◘ ◙ ◚ ◛ ◢ ◣ ◤ ◥ ☖ ☗ ❖ ◊"
+
+otros: "https://internetpasoapaso.com/simbolos/"
 
 
 trademark: "<sup>&copy;</sup>"

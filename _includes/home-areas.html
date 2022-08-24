@@ -68,7 +68,7 @@
 
           <h4><strong>{{ proposal.ref }}</strong>
           {%- assign date_format = "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ proposal.date | date_to_xmlschema }}" itemprop="datePublished">&nbsp;({{ proposal.date | date: date_format }})
+          <time class="dt-published" datetime="{{ proposal.modified | date_to_xmlschema }}" itemprop="datePublished">&nbsp;({{ proposal.modified | date: date_format }})
           </time>
           </h4>
 

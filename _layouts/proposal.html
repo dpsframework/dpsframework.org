@@ -106,12 +106,16 @@ layout: default
       <strong>{{  site.data.i18n[page.lang].initiated }}:</strong>   
          {% assign date_format = "%Y-%m-%d"  %}
          {%- assign date_format = "%a, %b %-d, %Y" -%}
+         {% assign date_format = "%Y-%m-%d"  %}
+
          
             <time class="dt-published" 
             datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
             ({{ page.date | date: date_format }}) 
             </time>
       <br>
+      <strong>{{  site.data.i18n[page.lang].published }}:</strong>    
+            ({{ page.modified | date: date_format }})<br>      
       <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ page.license }}<br>
 
        
