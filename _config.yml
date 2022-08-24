@@ -11,7 +11,7 @@ url:      'https://dpsframework.org'
 hard_url: 'https://dpsframework.org'
 
 
-title:    'dpsFramework project: Distributed Problem-Solving JADE Agents'
+title:    'dpsFramework project: Distributed Production-Systems on JADE platform'
 
 subtitle: 'dpsFramework project aims to maintain the compatibility of JADE distributed problem-solving agents (PS-Agents) and their connection to their integrated autonomous Expert Systems. This project also incorporates proposals, with proven solutions, to adapt: JADE 4.5.4 (2022) and its FIPA module implemented with CORBA libraries; y CLIPSJNI for CLIPS-6.31 and CLIPS-6.40, as well as core of JESS rule-based engine.'
 
