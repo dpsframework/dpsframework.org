@@ -9,9 +9,9 @@ subtitle:
 
 
 description:
-  en: ' The dpsFramework project aims to maintain compatibility between the JADE PS-Agents, and the engine software and expert system building tools that run the Production Systems integrated and managed by these Agents. It is organized in documentation areas where they are compiled: proposals, guides, annotations and work documents.'
+  en: ' The main objective of the dpsFramework project is to maintain compatibility between the JADE PSAgents, and the engine software and expert system building tools that are managed by those agents. Together with the evolution of Multi-Agent Systems and reasoning engines is the evolution of the Java platform. These technologies involved in the project generate a considerable volume of documentation, so this website has organized the documents into different areas: proposals, guides, notes and working documents. Added to these areas are the GitHub repositories with the software solutions that have been reached.'
   
-  es: ' El proyecto dpsFramework tiene como objetivo mantener la compatibilidad entre los Agentes-PS de JADE, y el software de los motores y de las herramientas de construcción de sistemas expertos que ejecutan los Sistemas de Producción integrados y gestionados por esos Agentes. Se organiza en áreas de documentación donde se recopilan: propuestas, guías, anotaciones y documentos de trabajo.'
+  es: ' El proyecto dpsFramework tiene como objetivo central mantener la compatibilidad entre los agentes PSAgents de JADE, y el software de los motores y las herramientas de construcción de sistemas expertos que son gestionados por esos agentes. Unido a la evolución de los Sistemas Multi-Agentes y de los motores de razonamiento se encuentra la evolución de la plataforma Java. Estas tecnologías involucradas en el proyecto generan un volumen considerable de documentación, de manera que este sitio Web ha organizados los documentos en áreas diferentes: propuestas, guías, anotaciones y documentos de trabajo. A esas áreas se le suman los repositorios de GitHub con las soluciones sofware que han sido alcanzadas.'
 
 
 shortdescription:
@@ -41,9 +41,9 @@ home-proposals:
   
 
 home-guides:
-  en: ' These are translations of technical manuals and software guides. In Markdown format and ready to navigate through its chapters.'
+  en: ' These are translations of technical manuals or software guides. They are in Markdown format and are interconnected for easy navigation through their chapters.'
   
-  es: ' Se trata de traducciones de manuales técnicos o de guías de software. En formato Markdown y preparados para navegar a través de sus capítulos.' 
+  es: ' Se trata de traducciones de manuales técnicos o de guías de software. Se encuentran en formato Markdown y están interconectadas para facilitar la navegación a través de sus capítulos.' 
   
 
 home-notes:
@@ -53,9 +53,9 @@ home-notes:
   
 
 home-papers:
-  en: '  They compile the working documents and international publications that represent the inspiration of the dpsFramework project: more specifically, the project objective that is oriented towards the maintenance of the software for the deployment of Multi-Agent systems and the Tools for the construction of Expert systems.'
+  en: '  This area collects essays, working documents and international publications that were and will be the inspiration for the dpsFramework project for the future period (2022..2027). And furthermore, they are documents that propose points of evolution to reach new ways of connecting and obtaining new solutions through the union of Multi-Agent Systems and Production Systems construction tools.'
   
-  es: '  Recopilan los documentos de trabajo y las publicaciones internacionales que representan la inspiración de el proyecto dpsFramework: más en concreto, el objetivo de proyecto que se orienta hacia el mantenimiento del software para el despliegue de sistemas Multi-Agente y de las Herramientas para la construcción de Sistemas Expertos.' 
+  es: '  Este área recopila ensayos, documentos de trabajo y publicaciones internacionales que fueron y que serán inspiración del proyecto dpsFramework para el futuro lapso (2022..2027). Y además, son documentos que proponen puntos de evolución para alcanzar nuevas formas de conectar y obtener nuevas soluciones mediante la unión de los Sistemas Multi-Agente y las herramientas de construcción de Sistemas de Producción.' 
   
 
 
