@@ -53,9 +53,9 @@ home-notes:
   
 
 home-papers:
-  en: '  This area collects essays, working documents and international publications that were and will be the inspiration for the dpsFramework project for the future period (2022..2027). And furthermore, they are documents that propose points of evolution to reach new ways of connecting and obtaining new solutions through the union of Multi-Agent Systems and Production Systems construction tools.'
+  en: '  This area collects essays, working documents and international publications that were and will be the inspiration for the dpsFramework project for the future period (2022..2027). These docs represent evolution models for the dpsframework project. For example, make improvements in the connection between the agent and the Production Systems; extend the semantics of messages with more precise ontologies; adopt a production system for the internal use of the agent to incorporate a reasoning layer to the activation of their behaviors; etc.'
   
-  es: '  Este área recopila ensayos, documentos de trabajo y publicaciones internacionales que fueron y que serán inspiración del proyecto dpsFramework para el futuro lapso (2022..2027). Y además, son documentos que proponen puntos de evolución para alcanzar nuevas formas de conectar y obtener nuevas soluciones mediante la unión de los Sistemas Multi-Agente y las herramientas de construcción de Sistemas de Producción.' 
+  es: '  Este área recopila ensayos, documentos de trabajo y publicaciones internacionales que fueron y que serán inspiración del proyecto dpsFramework para el futuro lapso (2022..2027). Estos documentos representan modelos de evolución para el proyecto dpsframework. Por ejemplo, realizar mejoras en la conexión entre el agente y el Sistemas de Producción; ampliar la semántica de los mensajes con ontologías más precisas; adoptar un sistema de producción de uso interno del agente para incorporar una capa de razonamiento a la activación de sus comportamientos; etc.' 
   
 
 
