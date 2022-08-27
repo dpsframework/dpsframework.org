@@ -4,24 +4,24 @@ title:
 
 
 subtitle:
-  en: 'Distributed Production-Systems on JADE platform'
-  es: 'Sistemas de producción distribuidos sobre JADE'
+  en: 'Multiagent Production Systems on JADE platform'
+  es: 'Sistemas de Producción Multiagente sobre plataforma JADE'
 
 
 description:
-  en: ' The main objective of the dpsFramework project is to maintain compatibility between the JADE PSAgents, and the engine software and expert system building tools that are managed by those agents. Together with the evolution of Multi-Agent Systems and reasoning engines is the evolution of the Java platform. These technologies involved in the project generate a considerable volume of documentation, so this website has organized the documents into different areas: proposals, guides, notes and working documents. Added to these areas are the GitHub repositories with the software solutions that have been reached.'
+  en: ' The dpsFramework project is a free and open source Java framework for building Multi-Agent Production System applications. It provides three types of JADE agents, and a development environment made up of a collection of internal and external scripts for the agents, which allow the creation and maintenance of applications. Each expert system is managed by those agents. This website collects the information and documents associated with the dpsframework project. This website has been organized into four different areas: (1) Proposals, (2) Guides, (3) Annotations, and (4) Working Documents. GitHub repositories with the software solutions that have been achieved are added to these areas.'
   
-  es: ' El proyecto dpsFramework tiene como objetivo central mantener la compatibilidad entre los agentes PSAgents de JADE, y el software de los motores y las herramientas de construcción de sistemas expertos que son gestionados por esos agentes. Unido a la evolución de los Sistemas Multi-Agentes y de los motores de razonamiento se encuentra la evolución de la plataforma Java. Estas tecnologías involucradas en el proyecto generan un volumen considerable de documentación, de manera que este sitio Web ha organizados los documentos en áreas diferentes: propuestas, guías, anotaciones y documentos de trabajo. A esas áreas se le suman los repositorios de GitHub con las soluciones sofware que han sido alcanzadas.'
+  es: ' El proyecto dpsFramework es un marco gratuito y de código abierto en Java, para construir aplicaciones de Sistemas de Producción Multiagente. Aporta tres tipos de agente JADE, y un entorno de desarrollo formado por una colección de scripts internos y externos a los agentes, que permiten la creación y el mantenimiento de las aplicaciones. Cada sistema experto es gestionado por esos agentes. Este sitio Web recopila la información y los documentos asociados al proyecto dpsframework. Este sitio Web ha quedado organizado en cuatro áreas diferentes: (1) propuestas, (2) guías, (3) anotaciones y (4) documentos de trabajo. Se suman a esas áreas los repositorios de GitHub con las soluciones sofware que han sido alcanzadas.'
 
 
 shortdescription:
-  en: ' dpsFramework aims to maintain PS-Agents compatibility and connectivity with their integrated Expert Systems.'
+  en: ' dpsFramework a free open source Java framework for building Multi-Agent Production Systems applications.'
 
-  es: ' dpsFramework tiene como objetivo mantener la compatibilidad de los agentes PS-Agents y la conectividad con sus Sistemas Expertos integrados.'
+  es: ' dpsFramework un marco gratuito y de código abierto en Java, para construir aplicaciones Sistmas de Producción Multiagente.'
 
 motto:
-  en: 'PS-Agent GUI Examples'
-  es: 'Ejemplos de interfaz gráfica de usuario de Agentes-PS'
+  en: 'Production System agent GUI example'
+  es: 'Ejemplo de interfaz gráfica de usuario del agente Sistema de Producción'
 
   
 home-fig1:
@@ -53,9 +53,9 @@ home-notes:
   
 
 home-papers:
-  en: '  This area collects essays, working documents and international publications that were and will be the inspiration for the dpsFramework project for the future period (2022..2027). These docs represent evolution models for the dpsframework project. For example, make improvements in the connection between the agent and the Production Systems; extend the semantics of messages with more precise ontologies; adopt a production system for the internal use of the agent to incorporate a reasoning layer to the activation of their behaviors; etc.'
+  en: '  This area compiles working papers and essays that constitute the research foundations of the dpsFramework project. These documents also represent the evolution model of the dpsframework project and the lines of development that will be undertaken in the coming years (2022...2027).'
   
-  es: '  Este área recopila ensayos, documentos de trabajo y publicaciones internacionales que fueron y que serán inspiración del proyecto dpsFramework para el futuro lapso (2022..2027). Estos documentos representan modelos de evolución para el proyecto dpsframework. Por ejemplo, realizar mejoras en la conexión entre el agente y el Sistemas de Producción; ampliar la semántica de los mensajes con ontologías más precisas; adoptar un sistema de producción de uso interno del agente para incorporar una capa de razonamiento a la activación de sus comportamientos; etc.' 
+  es: '  Este área recopila documentos de trabajo y ensayos que constituyen los fundamentos de investigación del proyecto dpsFramework. Estos documentos representan además, el modelo de evolución del proyecto dpsframework y las líneas de desarrollo que serán acometidas en los próximos años (2022...2027).' 
   
 
 

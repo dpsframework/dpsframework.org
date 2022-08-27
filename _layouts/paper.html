@@ -65,12 +65,8 @@ layout: default
 
     <div class="main-col">
       <h1 class="paper-title">
-      {{ page.title | escape }}
+      {{ page.title }}
       </h1>
-        
-      {{ content }}
-      <br>
-      <hr>
       {%- if page.license  -%}
         <small><strong>License: </strong>{{ page.license }}</small><br>
       {%- endif -%}
@@ -80,14 +76,21 @@ layout: default
       {%- if page.doi  -%}
         <small><strong>DOI: </strong>{{ page.doi }}</small><br>
       {%- endif -%}
-      {%- if page.updates  -%}
-        <small><strong>Updates at: </strong>{{ page.updates }}</small><br>
+      {%- if page.urldownload  -%}
+        <small><strong>URL: </strong>{{ page.urldownload }}</small><br>
+      {%- endif -%}
+      {%- if page.modified_date  -%}
+        <small><strong>Last revision: </strong>{{ page.modified_date }}</small><br>
       {%- endif -%}
       {%- if page.citation  -%}
         <small><strong>Citation: </strong>{{ page.citation }}</small><br>
       {%- endif -%}
      
+      <br>        
+      {{ content }}
       <br>
+      <hr>
+
 
       {%- if page.modified_date and page.lang == "es" -%}
         {%- assign mdate = page.modified_date | date_to_xmlschema -%}
