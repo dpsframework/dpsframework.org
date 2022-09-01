@@ -90,8 +90,9 @@
            {%- endif -%}  
              
            <strong>{{  site.data.i18n[page.lang].status}}:</strong>      {{ proposal.status }}<br>
-           <strong>{{  site.data.i18n[page.lang].proposedby }}:</strong> {{ proposal.author }}<br>
-           <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ proposal.date | date: date_format }}<br>
+           <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ proposal.author }}<br>
+           <strong>{{  site.data.i18n[page.lang].lastversion }}:</strong>    {{ proposal.date | date: date_format }}<br>
+           <strong>{{  site.data.i18n[page.lang].modified }}:</strong>    {{ proposal.modified | date: date_format }}<br>
            <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ proposal.license }}<br>
        
            <hr>

@@ -5,7 +5,7 @@ author:  'Giarratano, Riley'
 license:  'GNU Lesser General Public License v2.1'
 ref:  p42-clips-ug
 lang:  en
-date:  '2022-03-27'
+date:  '2021-04-29'
 modified:  '2022-08-10'
 status:  'In process'
 title:  'Proposal: CLIPS 6.4 User`s Guide, in spanish language'
@@ -250,5 +250,4 @@ etc.
 [^1]:  **CLIP 6.4 User's Guide**. 2021. Joseph C. Giarratano, Ph.D. Editor, Gary Riley. Available at: <https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/>. Visited in 2022.
 
 [^traductor]: **Traducción (es-ES)**: _Dr. FJ. Aguayo_ (2022). The rights of this work belong to its original authors. The translation has been done under the GNU Lesser General Public License v2.1.
-
 

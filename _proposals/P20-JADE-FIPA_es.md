@@ -1,12 +1,12 @@
 ---
 layout:  proposal
 toc:  true
-author:  'FJAC'
+author:  'TILAB Telecom'
 license:  'GNU Lesser General Public License v2.1'
 ref:  p20-jade-fipa
 lang:  es
-date:  '2022-04-22'
-modified:  '2022-07-24'
+date:  '2022-07-24'
+modified:  '2022-08-28'
 status:  'Finalizado'
 title:  'Compilación de JADE-FIPA con OpenJDK-18'
 subtitle:  'Solicitud de mejora de JADE-FIPA para permitir su compilación con OpenJDK-18, JDK-17 LTS y versiones anteriores de Java.'
@@ -235,4 +235,5 @@ images:
 
 
 ###  4.1. Información adicional a incluir en la Propuesta de Mejora
+  
   

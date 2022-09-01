@@ -1,12 +1,12 @@
 ---
 layout:  proposal
 toc:  true
-author:  'Aguayo, FJ'
-license:  'GNU Lesser General Public License v2.1'
+author:  'Gary Riley'
+license:  'GNU General Public License v2.1'
 ref:  p40-clipsjni-051
 lang:  en
 date:  '2022-04-27'
-modified:  '2022-08-17'
+modified:  '2022-08-31'
 status:  'Completed'
 title:  'Proposal: native library dual self-location of CLIPSJNI-0.51'
 subtitle:  'Proposal to update CLIPS-JNI-0.51 to facilitate the detection of the machine architecture and location of the native library at runtime'

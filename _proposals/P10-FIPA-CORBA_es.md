@@ -1,11 +1,11 @@
 ---
 layout:  proposal
 toc:  true
-author:  'FJAC'
+author:  'FIPA-Telecom Italia'
 license:  'GNU Lesser General Public License v2.1'
 ref:  p10-fipa-corba
 lang:  es
-date:  '2022-01-02'
+date:  '2021-01-02'
 modified:  '2022-06-18'
 status:  'Finalizado'
 title:  'Propuesta: compilar el módulo FIPA con Java JDK-17'
@@ -287,4 +287,3 @@ images:
 [^openJDK]: OpenJDK 17 is the open-source reference implementation of version 17 of the Java SE Platform, as specified by by JSR 390 in the Java Community Process. JDK 17 reached General Availability on 14 September 2021. URL for OpenJDK-11 is: https://openjdk.java.net/projects/jdk/11/. URL for OpenJDK-17 is: https://openjdk.java.net/projects/jdk/17/.
 
 [^cool]: COOL is the acronym for CLIPS Object Oriented Language.
-

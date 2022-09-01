@@ -5,7 +5,7 @@ author:  'Giarratano, Riley'
 license:  'GNU Lesser General Public License v2.1'
 ref:  p42-clips-ug
 lang:  es
-date:  '2022-03-27'
+date:  '2021-04-29'
 modified:  '2022-08-10'
 status:  'En curso'
 title:  'Propuesta: CLIPS 6.4 Guía de Usuario, en castellano'
@@ -250,5 +250,4 @@ etc.
 [^1]: **CLIPS Rule Based Programming Language Files**. Expert System Tool. Gary, Riley D. (Ed. 2022). URL: https://sourceforge.net/projects/clipsrules/. Available at: [https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download)
 
 [^traductor]: **Traducción (es-ES)**: _Dr. FJ. Aguayo_ (2022). Los derechos de esta obra pertenecen a sus autores originales. La traducción se ha realizado bajo la GNU Lesser General Public License v2.1.
-
 

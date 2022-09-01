@@ -101,9 +101,9 @@ layout: default
      
      
      
-      <strong>{{  site.data.i18n[page.lang].status }}:</strong>      {{ page.status }}<br>
-      <strong>{{  site.data.i18n[page.lang].proposedby }}:</strong> {{ page.author }}<br>
-      <strong>{{  site.data.i18n[page.lang].initiated }}:</strong>   
+      <strong>{{  site.data.i18n[page.lang].status }}:</strong> {{ page.status }}<br>
+      <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ page.author }}<br>
+      <strong>{{  site.data.i18n[page.lang].lastversion }}:</strong>   
          {% assign date_format = "%Y-%m-%d"  %}
          {%- assign date_format = "%a, %b %-d, %Y" -%}
          {% assign date_format = "%Y-%m-%d"  %}
@@ -114,7 +114,7 @@ layout: default
             ({{ page.date | date: date_format }}) 
             </time>
       <br>
-      <strong>{{  site.data.i18n[page.lang].published }}:</strong>    
+      <strong>{{  site.data.i18n[page.lang].modified }}:</strong>    
             ({{ page.modified | date: date_format }})<br>      
       <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ page.license }}<br>
 

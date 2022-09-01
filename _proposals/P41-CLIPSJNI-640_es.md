@@ -1,11 +1,11 @@
 ---
 layout:  proposal
 toc:  true
-author:  'FJ Aguayo'
+author:  'Gary Riley'
 license:  'GNU Lesser General Public License v2.1'
 ref:  p41-clipsjni-640
 lang:  es
-date:  '2022-05-14'
+date:  '2021-05-14'
 modified:  '2022-08-24'
 status:  'En curso: comprobaciones finales'
 title:  'Propuesta: auto-localización de librería nativa para CLIPSJNI-6.40'
@@ -266,4 +266,3 @@ images:
 [^openJDK]: OpenJDK 17 is the open-source reference implementation of version 17 of the Java SE Platform, as specified by by JSR 390 in the Java Community Process. JDK 17 reached General Availability on 14 September 2021. URL for OpenJDK-11 is: https://openjdk.java.net/projects/jdk/11/. URL for OpenJDK-17 is: https://openjdk.java.net/projects/jdk/17/.
 
 [^cool]: COOL is the acronym for CLIPS Object Oriented Language.
-
