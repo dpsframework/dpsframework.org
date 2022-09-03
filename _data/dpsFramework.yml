@@ -11,7 +11,7 @@ subtitle:
 description:
   en: ' The dpsFramework project is a free and open source Java framework for building Multi-Agent Production System applications. It provides three types of JADE agents, and a development environment made up of a collection of internal and external scripts for the agents, which allow the creation and maintenance of applications. Each expert system is managed by those agents. This website collects the information and documents associated with the dpsframework project. This website has been organized into four different areas: (1) Proposals, (2) Guides, (3) Annotations, and (4) Working Documents. GitHub repositories with the software solutions that have been achieved are added to these areas.'
   
-  es: ' El proyecto dpsFramework es un marco gratuito y de código abierto en Java, para construir aplicaciones de Sistemas de Producción Multiagente. Aporta tres tipos de agente JADE, y un entorno de desarrollo formado por una colección de scripts internos y externos a los agentes, que permiten la creación y el mantenimiento de las aplicaciones. Cada sistema experto es gestionado por esos agentes. Este sitio Web recopila la información y los documentos asociados al proyecto dpsframework. Este sitio Web ha quedado organizado en cuatro áreas diferentes: (1) propuestas, (2) guías, (3) anotaciones y (4) documentos de trabajo. Se suman a esas áreas los repositorios de GitHub con las soluciones sofware que han sido alcanzadas.'
+  es: ' El proyecto dpsFramework es un marco gratuito y de código abierto en Java, para construir aplicaciones de Sistemas de Producción Multiagente. Aporta tres tipos de agente JADE, y un entorno de desarrollo formado por una colección de scripts internos y externos a los agentes, que permiten la creación y el mantenimiento de las aplicaciones. Cada sistema experto es gestionado por esos agentes. Este sitio Web recopila la información y los documentos asociados al proyecto dpsframework. Este sitio Web ha quedado organizado en cuatro áreas diferentes: (1) propuestas, (2) guías, (3) anotaciones y (4) documentos de trabajo. Se suman a esas áreas los repositorios de GitHub con las soluciones software que han sido alcanzadas.'
 
 
 shortdescription:
@@ -25,9 +25,9 @@ motto:
 
   
 home-fig1:
-  en: ' The dpsframework <a href="https://github.com/dpsframework/dpsframework-components"/>project component repository</a>  is the place where all the update and maintenance efforts for the JADE PS-Agents have been gathered. It is scheduled for release in September 2022. '
+  en: ' The <a href="https://github.com/dpsframework/dpsframework-1.9" target="blank">dpsframework-1.9 project repository</a>  is the place where all the update and maintenance efforts for the JADE PS-Agents have been gathered. It is scheduled for release in September 2022. This will be the last version released since the original version 1.8 (2019). This new version 1.9 will be released under the MIT license and its code will be open source.'
 
-  es: ' El repositorio de <a href="https://github.com/dpsframework/dpsframework-components"/>componentes del proyecto dpsframework</a> es el lugar donde se han reunido todos los esfuerzos de actualización y mantenimiento de los Agentes-PS de JADE. Está prevista su liberación en Septiembre de 2022. '
+  es: ' El <a href="https://github.com/dpsframework/dpsframework-1.9/" target="blank">repositorio del proyecto dpsframework-1.9</a> es el lugar donde se han reunido todos los esfuerzos de actualización y mantenimiento de los Agentes-PS de JADE. Esta será la última versión liberada desde la versión original 1.8 (2019). Esta nueva versión 1.9 se va a liberar bajo liencia MIT y su código será abierto.'
 
 areas:
   en: 'Documentation areas:'
