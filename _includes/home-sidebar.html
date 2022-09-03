@@ -1,5 +1,5 @@
  {% assign papers    = site.papers    | sort: "year" | reverse | where:"lang", page.lang  %}
- {% assign proposals = site.proposals | sort: "date" | reverse | where:"lang", page.lang  %}
+ {% assign proposals = site.proposals | sort: "modified" | reverse | where:"lang", page.lang  %}
  {% assign paginas   = site.pages     | where:"lang", page.lang %}
  {% assign guias     = site.guides    | where:"lang", page.lang | where:"chapter", 0 %}
  {% assign notes     = site.notes       %}
