@@ -20,8 +20,8 @@ citation:  '@misc{Aguayo-Canela2022, author = {Aguayo-Canela, F.J.}, mendeley-gr
 toc:  false
 
 
-title:  'Bibliografía'
-headtitle:  'Bibliografía de dpsFramework'
+title:  'Referencias bibliográficas'
+headtitle:  'dpsFramework References - Bibliografía de dpsFramework'
 shorttitle:  'Referencias bibliográficas en dpsFw.'
 year:  '2022'
 author:  'FJAC'
