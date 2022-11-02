@@ -7,10 +7,10 @@ permalink: /sitemap.xml
   {% for post in site.posts %}
     {% if post.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{{ post.url }}</loc>
+        <loc>{{site.hard_url}}{{ post.url }}</loc>
         {% assign versions=site.posts | where:"ref", post.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.hard_url}}{{ version.url }}" />
         {% endfor %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
@@ -21,10 +21,10 @@ permalink: /sitemap.xml
   {% for post in site.guides %}
     {% if post.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{{ post.url }}</loc>
+        <loc>{{site.hard_url}}{{ post.url }}</loc>
         {% assign versions=site.guides | where:"ref", post.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.hard_url}}{{ version.url }}" />
         {% endfor %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
@@ -35,10 +35,10 @@ permalink: /sitemap.xml
   {% for post in site.proposals %}
     {% if post.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{{ post.url }}</loc>
+        <loc>{{site.hard_url}}{{ post.url }}</loc>
         {% assign versions=site.proposals | where:"ref", post.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.hard_url}}{{ version.url }}" />
         {% endfor %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,10 +49,10 @@ permalink: /sitemap.xml
   {% for post in site.notes %}
     {% if post.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{{ post.url }}</loc>
+        <loc>{{site.hard_url}}{{ post.url }}</loc>
         {% assign versions=site.notes | where:"ref", post.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.hard_url}}{{ version.url }}" />
         {% endfor %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
@@ -63,10 +63,10 @@ permalink: /sitemap.xml
   {% for post in site.papers %}
     {% if post.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{{ post.url }}</loc>
+        <loc>{{site.hard_url}}{{ post.url }}</loc>
         {% assign versions=site.papers | where:"ref", post.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.hard_url}}{{ version.url }}" />
         {% endfor %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         <changefreq>weekly</changefreq>
@@ -79,10 +79,10 @@ permalink: /sitemap.xml
   {% for page in site.pages %}
     {% if page.id contains "404" %}{% else %}
       <url>
-        <loc>{{site.base}}{{ page.url }}</loc>
+        <loc>{{site.hard_url}}{{ page.url }}</loc>
         {% assign versions=site.pages | where:"ref", page.ref %}
         {% for version in versions %}
-          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.base}}{{ version.url }}" />
+          <xhtml:link rel="alternate" hreflang="{{ version.lang }}" href="{{site.hard_url}}{{ version.url }}" />
         {% endfor %}
         <changefreq>weekly</changefreq>
       </url>
