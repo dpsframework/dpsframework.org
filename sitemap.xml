@@ -90,19 +90,19 @@ permalink: /sitemap.xml
   {% endfor %}
   
     <url>
-      <loc>{{site.hard_url}}/doc/bsh/manual/bshmanual.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/bsh/manual/bshmanual.html</loc>
       <lastmod>2016-06-04</lastmod>
     </url>
 
   
     <url>
-      <loc>{{site.hard_url}}/doc/bsh/manual/bshmanual.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/bsh/manual/bshmanual.html</loc>
       <lastmod>2016-06-04</lastmod>
     </url>
 
   
     <url>
-      <loc>{{site.hard_url}}/doc/hsql/hsqlug.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/hsql/hsqlug.html</loc>
       <lastmod>2016-06-04</lastmod>
     </url>
 
@@ -114,27 +114,27 @@ permalink: /sitemap.xml
 
   
     <url>
-      <loc>{{site.hard_url}}/doc/engines/clips/CLIPSLanguageHelp.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/engines/clips/CLIPSLanguageHelp.html</loc>
       <lastmod>2013-05-22</lastmod>
     </url>
 
     <url>
-      <loc>{{site.hard_url}}/doc/engines/clips/clipsjni/index.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/engines/clips/clipsjni/index.html</loc>
       <lastmod>2017-01-05</lastmod>
     </url>
 
     <url>
-      <loc>{{site.hard_url}}/doc/engines/jess/docs/index.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/engines/jess/docs/index.html</loc>
       <lastmod>2014-01-18</lastmod>
     </url>
 
     <url>
-      <loc>{{site.hard_url}}/doc/engines/jess/docs/api.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/engines/jess/docs/api.html</loc>
       <lastmod>2014-08-12</lastmod>
     </url>
 
     <url>
-      <loc>{{site.hard_url}}/doc/engines/prolog-swi/index.html</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/engines/prolog-swi/index.html</loc>
       <lastmod>2017-05-15</lastmod>
     </url>
 
@@ -152,7 +152,7 @@ permalink: /sitemap.xml
 
  
     <url>
-      <loc>{{site.hard_url}}/doc/dps/</loc>
+      <loc>{{site.hard_url}}/dpsAgents-api/doc/dps/</loc>
       <lastmod>2017-07-07</lastmod>
     </url>
 

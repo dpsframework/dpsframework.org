@@ -1,5 +1,5 @@
 - web:    false
-  link:   '/doc/bsh/manual/bshmanual.html'
+  link:   '/dpsAgents-api/doc/bsh/manual/bshmanual.html'
   imag:   'homebutton.png'
   size:   '35px'
   name:   'BeanShell Guide'
@@ -7,7 +7,7 @@
   author: 'Pat Niemeyer (pat@pat.net)'
 
 - web:    false
-  link:   '/doc/hsql/hsqlug.html'
+  link:   '/dpsAgents-api/doc/hsql/hsqlug.html'
   imag:   'hypersql.png'
   size:   '75px'
   name:   'User Guide'
@@ -23,7 +23,7 @@
   author: 'Blaine Simpson, and Fred Toussi.'
 
 - web:    false
-  link:   '/doc/engines/clips/CLIPSLanguageHelp.html'
+  link:   '/dpsAgents-api/doc/engines/clips/CLIPSLanguageHelp.html'
   imag:   'clips_logo.png'
   size:   '35px'
   name:   'CLIPS Help'
@@ -31,7 +31,7 @@
   author: 'Giarratano, Joseph C and Riley, Gary.(CLIPS v6.30, 2013)'
 
 - web:    false
-  link:   '/doc/engines/clips/clipsjni/index.html'
+  link:   '/dpsAgents-api/doc/engines/clips/clipsjni/index.html'
   imag:   'clips_logo.png'
   size:   '40px'
   name:   'CLIPJNI 0.5'
@@ -39,7 +39,7 @@
   author: 'Giarratano, Joseph C and Riley, Gary.(CLIPS v6.30, 2017)'
 
 - web:    false
-  link:   '/doc/engines/jess/docs/index.html'
+  link:   '/dpsAgents-api/doc/engines/jess/docs/index.html'
   imag:   'jess.png'
   size:   '35px'
   name:   'Jess Guide'
@@ -47,7 +47,7 @@
   author: 'Ernest J. Friedman-Hill (2014). Sandia National Laboratories'
 
 - web:    false
-  link:   '/doc/engines/jess/docs/api.html'
+  link:   '/dpsAgents-api/doc/engines/jess/docs/api.html'
   imag:   'jess.png'
   size:   '35px'
   name:   'Jess 8.0a1 Library '
@@ -55,7 +55,7 @@
   author: 'Ernest J. Friedman-Hill (2014). Sandia National Laboratories'
 
 - web:    false
-  link:   '/doc/engines/prolog-swi/index.html'
+  link:   '/dpsAgents-api/doc/engines/prolog-swi/index.html'
   imag:   'swiprolog.png'
   size:   '35px'
   name:   'swi-JPL-7 Library'
@@ -79,7 +79,7 @@
   author: 'Bobbylight, Developer'
 
 - web:    true
-  link:   '/doc/dps/'
+  link:   '/dpsAgents-api/doc/dps/'
   imag:   'dpsframework.png'
   size:   '56px'
   name:   'PSAgents 1.7'
