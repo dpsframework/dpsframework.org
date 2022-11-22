@@ -21,13 +21,13 @@ shortdescription:
 
 motto:
   en: 'Production System Shell from an Agent GUI'
-  es: 'Acceso a Shell de Sistema Experto desde la GUI de un Agente'
+  es: 'Acceso a Shell de Sistema Experto desde GUI de Agente'
 
   
 home-fig1:
-  en: ' The <a href="https://github.com/dpsframework/dpsframework-1.9" target="blank">dpsframework-1.9 project repository</a>  is the place where all the update and maintenance efforts for the JADE PS-Agents have been gathered. It is scheduled for release in September 2022. This will be the last version released since the original version 1.8 (2019). This new version 1.9 will be released under the MIT license and its code will be open source.'
+  en: ' This <a href="https://github.com/dpsframework/dpsAgents-2.1/" target="blank"> link dpsAgents-2.1</a> is a repository where updates and maintenance efforts about dpsAgents JADE Library have been gathered. It is scheduled for release in December 2022.'
 
-  es: ' El <a href="https://github.com/dpsframework/dpsframework-1.9/" target="blank">repositorio del proyecto dpsframework-1.9</a> es el lugar donde se han reunido todos los esfuerzos de actualización y mantenimiento de los Agentes-PS de JADE. Esta será la última versión liberada desde la versión original 1.8 (2019). Esta nueva versión 1.9 se va a liberar bajo liencia MIT y su código será abierto.'
+  es: ' El <a href="https://github.com/dpsframework/dpsAgents-2.1/" target="blank"> enlace a dpsAgents-2.1</a> es el repositorio donde se han reunido los esfuerzos de actualización y mantenimiento de la Libreria dpsAgents para la Plataforma JADE. Esta versión 2.1 tiene programada la liberación el próximo Diciembre de 2022.'
 
 areas:
   en: 'Worklines:'
@@ -35,9 +35,9 @@ areas:
 
 
 home-proposals:
-  en: ' They are very similar to the Java Specification Requests format. These types of documents are connected to each GitHub repository, where you can find the proposed solutions.'  
+  en: ' Project line dedicated to proposing changes to the components used and to developing solutions to adapt the dpsAgents Library and the JADE Platform to Java JDK-11 or higher compiler versions.'  
   
-  es: ' Son muy similares al formato de las Solicitudes de Especificación de Java. Este tipo de documentos está conectado a cada repositorio de GitHub, donde encontrar las soluciones propuestas.' 
+  es: ' Línea de proyecto dedicada a proponer cambios en los componentes utilizados y a desarrollar soluciones para adaptar la Librería dpsAgents y la Plataforma JADE a Java JDK11 o versiones del compilador superiores.' 
   
 
 home-guides:
