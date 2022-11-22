@@ -30,8 +30,8 @@ home-fig1:
   es: ' El <a href="https://github.com/dpsframework/dpsframework-1.9/" target="blank">repositorio del proyecto dpsframework-1.9</a> es el lugar donde se han reunido todos los esfuerzos de actualización y mantenimiento de los Agentes-PS de JADE. Esta será la última versión liberada desde la versión original 1.8 (2019). Esta nueva versión 1.9 se va a liberar bajo liencia MIT y su código será abierto.'
 
 areas:
-  en: 'Documentation areas:'
-  es: 'Áreas de documentación:'
+  en: 'Worklines:'
+  es: 'Líneas de trabajo:'
 
 
 home-proposals:
