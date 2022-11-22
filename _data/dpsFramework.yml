@@ -41,15 +41,15 @@ home-proposals:
   
 
 home-guides:
-  en: ' These are translations of technical manuals or software guides. They are in Markdown format and are interconnected for easy navigation through their chapters.'
+  en: ' Double line of work of the dps-Framework project, dedicated both to generating and compiling Guides and Manuals belonging to components used by people from the dpsAgents library.'
   
-  es: ' Se trata de traducciones de manuales técnicos o de guías de software. Se encuentran en formato Markdown y están interconectadas para facilitar la navegación a través de sus capítulos.' 
+  es: ' Línea doble de trabajo del proyecto dps-Framework dedicada tanto a generar como a recopilar Guías y Manuales pertenecientes a componentes utilizados por gentes de la librería dpsAgents.' 
   
 
 home-notes:
-  en: 'They are small reviews and featured announcements to indicate an event, or they are simple lists to connect with work and processes of the dpsframework project that have been completed.'
+  en: 'Area dedicated to announce events and version release dates or, to highlight links to dps-Framework repositories and processes that have been finished..'
   
-  es: ' Son pequeñas reseñas y anuncios destacados para indicar algún evento, o son sencillas listas para conectar con trabajos y con procesos del proyecto dpsframework que han sido terminados.' 
+  es: ' Área dedicada a anunciar eventos y fechas de liberación de versiones o, para destacar enlaces a repositorios y procesos de dps-Framework que han sido finalizados.' 
   
 
 home-papers:
