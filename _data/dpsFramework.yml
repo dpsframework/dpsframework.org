@@ -35,9 +35,9 @@ areas:
 
 
 home-proposals:
-  en: ' Project line dedicated to proposing changes to the components used and to developing solutions to adapt the dpsAgents Library and the JADE Platform to Java JDK-11 or higher compiler versions.'  
+  en: '  Work lines dedicated to proposing changes in the components used by the dpsAgents Library, and dedicated to building solutions to adapt those components and the JADE platform to Java JDK-11 or higher compiler versions. '  
   
-  es: ' Línea de proyecto dedicada a proponer cambios en los componentes utilizados y a desarrollar soluciones para adaptar la Librería dpsAgents y la Plataforma JADE a Java JDK11 o versiones del compilador superiores.' 
+  es: ' Líneas de trabajo dedicadas a proponer cambios en los componentes utilizados por la Librería dpsAgents, y dedicada a construir soluciones para adaptar esos componentes y la plataforma JADE a Java JDK-11 o versiones del compilador superiores. ' 
   
 
 home-guides:
