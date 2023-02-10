@@ -1,0 +1,116 @@
+---
+layout: default
+---
+
+
+<div class="wrapper">
+ <div class="home">
+
+  <div class="main-col-wrapper">
+
+
+       
+    <div  class="main-col-4">
+    
+    <!-- Essays -->
+    <div class="sidebar-title">
+      {{ site.data.i18n[page.lang]['draftH1'] }}:
+    </div>
+    <div class="mini-banner">
+     {%- if page.images[0] -%}
+     <img class="mini-banner" 
+          src="{{ page.imagepath }}{{ page.images[0] }}" 
+          title="{{ page.shorttitle }}" >
+     {%- endif -%}
+     <strong>{{ page.author }}
+             {%- if page.authors -%}
+              {% for author in page.authors %}, {{ author }}
+              {% endfor %}
+             {%- endif -%}
+     </strong>
+    
+     <br>
+     {{ page.department }}<br>
+     
+ 
+    
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        <br>{{ page.date | date: date_format }}
+        </time>
+        
+        
+       </div>
+       
+       
+       {% if page.toc %}
+         <div class="section-nav">
+           {% include toc.html html=content %}
+           {%- include language-selector.html -%}
+           <img src="{{ site.baseurl }}/assets/imgs/internet.png">
+         </div>
+       {% endif %}
+       
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="main-col">
+      <h1 class="paper-title">
+      {{ page.title }}
+      </h1>
+      {%- if page.license  -%}
+        <small><strong>License: </strong>{{ page.license }}</small><br>
+      {%- endif -%}
+      {%- if page.editor  -%}
+        <small><strong>Editor: </strong>{{ page.editor }}</small><br>
+      {%- endif -%}
+      {%- if page.doi  -%}
+        <small><strong>DOI: </strong>{{ page.doi }}</small><br>
+      {%- endif -%}
+      {%- if page.urldownload  -%}
+        <small><strong>URL: </strong>{{ page.urldownload }}</small><br>
+      {%- endif -%}
+      {%- if page.modified_date  -%}
+        <small><strong>Last revision: </strong>{{ page.modified_date }}</small><br>
+      {%- endif -%}
+      {%- if page.citation  -%}
+        <small><strong>Citation: </strong>{{ page.citation }}</small><br>
+      {%- endif -%}
+     
+      <br>        
+      {{ content }}
+      <br>
+      <hr>
+
+
+      {%- if page.modified_date and page.lang == "es" -%}
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+        <small><i><strong>N. d T.</strong>&nbsp;last revised, {{ mdate | date: date_format }}.</i></small><br>
+        </time>
+      {%- endif -%}
+
+
+      
+    </div>
+
+
+
+ 
+
+  </div>
+   {% include top-button.html %}
+
+ </div>
+
+
+</div>

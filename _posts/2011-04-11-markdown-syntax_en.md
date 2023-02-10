@@ -1,20 +1,28 @@
 ---
-layout: note
-title:  "Markdown-Syntax Manual"
+layout: post
+ref: manualMD
+
+title:      'Markdown-Syntax Manual'
+headtitle:  'Markdown-Syntax Manual'
+shorttitle: 'Jackques Distler (2011)'
+author:     'Jackques Distler'
+
+department: 'Physics Department, University of Texas, Austin, Texas 78712.'
+
+
+date:  2012-04-16 01:48:44 +0100
 lang:  en
-idiom:  us-EN
-imagepath:  'assets/imgs/'
+idiom:  en_EN
+
+imagepath:  '/assets/imgs/'
 images:
-  -  'dpsframework4areas.png'
+  -  'Engineering-25.png'
 
 menu:  false
-ref: manualMD
-author: Jackques Distler
-date:   2012-04-16 01:48:44 +0100
-tags: infront featured
 categories: drafts
-lang: en
-translate: false
+toc: true
+
+
 ---
   
 >  Posted by [Sirthias][1] at GitHub. The original can be located here: Professor [Jacques Distler][3], at Physics Department, University of Texas, Austin, Texas 78712. This document and the [MARUKU][2] Project were forked and studied. It was also used to [Translation of HTML entities to LaTeX][4]. Other tools oriented to conversion of HTML to Markdown, are available at [Mr.42][5].
@@ -675,13 +683,7 @@ Markdown provides backslash escapes for the following characters:
 
 <div class="clearfix">[Source](http://daringfireball.net/projects/markdown/basics)</div>
 
-# References
 
-- [[1]]  https://github.com/sirthias/pegdown/blob/master/src/test/resources/MarkdownTest103/Markdown%20Documentation%20-%20Syntax.md
-- [[2]]  https://golem.ph.utexas.edu/~distler/maruku/
-- [[3]]  https://golem.ph.utexas.edu/~distler/
-- [[4]]  https://golem.ph.utexas.edu/~distler/maruku/#entities
-- [[5]]  https://www.mister42.me/tools/html-to-markdown
 
 
 

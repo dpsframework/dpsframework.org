@@ -1,18 +1,20 @@
 ---
-layout: note
-title:  "Método para tener éxito con 'Git'"
-ref: gitBranching
-lang:  en
-idiom:  us-EN
-imagepath:  'assets/imgs/'
+layout: post
+title:  "Método exitoso de Git-Branching"
+ref: gitBranching2010
+lang:  es
+idiom:  es_ES
+imagepath:  '/assets/imgs/'
 images:
   -  'dpsframework4areas.png'
 
 menu:  false
-author: "Vincent Driessen<br><br>Translated by: Aguayo-Canela, F.J. (2016)<br>Department of Electrical and Systems Engineering and Automation"
+author: "Vincent Driessen"
 date: 2010-01-05 09:48:44 +0100
 categories: drafts
-
+toc: true
+headtitle:  'Un método para aplicar Git-Branching con éxito (2010)'
+shorttitle:  'Driessen, Vincent (2010)'
 ---
 
 **_Vincent Driessen_** (2010)
