@@ -97,7 +97,7 @@ defaults:
     values:
       layout: "default"
   - scope:
-      path: "drafts/**/*"
+      path: "docs/**/*"
     values:
       sitemap: true
 
