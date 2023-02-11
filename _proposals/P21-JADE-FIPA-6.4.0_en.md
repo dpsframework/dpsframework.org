@@ -8,15 +8,14 @@ lang:  en
 date:  '2022-12-19'
 modified:  '2023-01-14'
 status:  'Finished'
-title:  'Build of JADE-6.4.0 (December 2022 release) with JDK-17LTS'
-subtitle:  'Proposed build of JADE-4.6.0-6871 with OpenJDK-11, JDK-17 LTS, and later versions of Java.'
+title:  'JADE-6.4.0 (December, 2022) with JDK-17LTS'
+subtitle:  'JADE-4.6.0-r6871 build proposal with JDK-17-LTS, or later versions of Java.'
 headtitle:  'Unification of the libraries used by the JADE 4.6.0 core: This is a proposal to update the compilation mechanism with OpenJDK-11 to 18 or higher.'
 imagepath:  'images/jade-fipa/'
 images:  
   -  'jade-rotated.png'
   -  'jade.png'
   -  'fipa.png'
-
 
 
 ---

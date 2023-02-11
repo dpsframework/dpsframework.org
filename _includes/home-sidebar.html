@@ -16,50 +16,41 @@
     </a>
   </div>
   {% for proposal in proposals %}
+    <br>
     <a class="page-link"
        href="{{ site.baseurl }}{{ proposal.url}}">
-      {{ proposal.ref | upcase  }}
+      {{ proposal.subtitle | upcase  }}
     </a>
 
 
-
    
-    &nbsp; &nbsp; ~ &nbsp; &nbsp;    
+      
      
     {%- if proposal.ref -%}
+      <br><b>GitHub-Repo</b>:
       <a rel="page-link" href="https://github.com/dpsframework/{{ proposal.ref }}/" target="_blank" title="{{ proposal.ref }}">
       
-          Repo: 
+           {{ proposal.ref }} 
 
          <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-       </a>
+      </a>
     {%- endif -%}    
     
 
 
     <p class="sidebar-meta">
-
-
-
-
     {%- assign date_format = "%b, %Y" -%}
     <time class="dt-published" 
       datetime="{{ proposal.date | date_to_xmlschema }}" itemprop="datePublished">
       ({{ proposal.date | date: date_format }}) 
     </time>
     
-    
-    &#8226; {{ proposal.title }} 
-    
-    
-    <br>
-    
-     
-    
-    
-    
+    &#8226; {{ proposal.headtitle }} 
     
     </p>
+    
+    &nbsp; &nbsp; ~ &nbsp; &nbsp;<br>
+    
   {% endfor %}
 
 
