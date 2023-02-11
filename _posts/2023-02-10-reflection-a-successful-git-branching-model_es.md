@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reflexión sobre un método de aplicar Git-Branching con éxito"
+title:  "Reflexión sobre el método para aplicar Git-Branching con éxito"
 ref: gitBranching2020
 lang:  es
 idiom:  es-ES
