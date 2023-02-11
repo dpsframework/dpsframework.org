@@ -10,13 +10,17 @@ layout: default
 
       <div class="main-col">
          {{ content }}
+         {% include home-local-sidebar.html %}
       </div>
 
       <div class="main-col-4">
-      {% include home-sidebar.html %}
+      {% include home-partial-sidebar.html %}
       </div>
 
     </div>
   </header>  
 
 </div>
+
+
+

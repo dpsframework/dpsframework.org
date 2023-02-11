@@ -1,61 +1,74 @@
 title:
   en: 'dpsFramework Project'
-  es: 'Proyecto dpsFramework'
+  es: 'Proyecto dpsFramework '
 
 
 subtitle:
-  en: 'JADE Agents with Production Systems management capabilities'
-  es: 'Agentes JADE con capacidad de gestión de Sistemas de Producción'
+  en: 'JADE Add-On to deploy Multi-Agent Production Systems'
+  es: 'Complemento JADE para desplegar Sistemas de Producción Multi-Agente'
 
 
 description:
-  en: ' The goal of the dpsFramework project is to develop and maintain the `dpsAgents` Library. With this library it is possible to build Multiagent Production Systems. Briefly, the `dpsAgents` Library provides three different types of JADE agents; and a structure of directories and scripts that are recognized by the agents belonging to the same application. This Web site collects the information and documents associated with the dpsframework project and has been organized into four areas: (1) proposals, (2) guides, (3) annotations, and (4) working documents. Added to these four areas are the GitHub repositories with the software solutions achieved.'
+  en: ' During the PhD research (2012-2017) the `dpsAgents-1.8.jar` Library was developed for the JADE-4.5.0 Platform and Java SE-1.6. This library allowed a production system to be deployed in agents through a directory structure recognized by those agents. This website compiles that historical documentation and proposes a complete update and conversion, to create a new JADE Standard Add-On, with new capabilities and with an integration with JADE-4.6.0, and its Add-Ons available on the Web https://jade .tilab.com/.'
   
-  es: ' El objetivo del proyecto dpsFramework es desarrollar y mantener las Librería `dpsAgents`. Con esta librería es posible  construir Sistemas de Producción Multiagente. De manera breve, la Librería `dpsAgents` aporta tres tipos distintos de agentes JADE; y una estructura de directorios y scripts que son reconocidos por los agentes pertenecientes a una misma aplicación. Este sitio Web recopila la información y los documentos asociados al proyecto dpsframework y ha quedado organizado en cuatro áreas: (1) propuestas, (2) guías, (3) anotaciones y (4) documentos de trabajo. Se suman a esas cuatro áreas los repositorios de GitHub con las soluciones software alcanzadas.'
+  es: ' Durante la investigación de doctorado (2012-2017) se desarrolló la Librería `dpsAgents-1.8.jar` para la Plataforma JADE-4.5.0 y Java SE-1.6. Esa librería permitía desplegar un sistema de producción en agentes mediante una estructura de directorios reconocida por esos agentes. Este sitio Web recopila aquella documentación histórica y propone una actualización y conversión completas, para crar un nuevo Complemento Estándar de JADE, con nuevas capacidades y con una integración con JADE-4.6.0 y con sus complementos disponibles en la Web https://jade.tilab.com/.'
 
 
 shortdescription:
-  en: ' dpsFramework is dedicated to developing and maintaining the dpsAgents library whose purpose is to build Multiagent Production Systems deployed on the JADE Platform.'
+  en: ' The dpsFramework project is the development and publication of a new JADE standard Add-On to adapt the dpsAgents-1-8.jar library with new requirements for the JADE-4.6.0 Platform.'
 
-  es: ' dpsFramework está dedicado a desarrollar y mantener la librería dpsAgents que tienen como finalidad construir Sistmas de Producción Multiagente desplegados sobre la Plataforma JADE.'
+  es: ' El proyecto dpsFramework es el desarrollo y publicación de un nuevo complemento estándard de JADE para adaptar la librería dpsAgents-1-8.jar con nuevos requisitos para la Plataforma JADE-4.6.0.'
 
-motto:
-  en: 'Production System Shell from an Agent GUI'
-  es: 'Acceso a Shell de Sistema Experto desde GUI de Agente'
+target:
+  en: 'Targets:'
+  es: 'Objetivos:'
 
-  
-home-fig1:
-  en: ' This <a href="https://github.com/dpsframework/dpsAgents-2.1/" target="blank"> link dpsAgents-2.1</a> is a repository where updates and maintenance efforts about dpsAgents JADE Library have been gathered. It is scheduled for release in December 2022.'
 
-  es: ' El <a href="https://github.com/dpsframework/dpsAgents-2.1/" target="blank"> enlace a dpsAgents-2.1</a> es el repositorio donde se han reunido los esfuerzos de actualización y mantenimiento de la Libreria dpsAgents para la Plataforma JADE. Esta versión 2.1 tiene programada la liberación el próximo Diciembre de 2022.'
+
+target_1st:
+  en: "Build a standard <i>JADE Add-On, and publish the results.</i>."
+  es: 'Construir un <i>complemento estándar de JADE y publicar resultados.</i>.'
+
+
+target_2nd:
+  en: "Integrate with Production Systems based on CLIPS, Jess or Prolog."
+  es: 'Integrar con Sistemas de Producción basados en CLIPS, Jess o Prolog.'
+
+
+target_3rd:
+  en: "Govern the system's <i>distributed Knowledge Base</i> through agents behaviours."
+  es: 'Gobiernar la <i>Base de Conocimiento distribuida</i> del sistema mediante comportamientos de los agentes.'
+
+
 
 areas:
-  en: 'Worklines:'
+  en: 'Working lines:'
   es: 'Líneas de trabajo:'
 
 
+
 home-proposals:
-  en: '  Work lines dedicated to proposing changes in the components used by the dpsAgents.jar Library. One of its objectives is to provide solutions to adapt these Agents and the JADE platform, so that it can be executed with Java JDK-11 or higher. '  
+  en: '  They allow to group in sub-projects where to analyze, adapt or improve libraries; and where to establish component compilation processes used by agent-driven reasoning engines. <br>Each proposal is identified with a unique name, has a repository on GitHub and has a complete document describing its objectives, target platform and architecture, compiler used, etc. '  
   
-  es: ' Líneas de trabajo dedicadas a proponer cambios en los componentes utilizados por la Librería dpsAgents.jar. Entre sus objetivos está aportar soluciones para adaptar estos Agentes y la plataforma JADE, para que se ejecute con Java JDK-11 o versiones superiores. ' 
+  es: ' Permiten agrupar en sub-proyectos donde analizar, adaptar o mejorar librerías; y donde establecer procesos de compilación de componentes utilizados por motores de razonamiento gobernados por los agentes. <br>Cada propuesta se identica con un nombre único, posee un repositorio en GitHub y posee un documento completo descriptivo de objetivos, plataforma y arquitectura de destino, compilador utilizado, etc.  ' 
   
 
 home-guides:
-  en: ' Double line of work of the dps-Framework project, dedicated both to generating and compiling Guides and Manuals belonging to components used by people from the dpsAgents library.'
+  en: ' Documentation section, both manuals or guides that are specific to the JADE Add-On under development; as well as translations of programming guides or language books used by Agents or by Rule Engines.'
   
-  es: ' Línea doble de trabajo del proyecto dps-Framework dedicada tanto a generar como a recopilar Guías y Manuales pertenecientes a componentes utilizados por gentes de la librería dpsAgents.' 
+  es: ' Apartado de documentación, tanto de los manuales o guías que son propias del complemento JADE en desarrollo; así como de traducciones de guías de programación o libros de Lenguajes utilizados por los Agentes o por los motores de reglas.' 
   
 
 home-notes:
-  en: 'Area dedicated to announce events and version release dates or, to highlight links to dps-Framework repositories and processes that have been finished..'
+  en: ' List of events, version release dates or, simply, to highlight links to repositories and dpsFramework project processes that have been completed.'
   
-  es: ' Área dedicada a anunciar eventos y fechas de liberación de versiones o, para destacar enlaces a repositorios y procesos de dps-Framework que han sido finalizados.' 
+  es: ' Relación de eventos, fechas de liberación de versiones o, simplemente, para destacar enlaces a repositorios y procesos del proyecto dpsFramework que han sido finalizados.' 
   
 
 home-papers:
-  en: '  Workline dedicated to collecting working papers and essays that shaped and continue to shape the foundations of the research carried out to develop the dpsAgents Library. These documents establish what will be the evolution of the dps-framework project itself, and what will be the necessary lines to adopt for the development of applications that use Distributed Production Systems based on agent technology. '
+  en: '  These are documents and essays that are critically important for understanding the background and rationale for the research carried out to develop the dpsAgents-1.8 Library, and thus for understanding the new JADE Add-On. This subject is highly technical and allows us to determine how the dpsFramework project can evolve; what lines will be needed during new developments; how to clearly establish Distributed Production Systems based on agent technology; etc. '
   
-  es: '  Línea dedicada a recopilar documentos de trabajo y ensayos que dieron forma y siguen modelando los fundamentos de la investigación llevada a cabo para desarrollar la Librería dpsAgents. Estos documentos establecen cuál será la evolución del proyecto dps-framework en sí mismo, y cuáles serán las líneas necesarias a adoptar para el desarrollo de aplicaciones que utilizan los Sistemas de Producción Distribuidos basados en tecnología de agentes. ' 
+  es: '  Son documentos y ensayos que tienen importancia crítica para comprender los antecedentes y los fundamentos de la investigación llevada a cabo para desarrollar la Librería dpsAgents-1.8, y por tanto, para comprender el nuevo complemento JADE. Este materia es altamente técnico y permite fijar cómo puede evolucionar el proyecto dpsFramework; cuáles serán las líneas necesarias durante nuevos desarrollos; cómo fijar con claridad los Sistemas de Producción Distribuidos basados en tecnología de agentes; etc. ' 
   
 
 
