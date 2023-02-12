@@ -27,7 +27,7 @@ target:
 
 target_1st:
   en: "Build a standard <i>JADE Add-On, and publish the results.</i>."
-  es: 'Construir un <i>complemento estándar de JADE y publicar resultados.</i>.'
+  es: 'Construir un <i>complemento estándar de JADE y publicar resultados</i>.'
 
 
 target_2nd:
@@ -37,7 +37,7 @@ target_2nd:
 
 target_3rd:
   en: "Govern the system's <i>distributed Knowledge Base</i> through agents behaviours."
-  es: 'Gobiernar la <i>Base de Conocimiento distribuida</i> del sistema mediante comportamientos de los agentes.'
+  es: 'Gobernar la <i>Base de Conocimiento distribuida</i> del sistema mediante comportamientos de los agentes.'
 
 
 
@@ -50,7 +50,7 @@ areas:
 home-proposals:
   en: '  They allow to group in sub-projects where to analyze, adapt or improve libraries; and where to establish component compilation processes used by agent-driven reasoning engines. <br>Each proposal is identified with a unique name, has a repository on GitHub and has a complete document describing its objectives, target platform and architecture, compiler used, etc. '  
   
-  es: ' Permiten agrupar en sub-proyectos donde analizar, adaptar o mejorar librerías; y donde establecer procesos de compilación de componentes utilizados por motores de razonamiento gobernados por los agentes. <br>Cada propuesta se identica con un nombre único, posee un repositorio en GitHub y posee un documento completo descriptivo de objetivos, plataforma y arquitectura de destino, compilador utilizado, etc.  ' 
+  es: ' Permiten agrupar en sub-proyectos donde analizar, adaptar o mejorar librerías; y donde establecer procesos de compilación de componentes utilizados por motores de razonamiento gobernados por los agentes. <br>Cada propuesta es identificada con un nombre único, posee un repositorio en GitHub y posee un documento completo descriptivo de objetivos, plataforma y arquitectura de destino, compilador utilizado, etc.  ' 
   
 
 home-guides:
@@ -68,7 +68,7 @@ home-notes:
 home-papers:
   en: '  These are documents and essays that are critically important for understanding the background and rationale for the research carried out to develop the dpsAgents-1.8 Library, and thus for understanding the new JADE Add-On. This subject is highly technical and allows us to determine how the dpsFramework project can evolve; what lines will be needed during new developments; how to clearly establish Distributed Production Systems based on agent technology; etc. '
   
-  es: '  Son documentos y ensayos que tienen importancia crítica para comprender los antecedentes y los fundamentos de la investigación llevada a cabo para desarrollar la Librería dpsAgents-1.8, y por tanto, para comprender el nuevo complemento JADE. Este materia es altamente técnico y permite fijar cómo puede evolucionar el proyecto dpsFramework; cuáles serán las líneas necesarias durante nuevos desarrollos; cómo fijar con claridad los Sistemas de Producción Distribuidos basados en tecnología de agentes; etc. ' 
+  es: '  Son documentos y ensayos que tienen importancia crítica para comprender los antecedentes y los fundamentos de la investigación llevada a cabo para desarrollar la librería `dpsAgents-1.8.jar`, y por tanto, para comprender el nuevo complemento JADE. Este materia es altamente técnico y permite fijar cómo puede evolucionar el proyecto dpsFramework; cuáles serán las líneas necesarias durante nuevos desarrollos; cómo fijar con claridad los Sistemas de Producción Distribuidos basados en tecnología de agentes; etc. ' 
   
 
 
