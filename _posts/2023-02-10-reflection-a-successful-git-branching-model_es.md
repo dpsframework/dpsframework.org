@@ -1,25 +1,40 @@
 ---
 layout: post
-title:  "Reflexión sobre el método para aplicar Git-Branching con éxito"
+
 ref: gitBranching2020
+
+title:  "Reflexión sobre el método para aplicar Git-Branching con éxito"
+headtitle:  'A successful Git branching model: a new reflection (2020)'
+shorttitle:  'Driessen, Vincent (2020)'
+author: "Driessen, Vincent"
+
+
 lang:  es
 idiom:  es-ES
-imagepath:  '/assets/imgs/'
-images:
-  -  'dpsframework4areas.png'
   
-menu:  false
-author: "Driessen, Vincent"
-department: '<br>nvie.com. Thoughts and writings by Vincent Driessen. <br> https://nvie.com/<br><br><br><br>Traductor: Aguayo, FJ.'
+department: '<br>Website: https://nvie.com/ <br>Thoughts and writings by Vincent Driessen.'
 date: 2023-02-10 17:16:56 +0100
 
+imagepath:  '/assets/imgs/'
+images:
+  -  'git-model2x.png'
+
+
+
+menu:  false
 categories: drafts
 toc: true
 
-headtitle:  'A successful Git branching model: a new reflection (2020)'
-shorttitle:  'Driessen, Vincent (2020)'
+
+license: CC-BY
 
 ---
+
+
+
+
+
+
 
 **_Vincent Driessen_** (2020)
 

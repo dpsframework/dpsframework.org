@@ -1,21 +1,40 @@
 ---
 layout: post
-title:  "Método exitoso de Git-Branching"
-ref: gitBranching2010
-lang:  es
-idiom:  es_ES
-imagepath:  '/assets/imgs/'
-images:
-  -  'dpsframework4areas.png'
 
-menu:  false
-author: "Vincent Driessen"
-date: 2010-01-05 09:48:44 +0100
-categories: drafts
-toc: true
+title:  "Método para aplicar Git-Branching con éxito"
 headtitle:  'Un método para aplicar Git-Branching con éxito (2010)'
 shorttitle:  'Driessen, Vincent (2010)'
+
+
+ref: gitBranching2010
+
+lang:  es
+idiom:  es_ES
+
+author: "Vincent Driessen"
+
+
+department: '<br>Website: https://nvie.com/ <br>Thoughts and writings by Vincent Driessen.'
+date: 2010-01-05 09:48:44 +0100
+
+
+categories: drafts
+menu:  false
+toc: true
+
+
+imagepath:  '/assets/imgs/'
+images:
+  -  'git-model2x.png'
+
+
+license: CC-BY
+
 ---
+
+
+
+
 
 **_Vincent Driessen_** (2010)
 
