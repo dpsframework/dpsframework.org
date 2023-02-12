@@ -11,20 +11,39 @@
 
 
 <!-- Guides and Manuals -->
+
+
+
+<!-- Manuales -->
+       
   <div class="sidebar-title">
     <a  href="/guides{{ sufijo }}.html">
-      <strong>{{ site.data.i18n[page.lang]['guidesH1'] }}</strong>
+      <strong>{{ site.data.i18n[page.lang]['guidesH1']   | upcase   }}</strong>
     </a>
   </div>
-
+ 
+  
+  
   {% for guia in guias %}
+  <div>
     <a class="page-link"
      href="{{ site.baseurl }}{{ guia.url}}">
-     {{ guia.title }}
+     {{ guia.title  | upcase  }}
+     {%- if guia.images[0] -%}
+        <img class="mini-banner-right"
+             src="{{ guia.url }}/../{{ guia.imagepath }}{{ guia.images[0] }}"  
+	   alt="{{ guia.shorttitle }}"  align="right" width="80px">
+     {%- endif -%}
     </a>
-    <p class="sidebar-meta">
-    &#8226; {{ guia.shorttitle }}
-    </p>
+    <br><br>
+    <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ guia.author }}<br>
+    <strong>{{  site.data.i18n[page.lang].editor }}:</strong>    {{ guia.editor }}<br>
+    <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ guia.pubdate | date: "%b %-d, %Y" }}<br>
+    <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ guia.license }}<br>
+    
+    <br><hr width="100px" height="1px">
+
+  </div>  
   {% endfor %}
 
 
@@ -32,7 +51,7 @@
 <!-- Notes and Posts -->
   <div class="sidebar-title">
     <a  href="/notes{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['notesH1'] }}</strong>
+     <strong>{{ site.data.i18n[page.lang]['notesH1'] | upcase }}</strong>
     </a>
   </div>
 
@@ -68,18 +87,31 @@
 <!-- Essays -->
   <div class="sidebar-title">
     <a href="/papers{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['papersH1'] }}</strong>
+     <strong>{{ site.data.i18n[page.lang]['papersH1']  | upcase }}</strong>
     </a>
   </div>
 
   {% for paper in papers %}
+  <div>
   <a class="page-link"  
      href="{{ site.baseurl }}{{ paper.url}}">
-     {{ paper.title }}
+     {{ paper.title  | upcase  }}
+     {%- if paper.images[0] -%}
+        <img class="mini-banner-right"
+             src="{{ paper.url }}/../{{ paper.imagepath }}{{ paper.images[0] }}"  
+	   alt="{{ paper.shorttitle }}"  align="right" width="80px">
+     {%- endif -%}
     </a>
-    <p class="sidebar-meta">
-    &#8226; {{ paper.shorttitle }}
+    <br><br>
+    <p>
+    <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ paper.author }}<br>
+    <strong>{{  site.data.i18n[page.lang].department }}:</strong>    {{ paper.department }}<br>
+    <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ paper.pubdate | date: "%b %-d, %Y" }}<br>
+    <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ paper.license }}<br>
     </p>
+    <hr width="100px" height="1px">
+
+  </div>  
   {% endfor %}
 
 
@@ -90,18 +122,29 @@
 <!-- Drafts -->
   <div class="sidebar-title">
     <a href="/papers{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['draftsH1'] }}</strong>
+     <strong>{{ site.data.i18n[page.lang]['draftsH1'] | upcase  }}</strong>
     </a>
   </div>
 
   {% for draft in drafts %}
   <a class="page-link"  
      href="{{ site.baseurl }}{{ draft.url}}">
-     {{ draft.title }}
+     {{ draft.title | upcase  }}
+     {%- if draft.images[0] -%}
+        <img 
+             src="assets/imgs/{{ draft.images[0] }}"  
+	   alt="{{ draft.shorttitle }}"  align="right" width="60px">
+     {%- endif -%}
     </a>
-    <p class="sidebar-meta">
-    &#8226; {{ draft.shorttitle }}
+    <br><br>
+    <p>
+    <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ draft.author }}<br>
+    <strong>{{  site.data.i18n[page.lang].department }}:</strong>    {{ draft.department }}<br>
+    <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ draft.date | date: "%b %-d, %Y" }}<br>
+    <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ draft.license }}<br>
     </p>
+    <hr width="100px" height="1px">
+
   {% endfor %}
 
 

@@ -8,7 +8,7 @@ headtitle: "GitHub - Markdown-Cheatsheet"
 shorttitle: 'John Gruber (2016)'
 author: 'John Gruber'
 
-department: "John Gruber's original spec(http://daringfireball.net/projects/markdown/)"
+department: "John Gruber's original spec <br>(http://daringfireball.net/projects/markdown/) "
 
 
 date: 2016-07-11 11:46:21 +0100
@@ -22,6 +22,8 @@ images:
 menu:  false
 categories: drafts
 toc: true
+
+license: CC-BY
 
 ---
 

@@ -1,3 +1,25 @@
+trademark: "<sup>&copy;</sup>"
+registry: "<sup>&reg;</sup>"
+
+url: 'https://dpsframework.org'
+domain: '.org'
+baseurl: ''
+last_revised: 'February, 2023'
+copyright: ' © 2018–2023'
+license: 'LGPL 3.0' 
+
+lang: es
+
+index:
+  en: index_en.html
+  es: index.html
+
+feed:
+  en: /feed_en.xml
+  es: /feed.xml
+
+
+
 title:
   en: 'dpsFramework Project'
   es: 'Proyecto dpsFramework '
@@ -26,7 +48,7 @@ target:
 
 
 target_1st:
-  en: "Convert and upgrade `dpsAgents` library as a <i>JADE Add-On</i>.</i>."
+  en: "Convert and upgrade `dpsAgents` library as a <i>JADE Add-On</i>."
   es: 'Convertir y actualizar la librería `dpsAgents` como un <i>Plugin de JADE</i>.'
 
 
@@ -88,22 +110,3 @@ flechas: "↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↥ �
 cuadrados: "❏ ❐ ❑ ❒ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ ▉ ▊ ▋ █ ▌ ▐ ▍ ▎ ▏ ▕ ░ ▒ ▓ ▔ ▬ ▢ ▣ ▤ ▥ ▦ ▧ ▨ ▩ ▪ ▫ ▭ ▮ ▯ ☰ ☲ ☱ ☴ ☵ ☶ ☳ ☷ ▰ ▱ ◧ ◨ ◩ ◪ ◫ ∎ ■ □ ⊞ ⊟ ⊠ ⊡ ❘ ❙ ❚ 〓 ˍ ⋄ ⎔ ⎚ ► ◄ ◆ ◇ ◈ ◘ ◙ ◚ ◛ ◢ ◣ ◤ ◥ ☖ ☗ ❖ ◊"
 
 
-
-
-trademark: "<sup>&copy;</sup>"
-registry: "<sup>&reg;</sup>"
-
-url: 'https://dpsframework.org'
-domain: '.org'
-baseurl: ''
-last_revised: February, 2023
-
-lang: es
-
-index:
-  en: index_en.html
-  es: index.html
-
-feed:
-  en: /feed_en.xml
-  es: /feed.xml

@@ -48,7 +48,7 @@ en:
   updateon            :  'Update on'
   citation            :  'Citation .BIB format'
   editor              :  'Editor'
- 
+  department          :  'Department'
   
                 
 ## Español              
@@ -100,7 +100,7 @@ es:
   updateon            :  'Actualizado el'
   citation            :  'Ref. formato .bib'
   editor              :  'Editor'
-  
+  department          :  'Departamento'
   
   
   

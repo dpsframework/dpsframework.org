@@ -7,7 +7,7 @@ headtitle:  'Markdown-Syntax Manual'
 shorttitle: 'Jackques Distler (2011)'
 author:     'Jackques Distler'
 
-department: 'Physics Department, University of Texas, Austin, Texas 78712.'
+department: 'Physics Department<br> University of Texas, Austin, Texas 78712.'
 
 
 date:  2012-04-16 01:48:44 +0100
@@ -16,12 +16,13 @@ idiom:  en_EN
 
 imagepath:  '/assets/imgs/'
 images:
-  -  'Engineering-25.png'
+  -  'markdown-logo.png'
 
 menu:  false
 categories: drafts
 toc: true
 
+license: 'Copyright © 2002–2023 The Daring Fireball Company LLC. '
 
 ---
   
@@ -681,9 +682,21 @@ Markdown provides backslash escapes for the following characters:
     .   dot
     !   exclamation mark
 
-<div class="clearfix">[Source](http://daringfireball.net/projects/markdown/basics)</div>
 
 
+[Source: https://daringfireball.net/projects/markdown/basics ](https://daringfireball.net/projects/markdown/basics)
+
+
+# References
+
+
+
+
+- [1] https://github.com/sirthias/pegdown/blob/master/src/test/resources/MarkdownTest103/Markdown%20Documentation%20-%20Syntax.md
+- [2] https://golem.ph.utexas.edu/~distler/maruku/
+- [3] https://golem.ph.utexas.edu/~distler/
+- [4] https://golem.ph.utexas.edu/~distler/maruku/#entities
+- [5] https://www.mister42.me/tools/html-to-markdown
 
 
 
