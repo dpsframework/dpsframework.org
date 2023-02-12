@@ -15,9 +15,9 @@ description:
 
 
 shortdescription:
-  en: ' The dpsFramework project is the development and publication of a new JADE standard Add-On to adapt the dpsAgents-1-8.jar library with new requirements for the JADE-4.6.0 Platform.'
+  en: ' The dpsFramework project develops and publishes in JADE Standard Add-On format, the `dpsAgents-1.8.jar` library, and makes it compatible with the JADE-4.6.0 Platform, CLIPS-6.40, Jess-8.0a1, and the JPL Java library interface for SWI Prolog 7.x'
 
-  es: ' El proyecto dpsFramework es el desarrollo y publicación de un nuevo complemento estándard de JADE para adaptar la librería dpsAgents-1-8.jar con nuevos requisitos para la Plataforma JADE-4.6.0.'
+  es: ' El proyecto dpsFramework desarrolla y publica en formato de Complemento Estándard de JADE, la librería `dpsAgents-1.8.jar`, y la hace compatible con JADE-4.6.0 Platform, CLIPS-6.40, Jess-8.0a1, y la librería JPL Java interface para SWI Prolog 7.x'
 
 target:
   en: 'Targets:'
@@ -87,7 +87,7 @@ flechas: "↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↥ �
 
 cuadrados: "❏ ❐ ❑ ❒ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ ▉ ▊ ▋ █ ▌ ▐ ▍ ▎ ▏ ▕ ░ ▒ ▓ ▔ ▬ ▢ ▣ ▤ ▥ ▦ ▧ ▨ ▩ ▪ ▫ ▭ ▮ ▯ ☰ ☲ ☱ ☴ ☵ ☶ ☳ ☷ ▰ ▱ ◧ ◨ ◩ ◪ ◫ ∎ ■ □ ⊞ ⊟ ⊠ ⊡ ❘ ❙ ❚ 〓 ˍ ⋄ ⎔ ⎚ ► ◄ ◆ ◇ ◈ ◘ ◙ ◚ ◛ ◢ ◣ ◤ ◥ ☖ ☗ ❖ ◊"
 
-otros: "https://internetpasoapaso.com/simbolos/"
+
 
 
 trademark: "<sup>&copy;</sup>"
