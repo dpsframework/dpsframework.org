@@ -58,8 +58,8 @@ markdown:         kramdown
 # GitHub Metadata: https://jekyll.github.io/github-metadata/site.github/
 github:
   owner_url:       'https://github.com/dpsframework/'
-  repository_url:  'https://github.com/dpsframework/website'
-  owner_name:      'pacoaguayo'
+  repository_url:  'https://github.com/dpsframework/www.dpsframework.org'
+  owner_name:      'https://github.com/pacoaguayo'
   project_tagline: '0.1'
   name:            'dpsFramework Website'
   is_project_page: true
