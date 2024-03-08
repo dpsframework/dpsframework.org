@@ -59,7 +59,7 @@ markdown:         kramdown
 github:
   owner_url:       'https://github.com/dpsframework/'
   repository_url:  'https://github.com/dpsframework/www.dpsframework.org'
-  owner_name:      'https://github.com/pacoaguayo'
+  owner_name:      dpsframework'
   project_tagline: '0.1'
   name:            'dpsFramework Website'
   is_project_page: true
