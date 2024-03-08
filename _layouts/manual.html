@@ -1,0 +1,69 @@
+---
+layout: base
+---
+
+{% include breadcrumbs.html %}
+<div class="main-col-wrapper">
+
+  <!-- Left column: cite and table of content -->
+  <div class="main-col-4">
+  
+    <div class="sidebar-title">
+       <a  href="/manuals_{{ page.lang }}.html">
+         <strong>{{ site.data.i18n[page.lang]['manualsH1']  }}</strong>
+       </a>
+    </div>
+
+    <div class="mini-banner">
+       {%- if page.images[0] -%}
+         <img class="mini-banner" 
+            src="{{ page.imagepath }}{{ page.images[0] }}" 
+            alt="{{ page.shorttitle }}" >
+       {%- endif -%}
+       
+       <h2>{{ page.title }}</h2>
+       <i>{{ page.author }}</i><br>
+     
+       <i>Editor: {{ page.editor }}</i>
+       <br> 
+       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+       <time class="dt-published" datetime="{{ page.date_published | date_to_xmlschema }}" itemprop="datePublished">
+       {{ page.date_published | date: date_format }}
+       </time>
+       <hr>
+   
+     </div>    
+
+
+     <!-- Table of content and Lessons -->
+     {% assign lessons = site.manuals  | where:"manualcode", page.manualcode | where:"lang", page.lang %}
+       
+     <div class="section-nav">
+       <strong>{{site.data.i18n[page.lang]['tocH1'] }}:</strong>&nbsp;{{ page.title }}<br>
+       {% for lesson in lessons %}
+         {% if lesson.chapter == page.chapter %}
+           {% if page.toc %}
+             {% include toc.html html=content %}
+           {% endif %}
+         {% else %}
+           <strong>{{ site.data.i18n[page.lang].chapter }}</strong>&nbsp;
+           <a href="{{ lesson.url |  prepend: site.baseurl }}"> 
+           <i><strong>{{ lesson.chapter }}</i></strong>. &nbsp;
+           {{ lesson.headtitle }} 
+           </a>
+           <br>
+         {% endif %}
+       {% endfor %}
+       {%- include language-selector.html -%}
+        <img src="{{ site.baseurl }}/assets/imgs/internet.png">
+     </div>
+  </div>
+
+
+  <!-- Main lesson text and code -->
+  <div class="main-col">
+     {{ content  }}
+  </div>
+
+</div>
+{% include top-button.html %}

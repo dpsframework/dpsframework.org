@@ -6,6 +6,6 @@ Javadoc style comments in the BeanShell command script files.  See "BshDoc"
 for more information.
 <p/>
 
-&bshcommands-bshdoc;
+bshcommands-bshdoc;
 </section>
 

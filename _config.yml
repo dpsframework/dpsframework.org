@@ -1,150 +1,165 @@
-## --------------------------------------------------------
-## dpsFramework _config based on minima theme. (2017-2022)
-## -------------------------------------------------------
-theme: minima
+# --------------------------------------------------
+# dpsframework.org with Minima v3 theme. (2017-2024)
+# --------------------------------------------------
 
+# When you build locally, use this setting.
+# theme: minima
 
-## Main domain: dpsFramework.github
-## -------------------------------------------------
+# In November 2023, GitHub Pages still uses Minima 2.5.1 
+# (https://pages.github.com/versions/).
+# To use the latest Minima version on GitHub Pages:
+remote_theme: jekyll/minima
+
+# --------------------------------------------------
+# Main domain: dpsframework.github
+# --------------------------------------------------
 baseurl:  ''
-url:      'https://dpsframework.org'
-hard_url: 'https://dpsframework.org'
+url:      'https://dpsframework.org/'
+hard_url: 'https://dpsframework.org/'
 
 
-title:    'JADE Add-On to deploy Multi-Agent Production Systems'
 
-subtitle: 'The dpsFramework project develops and publishes in JADE Standard Add-On format, the `dpsAgents-1.8.jar` library, and makes it compatible with the JADE-4.6.0 Platform, CLIPS-6.40, Jess-8.0a1, and the JPL Java library interface for SWI Prolog 7.x'
+title:    'Another Framework to develop and deploy Expert Systems on JADE platform'
 
+
+# subtitle:
+  # en: 'Sistemas Expertos desplegados mediante Agentes JADE'
+  # es: 'Expert Systems deployed through JADE Agents'
+  
 author:
-  name: 'Aguayo-Canela, FJ'
-  email: info@dpsframework.org
+  name:         'Aguayo-Canela, FJ'
+  email:        'info@dpsframework.org'
+  collabratech: 'https://ieee-collabratec.ieee.org/app/p/FranciscoAguayo115080'
 
-description: ' The dpsFramework project develops and publishes in JADE Standard Add-On format, the `dpsAgents-1.8.jar` library, and makes it compatible with the JADE-4.6.0 Platform, CLIPS-6.40, Jess-8.0a1, and the JPL Java library interface for SWI Prolog 7.x'
+plugins:
+ - jekyll-sitemap
+ - jekyll-seo-tag
+# - jekyll-feed
 
 lang:   es
 index:  index.html
-feed:
-  en: /feed_en.xml
-  es: /feed.xml
 
-
-show_excerpts: false
-google_analytics: true
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-sitemap
  
-markdown: kramdown
+
+# Theme-specific settings
+# --------------------------------------------------
+# If you want to link only specific pages in your header, 
+# use this and add the path to the pages
+# in order as they should show up.
+# header_pages:
+#  - about.md
+
+# Set to `true` to show excerpts (extractos) on the homepage.
+show_excerpts:    false
+google_analytics: GTM-58XLTB4
+markdown:         kramdown
 
 
+# GitHub Metadata: https://jekyll.github.io/github-metadata/site.github/
 github:
-  owner_url: "https://github.com/dpsframework"
-  repository_url: "https://github.com/dpsframework"
-  owner_name: dpsframework
-  project_tagline: "1.8"
-  name: dpsframework
+  owner_url:       'https://github.com/dpsframework/'
+  repository_url:  'https://github.com/dpsframework/website'
+  owner_name:      'pacoaguayo'
+  project_tagline: '0.1'
+  name:            'dpsFramework Website'
   is_project_page: true
-  repository_name: dpsframework
+  repository_name: website
 
-
-
-
-## --------------------------------------------------------
-## Site dpsFramework collections
-## --------------------------------------------------------
+# Site collections
+# --------------------------------------------------
 collections:
-  papers:
+  essays:
     output: true
-    label: papers
-  proposals:
+    label: essays
+  projects:
     output: true
-    label: proposals
-  guides:
+    label: projects
+  manuals:
     output: true
     sort_by: chapter
-    label: guides
+    label: manuals
   notes:
     output: true
     label: notes
 
-## {{ site.collections | where: "label", "proposals" | first }}
-## ------------------------------------------------------------
+
+# {{ site.collections | where: "label", "projects" | first }}
+# --------------------------------------------------
 defaults:
   - scope:
       path: ""
-      type: "papers"
+      type: "essays"
     values:
-      layout: "paper"
+      layout: "essay"
   - scope:
       path: ""
-      type: "proposals"
+      type: "projects"
     values:
-      layout: "proposal"
+      layout: "project"
   - scope:
       path: ""
-      type: "guides"
+      type: "manuals"
     values:
-      layout: "guide"
+      layout: "manual"
   - scope:
       path: ""
       type: "notes"
     values:
       layout: "note"
   - scope:
-      path: ""
-    values:
-      layout: "default"
-  - scope:
-      path: "docs/**/*"
+      path: "dpsAgents-api/**/*"
     values:
       sitemap: true
 
 
-## --------------------------------------------------------
-## Jekyll minima
-## --------------------------------------------------------
-author:
-  name:  'DpsFramework project'
-  email: 'info@dpsframework.org'
-  collabratech: 'https://ieee-collabratec.ieee.org/app/p/FranciscoAguayo115080'
 
 
+
+
+
+# Minima specific settings, which are only available from Minima 3.0 onward.
 minima:
-  date_format: "%b, %Y"  # "%b %-d, %Y"
+  # Minima skin selection.
+  # Available skins are:
+  # classic            Default, light color scheme.
+  # dark               Dark variant of the classic skin.
+  # auto               Adaptive skin based on the default classic and dark skins.
+  # solarized-light    Light variant of solarized color scheme.
+  # solarized-dark     Dark variant of solarized color scheme.
+  # solarized          Adaptive skin for solarized color scheme skins.
   skin: classic
 
+  # Minima date format.
+  # The default value is "%b %d, %Y" (e.g. Nov 14, 2023)
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
+  #date_format: "%b-%d-%Y"
+  date_format: "%b, %Y"  # "%b %-d, %Y"
+
+  # Generate social links in footer.
+  #social_links:
+  #  - { platform: devto,          user_url: "https://dev.to/jekyll" }
+  #  - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
+  #  - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
+  #  - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
+  #  - { platform: github,         user_url: "https://github.com/jekyll/minima" }
+  #  - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
+  #  - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
+  #  - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
+  #  - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jekyll" }
+  #  - { platform: microdotblog,   user_url: "https://micro.blog/jekyll" }
+  #  - { platform: pinterest,      user_url: "https://www.pinterest.com/jekyll" }
+  #  - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/1234567/jekyll" }
+  #  - { platform: telegram,       user_url: "https://t.me/jekyll" }
+  #  - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
+  #  - { platform: x,              user_url: "https://x.com/jekyllrb" }
+  #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
+
+  # Generate social links in footer.
   social_links:
-    twitter: unileon
-    github:  dpsframework
-    # devto: 
-    # dribbble: 
-    facebook: unileon
-    # flickr:   
-    # instagram: 
-    # linkedin: 
-    # pinterest: 
-    youtube: universidaddeleon
-    # youtube_channel:
-    # youtube_channel_name:
-    # telegram: 
-    # googleplus: +
-    # microdotblog: 
-    # keybase: 
-
-    # Mastodon instances
-    # mastodon:
-    # - username: 
-    #   instance: example.com
-    # - username: 
-    #   instance: example.com
-
-    # GitLab instances
-    # gitlab:
-    # - username: 
-    #   instance: example.com
-    # - username: 
-    #   instance: example.com
-
-
+    - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
+    - { platform: github,         user_url: "https://github.com/dpsframework/" }
+    - { platform: google_scholar, user_url: "https://scholar.google.com/citations?hl=en&user=GHYD1RkAAAAJ&view_op=list_works&authuser=2" }
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/in/paco-aguayo" }
+    - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/15090312/ortelius" }
+    - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
+    - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }

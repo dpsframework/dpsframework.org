@@ -1,0 +1,112 @@
+---
+layout: base
+---
+
+{% include breadcrumbs.html %}  
+<div class="main-col-wrapper">
+   
+  <!-- Home PROJECT left-column: cites and TOC -->
+  <div class="main-col-4">
+   <div class="sidebar-title">
+       <a  href="/projects_{{ page.lang }}.html">
+         <strong>{{ site.data.i18n[page.lang]['projectsH1']  }}</strong>
+       </a>
+    </div>
+
+     <div class="sidebar-title">
+      <small><strong>{{site.data.i18n[page.lang]['projectName'] }}:</strong></small> {{ page.ref }}
+    </div>
+      
+
+    <div class="mini-banner-right">
+    
+    
+      {%- if page.images[0] -%}
+         <a rel="page-link" href="https://github.com/dpsframework/{{ page.ref | cgi_escape | escape }}" target="_blank" title="{{ page.ref | escape }}">
+         <img class="mini-banner-right"
+              src="{{ page.imagepath }}{{ page.images[0] }}" 
+              alt="{{ page.title }}" >
+         </a>
+     {%- endif -%}   
+    
+       
+
+       
+      <strong>{{  site.data.i18n[page.lang].objective }}:</strong>      {{ page.subtitle }}<br>
+     
+     
+      {%- if page.ref -%}
+        <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
+        <a rel="page-link" href="https://github.com/dpsframework/{{ page.ref | cgi_escape | escape }}" target="_blank" title="{{ page.ref | escape }}">
+        <strong>● GitHub:</strong> <svg class="svg-icon blue"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        </a>
+        <br>
+      {%- endif -%}  
+     
+     
+     
+      <strong>{{  site.data.i18n[page.lang].status }}:</strong> {{ page.status }}<br>
+      <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ page.author }}<br>
+      <strong>{{  site.data.i18n[page.lang].initiated }}:</strong>   
+         {% assign date_format = "%Y-%m-%d"  %}
+         {%- assign date_format = "%a, %b %-d, %Y" -%}
+         {% assign date_format = "%Y-%m-%d"  %}
+
+         
+            <time class="dt-published" 
+            datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            ({{ page.date | date: date_format }}) 
+            </time>
+      <br>
+      <strong>{{  site.data.i18n[page.lang].modified }}:</strong>    
+            ({{ page.modified | date: date_format }})<br>      
+      <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ page.license }}<br>
+
+       
+       
+
+     </div>
+     
+
+      
+     {% if page.toc %}
+       <div class="section-nav">
+         &nbsp;<strong>{{site.data.i18n[page.lang]['tocH1'] }}:</strong>&nbsp;{{ page.ref }}
+         {% include toc.html html=content %}
+         {%- include language-selector.html -%}
+         <img src="{{ site.baseurl }}/assets/imgs/internet.png">
+       </div>
+     {% endif %}
+       
+       
+       
+       
+  </div>
+
+
+
+  <div class="main-col">
+  
+      <div class="sidebar-title">
+        <h1 class="paper-title">{{ page.title }}</h1>
+      </div>
+      <h3><strong>{{ site.data.i18n[ page.lang ].abstract }}</strong>:</h3>
+      <blockquote>{{ page.headtitle }}</blockquote>   
+      {{ content }}
+      <br>
+      <hr>
+      {%- if page.license  -%}
+        <small><strong>License: </strong>{{ page.license }}</small><br>
+      {%- endif -%}
+      {%- if page.author  -%}
+        <small><strong>Author: </strong>{{ page.author }}</small><br>
+      {%- endif -%}
+      {%- if page.modified  -%}
+        <small><strong>Updated: </strong>{{ page.modified }}</small><br>
+      {%- endif -%}
+      <br>
+    </div>
+    
+    
+</div>
+{% include top-button.html %}     

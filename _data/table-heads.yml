@@ -1,0 +1,36 @@
+- blank:
+    en: "data.1"
+    es: "dato.1"
+  title:
+    en: '<strong>Table 0</strong>. Concept:' 
+    es: '<strong>Tabla 0</strong>. Concepto:'
+  field01:
+    en: 'Software / Library'
+    es: 'Software / Librería'
+  field02:
+    en: 'Description'
+    es: 'Descripción'
+- video:
+    en: "Demos"
+    es: "Demo"
+  title:
+    en: 'dpsFramework command-line demos:' 
+    es: 'dpsFramework vídeo demostración línea-de-comandos:'
+  field01:
+    en: 'Demo'
+    es: 'Demo'
+  field02:
+    en: 'Description'
+    es: 'Descripción'
+- head:
+    en: "Archives"
+    es: "Archivo"
+  title:
+    en: 'Expert Systems building Tools, API, Manuals, Shell Scripting, Used components:' 
+    es: 'Herramientas de construcción de Sistemas Expertos, API, Guías, Componentes:'
+  field01:
+    en: 'Software / Library'
+    es: 'Software / Librería'
+  field02:
+    en: 'Description'
+    es: 'Descripción'

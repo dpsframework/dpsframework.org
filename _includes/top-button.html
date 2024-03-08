@@ -1,7 +1,3 @@
-  <div id="backtop">
-     <a href="#">
-      {% if 'en' == page.lang %}Top{% endif %}
-      {% if 'es' == page.lang %}Subir{% endif %}
-     </a>
+  <div id="backtop"> 
+     <a href="#">{{ site.data.i18n[page.lang].goTop   | escape }}</a>
   </div>  
-  

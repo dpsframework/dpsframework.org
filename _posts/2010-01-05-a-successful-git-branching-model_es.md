@@ -18,7 +18,7 @@ department: '<br>Website: https://nvie.com/ <br>Thoughts and writings by Vincent
 date: 2010-01-05 09:48:44 +0100
 
 
-categories: drafts
+categories: posts
 menu:  false
 toc: true
 

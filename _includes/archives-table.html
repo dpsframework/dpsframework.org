@@ -1,0 +1,45 @@
+<table class="overviewSummary" summary="Third party API and User Guides" cellspacing="0" cellpadding="3" border="0">
+<tbody>
+<caption>
+  <span><b>{{site.data.i18n[page.lang]['table']}}
+      2. 
+  </b>
+  </span>
+<span class="tabEnd">&nbsp;{{ site.data.table-heads[2].title[page.lang] }}</span>
+</caption>
+
+<tr>
+<th class="colFirst" scope="col">{{ site.data.table-heads[2].field01[page.lang] }}</th>
+<th class="colLast" scope="col">{{ site.data.table-heads[2].field02[page.lang] }}</th>
+</tr>
+</tbody>
+
+
+<tbody>
+
+{% for item in site.data.archive %}
+  <tr class="altColor">
+    <td class="colFirst">
+      {% if item.web %}
+        <a href="{{ item.link }}" target="_blank">
+      {% endif %}
+      {% if item.web != true %}
+        <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" target="_blank">
+      {% endif %}
+        <img src="{{ site.url }}{{ site.baseurl }}/assets/imgs/{{ item.imag }}" align="right" width="{{ item.size }}">
+               &nbsp;<h3>{{ item.name }}</h3>
+        </a>
+    </td>
+    <td class="colLast">
+      <div class="block">
+        {{ item.title }}
+        <br>
+        <small>Author: {{ item.author }}</small>
+      </div>
+    </td>
+  </tr>
+{% endfor %}
+
+ </tbody>
+</table>
+

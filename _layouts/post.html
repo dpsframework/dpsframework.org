@@ -1,20 +1,19 @@
 ---
-layout: default
+layout: base
 ---
 
 
-<div class="wrapper">
+
+{% include breadcrumbs.html %}
  <div class="home">
-
   <div class="main-col-wrapper">
-
-
-       
     <div  class="main-col-4">
-    
-    <!-- Essays -->
+
+    <!-- Posts like an essays -->
     <div class="sidebar-title">
-      {{ site.data.i18n[page.lang]['draftH1'] }}:
+      <a  href="/notes_{{ page.lang }}.html">
+       <h3>{{  site.data.i18n[page.lang][ 'draftsH1' ]   }}</h3>
+     </a>
     </div>
     <div class="mini-banner">
      {%- if page.images[0] -%}
@@ -45,12 +44,13 @@ layout: default
        
        {% if page.toc %}
          <div class="section-nav">
+           <strong>{{site.data.i18n[page.lang]['tocH1'] }}:</strong>&nbsp;{{ page.title }}<br>
            {% include toc.html html=content %}
            {%- include language-selector.html -%}
            <img src="{{ site.baseurl }}/assets/imgs/internet.png">
          </div>
        {% endif %}
-       
+        
 
     </div>
 
@@ -112,5 +112,3 @@ layout: default
 
  </div>
 
-
-</div>

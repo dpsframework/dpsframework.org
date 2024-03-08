@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: base
 title:  dpsAgents-API
 pos: 40
 menu: false
@@ -11,4 +11,4 @@ list_title: 'Table of Third party Guides'
 date: 2023-03-08 10:56:49:44 +0100
 ---
 
-{% include archives-data.html %}
+{% include archives-table.html %}

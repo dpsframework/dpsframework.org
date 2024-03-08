@@ -19,7 +19,7 @@ images:
   -  'markdown-logo.png'
 
 menu:  false
-categories: drafts
+categories: posts
 toc: true
 
 license: 'Copyright © 2002–2023 The Daring Fireball Company LLC. '

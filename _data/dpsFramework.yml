@@ -1,112 +1,61 @@
-trademark: "<sup>&copy;</sup>"
-registry: "<sup>&reg;</sup>"
+trademark:    '<sup>&copy;</sup>'
+registry:     '<sup>&reg;</sup>'
+url:          'https://dpsframework.org'
+domain:       '.org'
+baseurl:      ''
+last_revised: 'February, 2024'
+copyright:    ' © 2017–2024'
+license:      'MIT' 
 
-url: 'https://dpsframework.org'
-domain: '.org'
-baseurl: ''
-last_revised: 'February, 2023'
-copyright: ' © 2018–2023'
-license: 'LGPL 3.0' 
 
+# Default Language: Spanish Castillian.
 lang: es
 
 index:
   en: index_en.html
   es: index.html
 
+
 feed:
   en: /feed_en.xml
   es: /feed.xml
 
 
-
 title:
-  en: 'dpsFramework Project'
-  es: 'Proyecto dpsFramework '
+  en: 'dpsFramework'
+  es: 'dpsFramework'
 
 
 subtitle:
-  en: 'JADE Add-On to deploy Multi-Agent Production Systems'
-  es: 'Complemento JADE para desplegar Sistemas de Producción Multi-Agente'
+  en: 'Framework (Java) to develop Multi-Agent applications <br>integrated with Expert Systems on the JADE<sup>&copy;</sup> Platform'
+  es: 'Framework (Java) para desarrollar aplicaciones Multi-Agent <br>integradas con Sistemas Expertos sobre la plataforma JADE<sup>&copy;</sup>'
 
 
 description:
-  en: ' During 2012-2017 <a href="https://github.com/dpsframework/dpsFrameworkBuilder/releases/tag/1.8" target="blank">`dpsAgents-1.8.jar` library</a> was developed for JADE-4.5.0 and Java SE-1.6 platforms as part of doctoral studies at University of León. This library allowed a Production System to be deployed in agents through a directory structure recognized by those agents. This DpsFramework project compiles that research and proposes a complete update and conversion of `dpsAgents` in the form of a JADE Add-On, incorporating new capabilities and integration with JADE-4.6.0 and the main  <a class="page -link" href="https://jade.tilab.com/download/add-ons/" target="blank"> JADE Add-Ons</a>.'
-  
-  es: ' Durante 2012-2017 fue desarrollada la <a href="https://github.com/dpsframework/dpsFrameworkBuilder/releases/tag/1.8" target="blank"> librería `dpsAgents-1.8.jar`</a> para las plataformas JADE-4.5.0 y Java SE-1.6, como parte de los estudios de doctorado en la Universidad de León. Esa librería permitía desplegar un Sistema de Producción en agentes mediante una estructura de directorios reconocida por esos agentes. Este proyecto DpsFramework recopila aquella investigación y propone una actualización y conversión completa de `dpsAgents` en formato de JADE Add-On, incorporando capacidades nuevas e integración con JADE-4.6.0 y los plugins <a class="page-link" href="https://jade.tilab.com/download/add-ons/" target="blank"> disponibles de JADE</a>.'
-
-
-shortdescription:
-  en: ' The dpsFramework project develops and publishes in JADE Standard Add-On format, the `dpsAgents-1.8.jar` library, and makes it compatible with the JADE-4.6.0 Platform, CLIPS-6.40, Jess-8.0a1, and the JPL Java library interface for SWI Prolog 7.x'
-
-  es: ' El proyecto dpsFramework desarrolla y publica en formato de Complemento Estándard de JADE, la librería `dpsAgents-1.8.jar`, y la hace compatible con JADE-4.6.0 Platform, CLIPS-6.40, Jess-8.0a1, y la librería JPL Java interface para SWI Prolog 7.x'
-
-target:
-  en: 'Targets:'
-  es: 'Objetivos:'
+  en: 'You can download <strong>dpsFramework</strong> (Java) on Github.<br>Here you can find the documentation that was used during the building of the framework itself organized into 4 areas:'
+  es: 'Puede descargar <strong>dpsFramework</strong> (Java) en Github.<br>Aquí puede encontrar la documentación que fue utilizada durante la construcción del propio framework organizada en 4 áreas:'
 
 
 
-target_1st:
-  en: "Convert and upgrade `dpsAgents` library as a <i>JADE Add-On</i>."
-  es: 'Convertir y actualizar la librería `dpsAgents` como un <i>Plugin de JADE</i>.'
 
-
-target_2nd:
-  en: "Integrate with Production Systems based on CLIPS, Jess or Prolog."
-  es: 'Integrar con Sistemas de Producción basados en CLIPS, Jess o Prolog.'
-
-
-target_3rd:
-  en: "Govern the system's <i>distributed Knowledge Base</i> through agents behaviours."
-  es: 'Gobernar la <i>Base de Conocimiento distribuida</i> del sistema mediante comportamientos de los agentes.'
-
-
-
-areas:
-  en: 'Working lines:'
-  es: 'Líneas de trabajo:'
-
-
-
-home-proposals:
-  en: '  They allow to group in sub-projects where to analyze, adapt or improve libraries; and where to establish component compilation processes used by agent-driven reasoning engines. <br>Each proposal is identified with a unique name, has a repository on GitHub and has a complete document describing its objectives, target platform and architecture, compiler used, etc. '  
-  
-  es: ' Permiten agrupar en sub-proyectos donde analizar, adaptar o mejorar librerías; y donde establecer procesos de compilación de componentes utilizados por motores de razonamiento gobernados por los agentes. <br>Cada propuesta es identificada con un nombre único, posee un repositorio en GitHub y posee un documento completo descriptivo de objetivos, plataforma y arquitectura de destino, compilador utilizado, etc.  ' 
+home-projects:
+  en: 'Software artifacts (platforms, compilers, libraries, etc.) adapted and prepared to be deployed together with this framework.'  
+  es: 'Artefactos de software (plataformas, compiladores, librerías, etc.) adaptadas y preparadas para ser desplegadas junto a este framework.' 
   
 
-home-guides:
-  en: ' Documentation section, both manuals or guides that are specific to the JADE Add-On under development; as well as translations of programming guides or language books used by Agents or by Rule Engines.'
-  
-  es: ' Apartado de documentación, tanto de los manuales o guías que son propias del complemento JADE en desarrollo; así como de traducciones de guías de programación o libros de Lenguajes utilizados por los Agentes o por los motores de reglas.' 
-  
+home-manuals:
+  en: 'Installation and User guides and, Programming Languages associated with dpsFramework.'
+  es: 'Guías de instalación, de usuario, de Lenguajes de programación utilizados en dpsFramework.' 
+
+
+home-essays:
+  en: 'Technical documentation, standards, production systems and Multi-Agent systems.'
+  es: 'Documentación, estándares, sistemas de producción y sistemas Multi-Agente.' 
+
 
 home-notes:
-  en: ' List of events, version release dates or, simply, to highlight links to repositories and dpsFramework project processes that have been completed.'
-  
-  es: ' Relación de eventos, fechas de liberación de versiones o, simplemente, para destacar enlaces a repositorios y procesos del proyecto dpsFramework que han sido finalizados.' 
-  
+  en: 'Annexed documentation: events, version dates, References, etc.'
+  es: 'Documentación anexa: eventos, fechas de versiones, Bibliografía, etc.' 
 
-home-papers:
-  en: '  These are documents and essays that are critically important for understanding the background and rationale for the research carried out to develop the dpsAgents-1.8 Library, and thus for understanding the new JADE Add-On. This subject is highly technical and allows us to determine how the dpsFramework project can evolve; what lines will be needed during new developments; how to clearly establish Distributed Production Systems based on agent technology; etc. '
-  
-  es: '  Son documentos y ensayos que tienen importancia crítica para comprender los antecedentes y los fundamentos de la investigación llevada a cabo para desarrollar la librería `dpsAgents-1.8.jar`, y por tanto, para comprender el nuevo complemento JADE. Este materia es altamente técnico y permite fijar cómo puede evolucionar el proyecto dpsFramework; cuáles serán las líneas necesarias durante nuevos desarrollos; cómo fijar con claridad los Sistemas de Producción Distribuidos basados en tecnología de agentes; etc. ' 
-  
-
-
-
-puntuacion: "˙ ‥ ‧ ‵ ❛ ❜ ❝ ❞ 、 。 〃 「 」 『 』 〝 〞 ︰ ﹁ ﹂ ﹃ ﹄ ﹐ ﹒ ﹔ ﹕ ！ ＃ ＄ ％ ＆ ＊ ， ． ： ； ？ ＠ ～ • … ¿ “ ‘ · ′ ” ’ ‐ ‑ ‒ – — ― ‗ ‚ ‛ „ ‟ ‣ ․ ″ ‴ ‶ ‷ ʹ ʺ ʻ ʼ ʽ ʾ ʿ ˀ ˁ ˂ ˃ ˄ ˅ ˆ ˇ ˈ ˉ ˊ ˋ ˌ ˍ ˎ ˏ ː ˑ ˒ ˓ ˔ ˕ ˖ ˗ ˘ ˚ ˛ ˜ ˝ ˞ ˠ ˡ ⁘ ⁙ ⁚ ⁛ ⁜ ⁜ ⁝ ⁞"
-
-parentesis: "〈 〈 〉 《 》 「 」 『 』 【 】 〔 〕 ︵ ︶ ︷ ︸ ︹ ︺ ︻ ︼ ︽ ︽ ︾ ︿ ﹀ ﹁ ﹁ ﹂ ﹃ ﹄ ﹙ ﹙ ﹚ ﹛ ﹜ ﹝ ﹞ ﹤ ﹥ （ ） ＜ ＞ ｛ ｛ ｝"
-
-hand_symbols: "☚ ☛ ☜  ☞ ☟"
-
-music: "♩ ♪ ♫ ♬ ♭ ♮ ♯ ° ø ؂ ≠ ≭ ♩ ♪ 𝅜 𝅝 𝅗𝅥 𝅘𝅥 𝅘𝅥𝅮 𝅘𝅥𝅯 𝅘𝅥𝅰 𝅘𝅥𝅱 𝅘𝅥𝅲"
-
-chess: "♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟"
-
-flechas: "↕ ↖ ↗ ↘ ↙ ↚ ↛ ↜ ↝ ↞ ↟ ↠ ↡ ↢ ↣ ↤ ↥ ↦ ↧ ↨ ↩ ↪ ↫ ↬ ↭ ↮ ↯ ↰ ↱ ↲ ↳ ↴ ↶ ↷ ↸ ↹ ↺ ↻ ↼ ↽ ↾ ↿ ⇀ ⇁ ⇂ ⇃ ⇄ ⇅ ⇆ ⇇ ⇈ ⇉ ⇊ ⇋ ⇌ ⇍ ⇎ ⇏ ⇕ ⇖ ⇗ ⇘ ⇙ ⇚ ⇛ ⇜ ⇝ ⇞ ⇟ ⇠ ⇡ ⇢ ⇣ ⇤ ⇥ ⇦ ⇧ ⇨ ⇩ ⇪ ⌅ ⌆ ⌤ ⏎ ▶ ☇ ☈ ☊ ☋ ☌ ☍ ➔ ➘ ➙ ➚ ➛ ➜ ➝ ➞ ➟ ➠ ➡ ➢ ➣ ➤ ➥ ➦ ➧ ➨ ➩ ➪ ➫ ➬ ➭ ➮ ➯ ➱ ➲ ➳ ➴ ➵ ➶ ➷ ➸ ➹ ➺ ➻ ➼ ➽ ➾ ⤴ ⤵ ↵ ↓ ↔ ← → ↑→ ↑  ⇐ ⇑ ⇒ ⇓ ⇔ ⌦ ⌧ ⌫ ⇰ ⇫ ⇬ ⇭ ⇳ ⇮ ⇯ ⇱ ⇲ ⇴ ⇵ ⇶ ⇷ ⇸ ⇹ ⇺ ⟵ ⟶ ⟷ ⬄ ⬀ ⬁ ⬂ ⬃ ⬅ ⮕ ⬆ ⬇ ⬈ ⬉ ⬊ ⬋ ⬌ ⬍ ⇽ ⇾ ⇿ ⬳ ⟿ ⤉ ⤈ ⇻ ⇼ ⬴ ⤀ ⬵ ⤁ ⬹ ⤔ ⬺ ⤕ ⬶ ⤅ ⬻ ⤖ ⬷ ⤐ ⬼ ⤗ ⬽ ⤘ ⤝ ⤞ ⤟ ⤠ ⤡ ⤢ ⤣ ⤤ ⤥ ⤦ ⤪ ⤨ ⤧ ⤩ ⤭ ⤮ ⤯ ⤰ ⤱ ⤲ ⤫ ⤬ ⬐ ⬎ ⬑ ⬏ ⤶ ⤷ ⥂ ⥃ ⥄ ⭀ ⥱ ⥶ ⥸ ⭂ ⭈ ⭊ ⥵ ⭁ ⭇ ⭉ ⥲ ⭋ ⭌ ⥳ ⥴ ⥆ ⥅ ⥹ ⥻ ⬰ ⥈ ⬾ ⥇ ⬲ ⟴ ⥷ ⭃ ⥺ ⭄ ⥉ ⥰ ⬿ ⤳ ⥊ ⥋ ⥌ ⥍ ⥎ ⥏ ⥐ ⥑ ⥒ ⥓ ⥔ ⥕ ⥖ ⥗ ⥘ ⥙ ⥚ ⥛ ⥜ ⥝ ⥞ ⥟ ⥠ ⥡ ⥢ ⥤ ⥣ ⥥ ⥦ ⥨ ⥧ ⥩ ⥮ ⥯ ⥪ ⥬ ⥫ ⥭ ⤌ ⤍ ⤎ ⤏ ⬸ ⤑ ⬱ ⟸ ⟹ ⟺ ⤂ ⤃ ⤄ ⤆ ⤇ ⤊ ⤋ ⭅ ⭆ ⟰ ⟱ ⟻ ⟼ ⤒ ⤓ ⤙ ⤚ ⤛ ⤜ ⥼ ⥽ ⥾ ⥿ ⤼ ⤽ ⤾ ⤿ ⤸ ⤺ ⤹ ⤻ ⥀ ⥁ ⟲ ⟳ ⮍ ⮌ ⮏ ⮎ ⮔ ◄ ► ◅ ▻ ◀ ▲ ▼ ⌃ ⌄ ⮹"
-
-cuadrados: "❏ ❐ ❑ ❒ ▀ ▁ ▂ ▃ ▄ ▅ ▆ ▇ ▉ ▊ ▋ █ ▌ ▐ ▍ ▎ ▏ ▕ ░ ▒ ▓ ▔ ▬ ▢ ▣ ▤ ▥ ▦ ▧ ▨ ▩ ▪ ▫ ▭ ▮ ▯ ☰ ☲ ☱ ☴ ☵ ☶ ☳ ☷ ▰ ▱ ◧ ◨ ◩ ◪ ◫ ∎ ■ □ ⊞ ⊟ ⊠ ⊡ ❘ ❙ ❚ 〓 ˍ ⋄ ⎔ ⎚ ► ◄ ◆ ◇ ◈ ◘ ◙ ◚ ◛ ◢ ◣ ◤ ◥ ☖ ☗ ❖ ◊"
 
 

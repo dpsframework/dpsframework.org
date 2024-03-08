@@ -1,0 +1,251 @@
+
+En columna de espacio: =REPT(" ";(17-len($A8)) )
+
+
+
+------------------------------------------------------------
+Ensayos y Papers: 
+------------------------------------------------------------
+layout:      essay
+ref:
+lang:        es
+idiom:       es-ES
+imagepath:   'images/'
+
+images:      
+  -  'cardoso-banner.png'
+  -  'cardoso-fig1.png'
+  -  'cardoso-fig2.png'
+  -  'cardoso-table1.png'
+
+
+citation:
+toc:         true
+title:       ''
+headtitle:   ''
+shorttitle:  ''
+year:        ''
+author:      ''
+department:  ''
+
+authors:
+  -  'Ferrando, A.'
+
+
+departments:
+  -  ''
+
+updates:     ''
+            
+doi:         ''
+urldownload: 
+editor:      ""
+pubdate:     ''
+license:     ""
+
+
+
+
+date:          ''
+modified_date: ''
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+Manuales y guías: 
+------------------------------------------------------------
+layout:         manual
+ref:            c640ug00
+lang:           en
+idiom:          us-EN
+imagepath:      '../images/'
+images:
+  -  'cug-640-banner.png'
+  -  'clips_logo.png'
+
+
+manualcode:     c640ug
+
+
+
+
+
+
+
+
+toc:            true
+
+
+title:          "CLIPS 6.4 User's Guide"
+headtitle:      'Readme'
+shorttitle:     'Giarratano, J.C. (2021)'
+year:           '2021'
+author:         'Giarratano, Joseph C. Ph.D.'
+department:     
+authors:        
+  - 
+
+
+departments:
+  - ""
+
+
+chapter:        0
+doi:            'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download'
+url:            'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/'
+editor:         'Gary Riley'
+pubdate:        '2021-09-04'
+license:        'GNU Lesser General Public License v3.0'
+
+
+
+
+ndtdate:        ''
+date_published: '2021-04-09'
+date_modified:  '2022-08-01'
+publisher:      'Gary Riley'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+Proyectos y artefactos: 
+------------------------------------------------------------
+layout:         project
+toc:            true
+author:         'TILAB Telecom'
+license:        'GNU Lesser General Public License v2.1'
+ref:            'JADE-FIPA-4.6.1'
+lang:           en
+date:           '2022-12-21'
+modified:       '2024-02-19'
+status:         'Finished'
+title:          'JADE-4.6.1 compiled with Java OpenJDK-17 LTS'
+subtitle:       'Creating specific `pom.xml` to build `jade-4.6.1.jar` with CORBA, Apache Commons and Java OpenJDK-17 or higher.'
+headtitle:      'Compilation and unification of libraries used by JADE 4.6.1 (2023/07/11), reorganization of the directory structure in the MAVEN model and preparation of `pom.xml` and `pom8.xml` files to obtain functional JADE versions without the need for two Java OpenJDK installations for libraries in version 8 and code in version 17LTS or higher of JAVA on the same machine or Docker container.'
+
+imagepath:      'images/jade-fipa/'
+images:  
+  -  'jade-rotated.png'
+  -  'jade.png'
+  -  'fipa.png'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+Notas y Anexos: 
+------------------------------------------------------------
+layout:         note
+ref:            biblio
+lang:           es
+idiom:          es-ES
+imagepath:      'assets/imgs/'
+
+images:
+  -  'dpsframework4areas.png'
+
+
+menu:           false
+citation:       '@misc{Aguayo-Canela2022, author = {Aguayo-Canela, F.J.}, mendeley-groups = {dPS-framework}, title = {{Inicio | dpsFramework project: Distributed Problem-Solving JADE Agents}}, url = {https://dpsframework.org/}, urldate = {2022-08-08}, year = {2022} }'
+toc:            true
+title:          'Referencias bibliográficas'
+headtitle:      'dpsFramework References - Bibliografía de dpsFramework'
+shorttitle:     'Referencias bibliográficas en dpsFw.'
+year:           '2022'
+author:         'FJAC'
+department:     ''
+authors:        
+
+keywords:
+  -  'Mendely, Zotero'
+
+status:         'En proceso'
+
+doi:            ''
+url:            https://dpsframework.org
+editor:         'Pending'
+license:        'MIT License Copyright (c) 2022'
+
+pubdate:        '2022-07-25'
+modified_date:  '2022-07-31'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+Posts: 
+------------------------------------------------------------
+layout:         post
+title:          ""
+headtitle:      ''
+shorttitle:     ''
+ref:            gitBranching2010
+lang:           es
+idiom:          es_ES
+author:         "Vincent Driessen"
+department:     ''
+date:           2010-01-05 09:48:44 +0100
+categories:     posts
+menu:           false
+toc: true
+
+imagepath:      '/assets/imgs/'
+
+images:
+  -  'git-model2x.png'
+
+license:        CC-BY
+
+

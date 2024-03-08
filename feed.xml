@@ -14,18 +14,8 @@ lang: es
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     
-    
-    
-  
- 
-    {% assign papers    = site.papers    | sort: "year" | reverse | where:"lang", page.lang  %}
-    {% assign proposals = site.proposals | sort: "date" | reverse | where:"lang", page.lang  %}
-    {% assign guias     = site.guides    | where:"lang", page.lang | where:"chapter", 0 %}
-    {% assign notes     = site.notes     | where:"lang", page.lang %}
-    {% assign paginas   = site.pages     | where:"lang", page.lang %}
-  
-
-    {% for item in papers limit:10 %}
+{% for collection in site.collections %}
+  {% for item in site[collection.label] %}
       <item>
         <title>{{ item.title | xml_escape }}</title>
         <description>{{ item.headtitle | xml_escape }}</description>
@@ -33,73 +23,11 @@ lang: es
         <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
         <link>{{ item.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ item.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <category>{{ site.data.i18n[ page.lang ].papersH1 }}</category>
-      </item>
-    {% endfor %}
-     
-    
-    {% for item in proposals limit:10 %}
-      <item>
-        <title>{{ item.title | xml_escape }}</title>
-        <description>{{ item.headtitle | xml_escape }}</description>
-        <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
-        <link>{{ item.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ item.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <category>{{ site.data.i18n[ page.lang ].proposalsH1 }}</category>
-      </item>
-    {% endfor %}
-
-    
-    {% for item in guias limit:10 %}
-      <item>
-        <title>{{ item.title | xml_escape }}</title>
-        <description>{{ item.headtitle | xml_escape }}</description>
-        <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
-        <link>{{ item.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ item.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <category>{{ site.data.i18n[ page.lang ].guidesH1 }}</category>
-      </item>
-    {% endfor %}
-
-    
-    {% for item in notes limit:10 %}
-      <item>
-        <title>{{ item.title | xml_escape }}</title>
-        <description>{{ item.headtitle | xml_escape }}</description>
-        <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
-        <link>{{ item.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ item.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <category>{{ site.data.i18n[ page.lang ].notesH1 }}</category>
-      </item>
-    {% endfor %}
-    
-    
-    {% for item in paginas limit:25 %}
-      <item>
-        <title>{{ item.title | xml_escape }}</title>
-        <description>{{ item.headtitle | xml_escape }}</description>
-        <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>
-        <link>{{ item.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ item.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <category>dpsFramework Website pages</category>
-      </item>
-    {% endfor %}
-    
-   
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
+        <category>{{ collection.label }}</category>
+      </item>  
+  {% endfor %}
+{% endfor %}
 
   </channel>
 </rss>
+

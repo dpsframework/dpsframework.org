@@ -1,0 +1,52 @@
+<!-- Demo collections -->
+{% assign demos = "OTVII6Ka_i8, 2I08k1Xz8bI" | split: ", " %}
+
+
+
+<table class="overviewSummary" summary="dpsFramework video-table" cellspacing="0" cellpadding="3" border="0">
+<tbody>
+<caption>
+  <span><b>{{site.data.i18n[page.lang]['table']}}
+      1. 
+  </b>
+  </span>
+<span class="tabEnd">&nbsp;{{ site.data.table-heads[1].title[page.lang] }}</span>
+</caption>
+
+<tr>
+<th class="colFirst" scope="col">{{ site.data.table-heads[1].field01[page.lang] }}</th>
+<th class="colLast" scope="col">{{ site.data.table-heads[1].field02[page.lang] }}</th>
+</tr>
+</tbody>
+
+
+
+
+
+{% for item in site.data.demos %}
+  <tr class="altColor">
+    <td class="colFirst">
+      {% if item.web %}
+        <a href="http://www.youtube.com/watch?feature=player_embedded&v={{ item.link }}" target="_blank">
+      {% endif %}
+        <img src="http://img.youtube.com/vi/{{ item.link }}/0.jpg" 
+             align="left" alt="demo" border="1" width="{{ item.size }}">
+              
+        </a>
+    </td>
+    <td class="colLast">
+      <div class="block">
+        <h3>{{ item.name }}</h3>
+        {{ item.title }}
+        <br>
+        <small>Author: {{ item.author }}</small>
+      </div>
+    </td>
+  </tr>
+{% endfor %}
+
+
+ </tbody>
+</table>
+
+

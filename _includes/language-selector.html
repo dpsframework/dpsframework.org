@@ -1,36 +1,36 @@
-[ {% assign colPo=site.papers | where:"ref", page.ref | sort: 'lang' %}
+[ {% assign colPo=site.essays | where:"ref", page.ref | sort: 'lang' | reverse  %}
   {% for po in colPo %} 
      <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}">
-     • {{ po.lang }}
+     • {{ site.data.i18n[po.lang].language  }}&nbsp;
      </a>
   {% endfor %}
-  {% assign colPo=site.guides | where:"ref", page.ref | sort: 'lang' %}
+  {% assign colPo=site.manuals | where:"ref", page.ref | sort: 'lang' | reverse  %}
   {% for po in colPo %} 
      <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}">
-     • {{ po.lang }}
+     • {{ site.data.i18n[po.lang].language  }}&nbsp;
      </a>
   {% endfor %}
-  {% assign colPo=site.notes | where:"ref", page.ref | sort: 'lang' %}
+  {% assign colPo=site.notes | where:"ref", page.ref | sort: 'lang' | reverse  %}
   {% for po in colPo %} 
      <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}">
-     • {{ po.lang }}
+     • {{ site.data.i18n[po.lang].language  }}&nbsp;
      </a>
   {% endfor %}
-  {% assign colPo=site.proposals | where:"ref", page.ref | sort: 'lang' %}
+  {% assign colPo=site.projects | where:"ref", page.ref | sort: 'lang' | reverse  %}
   {% for po in colPo %} 
      <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}">
-     • {{ po.lang }}
+     • {{ site.data.i18n[po.lang].language  }}&nbsp;
      </a>
   {% endfor %}
-  {% assign colPo=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% assign colPo=site.posts | where:"ref", page.ref | sort: 'lang' | reverse  %}
   {% for po in colPo %} 
      <a href="{{ po.url | prepend: site.baseurl }}" class="{{ po.lang }}">
-     • {{ po.lang }}
+     • {{ site.data.i18n[po.lang].language  }}&nbsp;
      </a>
   {% endfor %}
-  {% assign colPa=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% assign colPa=site.pages | where:"ref", page.ref | sort: 'lang' | reverse  %}
   {% for pa in colPa %} 
      <a href="{{ pa.url | prepend: site.baseurl }}" class="{{ pa.lang }}">
-      • {{ pa.lang }}
+     • {{ site.data.i18n[pa.lang].language  }}&nbsp;
      </a>
-  {% endfor %} &nbsp;]: {{ site.data.i18n[page.lang].language }} 
+  {% endfor %} ] 

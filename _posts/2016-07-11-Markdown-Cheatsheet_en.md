@@ -20,7 +20,7 @@ images:
   -  'octocat-2x.png'
 
 menu:  false
-categories: drafts
+categories: posts
 toc: true
 
 license: CC-BY
@@ -124,11 +124,15 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 ⋅⋅1. Ordered sub-list
 4. And another item.
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+⋅⋅⋅You can have properly indented paragraphs within list items. 
+Notice the blank line above, and the leading spaces (at least one, 
+but we'll use three here to also align the raw Markdown).
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+⋅⋅⋅To have a line break without a paragraph, you will 
+ need to use two trailing spaces.⋅⋅
 ⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, 
+where trailing spaces are not required.)
 
 * Unordered list can use asterisks
 - Or minuses
@@ -212,12 +216,14 @@ Some text to show that the reference links can follow later.
 Here's our logo (hover to see the title text):
 
 Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/imgs/icon48.png "Logo Title Text 1")
+![alt text](https://github.com/adam-p/markdown-here/
+raw/master/src/common/imgs/icon48.png "Logo Title Text 1")
 
 Reference-style: 
 ![alt text][logo]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/imgs/icon48.png "Logo Title Text 2"
+[logo]: https://github.com/adam-p/markdown-here/
+raw/master/src/common/imgs/icon48.png "Logo Title Text 2"
 ```
 
 Here's our logo (hover to see the title text):
@@ -328,7 +334,9 @@ Markdown | Less | Pretty
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly when it 
+wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap 
+for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 ```
 
 > Blockquotes are very handy in email to emulate reply text.
@@ -336,7 +344,9 @@ Quote break.
 
 Quote break.
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
+> This is a very long line that will still be quoted properly
+> when it wraps. Oh boy let's keep writing to make sure this is long 
+> enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote. 
 
 <a name="html"/>
 
@@ -437,7 +447,8 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 Or, in pure Markdown, but losing the image sizing and border:
 
 ```no-highlight
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)]
+ (http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 ```
 
 Referencing a bug by #bugID in your git commit links it to the slip. For example #1. 

@@ -1,0 +1,10 @@
+ <!-- Image mapping applied to 4 areas -->
+{% assign sufijo = "_" | append: page.lang %}
+  <img class="mini-banner" usemap="#4areas" align="right" 
+       src="/assets/imgs/dpsframework4areas{{ sufijo }}.png">
+  <map name="4areas">
+     <area shape="rect" coords="0,0,109,109"     title="{{ site.data.i18n[page.lang]['essaysH1'] }}"   alt="Essays"       href="essays{{ sufijo }}.html">
+     <area shape="rect" coords="109,0,218,109"   title="{{ site.data.i18n[page.lang]['manualsH1'] }}"    alt="Manuals"    href="manuals{{ sufijo }}.html">     
+     <area shape="rect" coords="0,109,109,218"   title="{{ site.data.i18n[page.lang]['projectsH1'] }}"      alt="Notes"      href="projects{{ sufijo }}.html">   
+     <area shape="rect" coords="109,109,218,218" title="{{ site.data.i18n[page.lang]['notesH1'] }}"     alt="Projects" href="notes{{ sufijo }}.html">
+  </map>

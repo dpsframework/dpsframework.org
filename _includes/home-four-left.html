@@ -1,0 +1,25 @@
+<!-- Globals vars. essays, projects, paginas, manuals, notes, drafts, sufijo -->
+
+  
+<div class="sidebar-title">
+  <!-- i18n file entries: notesH1, projectsH1, etc.  -->
+  <!-- Notes and Post walk together -->
+  {% if page.ref == "notes" %}
+     {% assign lt = page.ref  | append: "postsH1" %}
+  {% else %}
+     {% assign lt = page.ref  | append: "H1" %}
+  {% endif %}
+        
+  <a  href="/{{page.ref}}_{{ page.lang }}.html">
+     <h3>{{  site.data.i18n[page.lang][ lt ]   }}</h3>
+  </a>
+</div>      
+
+
+<!-- Brief areas description -->
+{% assign ht = "home-" | append: page.ref %}        
+{{ site.data.dpsFramework[ ht ][ page.lang ] }}<br><br>
+
+
+
+<h3>{% include home-mapping-areas.html %}</h3>

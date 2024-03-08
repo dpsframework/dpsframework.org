@@ -1,69 +1,54 @@
-<footer class="site-footer">
-
+{% comment %}
+  Revision: Feb, 2024. Theme: Minima v3.
+{% endcomment %}
+<footer class="site-footer h-card">
+ 
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col-1">
-        <p class="feed-subscribe">
-          <a href="{{ site.data.dpsFramework.feed[page.lang] | relative_url }}">
-            <svg class="svg-icon">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-
         {%- if site.author %}
-           <ul class="contact-list">
-       
-            {% if site.author.name -%}
-              {% if site.author.email -%}
-                <li>
-          <a class="u-email" href="mailto:{{ site.author.email }}">
-          <img class="u-email"  src="{{ site.baseurl  }}/assets/imgs/email.png" height="17px">
-            <span>E-mail</span>
-          </a>
-        </li>
-              {%- endif %}
+        <ul class="contact-list">
+          <li class="feed-subscribe">
+            <a href="{{ site.data.dpsFramework.feed[page.lang]  | default: 'feed.xml' | relative_url }}"  target="blank">
+              <svg class="svg-icon" color="orange">
+                <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+              </svg>
+              {{ site.data.i18n[page.lang].subscribe }}
+            </a>
+          </li>           
+          {% if site.author.name -%}
+            {% if site.author.email -%}
+              <li><a class="feed-subscribe" href="mailto:{{ site.author.email }}">
+                     <svg class="svg-icon" color="orange">
+                       <use xlink:href="{{ 'assets/minima-social-icons.svg#stackoverflow' | relative_url }}"></use>
+                     </svg>
+                  {{ site.author.email }}</a>
+              </li>
+            {%- endif %}
+            
             {% endif -%}
-      
             {% if site.author.collabratech -%}
-              <li><a href="{{ site.author.collabratech }}" target="blank">
-          <img class="u-email"  src="{{ site.baseurl  }}/assets/imgs/collabratec_logo_img.png" height="35px"></a>
-        </li>
+              <li><a class="feed-subscribe" href="{{ site.author.collabratech }}" target="blank">
+                  <img class="u-email"  src="{{ site.baseurl  }}/assets/imgs/collabratec_logo_img.png" height="35px"></a>
+              </li>
             {% endif -%}
-           </ul>
-        {%- endif %}
-        
-        <div class="social-links">
-          {%- include social.html -%}
-        </div>
-        
-      </div>
-
-
-      <div class="footer-col">
-        <p>
-          <a href="{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}">
-            <img src="{{ site.baseurl }}/assets/imgs/dpsframework.png"
-            align="left" width="91px" alt="Home">
-          </a>
-          {{ site.data.dpsFramework.description[page.lang]  }}
-        </p>
-        
-        {% include acknowledgments.html %}	
-    
-        
-      </div>
-
-
-
-      
-
-
-
+       </ul>
+       {%- endif %}       
     </div>
-    
-    
-
+    <div class="footer-col">
+       <p>
+         <a href="{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}">
+           <img src="{{ site.baseurl }}/assets/imgs/dpsframework.png"
+              align="left" width="117px" alt="Home">
+         </a>
+         {{ site.data.dpsFramework.subtitle[page.lang] }}
+         </p>
+         <div class="social-links">
+            {%- include social.html -%}
+            {% include footer-acknowledgments.html %}    
+          </div>  
+      </div>
+    </div>
 
   </div>
 

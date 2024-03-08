@@ -22,7 +22,7 @@ images:
 
 
 menu:  false
-categories: drafts
+categories: posts
 toc: true
 
 

@@ -1,3 +1,14 @@
+<!-- SEO plugin metadata -->
+{% seo %}
 
-  <meta name="owner" content="Aguayo-Canela, F.J." />
+<link rel="alternate" type="application/rss+xml" title="{{ site.data.dpsFramework.title[page.lang] }}" href="{{ site.data.dpsFramework.feed[page.lang] | prepend: site.baseurl | prepend: site.url }}">
+<link type="application/atom+xml" rel="alternate" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}" title="{{ site.data.dpsFramework.subtitle.[page.lang] }}" />
 
+{%- assign posts = site.posts | where:"ref", page.ref | sort: 'lang' -%}
+{%- for post in posts -%}
+ <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" />
+{% endfor %}
+{% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+{%- for page in pages -%}
+ <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+{% endfor %}

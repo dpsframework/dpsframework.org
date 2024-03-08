@@ -1,0 +1,62 @@
+<!-- Website description -->
+  <blockquote>
+    {{ site.data.dpsFramework.description[page.lang] }}
+  </blockquote>
+
+
+
+
+
+<!-- Website image collection navegator -->
+<h3>{% include home-mapping-areas.html %}</h3>
+
+
+
+
+<!-- 4-areas description -->
+{% assign areas = "essay, manual, project, note" | split: ", " %}
+<div>
+  {% for as in areas %}
+    {% assign st = as | append: "sH1" %}
+    {% assign lt = as | prepend: "home-" | append: "s" %}
+    <a  href="/{{as}}s{{ sufijo }}.html">
+       <b>{{ site.data.i18n[page.lang][ st ] }}</b></a>:
+       {{ site.data.dpsFramework[lt][page.lang] }}<br>
+  {% endfor %}  
+</div>
+
+
+
+
+
+<!-- dpsFramework video demo table  -->
+{% include home-landing-left-video-table.html %}
+
+
+
+
+
+
+<!-- dpsFramework Abstract -->
+<blockquote>
+  <strong>
+    {{ site.data.i18n[page.lang]['abstract'] }}
+  </strong>
+</blockquote>
+
+{% assign longPghs = "longdescriptionP11, longdescriptionP22, longdescriptionP33" | split: ", " %}
+<div>
+  {% for p in longPghs %}
+    <p>{{ site.data.abstract[p][page.lang] }}</p>
+  {% endfor %}  
+</div>
+
+
+
+
+
+
+<!-- Second language selector -->
+<div>
+{% include language-selector.html %}
+</div>

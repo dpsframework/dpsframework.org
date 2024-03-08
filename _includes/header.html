@@ -1,25 +1,27 @@
 <header class="site-header">
 
-
   <div class="wrapper">
+  
+    {%- assign default_paths = site.pages | where: "lang", page.lang  | where: "menu", 'true' | sort: "pos" |  map: "path"  -%}
+    {%- assign page_paths =  default_paths  -%}
+    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+  
     <div class="site-title" rel="author">
-     <a class="page-link" href="{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}" style="text-decoration: none;">{{ site.data.dpsFramework.title[page.lang] | default: site.github.repository_name }}</a>
+     <a class="page-link" 
+        href="{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}" 
+        style="text-decoration: none;"><strong>{{ site.data.dpsFramework.title[page.lang] | default: site.github.repository_name }}</strong></a>
     </div>
     
     <div class="site-subtitle">
       {{ site.data.dpsFramework.subtitle[page.lang] | default: site.github.repository_name }}<br>
       <a href="{{  site.url  }}{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}" style="text-decoration: none;">
         <img src="{{ site.baseurl }}/assets/imgs/logo-dpsFW-sombras.png"  
-        width="170px" alt="Come-back" title="comeback"> ↩
+        width="170px" alt="Go home page" title="Go home page..."> ↩
       </a>
     </div>      
 
-
-     {%- assign default_paths = site.pages | where: "lang", page.lang  | where: "menu", 'true' | sort: "pos" |  map: "path"  -%}
-     {%- assign page_paths =  default_paths  -%}
-     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
    
-     {%- if titles_size > 0 -%}
+    {%- if titles_size > 0 -%}
         <nav class="site-nav">
           <input type="checkbox" id="nav-trigger" class="nav-trigger" />
           <label for="nav-trigger">
@@ -37,29 +39,20 @@
               {%- if my_page.title -%}
                 {% assign sizemenu = my_page.title | size %}
                 <a class="page-link" href="{{ my_page.url | relative_url }}">
-                • <strong>{{ my_page.title | slice: 0 }}</strong>{{ my_page.title | slice: 1, sizemenu }}
+                  <strong>{{ my_page.title | slice: 0 }}</strong>{{ my_page.title | slice: 1, sizemenu }}
                 </a>
               {%- endif -%}
             {%- endfor -%}
-            
-            
-            
+                      
             {%- include language-selector.html -%}
             
             &nbsp;
             
-            <a href="{{  site.data.dpsFramework.url  }}{{ site.baseurl }}/{{ site.data.dpsFramework.index[page.lang] }}">
-              <img src="{{ site.baseurl }}/assets/imgs/internet.png">
+            <a  class="page-link" href="{{ site.github.owner_url }}" target="blank">
+             <img src="{{ site.baseurl }}/assets/imgs/octocat.png" title="Repository">
             </a>
-            
-            &nbsp;
-
-
-            [<a href="{{ site.github.owner_url }}" target="blank"><strong>GitHub</strong></a>]
-            
-            
           </div>
         </nav>
-      {% endif %}
+    {%- endif -%}
   </div>
 </header>

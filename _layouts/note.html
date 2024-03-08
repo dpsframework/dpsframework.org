@@ -1,37 +1,55 @@
 ---
-layout: default
+layout: base
 ---
 
-<div class="wrapper">
-    <div class="main-col-wrapper">
+{% include breadcrumbs.html %}
+ <div class="home">
+  <div class="main-col-wrapper">
+    <div  class="main-col-4">
 
-      <div class="main-col-1">
-         {% if page.toc %}
-         <div class="section-nav">
-           {% include toc.html html=content %}
-         </div>
-         {% endif %}
-      {% include home-sidebar.html %}
+      <!-- Notes like an essays -->
+      <div class="sidebar-title">
+        <a  href="/notes_{{ page.lang }}.html">
+          <h3>{{  site.data.i18n[page.lang][ 'notesH1' ]   }}</h3>
+        </a>
       </div>
-
-      <div class="main-col">
-        <div class="sidebar-title">
-          {{ page.title }}:
+  
+      <div class="mini-banner">
+      <!-- Local image mapping applied to 4 areas -->
+        {% assign sufijo = "_" | append: page.lang %}
+        <img class="mini-banner" usemap="#4areas" align="left" 
+             src="/assets/imgs/dpsframework4areas{{ sufijo }}.png">
+        <map name="4areas">
+           <area shape="rect" coords="0,0,109,109"     title="{{ site.data.i18n[page.lang]['projectsH1'] }}"   alt="projects" href="../projects{{ sufijo }}.html">
+           <area shape="rect" coords="109,0,218,109"   title="{{ site.data.i18n[page.lang]['manualsH1'] }}"    alt="Manuals"  href="../manuals{{ sufijo }}.html">     
+           <area shape="rect" coords="0,109,109,218"   title="{{ site.data.i18n[page.lang]['notesH1'] }}"      alt="Essays"   href="../essays{{ sufijo }}.html">   
+           <area shape="rect" coords="109,109,218,218" title="{{ site.data.i18n[page.lang]['essaysH1'] }}"     alt="Notes"    href="../notes{{ sufijo }}.html">
+        </map>
+  
+        <small>
+           <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ page.status }}<br>
+           <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ page.author }}<br>
+           <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ page.pubdate | date: date_format }}<br>
+           <strong>{{  site.data.i18n[page.lang].modified }}:</strong>  {{ page.modified_date | date: date_format }}<br>
+           <strong>{{  site.data.i18n[page.lang].license }}: </strong>  {{ page.license }}<br>
+           <strong>{{  site.data.i18n[page.lang].abstract}}: </strong>  {{ page.headtitle }}<br>
+        </small>
+        <hr>
+      </div>
+      {% if page.toc %}
+        <div class="section-nav">
+         <strong>{{site.data.i18n[page.lang]['tocH1'] }}:</strong>&nbsp;{{ page.title }}<br>
+         {% include toc.html html=content %}
+         {%- include language-selector.html -%}
+         <img src="{{ site.baseurl }}/assets/imgs/internet.png">
         </div>
-
-        {%- assign date_format = "%b %-d, %Y" -%}
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        <br>{{ page.date | date: date_format }}
-        </time>        
-        
-        
-        
-        {{ content }}
-      </div>
-
+      {% endif %}
     </div>
+
+    <div class="main-col">
+      <h2 class="paper-title">{{ page.title }}</h2>
+      {{ content }}
+    </div>
+  </div>
   {% include top-button.html %}
 </div>
-
-
-
