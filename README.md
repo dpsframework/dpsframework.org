@@ -1,17 +1,17 @@
 ## dpsFramework website
 
 > - Revision 0.2: June, 2019.
-> - Revision 1.0: June, 2022. (pending)
-> - Migrated to Minima V3. Full content revision of dpsFramework.  February, 2024. (in-progress)
+> - Revision 1.0: June, 2022. (closed)
+> - Revision 1.1: February, 2024. (In process)
 
  
--  [dpsFramework website](https://dpsframework.org)
+-  [Visit dpsFramework website ...](https://dpsframework.org)
 
 
 --- 
 
-![dpsFramework (Java) Problem-Solver JADE Agent](assets/imgs/logo-dpsFW-sombras.png)<br>
+![dpsFramework (Java) Distributed Production System Framework for the JADE Platform](assets/imgs/logo_dpsframework_bw_small.png)<br>
 
 ---
 
-![dpsFramework (Java) Problem-Solver JADE Agent example](/assets/imgs/psMonitorAgent00.png)<br>
+
