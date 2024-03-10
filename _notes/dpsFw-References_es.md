@@ -3,7 +3,7 @@ layout: note
 ref:  biblio
 lang:  es
 idiom:  es-ES
-imagepath:  'assets/imgs/'
+imagepath:  'images/bib/'
 images:
   -  'dpsframework4areas.png'
 

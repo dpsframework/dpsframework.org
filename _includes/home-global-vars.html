@@ -1,18 +1,11 @@
-<!-- Globals vars. essays, projects, paginas, manuals, notes, drafts, sufijo.  -->
+<!-- Globals vars: essays, projects, paginas, manuals, notes, drafts, sufijo.  -->
 {% assign essays       = site.essays    | sort: "year" | reverse | where:"lang", page.lang  %}
 {% assign projects     = site.projects  | sort: "modified" | reverse | where:"lang", page.lang  %}
 {% assign paginas      = site.pages     | where:"lang", page.lang %}
 {% assign manuals      = site.manuals   | where:"lang", page.lang | where:"chapter", 0 %}
-{% assign notes        = site.notes     | where:"lang", page.lang %}
+{% assign notes        = site.notes     | sort: "year" | reverse | where:"lang", page.lang %}
 {% assign drafts       = site.posts     | where:"lang", page.lang %}
 {% assign sufijo       = "_"            | append: page.lang %}
 
 {% assign labels = "essays, manuals, projects, notes, posts" | split: ", "  %}
 
-
-
-<!-- Listing type: pushHeader, citeBrief, citeComplex, doEveryArea -->
-{% assign pushHeader   = false %}
-{% assign citeBrief    = false %}
-{% assign citeComplex  = false %}
-{% assign doEveryArea  = false %}

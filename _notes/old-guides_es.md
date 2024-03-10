@@ -3,7 +3,7 @@ layout: note
 ref:  oldguides
 lang:  es
 idiom:  es-ES
-imagepath:  'assets/imgs/'
+imagepath:  'images/old/'
 images:
   -  'dpsframework4areas.png'
 

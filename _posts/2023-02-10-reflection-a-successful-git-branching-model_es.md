@@ -12,7 +12,7 @@ author: "Driessen, Vincent"
 lang:  es
 idiom:  es-ES
   
-department: '<br>Website: https://nvie.com/ <br>Thoughts and writings by Vincent Driessen.'
+department: 'https://nvie.com/ Thoughts and writings by Vincent Driessen.'
 date: 2023-02-10 17:16:56 +0100
 
 imagepath:  '/assets/imgs/'

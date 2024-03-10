@@ -17,22 +17,28 @@ layout: base
       <div class="mini-banner">
       <!-- Local image mapping applied to 4 areas -->
         {% assign sufijo = "_" | append: page.lang %}
+        
         <img class="mini-banner" usemap="#4areas" align="left" 
-             src="/assets/imgs/dpsframework4areas{{ sufijo }}.png">
-        <map name="4areas">
-           <area shape="rect" coords="0,0,109,109"     title="{{ site.data.i18n[page.lang]['projectsH1'] }}"   alt="projects" href="../projects{{ sufijo }}.html">
-           <area shape="rect" coords="109,0,218,109"   title="{{ site.data.i18n[page.lang]['manualsH1'] }}"    alt="Manuals"  href="../manuals{{ sufijo }}.html">     
-           <area shape="rect" coords="0,109,109,218"   title="{{ site.data.i18n[page.lang]['notesH1'] }}"      alt="Essays"   href="../essays{{ sufijo }}.html">   
-           <area shape="rect" coords="109,109,218,218" title="{{ site.data.i18n[page.lang]['essaysH1'] }}"     alt="Notes"    href="../notes{{ sufijo }}.html">
-        </map>
-  
+               src="/assets/imgs/dpsframework4areas{{ sufijo }}.png">
+          <map name="4areas">
+             <area shape="rect" coords="0,0,109,109"     title="{{ site.data.i18n[page.lang]['projectsH1'] }}"   alt="Essays" href="../essays{{ sufijo }}.html">
+             <area shape="rect" coords="109,0,218,109"   title="{{ site.data.i18n[page.lang]['manualsH1'] }}"    alt="Manuals"  href="../manuals{{ sufijo }}.html">     
+             <area shape="rect" coords="0,109,109,218"   title="{{ site.data.i18n[page.lang]['notesH1'] }}"      alt="Projects"   href="../projects{{ sufijo }}.html">   
+             <area shape="rect" coords="109,109,218,218" title="{{ site.data.i18n[page.lang]['essaysH1'] }}"     alt="Notes"    href="../notes{{ sufijo }}.html">
+          </map>
+
+
+        {% assign mdStrings = "headtitle, author, year, status, license, traductor, shorttitle, citation"   | split: ", " %}
+        {% assign mdDates   = "pubdate, modified_date" | split: ", " %}
+        
         <small>
-           <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ page.status }}<br>
-           <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ page.author }}<br>
-           <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ page.pubdate | date: date_format }}<br>
-           <strong>{{  site.data.i18n[page.lang].modified }}:</strong>  {{ page.modified_date | date: date_format }}<br>
-           <strong>{{  site.data.i18n[page.lang].license }}: </strong>  {{ page.license }}<br>
-           <strong>{{  site.data.i18n[page.lang].abstract}}: </strong>  {{ page.headtitle }}<br>
+        {% for md in mdStrings %}
+          <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ page[md] }}<br>
+        {% endfor %}
+        
+        {% for md in mdDates %}
+           <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ page[md] | date: date_format }}<br>
+        {% endfor %}
         </small>
         <hr>
       </div>

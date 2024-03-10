@@ -1,30 +1,17 @@
 # --------------------------------------------------
 # dpsframework.org with Minima v3 theme. (2017-2024)
 # --------------------------------------------------
-
-# When you build locally, use this setting.
 # theme: minima
-
-# In November 2023, GitHub Pages still uses Minima 2.5.1 
-# (https://pages.github.com/versions/).
 # To use the latest Minima version on GitHub Pages:
 remote_theme: jekyll/minima
 
 # --------------------------------------------------
-# Main domain: dpsframework.github
+# Main domain: dpsframework.org
 # --------------------------------------------------
-baseurl:  ''
 url:      'https://dpsframework.org/'
 hard_url: 'https://dpsframework.org/'
-
-
-
-title:    'Another Framework to develop and deploy Expert Systems on JADE platform'
-
-
-# subtitle:
-  # en: 'Sistemas Expertos desplegados mediante Agentes JADE'
-  # es: 'Expert Systems deployed through JADE Agents'
+baseurl:  ''
+title:    'Framework (Java) to develop Multi-Agent applications integrated with Expert Systems on the JADE platform'
   
 author:
   name:         'Aguayo-Canela, FJ'
@@ -34,26 +21,13 @@ author:
 plugins:
  - jekyll-sitemap
  - jekyll-seo-tag
-# - jekyll-feed
 
+# Default web site language and vars.
 lang:   es
 index:  index.html
-
- 
-
-# Theme-specific settings
-# --------------------------------------------------
-# If you want to link only specific pages in your header, 
-# use this and add the path to the pages
-# in order as they should show up.
-# header_pages:
-#  - about.md
-
-# Set to `true` to show excerpts (extractos) on the homepage.
 show_excerpts:    false
 google_analytics: GTM-58XLTB4
 markdown:         kramdown
-
 
 # GitHub Metadata: https://jekyll.github.io/github-metadata/site.github/
 github:
@@ -66,7 +40,6 @@ github:
   repository_name: website
 
 # Site collections
-# --------------------------------------------------
 collections:
   essays:
     output: true
@@ -82,9 +55,7 @@ collections:
     output: true
     label: notes
 
-
-# {{ site.collections | where: "label", "projects" | first }}
-# --------------------------------------------------
+# Default values applied to collections
 defaults:
   - scope:
       path: ""
@@ -112,12 +83,7 @@ defaults:
       sitemap: true
 
 
-
-
-
-
-
-# Minima specific settings, which are only available from Minima 3.0 onward.
+# Minima v3
 minima:
   # Minima skin selection.
   # Available skins are:
@@ -130,10 +96,7 @@ minima:
   skin: classic
 
   # Minima date format.
-  # The default value is "%b %d, %Y" (e.g. Nov 14, 2023)
-  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
-  #date_format: "%b-%d-%Y"
-  date_format: "%b, %Y"  # "%b %-d, %Y"
+  date_format: "%b, %Y"
 
   # Generate social links in footer.
   #social_links:
@@ -162,4 +125,4 @@ minima:
     - { platform: linkedin,       user_url: "https://www.linkedin.com/in/paco-aguayo" }
     - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/15090312/ortelius" }
     - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
-    - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
+    - { platform: youtube,        user_url: "https://www.youtube.com/channel/" }

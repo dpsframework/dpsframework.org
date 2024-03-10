@@ -1,104 +1,61 @@
-<!-- Listing areas: 
-        projects, 
-        manuals, 
-        essays, 
-        notes and 
-        posts 
-        by context collection. -->
 
-
-
+<!-- PROJECTS -->
 <!-- PROJECTS Collection -->
+{% if page.ref          == "projects"  %}
 
-{% if doEveryArea or page.ref == 'projects'  %}
-  {% if pushHeader %}
+  <!-- Projects metadata fields -->
+  {% assign mdStrings    = "subtitle, status, author, date, modified, license, headtitle"   | split: ", " %}
+  {% assign mdDates      = "date, modified" | split: ", " %}
+  {%- assign date_format = "%b %-d, %Y" -%}
+  {% assign coLabel      =  page.ref  %}
+  
+  <!-- Hard code about: Posts and Notes. They are together -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+
+  <!-- PROJECTS collection -->
+  {% for item in projects %}
     <div class="sidebar-title">
-      <a  href="/projects{{ sufijo }}.html">
-       <strong>{{ site.data.i18n[page.lang]['projectsH1']  }}</strong>
+      <a class="page-link" href="{{ site.baseurl }}{{ item.url}}">{{ item.title  }}
+      {% if item.images[0] %}
+         <img class="mini-banner-right"
+         src="{{lh}}/{{ item.imagepath }}{{ item.images[0] }}" 
+         alt="{{ item.title }}" align="right" width="70px">
+      {% endif %}   
       </a>
     </div>
-  {% endif %}
+
+    <h4><strong>GitHub ID: </strong>{{ item.ref }} 
+    {%- assign date_format = "%b %-d, %Y" -%}
+    <time class="dt-published" datetime="{{ item.modified | date_to_xmlschema }}" itemprop="datePublished">
+    &nbsp;({{ site.data.i18n[page.lang]['modified']}}: {{ item.modified | date: date_format }})
+    </time>
+    </h4>
 
 
-  <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for item in projects %}
-      <div class="page-link">
-        <a href="{{ site.baseurl }}{{ item.url}}">
-        &#8226; {{ item.title }}&nbsp;&#8680;
-<!--         {% if item.images[0] %}
-                 <img src="{{ item.url }}/../{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.shorttitle }}" align="right" height="28px" width="35px">
-        {% endif %} -->
-        </a>
-<!--         <p class="sidebar-meta">
-          {%- assign date_format = "%b %-d, %Y" -%}
-          {{ item.subtitle }}<br>
-          <time class="dt-published" datetime="{{ item.modified | date_to_xmlschema }}" itemprop="datePublished">
-             ({{site.data.i18n[page.lang]['modified']}}: 
-             <b>{{ item.modified | date: date_format }})</b>
-          </time>
-         
-          <time class="dt-published" datetime="{{ item.date | date_to_xmlschema }}" itemprop="dateInitiated">
-          ({{site.data.i18n[page.lang]['initiated']}}: 
-           {{ item.date | date: date_format }}) 
-          </time>
-        
-        </p> -->
-      </div>
-    {% endfor %}
-    
+    <!-- Metadata paragraph -->
+    <strong>{{  site.data.i18n[page.lang].objective }}:</strong>{{ item.subtitle }}<br>
+    {%- if item.ref -%}
+      <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
+       <a rel="page-link" href="{{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}" 
+          target="_blank" title="{{ item.ref | escape }}">
+       <strong>● GitHub:</strong> 
+       <svg class="svg-icon blue">
+          <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+       </svg>
+       {{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}</a>
+       <br>
+     {%- endif -%}  
+     <!--  Classic output by hand -->
+     <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ item.status }}<br>
+     <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ item.author }}<br>
+     <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ item.date | date: date_format }}<br>
+     <strong>{{  site.data.i18n[page.lang].modified }}:</strong>  {{ item.modified | date: date_format }}<br>
+     <strong>{{  site.data.i18n[page.lang].license }}: </strong>  {{ item.license }}<br>
+     <strong>{{  site.data.i18n[page.lang].abstract}}: </strong>  {{ item.headtitle }}<br>
+     <hr>
 
-
-
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
-    {% for item in projects %}
-            <div class="sidebar-title">
-              <a class="page-link"
-                 href="{{ site.baseurl }}{{ item.url}}">
-                 &#8226; {{ item.title  }} &#8680;
-              {% if item.images[0] %}
-                 <img class="mini-banner-right"
-                 src="projects/{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.title }}" align="right" width="70px">
-              {% endif %}   
-              </a>
-            </div>
-    
-            <h4><strong>{{ item.ref }}</strong>
-            {%- assign date_format = "%b %-d, %Y" -%}
-            <time class="dt-published" datetime="{{ item.modified | date_to_xmlschema }}" itemprop="datePublished">
-            &nbsp;({{ site.data.i18n[page.lang]['lastversion']}}: {{ item.modified | date: date_format }})
-            </time>
-            </h4>
-             
-             <strong>{{  site.data.i18n[page.lang].objective }}:</strong>
-               {{ item.subtitle }}
-             <br>
-       
-             {%- if item.ref -%}
-               <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
-               <a rel="page-link" href="{{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}" 
-                  target="_blank" title="{{ item.ref | escape }}">
-               <strong>● GitHub:</strong> <svg class="svg-icon blue">
-                  <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-               {{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}</a>
-               <br>
-             {%- endif -%}  
-               
-             <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ item.status }}<br>
-             <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ item.author }}<br>
-             <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ item.date | date: date_format }}<br>
-             <strong>{{  site.data.i18n[page.lang].modified }}:</strong>  {{ item.modified | date: date_format }}<br>
-             <strong>{{  site.data.i18n[page.lang].license }}: </strong>  {{ item.license }}<br>
-             <strong>{{  site.data.i18n[page.lang].abstract}}: </strong>  {{ item.headtitle }}<br>
-             <hr>
-
-      {% endfor %}
-      
-      
-    {% endif %}
+  {% endfor %}
 {% endif %} 
   
 
@@ -114,356 +71,262 @@
 
 
 
-
-
 <!-- MANUALS and GUIDES Collection -->
+{% if page.ref          == 'manuals'   %}
 
-{% if doEveryArea or  page.ref == 'manuals'   %}
-  {% if pushHeader %}
+
+  <!-- Manuals metadata fields -->
+  {% assign mdStrings    = "editor, publisher, license, doi, traductor"   | split: ", " %}
+  {% assign mdDates      = "date_published, date_modified, ndtdate" | split: ", " %}
+  {% assign date_format  = "%b %-d, %Y" %}
+  {% assign coLabel      =  page.ref   %}
+  
+  <!-- Hard code about: manuals -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+
+
+
+  <!--  MANUALS and GUIDES collection by Chapter -->
+  {% for guia in manuals %}
+
+    <!--  Chapter URLs calculation -->
+    {% assign cPath        = guia.url       |  slice: 1, guia.url.size %}
+    {% assign pathParts    = cPath          | split: "/" %}       
+    {% assign length       = pathParts.size | minus: 2 %}
+    {% assign path         = "" %}
+    {% for c in (0..length) %}
+      {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
+    {% endfor %}
+
     <div class="sidebar-title">
-      <a  href="/manuals{{ sufijo }}.html">
-       <strong>{{ site.data.i18n[page.lang]['manualsH1']  }}</strong>
+      <a class="page-link"
+         href="{{ site.baseurl }}{{ guia.url}}">{{ guia.title  }}
+         {%- if guia.images[0] -%}
+           <img class="mini-banner-right" 
+                src="{{ path }}/{{ guia.imagepath }}{{ guia.images[0] }}"  
+                align="right" width="70px"  alt="{{ guia.title }}" >
+         {%- endif -%}
       </a>
     </div>
-  {% endif %}
 
- <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for item in manuals %}
-      <a class="page-link"
-        href="{{ site.baseurl }}{{ item.url}}">
-        {{ item.title }}
-        {% if item.images[0] %}
-                 <img src="{{ item.url }}/../{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.shorttitle }}" align="right" width="35px">
-        {% endif %}  
-      </a>
-      <p class="sidebar-meta">
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ item.date | date_to_xmlschema }}" itemprop="datePublished">
-        ({{ item.date | date: date_format }}) 
-      </time>
-      &#8226; {{ item.shorttitle }}
-      </p>
-    {% endfor %}  
-  
-  
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
 
-        {% for guia in manuals %}
-        
-        {% assign cPath = guia.url |  slice: 1, guia.url.size %}
-        {% assign pathParts = cPath | split: "/" %}       
-        {% assign length = pathParts.size | minus: 2 %}
-        {% assign path = "" %}
-        {% for c in (0..length) %}
-          {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
-        {% endfor %}
-
- 
-
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ guia.url}}">
-               {{ guia.title  }} 
-            {%- if guia.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ path }}/{{ guia.imagepath }}{{ guia.images[0] }}"  align="right" width="70px"  alt="{{ guia.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-       
-
-          <i>{{ guia.author }}</i><br>
-          <i>Editor  {{ guia.editor }}</i>
-          <br> 
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ guia.date_published | date_to_xmlschema }}" itemprop="datePublished">
+    <i>{{ guia.author }}</i><br>
+    <i>Editor  {{ guia.editor }}</i><br> 
+    <time class="dt-published" 
+          datetime="{{ guia.date_published | date_to_xmlschema }}" itemprop="datePublished">
           {{ guia.date_published | date: date_format }}
-          </time>
-          <h2> </h2>
-
-
-          <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ guia.author }}<br>
-          <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ guia.pubdate }}<br>
-          <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ guia.license }}<br>
-
-
-          <hr>
- 
-
-        
-        {% endfor %}
-
-  {% endif %}
-{% endif %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Essays -->
-{% if page.ref == 'essays'  or doEveryArea == true %}
-
-  {% if pushHeader %}
-  <div class="sidebar-title">
-    <a href="/essays{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['essaysH1']  }}</strong>
-    </a>
+    </time>
     
-  </div>
-  
-  {% endif %}
+    <h2> </h2>
 
 
- <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for item in essays %}
-      <a class="page-link"
-        href="{{ site.baseurl }}{{ item.url}}">
-        {{ item.title }}
-        {% if item.images[0] %}
-                 <img src="{{ item.url }}/../{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.shorttitle }}" align="right" width="35px">
-        {% endif %}  
-      </a>
-      <p class="sidebar-meta">
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ item.date | date_to_xmlschema }}" itemprop="datePublished">
-        ({{ item.date | date: date_format }}) 
-      </time>
-      &#8226; {{ item.shorttitle }}
-      </p>
-    {% endfor %}  
-    
-    
-    
-      
-  
-  
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
-        {% for essay in essays %}
-        
-        {% assign cPath = essay.url |  slice: 1, essay.url.size %}
-        {% assign pathParts = cPath | split: "/" %}       
-        {% assign length = pathParts.size | minus: 2 %}
-        {% assign path = "" %}
-        {% for c in (0..length) %}
-          {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
-        {% endfor %}
-
-        
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ essay.url}}">
-               {{ essay.title  }} &nbsp;&#8680;
-            {%- if essay.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ path }}/{{ essay.imagepath }}{{ essay.images[0] }}"  align="right"  width="70px" alt="{{ essay.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-          <h3>{{ essay.headtitle }}</h3>
-          <strong>{{ essay.author }}
-             {%- if essay.authors -%}
-               {% for author in essay.authors %}, {{ author }}
-               {% endfor %}
-             {%- endif -%}
-          </strong>
-          <br>
-          <i>{{ essay.department }}</i>
-          <h2> </h2>
-          <strong>{{  site.data.i18n[page.lang].editor  }}:</strong>      {{ essay.editor }}<br>
-          <strong>{{  site.data.i18n[page.lang].citation  }}:</strong>    {{ essay.citation }}<br>
-          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ essay.pubdate }}<br>
-          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ essay.license }}<br>
-       
-          <hr>
-
-           
-        {% endfor %}
-
-
-
-
-
-
-
-
-
-
-  {% endif %}
-{% endif %}
-
-
-
-
-<!-- Notes and Posts -->
-<!-- Notes -->
-{% if doEveryArea  or  page.ref == 'notes' %}
-
-
-  <div class="sidebar-title">
-    <a  href="/notes{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['notesH1']  }}</strong>
-    </a>
-  </div>
-  
-  
-  
- <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for note in notes %}
-      <a class="page-link"
-        href="{{ site.baseurl }}{{ note.url}}">
-        {{ note.title }}
-      </a>
-      <p class="sidebar-meta">
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ note.pubdate | date_to_xmlschema }}" itemprop="datePublished">
-        ({{ note.pubdate | date: date_format }}) 
-      </time>
-      &#8226; {{ note.shorttitle }}
-      </p>
-    {% endfor %}  
-    
-    
-      
-  
-  
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
-
-        {% for note in notes %}
-        
-
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ note.url}}">
-               {{ note.title  }} 
-            {%- if note.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ note.imagepath }}{{ note.images[0] }}"   align="right"  width="70px"  alt="{{ note.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-
-          {%- assign date_format = "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ note.pubdate | date_to_xmlschema }}" itemprop="datePublished">
-            &nbsp;({{ note.pubdate | date: date_format }})
-          </time>
-       
-          <h2> </h2>
-          
-          <strong>{{  site.data.i18n[page.lang].status  }}:</strong>      {{ note.status }}<br>
-          <strong>{{  site.data.i18n[page.lang].proposedby  }}:</strong> {{ note.author }}<br>
-          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ note.pubdate }}<br>
-          <strong>{{  site.data.i18n[page.lang].updateon  }}:</strong>   {{ note.modified_date }}<br>
-          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ note.license }}<br>
-       
-          <hr>
-         
-        {% endfor %}
-
-
-
-  {% endif %}
-
-  
-
-
-
-<!-- Posts with alias drafts -->
-  <div class="sidebar-title">
-    <a  href="/notes{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['draftsH1']  }}</strong>
-    </a>
-  </div>
-
-
-  <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for draft in drafts %}
-      <a class="page-link"
-        href="{{ site.baseurl }}{{ draft.url}}">
-        {{ draft.title }}
-        {%- if draft.images[0] -%}
-          <img src="assets/imgs/{{ draft.images[0] }}"  
-               alt="{{draft.shorttitle }}"  align="right" width="35px">
-        {%- endif -%}
-      </a>
-      <p class="sidebar-meta">
-        {%- assign date_format = "%b %-d, %Y" -%}
-        <time class="dt-published" datetime="{{ draft.date | date_to_xmlschema }}" itemprop="datePublished">
-          ({{ draft.date | date: date_format }}) 
-        </time>
-        &#8226; {{ draft.shorttitle }}
-      </p>
+    <!-- Metadata paragraph -->
+    {% for md in mdStrings %}
+      <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ guia[md] }}<br>
     {% endfor %}
-    
-    
-    
-    
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
 
-
-
-
-        {% for draft in drafts %}
-        
-
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ draft.url}}">
-               {{ draft.title  }} 
-            {%- if draft.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ draft.imagepath }}{{ draft.images[0] }}"   align="right"  width="70px"  alt="{{ note.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-
-          {%- assign date_format = "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ draft.date | date_to_xmlschema }}" itemprop="datePublished">
-          &nbsp;({{ draft.date | date: date_format }})
-          </time>
-       
-          <h2> </h2>
-          
-
-          <strong>{{  site.data.i18n[page.lang].author  }}:</strong> {{ draft.author }}<br>
-          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ draft.shorttitle }}<br>
-          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ draft.license }}<br>
-       
-          <hr>
-         
-        {% endfor %}
-
-
-
-
-
-
-
-  {% endif %}
+    {% for md in mdDates %}
+       <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ guia[md] | date: date_format }}<br>
+    {% endfor %}
+    <hr>
+  {% endfor %}
 {% endif %}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<!-- ESSAYS and PAPERS -->
+{% if     page.ref == 'essays'  %}
+
+
+  <!-- Essays metadata fields -->
+  {% assign mdStrings    = "editor, department, license, doi, updates, citation, traductor"   | split: ", " %}
+  {% assign mdDates      = "date, pubdate, modified_date" | split: ", " %}
+  {% assign date_format  = "%b %-d, %Y" %}
+  {% assign coLabel      =  page.ref   %}
+  
+  <!-- Hard code about: manuals -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+
+  <!-- ESSAYS Collection -->
+  {% for essay in essays %}
+  
+  
+    <!-- Essays path calculation -->
+    {% assign cPath              = essay.url      |  slice: 1, essay.url.size %}
+    {% assign pathParts          = cPath          | split: "/" %}       
+    {% assign length             = pathParts.size | minus: 2 %}
+    {% assign path               = "" %}
+    {% for c in (0..length) %}
+      {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
+    {% endfor %}
+
+  
+    <div class="sidebar-title">
+      <a class="page-link"
+         href="{{ site.baseurl }}{{ essay.url}}">
+         {{ essay.title  }}
+         {% if essay.images[0] %}
+           <img class="mini-banner-right" 
+                src="{{ path }}/{{ essay.imagepath }}{{ essay.images[0] }}"  
+                align="right"  width="70px" alt="{{ essay.title }}" >
+         {% endif %}
+      </a>
+    </div>
+    
+    
+    <h3>{{ essay.headtitle }}</h3>
+    <strong>{{ essay.author }}
+       {%- if essay.authors -%}
+         {% for author in essay.authors %}, {{ author }}
+         {% endfor %}
+       {%- endif -%}
+    </strong>
+    <br>
+    <i>{{ essay.department }}</i>
+    <h2> </h2>
+
+
+    <!-- Metadata paragraph -->
+    <ul>
+    {% for md in mdDates %}
+       <li><strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ essay[md] | date: date_format }}</li>
+    {% endfor %}
+
+    {% for md in mdStrings %}
+      <li><strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ essay[md] }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+  {% endfor %}
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- NOTES and POSTS  -->
+{% if   page.ref        == "notes"    %}
+  
+  
+  <!-- Notes and Posts metadata fields -->
+  {% assign mdStrings    = "headtitle, author, year, status, license, traductor, shorttitle, citation"   | split: ", " %}
+  {% assign mdDates      = "modified_date, pubdate" | split: ", " %}
+  {%- assign date_format = "%b %-d, %Y" -%}
+  {% assign coLabel      =  page.ref  %}
+  
+  <!-- Hard code about: Posts and Notes. They are together -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+
+
+  <div class="sidebar-title">
+    <a  href="/{{lh}}{{ sufijo }}.html">
+     <strong>{{ site.data.i18n[page.lang][ lt ]  }}</strong>
+    </a>
+  </div>
+
+
+  <!-- Notes title and meta  -->
+  {% for item in notes %}
+
+    <div class="sidebar-title">
+      <a class="page-link" href="{{ site.baseurl }}{{item.url}}">
+        {{ item.title  }}
+      {%- if item.images[0] -%}
+        <img class="mini-banner-right" 
+           src="/{{ lh }}/{{ item.imagepath }}{{ item.images[0] }}" 
+           align="right"  width="70px">
+      {%- endif -%}
+      </a>
+    </div>
+
+    <!-- Metadata paragraph -->
+    {% for md in mdDates %}
+       <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ item[md] | date: date_format }}<br>
+    {% endfor %}
+    <br>
+    <ul>
+    {% for md in mdStrings %}
+      <li><strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ item[md] }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+  {% endfor %}
+
+
+
+  <!-- CONTINUE with  posts   -->
+  <!-- POSTS    alias drafts  -->
+  <!-- Notes and Posts metadata fields -->
+  {% assign mdStrings    = "headtitle, author, department, shorttitle, license"   | split: ", " %}
+  {% assign mdDates      = "date, modified_date" | split: ", " %}
+  {%- assign date_format = "%b %-d, %Y" -%}
+  
+  <!-- Hard code: Posts -->
+  {%   assign lt = "drafts"     | append: "H1" %}
+  {%   assign lh = "notes"     %}
+  
+  <div  id="posts" class="sidebar-title">
+    <a  href="/{{lh}}{{ sufijo }}.html">
+     <strong>{{ site.data.i18n[page.lang][lt]  }}</strong>
+    </a>
+  </div>
+
+  <!-- Posts title and meta  -->
+  {% for item in drafts %}
+
+    <div class="sidebar-title">
+      <a class="page-link"
+         href="{{ site.baseurl }}{{ item.url}}">
+         {{ item.title  }} 
+      {%- if item.images[0] -%}
+        <img class="mini-banner-right" 
+           src="{{ item.imagepath }}{{ item.images[0] }}"  
+                align="right"  width="70px"  alt="{{item.title}}" >
+      {%- endif -%}
+      </a>
+    </div>
+
+    <!-- Metadata paragraph -->
+    {% for md in mdDates %}
+      <time class="dt-published" datetime="{{item[md] | date_to_xmlschema }}" itemprop="datePublished">
+        <i>{{  site.data.i18n[page.lang][md] }}</i>&nbsp;({{ item[md] | date: date_format }})  
+      </time>
+    {% endfor %}
+    <h2> </h2>
+
+    {% for md in mdStrings %}
+      <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ item[md] }}<br>
+    {% endfor %}
+    <hr>
+
+  {% endfor %}
+{% endif %}
 
