@@ -311,10 +311,11 @@
 
 
 
-<!-- Notes and Posts -->
-<!-- Notes -->
-{% if doEveryArea  or  page.ref == 'notes' %}
 
+
+
+<!-- NOTES and POSTS  -->
+{% if page.ref == 'notes' %}
 
   <div class="sidebar-title">
     <a  href="/notes{{ sufijo }}.html">
@@ -322,65 +323,46 @@
     </a>
   </div>
   
-  
-  
- <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for note in notes %}
+  {% for note in notes %}
+
+    <div class="sidebar-title">
       <a class="page-link"
-        href="{{ site.baseurl }}{{ note.url}}">
-        {{ note.title }}
+         href="{{ site.baseurl }}{{ note.url}}">
+         &#8226; {{ note.title  }} 
+      {%- if note.images[0] -%}
+        <img class="mini-banner-right" 
+           src="/notes/{{ note.imagepath }}{{ note.images[0] }}"   align="right"  width="70px"   >
+      {%- endif -%}
       </a>
-      <p class="sidebar-meta">
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ note.pubdate | date_to_xmlschema }}" itemprop="datePublished">
-        ({{ note.pubdate | date: date_format }}) 
-      </time>
-      &#8226; {{ note.shorttitle }}
-      </p>
-    {% endfor %}  
+    </div>
+
+    {%- assign date_format = "%b %-d, %Y" -%}
+    <time class="dt-published" datetime="{{ note.pubdate | date_to_xmlschema }}" itemprop="datePublished">
+      &nbsp;({{ note.pubdate | date: date_format }})
+    </time>
+ 
+    <h2> </h2>
     
+    {% assign mdStrings = "headtitle, author, year, status, license, traductor, shorttitle, citation"   | split: ", " %}
+    {% assign mdDates   = "pubdate, modified_date" | split: ", " %}
     
-      
-  
-  
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
+    {% for md in mdDates %}
+       <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ note[md] | date: date_format }}<br>
+    {% endfor %}
 
-        {% for note in notes %}
-        
+    {% for md in mdStrings %}
+      <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ note[md] }}<br>
+    {% endfor %}
+    
 
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ note.url}}">
-               {{ note.title  }} 
-            {%- if note.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ note.imagepath }}{{ note.images[0] }}"   align="right"  width="70px"  alt="{{ note.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
 
-          {%- assign date_format = "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ note.pubdate | date_to_xmlschema }}" itemprop="datePublished">
-            &nbsp;({{ note.pubdate | date: date_format }})
-          </time>
-       
-          <h2> </h2>
-          
-          <strong>{{  site.data.i18n[page.lang].status  }}:</strong>      {{ note.status }}<br>
-          <strong>{{  site.data.i18n[page.lang].proposedby  }}:</strong> {{ note.author }}<br>
-          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ note.pubdate }}<br>
-          <strong>{{  site.data.i18n[page.lang].updateon  }}:</strong>   {{ note.modified_date }}<br>
-          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ note.license }}<br>
-       
-          <hr>
-         
-        {% endfor %}
+    <hr>
+   
+  {% endfor %}
 
 
 
-  {% endif %}
+
 
   
 
