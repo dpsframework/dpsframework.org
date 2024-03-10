@@ -21,7 +21,7 @@ toc:         true
 
 
 title:       'Una revisión sobre la Programación Basada en Agentes en los Sistemas Multi-Agente'
-headtitle:   'Cardoso, R.C.; Ferrando, A. A Review of Agent-Based Programming for Multi-Agent Systems. Computers 2021, 10, 16.'
+headtitle:   'A Review of Agent-Based Programming for Multi-Agent Systems'
 shorttitle:  'Cardoso, Ferrando (2021)'
 year:        '2021'
 author:      'Cardoso, R.C.'
@@ -41,7 +41,7 @@ editor:      "Academic Editor: Paolo Bellavista. Publisher’s Note: MDPI stays 
 pubdate:     '2021/01/27'
 license:     "Copyright: © 2021 by the authors. License MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/ licenses/by/4.0/)."
 
-
+traductor: 'FJ Aguayo'
 
 
 date:        '2021/01/27'

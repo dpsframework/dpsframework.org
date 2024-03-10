@@ -46,7 +46,7 @@
        {{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}</a>
        <br>
      {%- endif -%}  
-     <!--  Classic by hand -->
+     <!--  Classic output by hand -->
      <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ item.status }}<br>
      <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ item.author }}<br>
      <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ item.date | date: date_format }}<br>
@@ -148,99 +148,82 @@
 
 
 
-<!-- Essays -->
-{% if page.ref == 'essays'  or doEveryArea == true %}
+<!-- ESSAYS and PAPERS -->
+{% if     page.ref == 'essays'  %}
 
-  {% if pushHeader %}
-  <div class="sidebar-title">
-    <a href="/essays{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['essaysH1']  }}</strong>
-    </a>
-    
-  </div>
+
+  <!-- Essays metadata fields -->
+  {% assign mdStrings    = "editor, department, license, doi, updates, citation, traductor"   | split: ", " %}
+  {% assign mdDates      = "date, pubdate, modified_date" | split: ", " %}
+  {% assign date_format  = "%b %-d, %Y" %}
+  {% assign coLabel      =  page.ref   %}
   
-  {% endif %}
+  <!-- Hard code about: manuals -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
 
+  <!-- ESSAYS Collection -->
+  {% for essay in essays %}
+  
+  
+    <!-- Essays path calculation -->
+    {% assign cPath              = essay.url      |  slice: 1, essay.url.size %}
+    {% assign pathParts          = cPath          | split: "/" %}       
+    {% assign length             = pathParts.size | minus: 2 %}
+    {% assign path               = "" %}
+    {% for c in (0..length) %}
+      {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
+    {% endfor %}
 
- <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for item in essays %}
+  
+    <div class="sidebar-title">
       <a class="page-link"
-        href="{{ site.baseurl }}{{ item.url}}">
-        {{ item.title }}
-        {% if item.images[0] %}
-                 <img src="{{ item.url }}/../{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.shorttitle }}" align="right" width="35px">
-        {% endif %}  
+         href="{{ site.baseurl }}{{ essay.url}}">
+         {{ essay.title  }}
+         {% if essay.images[0] %}
+           <img class="mini-banner-right" 
+                src="{{ path }}/{{ essay.imagepath }}{{ essay.images[0] }}"  
+                align="right"  width="70px" alt="{{ essay.title }}" >
+         {% endif %}
       </a>
-      <p class="sidebar-meta">
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ item.date | date_to_xmlschema }}" itemprop="datePublished">
-        ({{ item.date | date: date_format }}) 
-      </time>
-      &#8226; {{ item.shorttitle }}
-      </p>
-    {% endfor %}  
+    </div>
     
     
-    
-      
-  
-  
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
-        {% for essay in essays %}
-        
-        {% assign cPath = essay.url |  slice: 1, essay.url.size %}
-        {% assign pathParts = cPath | split: "/" %}       
-        {% assign length = pathParts.size | minus: 2 %}
-        {% assign path = "" %}
-        {% for c in (0..length) %}
-          {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
-        {% endfor %}
-
-        
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ essay.url}}">
-               {{ essay.title  }} &nbsp;&#8680;
-            {%- if essay.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ path }}/{{ essay.imagepath }}{{ essay.images[0] }}"  align="right"  width="70px" alt="{{ essay.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-          <h3>{{ essay.headtitle }}</h3>
-          <strong>{{ essay.author }}
-             {%- if essay.authors -%}
-               {% for author in essay.authors %}, {{ author }}
-               {% endfor %}
-             {%- endif -%}
-          </strong>
-          <br>
-          <i>{{ essay.department }}</i>
-          <h2> </h2>
-          <strong>{{  site.data.i18n[page.lang].editor  }}:</strong>      {{ essay.editor }}<br>
-          <strong>{{  site.data.i18n[page.lang].citation  }}:</strong>    {{ essay.citation }}<br>
-          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ essay.pubdate }}<br>
-          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ essay.license }}<br>
-       
-          <hr>
-
-           
-        {% endfor %}
+    <h3>{{ essay.headtitle }}</h3>
+    <strong>{{ essay.author }}
+       {%- if essay.authors -%}
+         {% for author in essay.authors %}, {{ author }}
+         {% endfor %}
+       {%- endif -%}
+    </strong>
+    <br>
+    <i>{{ essay.department }}</i>
+    <h2> </h2>
 
 
+    <!-- Metadata paragraph -->
+    <ul>
+    {% for md in mdDates %}
+       <li><strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ essay[md] | date: date_format }}</li>
+    {% endfor %}
 
-
-
-
-
-
-
-
-  {% endif %}
+    {% for md in mdStrings %}
+      <li><strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ essay[md] }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+  {% endfor %}
 {% endif %}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -343,7 +326,7 @@
       <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ item[md] }}<br>
     {% endfor %}
     <hr>
-  {% endfor %}
 
+  {% endfor %}
 {% endif %}
 
