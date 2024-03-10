@@ -35,19 +35,21 @@ departments:
 
 
 chapter:  0
-doi:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/clips_documentation_640.zip/download'
-url:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.40/'
+doi:  'https://sourceforge.net/projects/clipsrules/files/CLIPS/6.4.1/clips_documentation_641.zip/download'
+
 editor:  'Gary Riley'
-pubdate:  '2021-09-04'
+pubdate:  '2021-04-09'
 license:  'GNU Lesser General Public License v3.0'
 
 
 
 
-ndtdate:  ''
+ndtdate:  '2024-02-29'
 date_published:  '2021-04-09'
-date_modified:  '2022-08-01'
+date_modified:  '2023-08-01'
 publisher:  'Gary Riley'
+traductor:  'FJ Aguayo'
+
 
 ---
 

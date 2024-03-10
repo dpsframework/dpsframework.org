@@ -13,7 +13,7 @@
   {%   assign lt = coLabel     | append: "H1" %}
   {%   assign lh = coLabel    %}
 
-  
+  <!-- PROJECTS collection -->
   {% for item in projects %}
     <div class="sidebar-title">
       <a class="page-link" href="{{ site.baseurl }}{{ item.url}}">{{ item.title  }}
@@ -46,7 +46,7 @@
        {{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}</a>
        <br>
      {%- endif -%}  
-     
+     <!--  Classic by hand -->
      <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ item.status }}<br>
      <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ item.author }}<br>
      <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ item.date | date: date_format }}<br>
@@ -56,9 +56,6 @@
      <hr>
 
   {% endfor %}
-  
-  
-
 {% endif %} 
   
 
@@ -74,89 +71,66 @@
 
 
 
-
-
 <!-- MANUALS and GUIDES Collection -->
+{% if page.ref          == 'manuals'   %}
 
-{% if doEveryArea or  page.ref == 'manuals'   %}
-  {% if pushHeader %}
+
+  <!-- Manuals metadata fields -->
+  {% assign mdStrings    = "editor, publisher, license, doi, traductor"   | split: ", " %}
+  {% assign mdDates      = "date_published, date_modified, ndtdate" | split: ", " %}
+  {% assign date_format  = "%b %-d, %Y" %}
+  {% assign coLabel      =  page.ref   %}
+  
+  <!-- Hard code about: manuals -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+
+
+
+  <!--  MANUALS and GUIDES collection by Chapter -->
+  {% for guia in manuals %}
+
+    <!--  Chapter URLs calculation -->
+    {% assign cPath        = guia.url       |  slice: 1, guia.url.size %}
+    {% assign pathParts    = cPath          | split: "/" %}       
+    {% assign length       = pathParts.size | minus: 2 %}
+    {% assign path         = "" %}
+    {% for c in (0..length) %}
+      {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
+    {% endfor %}
+
     <div class="sidebar-title">
-      <a  href="/manuals{{ sufijo }}.html">
-       <strong>{{ site.data.i18n[page.lang]['manualsH1']  }}</strong>
+      <a class="page-link"
+         href="{{ site.baseurl }}{{ guia.url}}">{{ guia.title  }}
+         {%- if guia.images[0] -%}
+           <img class="mini-banner-right" 
+                src="{{ path }}/{{ guia.imagepath }}{{ guia.images[0] }}"  
+                align="right" width="70px"  alt="{{ guia.title }}" >
+         {%- endif -%}
       </a>
     </div>
-  {% endif %}
 
- <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for item in manuals %}
-      <a class="page-link"
-        href="{{ site.baseurl }}{{ item.url}}">
-        {{ item.title }}
-        {% if item.images[0] %}
-                 <img src="{{ item.url }}/../{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.shorttitle }}" align="right" width="35px">
-        {% endif %}  
-      </a>
-      <p class="sidebar-meta">
-      {%- assign date_format = "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ item.date | date_to_xmlschema }}" itemprop="datePublished">
-        ({{ item.date | date: date_format }}) 
-      </time>
-      &#8226; {{ item.shorttitle }}
-      </p>
-    {% endfor %}  
-  
-  
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
 
-        {% for guia in manuals %}
-        
-        {% assign cPath = guia.url |  slice: 1, guia.url.size %}
-        {% assign pathParts = cPath | split: "/" %}       
-        {% assign length = pathParts.size | minus: 2 %}
-        {% assign path = "" %}
-        {% for c in (0..length) %}
-          {% capture path %}{{ path }}/{{pathParts[c]}}{% endcapture %}
-        {% endfor %}
-
- 
-
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ guia.url}}">
-               {{ guia.title  }} 
-            {%- if guia.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ path }}/{{ guia.imagepath }}{{ guia.images[0] }}"  align="right" width="70px"  alt="{{ guia.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-       
-
-          <i>{{ guia.author }}</i><br>
-          <i>Editor  {{ guia.editor }}</i>
-          <br> 
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ guia.date_published | date_to_xmlschema }}" itemprop="datePublished">
+    <i>{{ guia.author }}</i><br>
+    <i>Editor  {{ guia.editor }}</i><br> 
+    <time class="dt-published" 
+          datetime="{{ guia.date_published | date_to_xmlschema }}" itemprop="datePublished">
           {{ guia.date_published | date: date_format }}
-          </time>
-          <h2> </h2>
+    </time>
+    
+    <h2> </h2>
 
 
-          <strong>{{  site.data.i18n[page.lang].author }}:</strong> {{ guia.author }}<br>
-          <strong>{{  site.data.i18n[page.lang].published }}:</strong>    {{ guia.pubdate }}<br>
-          <strong>{{  site.data.i18n[page.lang].license }}: </strong>    {{ guia.license }}<br>
+    <!-- Metadata paragraph -->
+    {% for md in mdStrings %}
+      <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ guia[md] }}<br>
+    {% endfor %}
 
-
-          <hr>
- 
-
-        
-        {% endfor %}
-
-  {% endif %}
+    {% for md in mdDates %}
+       <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ guia[md] | date: date_format }}<br>
+    {% endfor %}
+    <hr>
+  {% endfor %}
 {% endif %}
 
 
