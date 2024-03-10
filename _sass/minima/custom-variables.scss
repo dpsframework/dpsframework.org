@@ -13,7 +13,14 @@ $spacing-unit:     40px;
 
 $color-blue-1: #E8F8FF;
 $color-blue-2: #edfaff;
- 
+
+
+$lm-color-blue-1-1: lighten($color-blue-1, 1);
+$dm-color-blue-1-5: darken($color-blue-1, 5);
+
+$lm-brand-color-46:  lighten($brand-color, 46%);
+$lm-brand-color-37:  lighten($brand-color, 37%);
+
 $code-background-color: #edfaff !default;
 
 
@@ -66,4 +73,5 @@ $foot-table-zebra-color:     lighten($foot-background-color, 4%) !default;
 $foot-table-header-bg-color: lighten($foot-background-color, 10%) !default;
 $foot-table-header-border:   lighten($foot-background-color, 21%) !default;
 $foot-table-border-color:    $foot-border-color-01 !default;
+
 
