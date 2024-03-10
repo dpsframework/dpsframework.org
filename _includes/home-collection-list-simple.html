@@ -315,49 +315,55 @@
 
 
 <!-- NOTES and POSTS  -->
-{% if page.ref == 'notes' %}
+{% if   page.ref        == "notes"    %}
+  
+  
+  <!-- Notes and Posts metadata fields -->
+  {% assign mdStrings    = "headtitle, author, year, status, license, traductor, shorttitle, citation"   | split: ", " %}
+  {% assign mdDates      = "modified_date, pubdate" | split: ", " %}
+  {%- assign date_format = "%b %-d, %Y" -%}
+  {% assign coLabel      =  page.ref  %}
+  
+  <!-- Hard code about: Posts and Notes. They are together -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+  {%   if     lh == "posts" %}
+    {% assign lh =  "notes" %}  
+  {% endif %}
 
   <div class="sidebar-title">
-    <a  href="/notes{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['notesH1']  }}</strong>
+    <a  href="/{{coLabel}}{{ sufijo }}.html">
+     <strong>{{ site.data.i18n[page.lang][ lt ]  }}</strong>
     </a>
   </div>
-  
+
+
+  <!-- Notes title and meta  -->
   {% for note in notes %}
 
     <div class="sidebar-title">
-      <a class="page-link"
-         href="{{ site.baseurl }}{{ note.url}}">
-         &#8226; {{ note.title  }} 
+      <a class="page-link" href="{{ site.baseurl }}{{ note.url}}">
+        {{ note.title  }}
       {%- if note.images[0] -%}
         <img class="mini-banner-right" 
-           src="/notes/{{ note.imagepath }}{{ note.images[0] }}"   align="right"  width="70px"   >
+           src="/{{ lh }}/{{ note.imagepath }}{{ note.images[0] }}" 
+           align="right"  width="70px">
       {%- endif -%}
       </a>
     </div>
 
-    {%- assign date_format = "%b %-d, %Y" -%}
-    <time class="dt-published" datetime="{{ note.pubdate | date_to_xmlschema }}" itemprop="datePublished">
-      &nbsp;({{ note.pubdate | date: date_format }})
-    </time>
- 
-    <h2> </h2>
-    
-    {% assign mdStrings = "headtitle, author, year, status, license, traductor, shorttitle, citation"   | split: ", " %}
-    {% assign mdDates   = "pubdate, modified_date" | split: ", " %}
-    
+    <!-- Metadata paragraph -->
     {% for md in mdDates %}
        <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ note[md] | date: date_format }}<br>
     {% endfor %}
-
+    <br>
+    <ul>
     {% for md in mdStrings %}
-      <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ note[md] }}<br>
+      <li><strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ note[md] }}</li>
     {% endfor %}
-    
-
+    </ul>
 
     <hr>
-   
   {% endfor %}
 
 

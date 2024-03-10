@@ -1,22 +1,22 @@
+<!-- Main collections labels in dpsFramework website -->
+{% assign       coLabels = "essays, manuals, projects, notes, posts" | split: ", "  %}
 
-<!-- Main collections in dpsFramework website -->
-{% assign       labels = "essays, manuals, projects, notes, posts" | split: ", "  %}
 
 
-{% for label in labels %}
+{% for coLabel in coLabels %}
 
-<!-- Posts and Notes are together -->
-  {%   assign lt = label     | append: "H1" %}
-  {%   assign lh = label    %}
+<!-- Hardcode about: Posts and Notes. They are together -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
   {%   if     lh == "posts" %}
     {% assign lh =  "notes" %}  
   {% endif %}
 
-<!-- Order in collections -->
-  {% if label == "manuals" %}
-    {% assign orderColl = site[label]  | where:"lang", page.lang | where:"chapter", 0 %}
+<!-- Special order in this collection -->
+  {% if coLabel == "manuals" %}
+    {% assign orderColl = site[coLabel]  | where:"lang", page.lang | where:"chapter", 0 %}
   {% else %}
-    {% assign orderColl = site[label] | sort: "year" | reverse | where:"lang", page.lang   %}  
+    {% assign orderColl = site[coLabel] | sort: "year" | reverse | where:"lang", page.lang   %}  
   {% endif %}
 
 <!-- Collections header and links -->
@@ -31,7 +31,7 @@
 
 
 
-<!-- List documents on right side -->
+<!-- List documents on landing right side -->
   <ul>
   {% for item in orderColl  %}
     {% if item.lang == page.lang %}
