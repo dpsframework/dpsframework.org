@@ -1,104 +1,64 @@
-<!-- Listing areas: 
-        projects, 
-        manuals, 
-        essays, 
-        notes and 
-        posts 
-        by context collection. -->
 
-
-
+<!-- PROJECTS -->
 <!-- PROJECTS Collection -->
+{% if page.ref          == "projects"  %}
 
-{% if doEveryArea or page.ref == 'projects'  %}
-  {% if pushHeader %}
+  <!-- Projects metadata fields -->
+  {% assign mdStrings    = "subtitle, status, author, date, modified, license, headtitle"   | split: ", " %}
+  {% assign mdDates      = "date, modified" | split: ", " %}
+  {%- assign date_format = "%b %-d, %Y" -%}
+  {% assign coLabel      =  page.ref  %}
+  
+  <!-- Hard code about: Posts and Notes. They are together -->
+  {%   assign lt = coLabel     | append: "H1" %}
+  {%   assign lh = coLabel    %}
+
+  
+  {% for item in projects %}
     <div class="sidebar-title">
-      <a  href="/projects{{ sufijo }}.html">
-       <strong>{{ site.data.i18n[page.lang]['projectsH1']  }}</strong>
+      <a class="page-link" href="{{ site.baseurl }}{{ item.url}}">{{ item.title  }}
+      {% if item.images[0] %}
+         <img class="mini-banner-right"
+         src="{{lh}}/{{ item.imagepath }}{{ item.images[0] }}" 
+         alt="{{ item.title }}" align="right" width="70px">
+      {% endif %}   
       </a>
     </div>
-  {% endif %}
+
+    <h4><strong>GitHub ID: </strong>{{ item.ref }} 
+    {%- assign date_format = "%b %-d, %Y" -%}
+    <time class="dt-published" datetime="{{ item.modified | date_to_xmlschema }}" itemprop="datePublished">
+    &nbsp;({{ site.data.i18n[page.lang]['modified']}}: {{ item.modified | date: date_format }})
+    </time>
+    </h4>
 
 
-  <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for item in projects %}
-      <div class="page-link">
-        <a href="{{ site.baseurl }}{{ item.url}}">
-        &#8226; {{ item.title }}&nbsp;&#8680;
-<!--         {% if item.images[0] %}
-                 <img src="{{ item.url }}/../{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.shorttitle }}" align="right" height="28px" width="35px">
-        {% endif %} -->
-        </a>
-<!--         <p class="sidebar-meta">
-          {%- assign date_format = "%b %-d, %Y" -%}
-          {{ item.subtitle }}<br>
-          <time class="dt-published" datetime="{{ item.modified | date_to_xmlschema }}" itemprop="datePublished">
-             ({{site.data.i18n[page.lang]['modified']}}: 
-             <b>{{ item.modified | date: date_format }})</b>
-          </time>
-         
-          <time class="dt-published" datetime="{{ item.date | date_to_xmlschema }}" itemprop="dateInitiated">
-          ({{site.data.i18n[page.lang]['initiated']}}: 
-           {{ item.date | date: date_format }}) 
-          </time>
-        
-        </p> -->
-      </div>
-    {% endfor %}
-    
+    <!-- Metadata paragraph -->
+    <strong>{{  site.data.i18n[page.lang].objective }}:</strong>{{ item.subtitle }}<br>
+    {%- if item.ref -%}
+      <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
+       <a rel="page-link" href="{{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}" 
+          target="_blank" title="{{ item.ref | escape }}">
+       <strong>● GitHub:</strong> 
+       <svg class="svg-icon blue">
+          <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+       </svg>
+       {{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}</a>
+       <br>
+     {%- endif -%}  
+     
+     <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ item.status }}<br>
+     <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ item.author }}<br>
+     <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ item.date | date: date_format }}<br>
+     <strong>{{  site.data.i18n[page.lang].modified }}:</strong>  {{ item.modified | date: date_format }}<br>
+     <strong>{{  site.data.i18n[page.lang].license }}: </strong>  {{ item.license }}<br>
+     <strong>{{  site.data.i18n[page.lang].abstract}}: </strong>  {{ item.headtitle }}<br>
+     <hr>
 
+  {% endfor %}
+  
+  
 
-
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
-    {% for item in projects %}
-            <div class="sidebar-title">
-              <a class="page-link"
-                 href="{{ site.baseurl }}{{ item.url}}">
-                 &#8226; {{ item.title  }} &#8680;
-              {% if item.images[0] %}
-                 <img class="mini-banner-right"
-                 src="projects/{{ item.imagepath }}{{ item.images[0] }}" 
-                 alt="{{ item.title }}" align="right" width="70px">
-              {% endif %}   
-              </a>
-            </div>
-    
-            <h4><strong>{{ item.ref }}</strong>
-            {%- assign date_format = "%b %-d, %Y" -%}
-            <time class="dt-published" datetime="{{ item.modified | date_to_xmlschema }}" itemprop="datePublished">
-            &nbsp;({{ site.data.i18n[page.lang]['lastversion']}}: {{ item.modified | date: date_format }})
-            </time>
-            </h4>
-             
-             <strong>{{  site.data.i18n[page.lang].objective }}:</strong>
-               {{ item.subtitle }}
-             <br>
-       
-             {%- if item.ref -%}
-               <strong>{{  site.data.i18n[page.lang].repo }}: </strong>
-               <a rel="page-link" href="{{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}" 
-                  target="_blank" title="{{ item.ref | escape }}">
-               <strong>● GitHub:</strong> <svg class="svg-icon blue">
-                  <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
-               {{ site.github.owner_url }}{{ item.ref | cgi_escape | escape }}</a>
-               <br>
-             {%- endif -%}  
-               
-             <strong>{{  site.data.i18n[page.lang].status}}:</strong>     {{ item.status }}<br>
-             <strong>{{  site.data.i18n[page.lang].author }}:</strong>    {{ item.author }}<br>
-             <strong>{{  site.data.i18n[page.lang].initiated }}:</strong> {{ item.date | date: date_format }}<br>
-             <strong>{{  site.data.i18n[page.lang].modified }}:</strong>  {{ item.modified | date: date_format }}<br>
-             <strong>{{  site.data.i18n[page.lang].license }}: </strong>  {{ item.license }}<br>
-             <strong>{{  site.data.i18n[page.lang].abstract}}: </strong>  {{ item.headtitle }}<br>
-             <hr>
-
-      {% endfor %}
-      
-      
-    {% endif %}
 {% endif %} 
   
 
