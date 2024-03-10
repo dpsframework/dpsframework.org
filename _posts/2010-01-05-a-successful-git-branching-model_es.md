@@ -14,9 +14,9 @@ idiom:  es_ES
 author: "Vincent Driessen"
 
 
-department: '<br>Website: https://nvie.com/ <br>Thoughts and writings by Vincent Driessen.'
+department: 'https://nvie.com/ Thoughts and writings by Vincent Driessen.'
 date: 2010-01-05 09:48:44 +0100
-
+modified_date: '2024/03/01'
 
 categories: posts
 menu:  false

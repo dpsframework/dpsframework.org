@@ -327,26 +327,24 @@
   <!-- Hard code about: Posts and Notes. They are together -->
   {%   assign lt = coLabel     | append: "H1" %}
   {%   assign lh = coLabel    %}
-  {%   if     lh == "posts" %}
-    {% assign lh =  "notes" %}  
-  {% endif %}
+
 
   <div class="sidebar-title">
-    <a  href="/{{coLabel}}{{ sufijo }}.html">
+    <a  href="/{{lh}}{{ sufijo }}.html">
      <strong>{{ site.data.i18n[page.lang][ lt ]  }}</strong>
     </a>
   </div>
 
 
   <!-- Notes title and meta  -->
-  {% for note in notes %}
+  {% for item in notes %}
 
     <div class="sidebar-title">
-      <a class="page-link" href="{{ site.baseurl }}{{ note.url}}">
-        {{ note.title  }}
-      {%- if note.images[0] -%}
+      <a class="page-link" href="{{ site.baseurl }}{{item.url}}">
+        {{ item.title  }}
+      {%- if item.images[0] -%}
         <img class="mini-banner-right" 
-           src="/{{ lh }}/{{ note.imagepath }}{{ note.images[0] }}" 
+           src="/{{ lh }}/{{ item.imagepath }}{{ item.images[0] }}" 
            align="right"  width="70px">
       {%- endif -%}
       </a>
@@ -354,104 +352,64 @@
 
     <!-- Metadata paragraph -->
     {% for md in mdDates %}
-       <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ note[md] | date: date_format }}<br>
+       <strong>{{  site.data.i18n[page.lang][md] }}:</strong> {{ item[md] | date: date_format }}<br>
     {% endfor %}
     <br>
     <ul>
     {% for md in mdStrings %}
-      <li><strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ note[md] }}</li>
+      <li><strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ item[md] }}</li>
     {% endfor %}
     </ul>
-
     <hr>
   {% endfor %}
 
 
 
-
-
+  <!-- CONTINUE with  posts   -->
+  <!-- POSTS    alias drafts  -->
+  <!-- Notes and Posts metadata fields -->
+  {% assign mdStrings    = "headtitle, author, department, shorttitle, license"   | split: ", " %}
+  {% assign mdDates      = "date, modified_date" | split: ", " %}
+  {%- assign date_format = "%b %-d, %Y" -%}
   
-
-
-
-<!-- Posts with alias drafts -->
-  <div class="sidebar-title">
-    <a  href="/notes{{ sufijo }}.html">
-     <strong>{{ site.data.i18n[page.lang]['draftsH1']  }}</strong>
+  <!-- Hard code: Posts -->
+  {%   assign lt = "drafts"     | append: "H1" %}
+  {%   assign lh = "notes"     %}
+  
+  <div  id="posts" class="sidebar-title">
+    <a  href="/{{lh}}{{ sufijo }}.html">
+     <strong>{{ site.data.i18n[page.lang][lt]  }}</strong>
     </a>
   </div>
 
+  <!-- Posts title and meta  -->
+  {% for item in drafts %}
 
-  <!--  citeBrief == true, is ised with index.html / index_en.html  -->
-  {% if citeBrief  %}
-    {% for draft in drafts %}
+    <div class="sidebar-title">
       <a class="page-link"
-        href="{{ site.baseurl }}{{ draft.url}}">
-        {{ draft.title }}
-        {%- if draft.images[0] -%}
-          <img src="assets/imgs/{{ draft.images[0] }}"  
-               alt="{{draft.shorttitle }}"  align="right" width="35px">
-        {%- endif -%}
+         href="{{ site.baseurl }}{{ item.url}}">
+         {{ item.title  }} 
+      {%- if item.images[0] -%}
+        <img class="mini-banner-right" 
+           src="{{ item.imagepath }}{{ item.images[0] }}"  
+                align="right"  width="70px"  alt="{{item.title}}" >
+      {%- endif -%}
       </a>
-      <p class="sidebar-meta">
-        {%- assign date_format = "%b %-d, %Y" -%}
-        <time class="dt-published" datetime="{{ draft.date | date_to_xmlschema }}" itemprop="datePublished">
-          ({{ draft.date | date: date_format }}) 
-        </time>
-        &#8226; {{ draft.shorttitle }}
-      </p>
+    </div>
+
+    <!-- Metadata paragraph -->
+    {% for md in mdDates %}
+      <time class="dt-published" datetime="{{item[md] | date_to_xmlschema }}" itemprop="datePublished">
+        <i>{{  site.data.i18n[page.lang][md] }}</i>&nbsp;({{ item[md] | date: date_format }})  
+      </time>
     {% endfor %}
-    
-    
-    
-    
-  <!--  citeBrief == false, is used in collections-home-pages -->
-  {% else %}
+    <h2> </h2>
 
+    {% for md in mdStrings %}
+      <strong>{{  site.data.i18n[page.lang][md]}}:</strong> {{ item[md] }}<br>
+    {% endfor %}
+    <hr>
+  {% endfor %}
 
-
-
-        {% for draft in drafts %}
-        
-
-          <div class="sidebar-title">
-            <a class="page-link"
-               href="{{ site.baseurl }}{{ draft.url}}">
-               {{ draft.title  }} 
-            {%- if draft.images[0] -%}
-              <img class="mini-banner-right" 
-                 src="{{ draft.imagepath }}{{ draft.images[0] }}"   align="right"  width="70px"  alt="{{ note.shorttitle }}" >
-            {%- endif -%}
-            </a>
-          </div>
-
-          {%- assign date_format = "%b %-d, %Y" -%}
-          <time class="dt-published" datetime="{{ draft.date | date_to_xmlschema }}" itemprop="datePublished">
-          &nbsp;({{ draft.date | date: date_format }})
-          </time>
-       
-          <h2> </h2>
-          
-
-          <strong>{{  site.data.i18n[page.lang].author  }}:</strong> {{ draft.author }}<br>
-          <strong>{{  site.data.i18n[page.lang].published  }}:</strong>   {{ draft.shorttitle }}<br>
-          <strong>{{  site.data.i18n[page.lang].license  }}: </strong>    {{ draft.license }}<br>
-       
-          <hr>
-         
-        {% endfor %}
-
-
-
-
-
-
-
-  {% endif %}
 {% endif %}
-
-
-
-
-
 
