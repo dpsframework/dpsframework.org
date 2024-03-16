@@ -8,7 +8,7 @@ lang:             en
 date:             '2022-12-19'
 modified:         '2024-03-10'
 status:           'Finished'
-title:            'JADE-4.6.1 compiled with Docker newest Maven image'
+title:            "JADE-4.6.1 built with Maven Docker images"
 subtitle:         'A specific `pom.xml` files to build `jade-platform-4.6.1.jar` with latest Maven images'
 headtitle:        'Compilation and unification of libraries used by JADE 4.6.1 (2023/07/11), reorganization of the directory structure in the MAVEN model and preparation of `pom.xml` and `pom8.xml` files to obtain functional JADE Platform version with containers Docker.'
 imagepath:        'images/jade-fipa/'
