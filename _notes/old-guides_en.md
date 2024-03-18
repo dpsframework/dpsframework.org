@@ -9,8 +9,8 @@ images:
 
 menu:  false
 toc:  true
-title:  'Deprecated documents'
-headtitle:  'Manuals and guides from previous versions of dpsFramework Components'
+title:  'Previous version documents'
+headtitle:  'Manuals and guides from previous versions'
 shorttitle:  'Old Guides'
 year:  '2018'
 author:  'FJAC'
