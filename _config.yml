@@ -8,8 +8,8 @@ remote_theme: jekyll/minima
 # --------------------------------------------------
 # Main domain: dpsframework.org
 # --------------------------------------------------
-url:      'https://dpsframework.org/'
-hard_url: 'https://dpsframework.org/'
+url:      'https://dpsframework.org'
+hard_url: 'https://dpsframework.org'
 baseurl:  ''
 title:    'Framework (Java) to develop Multi-Agent applications integrated with Expert Systems on the JADE platform'
   
@@ -32,12 +32,12 @@ markdown:         kramdown
 # GitHub Metadata: https://jekyll.github.io/github-metadata/site.github/
 github:
   owner_url:       'https://github.com/dpsframework/'
-  repository_url:  'https://github.com/dpsframework/www.dpsframework.org'
-  owner_name:      dpsframework'
-  project_tagline: '0.1'
+  repository_url:  'https://github.com/dpsframework/dpsframework.org'
+  owner_name:      'dpsframework'
+  project_tagline: '0.2'
   name:            'dpsFramework Website'
   is_project_page: true
-  repository_name: website
+  repository_name: 'dpsframework.org'
 
 # Site collections
 collections:
