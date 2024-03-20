@@ -9,9 +9,9 @@ images:
 
 menu:  false
 toc:  true
-title:  'Documentación obsoleta'
-headtitle:  'Historical User Guides of dpsFramework Components'
-shorttitle:  'Guías antiguas'
+title:  'Documentos de versiones anteriores'
+headtitle:  'Manuals and guides from previous versions'
+shorttitle:  'Guías, manuales y APIs de versiones anteriores'
 year:  '2018'
 author:  'FJAC'
 department:  ''
